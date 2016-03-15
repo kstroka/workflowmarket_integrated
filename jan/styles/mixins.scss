@@ -1,0 +1,112 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin desktop {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin icon($url,$color:black){
+  background-color: $color;
+  -webkit-mask-image: url($url);
+  mask-image: url($url);
+}
+
+
+$backgroundColor : #040520;
+$backgroundColor2 : #10042f;
+$mainAppColor : #f0f0f0;
+
+$mainToolbarColor: #2bf4b1;
+$mainToolbarColor1: #29e9a9;
+$mainToolbarColor2: #00E499;
+$mainToolbarColor3 : #009464;
+$mainToolbarColor4 : #003F24;
+$mainToolbarColor5: #007041;
+
+$mainWindowColor: #E93255;
+$mainWindowColor1: #e63255;
+$mainWindowColor2 : #AE1331;
+$mainWindowColor3 : #680014;
+
+$buttonColor1 : #5562AA ;
+$buttonColor12 : #24327D;
+$buttonColor13 : #07124A;
+$buttonColor14 : #3A4895;
+$buttonColor15 : #394793;
+
+$buttonColor2: #1289D0;
+$buttonColor22: #045483;
+$buttonColor23 : #158DD4;
+
+$buttonColor3 : #0672AF;
+$buttonColor32: #034369;
+
+$gray : #757575;
+$fieldColor : #FDFFFC;
+$fieldFontColor : #000543;
+
+$popupinputheight : 25px;
+$on-off-width : 45px;
+
+
+
+@mixin button($width:155px,$background:black ,$color:white, $hover:black){
+  box-sizing: border-box;
+  display: block;
+  padding: 0;
+  position: relative;
+  float: left;
+  width: $width ;
+  height: 38px;
+  margin-right: 20px;
+  margin-bottom: 12px;
+  background-color: $background;
+  color : $color;
+  padding-left: 22px;
+  vertical-align: middle;
+  line-height: 38px;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $hover;
+  }
+  .button-icon{
+    position: absolute;
+    display: inline-block;
+    left: 4px;
+    height: 14px;
+    width: 14px;
+    padding-top: 12px;
+  }
+}
+
+@mixin gradient ($start-colour, $end-colour) {
+  background-color: $start-colour;
+  background-image: -webkit-gradient(linear, left top, right top, from($start-colour), to($end-colour));
+  background-image: -webkit-linear-gradient(left, $start-colour, $end-colour);
+  background-image:    -moz-linear-gradient(left, $start-colour, $end-colour);
+  background-image:     -ms-linear-gradient(left, $start-colour, $end-colour);
+  background-image:      -o-linear-gradient(left, $start-colour, $end-colour);
+  background-image:         linear-gradient(left, $start-colour, $end-colour);
+  filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}', gradientType='1');
+}
+
+@mixin shadow($opacity:0.2){
+  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,$opacity);
+  box-shadow: 0 2px 10px rgba(0,0,0,$opacity);
+}

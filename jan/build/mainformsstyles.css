@@ -1,0 +1,1571 @@
+@font-face {
+  font-family: "font-icon";
+  src: url("../../global/styles/fonts/font-icon.eot");
+  src: url("../../global/styles/fonts/font-icon.eot?#iefix") format("embedded-opentype"), url("../../global/styles/fonts/font-icon.woff") format("woff"), url("../../global/styles/fonts/font-icon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+.icon {
+  font-family: "font-icon";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-add189:before {
+  content: "\f101"; }
+
+.icon-alarm52:before {
+  content: "\f102"; }
+
+.icon-basic14:before {
+  content: "\f103"; }
+
+.icon-basic15:before {
+  content: "\f104"; }
+
+.icon-basic16:before {
+  content: "\f105"; }
+
+.icon-basic17:before {
+  content: "\f106"; }
+
+.icon-blank38:before {
+  content: "\f107"; }
+
+.icon-bookmark49:before {
+  content: "\f108"; }
+
+.icon-center13:before {
+  content: "\f109"; }
+
+.icon-clasic:before {
+  content: "\f10a"; }
+
+.icon-delete85:before {
+  content: "\f10b"; }
+
+.icon-dollar178:before {
+  content: "\f10c"; }
+
+.icon-door24:before {
+  content: "\f10d"; }
+
+.icon-down124:before {
+  content: "\f10e"; }
+
+.icon-download168:before {
+  content: "\f10f"; }
+
+.icon-expand42:before {
+  content: "\f110"; }
+
+.icon-expand43:before {
+  content: "\f111"; }
+
+.icon-eye106:before {
+  content: "\f112"; }
+
+.icon-film63:before {
+  content: "\f113"; }
+
+.icon-heart297:before {
+  content: "\f114"; }
+
+.icon-home153:before {
+  content: "\f115"; }
+
+.icon-left-arrow:before {
+  content: "\f116"; }
+
+.icon-left224:before {
+  content: "\f117"; }
+
+.icon-left225:before {
+  content: "\f118"; }
+
+.icon-location44:before {
+  content: "\f119"; }
+
+.icon-locked61:before {
+  content: "\f11a"; }
+
+.icon-mail80:before {
+  content: "\f11b"; }
+
+.icon-navigation12:before {
+  content: "\f11c"; }
+
+.icon-pause46:before {
+  content: "\f11d"; }
+
+.icon-print45:before {
+  content: "\f11e"; }
+
+.icon-refresh62:before {
+  content: "\f11f"; }
+
+.icon-remove22:before {
+  content: "\f120"; }
+
+.icon-right-arrow:before {
+  content: "\f121"; }
+
+.icon-right164:before {
+  content: "\f122"; }
+
+.icon-right247:before {
+  content: "\f123"; }
+
+.icon-rocket74:before {
+  content: "\f124"; }
+
+.icon-round75:before {
+  content: "\f125"; }
+
+.icon-round77:before {
+  content: "\f126"; }
+
+.icon-smartphone24:before {
+  content: "\f127"; }
+
+.icon-speaker111:before {
+  content: "\f128"; }
+
+.icon-speaker112:before {
+  content: "\f129"; }
+
+.icon-speaker113:before {
+  content: "\f12a"; }
+
+.icon-star174:before {
+  content: "\f12b"; }
+
+.icon-thumbtack1:before {
+  content: "\f12c"; }
+
+.icon-unlocked46:before {
+  content: "\f12d"; }
+
+.icon-warning39:before {
+  content: "\f12e"; }
+
+.icon-widescreen9:before {
+  content: "\f12f"; }
+
+.icon-window58:before {
+  content: "\f130"; }
+
+.icon-wrench73:before {
+  content: "\f131"; }
+
+.icon-zoom71:before {
+  content: "\f132"; }
+
+body .container {
+  margin: 0 auto;
+  position: relative; }
+  @media screen and (min-width: 1200px) {
+    body .container {
+      max-width: 1200px; } }
+  @media screen and (min-width: 960px) and (max-width: 1199px) {
+    body .container {
+      max-width: 960px; } }
+  @media screen and (min-width: 720px) and (max-width: 959px) {
+    body .container {
+      max-width: 720px; } }
+  @media screen and (max-width: 479px) {
+    body .container {
+      max-width: 480px; } }
+
+.icon-add {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/round75.svg");
+  mask-image: url("../../../src/global/content/svg/round75.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-close {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/delete85.svg");
+  mask-image: url("../../../src/global/content/svg/delete85.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-check {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/basic14.svg");
+  mask-image: url("../../../src/global/content/svg/basic14.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-date {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/basic17.svg");
+  mask-image: url("../../../src/global/content/svg/basic17.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-description {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/warning39.svg");
+  mask-image: url("../../../src/global/content/svg/warning39.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-selectbox {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/expand42.svg");
+  mask-image: url("../../../src/global/content/svg/expand42.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-email {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/basic16.svg");
+  mask-image: url("../../../src/global/content/svg/basic16.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-fileupload {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/rocket74.svg");
+  mask-image: url("../../../src/global/content/svg/rocket74.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-longanswer {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/center13.svg");
+  mask-image: url("../../../src/global/content/svg/center13.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-checkbox {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/bookmark49.svg");
+  mask-image: url("../../../src/global/content/svg/bookmark49.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-number {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/home153.svg");
+  mask-image: url("../../../src/global/content/svg/home153.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-pictureupload {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/print45.svg");
+  mask-image: url("../../../src/global/content/svg/print45.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-shortanswer {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/left225.svg");
+  mask-image: url("../../../src/global/content/svg/left225.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-test1 {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/wrench73.svg");
+  mask-image: url("../../../src/global/content/svg/wrench73.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-test2 {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/thumbtack1.svg");
+  mask-image: url("../../../src/global/content/svg/thumbtack1.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-test3 {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/unlocked46.svg");
+  mask-image: url("../../../src/global/content/svg/unlocked46.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-test4 {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/expand43.svg");
+  mask-image: url("../../../src/global/content/svg/expand43.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-test5 {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/dollar178.svg");
+  mask-image: url("../../../src/global/content/svg/dollar178.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-yesno {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/navigation12.svg");
+  mask-image: url("../../../src/global/content/svg/navigation12.svg");
+  width: 100%;
+  height: 100%; }
+
+.icon-right {
+  background-color: white;
+  -webkit-mask-image: url("../../../src/global/content/svg/right164.svg");
+  mask-image: url("../../../src/global/content/svg/right164.svg");
+  width: 100%;
+  height: 100%; }
+
+body {
+  background-color: #040520;
+  background-image: -webkit-gradient(linear, left top, right top, from(#040520), to(#10042f));
+  background-image: -webkit-linear-gradient(left, #040520, #10042f);
+  background-image: -moz-linear-gradient(left, #040520, #10042f);
+  background-image: -ms-linear-gradient(left, #040520, #10042f);
+  background-image: -o-linear-gradient(left, #040520, #10042f);
+  background-image: linear-gradient(left, #040520, #10042f);
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#040520', end-colourStr='#10042f', gradientType='1'); }
+  body .button-small {
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+    position: relative;
+    float: left;
+    width: 72.5px;
+    height: 38px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    background-color: #0672AF;
+    color: white;
+    padding-left: 22px;
+    vertical-align: middle;
+    line-height: 38px;
+    border-radius: 2px;
+    cursor: pointer; }
+    body .button-small:hover {
+      background-color: #034369; }
+    body .button-small .button-icon {
+      position: absolute;
+      display: inline-block;
+      left: 4px;
+      height: 14px;
+      width: 14px;
+      padding-top: 12px; }
+  body .button-medium {
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+    position: relative;
+    float: left;
+    width: 165px;
+    height: 38px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    background-color: #1289D0;
+    color: white;
+    padding-left: 22px;
+    vertical-align: middle;
+    line-height: 38px;
+    border-radius: 2px;
+    cursor: pointer; }
+    body .button-medium:hover {
+      background-color: #045483; }
+    body .button-medium .button-icon {
+      position: absolute;
+      display: inline-block;
+      left: 4px;
+      height: 14px;
+      width: 14px;
+      padding-top: 12px; }
+  body .button-large {
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+    position: relative;
+    float: left;
+    width: 350px;
+    height: 38px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+    background-color: #5562AA;
+    color: white;
+    padding-left: 22px;
+    vertical-align: middle;
+    line-height: 38px;
+    border-radius: 2px;
+    cursor: pointer; }
+    body .button-large:hover {
+      background-color: #24327D; }
+    body .button-large .button-icon {
+      position: absolute;
+      display: inline-block;
+      left: 4px;
+      height: 14px;
+      width: 14px;
+      padding-top: 12px; }
+
+.app {
+  font-weight: lighter;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 60px;
+  left: 0;
+  min-height: 500px;
+  height: auto;
+  margin: 0 20px;
+  text-align: left;
+  background-color: #f0f0f0;
+  zoom: 1;
+  z-index: 1; }
+  .app .formCreator {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2; }
+    .app .formCreator .main .form-name {
+      display: block;
+      width: 390px;
+      height: 34px;
+      position: absolute;
+      top: -34px;
+      background-color: white;
+      z-index: 2; }
+      .app .formCreator .main .form-name .form-icon {
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        .app .formCreator .main .form-name .form-icon .icon-check {
+          background-color: #040520; }
+      .app .formCreator .main .form-name .form-name-value {
+        width: calc(100% - 2px - 34px);
+        height: 32px;
+        font-size: 28px;
+        line-height: 32px;
+        top: 0;
+        left: 34px;
+        position: absolute;
+        color: #040520;
+        border: none; }
+      .app .formCreator .main .form-name.error .form-icon .icon-check {
+        background-color: red; }
+    .app .formCreator .main .toolbar {
+      background-color: #2bf4b1;
+      background-color: #29e9a9;
+      background-image: -webkit-gradient(linear, left top, right top, from(#29e9a9), to(#2bf4b1));
+      background-image: -webkit-linear-gradient(left, #29e9a9, #2bf4b1);
+      background-image: -moz-linear-gradient(left, #29e9a9, #2bf4b1);
+      background-image: -ms-linear-gradient(left, #29e9a9, #2bf4b1);
+      background-image: -o-linear-gradient(left, #29e9a9, #2bf4b1);
+      background-image: linear-gradient(left, #29e9a9, #2bf4b1);
+      filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#29e9a9', end-colourStr='#2bf4b1', gradientType='1');
+      position: absolute;
+      width: 390px;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 4;
+      box-shadow: 6px 0 8px -6px #10042f; }
+      .app .formCreator .main .toolbar .content {
+        display: inline-block;
+        margin: 20px;
+        margin-right: 0;
+        margin-bottom: 10px;
+        top: 0;
+        bottom: 0;
+        height: calc(100% - 40px); }
+        .app .formCreator .main .toolbar .content .buttons-group {
+          overflow: auto;
+          list-style: none;
+          display: block;
+          float: left;
+          width: inherit;
+          margin: 10px 0;
+          padding-left: 0; }
+          .app .formCreator .main .toolbar .content .buttons-group .button-small {
+            box-sizing: border-box;
+            display: block;
+            padding: 0;
+            position: relative;
+            float: left;
+            width: 72.5px;
+            height: 38px;
+            margin-right: 20px;
+            margin-bottom: 12px;
+            background-color: #0672AF;
+            color: white;
+            padding-left: 22px;
+            vertical-align: middle;
+            line-height: 38px;
+            border-radius: 2px;
+            cursor: pointer; }
+            .app .formCreator .main .toolbar .content .buttons-group .button-small:hover {
+              background-color: #034369; }
+            .app .formCreator .main .toolbar .content .buttons-group .button-small .button-icon {
+              position: absolute;
+              display: inline-block;
+              left: 4px;
+              height: 14px;
+              width: 14px;
+              padding-top: 12px; }
+          .app .formCreator .main .toolbar .content .buttons-group .button-medium {
+            box-sizing: border-box;
+            display: block;
+            padding: 0;
+            position: relative;
+            float: left;
+            width: 165px;
+            height: 38px;
+            margin-right: 20px;
+            margin-bottom: 12px;
+            background-color: #1289D0;
+            color: white;
+            padding-left: 22px;
+            vertical-align: middle;
+            line-height: 38px;
+            border-radius: 2px;
+            cursor: pointer;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+            .app .formCreator .main .toolbar .content .buttons-group .button-medium:hover {
+              background-color: #045483; }
+            .app .formCreator .main .toolbar .content .buttons-group .button-medium .button-icon {
+              position: absolute;
+              display: inline-block;
+              left: 4px;
+              height: 14px;
+              width: 14px;
+              padding-top: 12px; }
+            .app .formCreator .main .toolbar .content .buttons-group .button-medium.dragged {
+              background-color: #045483; }
+          .app .formCreator .main .toolbar .content .buttons-group .button-large {
+            box-sizing: border-box;
+            display: block;
+            padding: 0;
+            position: relative;
+            float: left;
+            width: 350px;
+            height: 38px;
+            margin-right: 20px;
+            margin-bottom: 12px;
+            background-color: #5562AA;
+            color: white;
+            padding-left: 22px;
+            vertical-align: middle;
+            line-height: 38px;
+            border-radius: 2px;
+            cursor: pointer; }
+            .app .formCreator .main .toolbar .content .buttons-group .button-large:hover {
+              background-color: #24327D; }
+            .app .formCreator .main .toolbar .content .buttons-group .button-large .button-icon {
+              position: absolute;
+              display: inline-block;
+              left: 4px;
+              height: 14px;
+              width: 14px;
+              padding-top: 12px; }
+        .app .formCreator .main .toolbar .content .close-form-creator, .app .formCreator .main .toolbar .content .cancel-save {
+          position: absolute;
+          bottom: 5px;
+          right: 10px;
+          width: 100px; }
+          .app .formCreator .main .toolbar .content .close-form-creator .close-button, .app .formCreator .main .toolbar .content .close-form-creator .cancel-button, .app .formCreator .main .toolbar .content .cancel-save .close-button, .app .formCreator .main .toolbar .content .cancel-save .cancel-button {
+            display: block;
+            width: 100%;
+            height: 35px;
+            float: right;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 35px;
+            font-size: 20px;
+            border-radius: 2px;
+            background-color: #007041;
+            color: white;
+            cursor: pointer;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+            .app .formCreator .main .toolbar .content .close-form-creator .close-button:hover, .app .formCreator .main .toolbar .content .close-form-creator .cancel-button:hover, .app .formCreator .main .toolbar .content .cancel-save .close-button:hover, .app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
+              background-color: #003F24; }
+        .app .formCreator .main .toolbar .content .cancel-save {
+          left: 10px; }
+          .app .formCreator .main .toolbar .content .cancel-save .cancel-button {
+            background-color: #AE1331; }
+            .app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
+              background-color: #680014; }
+    .app .formCreator .main .window {
+      z-index: 2;
+      position: absolute;
+      width: auto;
+      height: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 390px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background-color: #E93255;
+      background-color: #e63255;
+      background-image: -webkit-gradient(linear, left top, right top, from(#e63255), to(#E93255));
+      background-image: -webkit-linear-gradient(left, #e63255, #E93255);
+      background-image: -moz-linear-gradient(left, #e63255, #E93255);
+      background-image: -ms-linear-gradient(left, #e63255, #E93255);
+      background-image: -o-linear-gradient(left, #e63255, #E93255);
+      background-image: linear-gradient(left, #e63255, #E93255);
+      filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#e63255', end-colourStr='#E93255', gradientType='1'); }
+      .app .formCreator .main .window .content {
+        display: inline-block;
+        margin: 20px;
+        position: absolute;
+        margin-bottom: 30px;
+        margin-right: 0;
+        top: 0;
+        bottom: 0;
+        width: calc(100% - 40px);
+        height: calc(100% - 50px); }
+        .app .formCreator .main .window .content .inputfields-group, .app .formCreator .main .window .content .newinputfield-group {
+          overflow: auto;
+          list-style: none;
+          float: left;
+          width: 100%;
+          margin: 0;
+          min-height: 60px;
+          margin-top: 10px;
+          padding-left: 0; }
+          .app .formCreator .main .window .content .inputfields-group .inputfield, .app .formCreator .main .window .content .newinputfield-group .inputfield {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: 60px;
+            position: relative;
+            margin-bottom: 10px;
+            background-color: #FDFFFC;
+            color: #000543;
+            padding: 0 25px 0 28px;
+            vertical-align: middle;
+            line-height: 60px;
+            border-radius: 2px;
+            font-size: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+            .app .formCreator .main .window .content .inputfields-group .inputfield .input-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon {
+              position: absolute;
+              display: inline-block;
+              left: 4px;
+              height: 20px;
+              width: 20px;
+              padding-top: 20px; }
+              .app .formCreator .main .window .content .inputfields-group .inputfield .input-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon * {
+                background-color: #000543; }
+            .app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon {
+              position: absolute;
+              display: inline-block;
+              right: 10px;
+              height: 20px;
+              width: 20px;
+              padding-top: 20px; }
+              .app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon * {
+                background-color: #000543; }
+          .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: 60px;
+            position: relative;
+            margin-bottom: 10px;
+            background-color: rgba(253, 255, 252, 0.2);
+            color: #000543;
+            padding: 0 25px 0 28px;
+            vertical-align: middle;
+            line-height: 60px;
+            border-radius: 2px;
+            font-size: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            border: 2px dashed #FDFFFC; }
+            .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon {
+              position: absolute;
+              display: inline-block;
+              left: 4px;
+              height: 20px;
+              width: 20px;
+              padding-top: 20px; }
+              .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon * {
+                background-color: #000543; }
+            .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon {
+              position: absolute;
+              display: inline-block;
+              right: 10px;
+              height: 20px;
+              width: 20px;
+              padding-top: 20px; }
+              .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon * {
+                background-color: #000543; }
+          .app .formCreator .main .window .content .inputfields-group .newinputfield, .app .formCreator .main .window .content .newinputfield-group .newinputfield {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: 60px;
+            position: relative;
+            margin-bottom: 10px;
+            background-color: #2bf4b1;
+            color: #000543;
+            padding: 0 25px 0 28px;
+            vertical-align: middle;
+            line-height: 60px;
+            border-radius: 2px;
+            font-size: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            cursor: default; }
+            .app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
+              position: absolute;
+              display: inline-block;
+              left: 4px;
+              height: 20px;
+              width: 20px;
+              padding-top: 20px; }
+              .app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon *, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon * {
+                background-color: #000543; }
+            .app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon {
+              position: absolute;
+              display: inline-block;
+              right: 10px;
+              height: 20px;
+              width: 20px;
+              padding-top: 20px; }
+              .app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon * {
+                background-color: #000543; }
+            .app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
+              position: absolute;
+              display: inline-block;
+              left: 4px;
+              height: 24px;
+              width: 24px;
+              padding-top: 18px; }
+        .app .formCreator .main .window .content .newinputfield-group {
+          margin-bottom: 20px; }
+        .app .formCreator .main .window .content .inputfield-group-border {
+          border: 2px dashed white;
+          border-radius: 2px;
+          box-sizing: border-box; }
+    .app .formCreator .popup {
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+      overflow: hidden;
+      border-radius: 2px;
+      height: auto;
+      width: auto;
+      top: 18px;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      background-color: white;
+      z-index: 15; }
+      .app .formCreator .popup .toolbar-editor {
+        padding: 0;
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        text-align: left;
+        width: 350px;
+        height: 100%;
+        background-color: #E93255; }
+        .app .formCreator .popup .toolbar-editor .inputfield-name {
+          padding: 0 15px 0 10px;
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 40px;
+          top: 0;
+          left: 0;
+          background-color: #1289D0; }
+          .app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-icon {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 20px;
+            top: 10px; }
+          .app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-name-inner {
+            display: inline-block;
+            height: inherit;
+            width: auto;
+            color: white;
+            line-height: 40px;
+            vertical-align: middle;
+            text-align: left;
+            box-sizing: border-box;
+            padding-left: 35px;
+            font-size: 20px; }
+        .app .formCreator .popup .toolbar-editor .inputfield-save {
+          padding: 0;
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 50px;
+          bottom: 0;
+          left: 0;
+          padding-top: 10px;
+          box-sizing: border-box;
+          background-color: #1289D0; }
+          .app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button {
+            display: block;
+            width: 60px;
+            height: 30px;
+            float: right;
+            margin-right: 15px;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 30px;
+            background-color: #0672AF;
+            color: white;
+            cursor: pointer; }
+            .app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button:hover {
+              background-color: #034369; }
+          .app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button {
+            display: block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            vertical-align: middle;
+            float: right;
+            margin-right: 5px;
+            color: white;
+            background-color: #5562AA;
+            cursor: pointer; }
+            .app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button:hover {
+              background-color: #24327D; }
+        .app .formCreator .popup .toolbar-editor .inputfield-setting {
+          box-sizing: border-box;
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: auto;
+          top: 40px;
+          bottom: 50px;
+          left: 0;
+          background-color: #5562AA;
+          background-color: #3A4895;
+          background-image: -webkit-gradient(linear, left top, right top, from(#3A4895), to(#394793));
+          background-image: -webkit-linear-gradient(left, #3A4895, #394793);
+          background-image: -moz-linear-gradient(left, #3A4895, #394793);
+          background-image: -ms-linear-gradient(left, #3A4895, #394793);
+          background-image: -o-linear-gradient(left, #3A4895, #394793);
+          background-image: linear-gradient(left, #3A4895, #394793);
+          filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#3A4895', end-colourStr='#394793', gradientType='1');
+          overflow-y: auto; }
+          .app .formCreator .popup .toolbar-editor .inputfield-setting .block {
+            width: 100%;
+            height: auto;
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 8px 16px;
+            border-bottom: 1px solid #FDFFFC; }
+            .app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading {
+              display: block;
+              width: 100%;
+              height: 25px;
+              line-height: 25px;
+              font-size: 16px;
+              color: #FDFFFC; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading .description {
+                display: inline-block;
+                position: absolute;
+                display: none;
+                height: 21px;
+                width: 21px;
+                padding-top: 2px;
+                padding-left: 5px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading .description .icon-description {
+                  background-color: white; }
+            .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body {
+              width: 100%;
+              height: auto;
+              clear: both; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label {
+                text-align: left;
+                float: left;
+                width: calc(100% - 120px);
+                height: 25px;
+                line-height: 25px;
+                font-size: 16px;
+                color: #FDFFFC;
+                margin-bottom: 3px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label .description {
+                  display: inline-block;
+                  position: absolute;
+                  display: none;
+                  height: 21px;
+                  width: 21px;
+                  padding-top: 2px;
+                  padding-left: 5px; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label .description .icon-description {
+                    background-color: white; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .small-input {
+                width: calc(100% - 2px);
+                height: 23px;
+                border: none;
+                border-radius: 2px;
+                display: inline-block;
+                margin-bottom: 3px;
+                box-sizing: border-box;
+                padding-left: 5px; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .max-length {
+                width: calc(30% - 2px);
+                height: 25px;
+                border: none;
+                border-radius: 2px;
+                display: inline-block;
+                margin-bottom: 3px;
+                box-sizing: border-box;
+                padding-left: 5px; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .large-input {
+                width: calc(100% - 4px);
+                height: 55px;
+                border: none;
+                border-radius: 2px;
+                display: inline-block;
+                resize: none;
+                margin-bottom: 3px; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block {
+                width: 100%;
+                margin-bottom: 10px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block:last-child {
+                  margin-bottom: 3px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .choice {
+                  width: calc(100% - 30px - 15px - 4px);
+                  border: none;
+                  height: 23px;
+                  border-radius: 2px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls {
+                  width: 30px;
+                  float: right; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
+                    position: relative;
+                    float: left;
+                    height: 23px;
+                    width: 23px;
+                    padding-right: 5px;
+                    cursor: pointer; }
+                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon .icon-add, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon .icon-add {
+                      background-color: #2bf4b1; }
+                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon .icon-close, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon .icon-close {
+                      background-color: #E93255; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count {
+                width: 100%;
+                margin-top: 3px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .label {
+                  width: 100%; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
+                  width: calc(50% - 5px);
+                  float: left; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .min-selected, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .max-selected, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .min-selected, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .max-selected {
+                    width: calc(100% - 6px);
+                    height: 25px;
+                    border: none;
+                    border-radius: 2px;
+                    display: inline-block;
+                    margin-bottom: 3px;
+                    box-sizing: border-box;
+                    padding-left: 5px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
+                  float: right; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset {
+                width: calc(100% - 45px - 2px);
+                height: 23px;
+                border: none;
+                border-radius: 2px;
+                display: inline-block;
+                margin-bottom: 3px;
+                box-sizing: border-box;
+                padding-left: 5px; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon {
+                position: relative;
+                height: 23px;
+                width: 23px;
+                float: right;
+                padding-right: 5px;
+                cursor: pointer; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon .icon-add {
+                  background-color: white; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .description-block {
+                display: none;
+                width: 100%; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup {
+                width: 90px;
+                height: 25px;
+                border: none;
+                border-radius: 2px;
+                display: block;
+                float: right;
+                overflow: hidden;
+                margin-bottom: 3px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover {
+                  position: relative;
+                  width: 135px;
+                  left: -45px;
+                  cursor: pointer; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
+                    float: left;
+                    width: 45px;
+                    height: 25px;
+                    line-height: 25px;
+                    vertical-align: middle;
+                    text-align: center;
+                    color: white;
+                    border-radius: 0; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup {
+                    background-color: #2bf4b1;
+                    border-top-left-radius: 2px;
+                    border-bottom-left-radius: 2px; }
+                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup:hover {
+                      background-color: #00E499; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
+                    background-color: #040520;
+                    border-radius: 2px; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup {
+                    background-color: #E93255;
+                    border-top-right-radius: 2px;
+                    border-bottom-right-radius: 2px; }
+                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup:hover {
+                      background-color: #AE1331; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected {
+                  left: 0; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected .slider {
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 2px;
+                    border-bottom-right-radius: 2px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected {
+                  left: -45px; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected .slider {
+                    border-top-left-radius: 2px;
+                    border-bottom-left-radius: 2px;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px; }
+              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block {
+                border-top: 1px solid white;
+                display: none;
+                margin-top: 5px; }
+                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save {
+                  padding: 0;
+                  display: block;
+                  width: 100%;
+                  bottom: 0;
+                  left: 0;
+                  padding-top: 10px;
+                  box-sizing: border-box; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-save-button {
+                    display: block;
+                    width: 60px;
+                    height: 30px;
+                    float: right;
+                    margin-right: 15px;
+                    vertical-align: middle;
+                    text-align: center;
+                    line-height: 30px;
+                    background-color: #0672AF;
+                    color: white;
+                    cursor: pointer; }
+                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-cancel-button {
+                    display: block;
+                    width: 80px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    vertical-align: middle;
+                    float: right;
+                    margin-right: 5px;
+                    color: white;
+                    background-color: #1289D0;
+                    cursor: pointer; }
+      .app .formCreator .popup .preview {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 350px;
+        overflow: auto;
+        overflow-x: hidden;
+        background-color: #FDFFFC; }
+        .app .formCreator .popup .preview .preview-block {
+          width: 450px;
+          padding-left: 40px;
+          box-sizing: border-box;
+          margin-top: 200px;
+          visibility: hidden; }
+          .app .formCreator .popup .preview .preview-block .fieldname {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            position: relative;
+            color: #040520;
+            vertical-align: middle;
+            line-height: 30px;
+            font-size: 30px;
+            cursor: pointer; }
+          .app .formCreator .popup .preview .preview-block .description {
+            box-sizing: border-box;
+            width: 100%;
+            position: relative;
+            color: #040520;
+            margin-top: 10px;
+            vertical-align: middle;
+            line-height: 20px;
+            font-size: 20px;
+            cursor: pointer; }
+          .app .formCreator .popup .preview .preview-block .shortanswer {
+            width: 100%;
+            height: 38px;
+            border: none;
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 20px; }
+            .app .formCreator .popup .preview .preview-block .shortanswer .shortanswer-input {
+              width: calc(100% - 4px);
+              height: 100%;
+              font-size: 32px;
+              border: #757575 1px solid;
+              border-radius: 2px;
+              display: inline-block; }
+          .app .formCreator .popup .preview .preview-block .longanswer {
+            width: 100%;
+            height: 120px;
+            border: none;
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 20px; }
+            .app .formCreator .popup .preview .preview-block .longanswer .longanswer-input {
+              resize: none;
+              width: calc(100% - 4px);
+              height: 100%;
+              font-size: 20px;
+              border: #757575 1px solid;
+              border-radius: 2px;
+              display: inline-block; }
+          .app .formCreator .popup .preview .preview-block .selectbox {
+            width: 100%;
+            height: 38px;
+            border: none;
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 20px; }
+            .app .formCreator .popup .preview .preview-block .selectbox .selectbox-input {
+              width: calc(100% - 4px);
+              height: 100%;
+              font-size: 22px;
+              border: #f0f0f0 1px solid;
+              border-radius: 2px;
+              display: inline-block; }
+          .app .formCreator .popup .preview .preview-block .checkbox {
+            width: 100%;
+            border: none;
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 20px; }
+            .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checkbox-input {
+              display: none; }
+            .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label {
+              width: 100%;
+              display: block;
+              height: 34px;
+              position: relative;
+              cursor: pointer;
+              background-color: white;
+              font-size: 24px;
+              line-height: 34px;
+              margin-bottom: 6px;
+              padding-left: 40px;
+              box-sizing: border-box;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              border-radius: 2px;
+              border: 1px solid #E93255; }
+              .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon {
+                display: block;
+                position: absolute;
+                background-color: #E93255;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 34px; }
+                .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon .icon-check {
+                  background-color: darkgray; }
+            .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked {
+              border: 1px solid #2bf4b1; }
+              .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon {
+                background-color: #2bf4b1; }
+                .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon .icon-check {
+                  background-color: white; }
+          .app .formCreator .popup .preview .preview-block .preview-save {
+            display: block;
+            height: 50px;
+            box-sizing: border-box; }
+            .app .formCreator .popup .preview .preview-block .preview-save .preview-next-button, .app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
+              display: block;
+              width: 80px;
+              height: 30px;
+              float: right;
+              vertical-align: middle;
+              text-align: center;
+              line-height: 30px;
+              font-size: 20px;
+              border-radius: 2px;
+              background-color: #2bf4b1;
+              color: white;
+              cursor: pointer; }
+            .app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
+              float: left;
+              background-color: #E93255; }
+            .app .formCreator .popup .preview .preview-block .preview-save .preview-next-button {
+              float: right;
+              background-color: #2bf4b1; }
+        .app .formCreator .popup .preview .close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: black;
+          width: 40px;
+          height: 40px;
+          cursor: pointer; }
+          .app .formCreator .popup .preview .close .icon-close {
+            background-color: #040520; }
+
+.blur {
+  -webkit-filter: blur(1px) grayscale(0.2) opacity(0.8);
+  -moz-filter: blur(1px) grayscale(0.2) opacity(0.8);
+  -o-filter: blur(1px) grayscale(0.2) opacity(0.8);
+  -ms-filter: blur(1px);
+  filter: blur(1px) grayscale(0.2) opacity(0.8); }
+
+.app .formMapper {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0; }
+  .app .formMapper .transition, .app .formMapper .transition-icon {
+    cursor: pointer; }
+  .app .formMapper .transition-controlls {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 240px;
+    height: 120px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 8px 4px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+    .app .formMapper .transition-controlls .close-controlls {
+      width: 24px;
+      height: 24px;
+      right: 0;
+      top: 0;
+      position: absolute;
+      z-index: 15; }
+      .app .formMapper .transition-controlls .close-controlls .icon-close {
+        background-color: #680014; }
+    .app .formMapper .transition-controlls:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-top: 12px solid white;
+      border-right: 12px solid transparent;
+      border-left: 12px solid transparent;
+      left: 108px;
+      bottom: -12px; }
+    .app .formMapper .transition-controlls .action-selector, .app .formMapper .transition-controlls .remove-form-confirm, .app .formMapper .transition-controlls .change-form-name-confirm {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%; }
+      .app .formMapper .transition-controlls .action-selector .headline, .app .formMapper .transition-controlls .remove-form-confirm .headline, .app .formMapper .transition-controlls .change-form-name-confirm .headline {
+        width: calc(100% - 40px);
+        margin: auto;
+        height: 24px;
+        line-height: 24px;
+        font-size: 22px;
+        text-align: center;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+    .app .formMapper .transition-controlls .remove-form-confirm, .app .formMapper .transition-controlls .change-form-name-confirm {
+      display: none; }
+      .app .formMapper .transition-controlls .remove-form-confirm .save, .app .formMapper .transition-controlls .remove-form-confirm .cancel, .app .formMapper .transition-controlls .remove-form-confirm .remove, .app .formMapper .transition-controlls .change-form-name-confirm .save, .app .formMapper .transition-controlls .change-form-name-confirm .cancel, .app .formMapper .transition-controlls .change-form-name-confirm .remove {
+        position: absolute;
+        bottom: 0;
+        width: 30%;
+        height: 25px;
+        line-height: 25px;
+        font-size: 15px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 2px;
+        background-color: lightgray;
+        right: 0; }
+        .app .formMapper .transition-controlls .remove-form-confirm .save:hover, .app .formMapper .transition-controlls .remove-form-confirm .cancel:hover, .app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .app .formMapper .transition-controlls .change-form-name-confirm .save:hover, .app .formMapper .transition-controlls .change-form-name-confirm .cancel:hover, .app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
+          background-color: grey;
+          color: white;
+          cursor: pointer; }
+      .app .formMapper .transition-controlls .remove-form-confirm .cancel, .app .formMapper .transition-controlls .change-form-name-confirm .cancel {
+        left: 0; }
+      .app .formMapper .transition-controlls .remove-form-confirm .remove, .app .formMapper .transition-controlls .change-form-name-confirm .remove {
+        background-color: #E93255;
+        color: black; }
+        .app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
+          background-color: #AE1331; }
+      .app .formMapper .transition-controlls .remove-form-confirm .remove, .app .formMapper .transition-controlls .change-form-name-confirm .remove {
+        background-color: #E93255;
+        color: #680014; }
+        .app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
+          background-color: #AE1331; }
+      .app .formMapper .transition-controlls .remove-form-confirm .save, .app .formMapper .transition-controlls .change-form-name-confirm .save {
+        background-color: #2bf4b1;
+        color: #003F24; }
+        .app .formMapper .transition-controlls .remove-form-confirm .save:hover, .app .formMapper .transition-controlls .change-form-name-confirm .save:hover {
+          background-color: #003F24; }
+    .app .formMapper .transition-controlls .action-selector .change-form, .app .formMapper .transition-controlls .action-selector .remove-form, .app .formMapper .transition-controlls .action-selector .edit-form {
+      position: relative;
+      height: auto;
+      width: calc( (100% - 6*2% - 6*2px ) / 3);
+      margin-top: 20px;
+      border-radius: 2px;
+      float: left;
+      margin-left: 2%;
+      margin-right: 2%;
+      cursor: pointer;
+      box-sizing: border-box; }
+      .app .formMapper .transition-controlls .action-selector .change-form .icon-add, .app .formMapper .transition-controlls .action-selector .change-form .icon-close, .app .formMapper .transition-controlls .action-selector .change-form .icon-test1, .app .formMapper .transition-controlls .action-selector .remove-form .icon-add, .app .formMapper .transition-controlls .action-selector .remove-form .icon-close, .app .formMapper .transition-controlls .action-selector .remove-form .icon-test1, .app .formMapper .transition-controlls .action-selector .edit-form .icon-add, .app .formMapper .transition-controlls .action-selector .edit-form .icon-close, .app .formMapper .transition-controlls .action-selector .edit-form .icon-test1 {
+        height: 40px;
+        width: 40px;
+        margin: auto;
+        background-color: black; }
+      .app .formMapper .transition-controlls .action-selector .change-form .label, .app .formMapper .transition-controlls .action-selector .remove-form .label, .app .formMapper .transition-controlls .action-selector .edit-form .label {
+        text-align: center;
+        color: #040520; }
+      .app .formMapper .transition-controlls .action-selector .change-form:hover, .app .formMapper .transition-controlls .action-selector .remove-form:hover, .app .formMapper .transition-controlls .action-selector .edit-form:hover {
+        margin-top: 19px;
+        border: 1px solid #757575; }
+    .app .formMapper .transition-controlls .action-selector .change-form .icon-test1 {
+      background-color: #1289D0; }
+    .app .formMapper .transition-controlls .action-selector .remove-form .icon-close {
+      background-color: #AE1331; }
+    .app .formMapper .transition-controlls .action-selector .edit-form .icon-add {
+      background-color: #009464; }
+    .app .formMapper .transition-controlls .remove-form-confirm .question {
+      height: 40px;
+      margin-top: 5px;
+      line-height: 20px;
+      font-size: 15px;
+      text-align: center;
+      vertical-align: middle; }
+    .app .formMapper .transition-controlls .change-form-name-confirm .form-name {
+      margin-top: 15px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 18px;
+      vertical-align: middle;
+      width: calc(100% - 6px); }
+  .app .formMapper .close-mapper {
+    position: absolute;
+    bottom: 5px;
+    right: 5px; }
+    .app .formMapper .close-mapper .close-button {
+      display: block;
+      width: 120px;
+      height: 30px;
+      float: right;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 30px;
+      font-size: 22px;
+      border-radius: 2px;
+      background-color: #2bf4b1;
+      color: white;
+      cursor: pointer;
+      background-color: #003F24;
+      background-image: -webkit-gradient(linear, left top, right top, from(#003F24), to(#009464));
+      background-image: -webkit-linear-gradient(left, #003F24, #009464);
+      background-image: -moz-linear-gradient(left, #003F24, #009464);
+      background-image: -ms-linear-gradient(left, #003F24, #009464);
+      background-image: -o-linear-gradient(left, #003F24, #009464);
+      background-image: linear-gradient(left, #003F24, #009464);
+      filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#003F24', end-colourStr='#009464', gradientType='1'); }
+
+.app .formSelector {
+  display: none;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 440px;
+  height: 250px;
+  margin: auto;
+  padding: 4px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+  .app .formSelector .close-form-selector {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 20px;
+    height: 20px; }
+    .app .formSelector .close-form-selector .icon-close {
+      background-color: #040520; }
+  .app .formSelector .select-block {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    position: relative; }
+    .app .formSelector .select-block .select-icons {
+      display: block;
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute; }
+      .app .formSelector .select-block .select-icons .copy-form, .app .formSelector .select-block .select-icons .new-form {
+        width: calc(50% - 5px);
+        height: 100%;
+        border-radius: 2px;
+        position: relative; }
+        .app .formSelector .select-block .select-icons .copy-form .label, .app .formSelector .select-block .select-icons .new-form .label {
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          width: 100%;
+          line-height: 30px;
+          font-size: 25px;
+          color: white;
+          text-align: center; }
+        .app .formSelector .select-block .select-icons .copy-form .copy-form-icon, .app .formSelector .select-block .select-icons .copy-form .new-form-icon, .app .formSelector .select-block .select-icons .new-form .copy-form-icon, .app .formSelector .select-block .select-icons .new-form .new-form-icon {
+          height: 150px;
+          width: 150px;
+          margin: auto;
+          margin-top: 20px; }
+      .app .formSelector .select-block .select-icons .copy-form {
+        float: left;
+        background-color: #00E499; }
+        .app .formSelector .select-block .select-icons .copy-form:hover {
+          background-color: #009464; }
+      .app .formSelector .select-block .select-icons .new-form {
+        float: right;
+        background-color: #E93255; }
+        .app .formSelector .select-block .select-icons .new-form:hover {
+          background-color: #AE1331; }
+      .app .formSelector .select-block .select-icons .new-form.disabled:hover {
+        background-color: #E93255; }
+      .app .formSelector .select-block .select-icons .copy-form.disabled:hover {
+        background-color: #2bf4b1; }
+    .app .formSelector .select-block .select-name, .app .formSelector .select-block .select-form {
+      display: none;
+      width: 100%;
+      height: 150px;
+      font-size: 25px;
+      border-radius: 2px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+      .app .formSelector .select-block .select-name .label, .app .formSelector .select-block .select-form .label {
+        margin-bottom: 20px;
+        text-align: center; }
+      .app .formSelector .select-block .select-name .form-outer-block, .app .formSelector .select-block .select-form .form-outer-block {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 20px;
+        position: relative; }
+        .app .formSelector .select-block .select-name .form-outer-block .form-name, .app .formSelector .select-block .select-name .form-outer-block .form-selector, .app .formSelector .select-block .select-form .form-outer-block .form-name, .app .formSelector .select-block .select-form .form-outer-block .form-selector {
+          width: calc(100% - 6px);
+          height: 30px;
+          line-height: 30px; }
+      .app .formSelector .select-block .select-name .save-form-name, .app .formSelector .select-block .select-name .save-form-selection, .app .formSelector .select-block .select-form .save-form-name, .app .formSelector .select-block .select-form .save-form-selection {
+        padding: 0;
+        display: block;
+        position: relative;
+        height: 50px;
+        padding-top: 10px;
+        box-sizing: border-box;
+        margin: auto;
+        width: 290px; }
+        .app .formSelector .select-block .select-name .save-form-name .cancel-save, .app .formSelector .select-block .select-name .save-form-name .confirm-save, .app .formSelector .select-block .select-name .save-form-selection .cancel-save, .app .formSelector .select-block .select-name .save-form-selection .confirm-save, .app .formSelector .select-block .select-form .save-form-name .cancel-save, .app .formSelector .select-block .select-form .save-form-name .confirm-save, .app .formSelector .select-block .select-form .save-form-selection .cancel-save, .app .formSelector .select-block .select-form .save-form-selection .confirm-save {
+          display: inline-block;
+          width: 120px;
+          height: 30px;
+          float: left;
+          vertical-align: middle;
+          text-align: center;
+          line-height: 30px;
+          font-size: 24px;
+          background-color: #0672AF;
+          color: white;
+          cursor: pointer;
+          border-radius: 2px; }
+          .app .formSelector .select-block .select-name .save-form-name .cancel-save:hover, .app .formSelector .select-block .select-name .save-form-name .confirm-save:hover, .app .formSelector .select-block .select-name .save-form-selection .cancel-save:hover, .app .formSelector .select-block .select-name .save-form-selection .confirm-save:hover, .app .formSelector .select-block .select-form .save-form-name .cancel-save:hover, .app .formSelector .select-block .select-form .save-form-name .confirm-save:hover, .app .formSelector .select-block .select-form .save-form-selection .cancel-save:hover, .app .formSelector .select-block .select-form .save-form-selection .confirm-save:hover {
+            background-color: #034369; }
+        .app .formSelector .select-block .select-name .save-form-name .confirm-save, .app .formSelector .select-block .select-name .save-form-selection .confirm-save, .app .formSelector .select-block .select-form .save-form-name .confirm-save, .app .formSelector .select-block .select-form .save-form-selection .confirm-save {
+          background-color: #5562AA;
+          float: right; }
+          .app .formSelector .select-block .select-name .save-form-name .confirm-save:hover, .app .formSelector .select-block .select-name .save-form-selection .confirm-save:hover, .app .formSelector .select-block .select-form .save-form-name .confirm-save:hover, .app .formSelector .select-block .select-form .save-form-selection .confirm-save:hover {
+            background-color: #24327D; }
+    .app .formSelector .select-block .select-form .form-outer-block .form-selector {
+      width: 100%;
+      -webkit-appearance: menulist-button; }
+.app .disabled {
+  -webkit-filter: grayscale(95%);
+  -moz-filter: grayscale(95%);
+  -ms-filter: grayscale(95%);
+  -o-filter: grayscale(95%);
+  filter: grayscale(95%);
+  filter: url(grayscale.svg);
+  /* Firefox 4+ */
+  filter: gray;
+  /* IE 6-9 */ }
+.app .error {
+  outline: 2px solid red; }
+  .app .error:focus {
+    outline: 2px solid red; }
+
+/*# sourceMappingURL=mainformsstyles.css.map */

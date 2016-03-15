@@ -1,0 +1,84 @@
+@mixin icon($icon,$color:white){
+    background-color: $color;
+    -webkit-mask-image: url("../../../src/global/content/svg/" + $icon + ".svg");
+    mask-image: url("../../../src/global/content/svg/" + $icon + ".svg");
+    width: 100%;
+    height: 100%;
+}
+
+.icon-add{
+  @include icon("round75");
+}
+
+.icon-close{
+  @include icon("delete85");
+}
+
+.icon-check{
+  @include icon("basic14");
+}
+
+.icon-date{
+  @include icon("basic17");
+}
+
+.icon-description{
+  @include icon("warning39");
+}
+
+.icon-selectbox{
+  @include icon("expand42");
+}
+
+.icon-email{
+  @include icon("basic16");
+}
+
+.icon-fileupload{
+  @include icon("rocket74");
+}
+
+.icon-longanswer{
+  @include icon("center13");
+}
+
+
+.icon-checkbox{
+  @include icon("bookmark49");
+}
+
+.icon-number{
+  @include icon("home153");
+}
+
+.icon-pictureupload{
+  @include icon("print45");
+}
+
+.icon-shortanswer{
+  @include icon("left225");
+}
+
+.icon-test1{
+  @include icon("wrench73");
+}
+.icon-test2{
+  @include icon("thumbtack1");
+}
+.icon-test3{
+  @include icon("unlocked46");
+}
+.icon-test4{
+  @include icon("expand43");
+}
+.icon-test5{
+  @include icon("dollar178");
+}
+
+.icon-yesno{
+  @include icon("navigation12");
+}
+
+.icon-right{
+  @include icon("right164");
+}
