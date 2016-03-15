@@ -1,0 +1,121 @@
+.drop-card{
+  display: none;
+  width: 600px;
+  height: 270px;
+  position: absolute;
+  background-color: inherit;
+  top:35px;
+  left:0;
+  border-radius: 5px;
+  cursor: default;
+  z-index: 2;
+  .content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .top-line{
+      height: 5px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .menu{
+      height: calc(100% - 5px);
+      width:100%;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      box-sizing: border-box;
+
+      .column{
+        width: 50%;
+        height:100%;
+        box-sizing: border-box;
+        padding:0 30px;
+        border-right: 1px solid $gray2;
+        font-size: $textSize;
+        color:$gray;
+        &:first-child{
+          padding-left: 0;
+          float: left;
+        }
+        &:last-child{
+          padding-right: 0;
+          border-right: 0;
+          float: right;
+        }
+        .header{
+          font-size: $textSize;
+          color:$gray3;
+          margin-bottom: 20px;
+
+        }
+        .links{
+          .link{
+            padding: 8px 0;
+            font-size: $textSmallSize;
+            border-bottom: 1px solid $gray2;
+            box-sizing: border-box;
+            cursor: pointer;
+            &:last-child{
+              border-bottom: 0;
+            }
+
+            .text{
+
+            }
+            .icon{
+              color:$blue;
+            }
+
+            &:hover{
+              .text{
+                color: $gray3;
+              }
+              .icon{
+                color:$blue2;
+              }
+            }
+          }
+        }
+        .alphabet{
+          margin-bottom: 20px;
+          .char{
+            display: inline-block;
+            padding: 4px;
+            box-sizing: border-box;
+            cursor: pointer;
+            &:hover{
+              color: $gray3;
+            }
+          }
+        }
+        .search{
+          .search-input{
+            @include input(white,$gray3,white,$gray3);
+            font-size: $textSmallSize;
+            margin-right: 5px;
+          }
+          .search-button{
+            @include button($blue,white,$blue2,white);
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+  .card-tr{
+    display:table-row;
+    width: 100%;
+  }
+
+  .card-td{
+    display: table-cell;
+  }
+}

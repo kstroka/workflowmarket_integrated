@@ -1,0 +1,4 @@
+Pridane kopirovanie roli do firmy pri kopirovani procesu
+vytvorenie suborov include/functions.php a include/errors.php
+odstranenie zbytocnych class z core/object a prerobenie cesty k registru
+niektore funkcie este nemaju vzdy view, ale iba zopar, ked je chyba
