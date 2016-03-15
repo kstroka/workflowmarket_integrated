@@ -43,19 +43,19 @@ module.exports = function(grunt) {
 
       }
     },
-    //mustache: {
-    //  files : {
-    //    src: 'src/global/templates/',
-    //    dest: 'src/global/js/templates.js',
-    //    options: {
-    //      prefix: 'wm.__.templates = ',
-    //      postfix: ";",
-    //      verbose:true,
-    //      livereload: true
-    //
-    //    }
-    //  }
-    //},
+    mustache: {
+      files : {
+        src: 'global/templates/',
+        dest: 'global/js/templates.js',
+        options: {
+          prefix: 'wm.__.templates = ',
+          postfix: ";",
+          verbose:true,
+          livereload: true
+
+        }
+      }
+    },
 
     watch: {
       css: {
