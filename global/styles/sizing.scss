@@ -1,0 +1,18 @@
+body .container{
+  margin: 0 auto;
+  position: relative;
+  @include xlarge{
+    max-width: $large-desktop;
+  }
+  @include large{
+    max-width: $desktop;
+  }
+
+  @include medium{
+    max-width:  $tablet;
+  }
+
+  @include small{
+    max-width: $mobile;
+  }
+}
