@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Workflow market</title>
+    <meta name="description" content="Workflow market">
+    <meta name="author" content="Jan Polacek">
+
+    <link rel="stylesheet" href="./src/global/vendor/normalize.css">
+    <link rel="stylesheet" href="./src/global/vendor/jquery-ui.min.css">
+    <link rel="stylesheet" href="./src/homepage/build/homepage.css">
+
+</head>
+
+<body>
+
+<script src="./src/global/vendor/jquery-2.2.0.min.js"></script>
+<script src="./src/global/vendor/jquery-ui.min.js"></script>
+<script src="./src/global/vendor/mustache.min.js"></script>
+<script>
+    window.wm = window.wm || {__:{}};
+
+</script>
+<script src="src/global/js/templates.js"></script>
+<script src="src/homepage/build/homepage.js"></script>
+
+<script>
+    wm.home = new wm.__.Homepage();
+</script>
+
+</body>
+
+</html>
