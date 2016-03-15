@@ -1,7 +1,7 @@
 @mixin icon($icon,$color:white){
     background-color: $color;
-    -webkit-mask-image: url("../../../src/global/content/svg/" + $icon + ".svg");
-    mask-image: url("../../../src/global/content/svg/" + $icon + ".svg");
+    -webkit-mask-image: url("../../src/global/content/svg/" + $icon + ".svg");
+    mask-image: url("../../src/global/content/svg/" + $icon + ".svg");
     width: 100%;
     height: 100%;
 }

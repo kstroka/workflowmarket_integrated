@@ -3105,7 +3105,7 @@ function loadVariables(){
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','width',width);
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','x',x);
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','y',y);
-        svgimg.setAttributeNS('http://www.w3.org/1999/xlink','href','./src/global/content/svg/bookmark49.svg');
+        svgimg.setAttributeNS('http://www.w3.org/1999/xlink','href','../global/content/svg/bookmark49.svg');
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','class','transition-icon');
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','id',transitionID);
 

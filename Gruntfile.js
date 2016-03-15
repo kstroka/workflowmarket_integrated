@@ -5,8 +5,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'src/forms/build/mainformsstyles.css': 'src/forms/styles/mainformsstyles.scss',
-          'src/homepage/build/homepage.css':'src/homepage/styles/mainhomepagestyles.scss'
+          'jan/build/mainformsstyles.css': 'jan/styles/mainformsstyles.scss',
+          'martin/homepage/build/homepage.css':'martin/homepage/styles/mainhomepagestyles.scss'
         }
       }
     },
@@ -17,20 +17,20 @@ module.exports = function(grunt) {
       forms: {
         files:[
           {
-            src: ['src/forms/js/**/*.js', '!src/forms/js/base/load.js', 'src/forms/js/base/load.js'],
-              dest:'src/forms/build/forms.js'
+            src: ['jan/js/**/*.js', '!jan/js/base/load.js', 'jan/js/base/load.js'],
+              dest:'jan/build/forms.js'
            },
           {
-            src: ['src/homepage/js/**/*.js'],
-            dest: 'src/homepage/build/homepage.js'}
+            src: ['martin/homepage/js/**/*.js'],
+            dest: 'martin/homepage/build/homepage.js'}
         ]
       }
     },
     webfont: {
       icons: {
-        src: 'src/global/content/svg/*.svg',
-        dest: 'src/global/styles/fonts/',
-        destCss: 'src/global/styles/',
+        src: 'global/content/svg/*.svg',
+        dest: 'global/styles/fonts/',
+        destCss: 'global/styles/',
         options: {
             font:'font-icon',
              stylesheet: 'scss',
@@ -43,48 +43,49 @@ module.exports = function(grunt) {
 
       }
     },
-    mustache: {
-      files : {
-        src: 'src/global/templates/',
-        dest: 'src/global/js/templates.js',
-        options: {
-          prefix: 'wm.__.templates = ',
-          postfix: ";",
-          verbose:true,
-          livereload: true
-
-        }
-      }
-    },
+    //mustache: {
+    //  files : {
+    //    src: 'src/global/templates/',
+    //    dest: 'src/global/js/templates.js',
+    //    options: {
+    //      prefix: 'wm.__.templates = ',
+    //      postfix: ";",
+    //      verbose:true,
+    //      livereload: true
+    //
+    //    }
+    //  }
+    //},
 
     watch: {
       css: {
         files: [
-          'src/forms/styles/**/*.scss',
-          'src/homepage/styles/**/*.scss',
-          'src/global/styles/**/*.scss'],
+          'jan/styles/**/*.scss',
+          'martin/homepage/styles/**/*.scss',
+          'global/styles/**/*.scss'],
         tasks: ['sass'],
         options: {
           livereload: true
         }
       },
-      mustache:{
-        files: ['**/*.mustache'],
-        tasks: ['mustache'],
-        options: {
-
-          livereload: true
-        }
-
-      },
-      other: {
-        files: ['src/forms/js/**/*.js','!src/global/js/templates.js','src/homepage/js/**/*.js'],
+      //mustache:{
+      //  files: ['**/*.mustache'],
+      //  tasks: ['mustache'],
+      //  options: {
+      //
+      //    livereload: true
+      //  }
+      //
+      //},
+      js: {
+        files: ['jan/js/**/*.js','!global/js/templates.js','martin/homepage/js/**/*.js'],
         tasks: ['concat'/*,'uglify'*/],
         options: {
           livereload: true
         }
       }
     }
+
 
 
   });
