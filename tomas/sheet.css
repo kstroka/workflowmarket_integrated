@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container{
     width: 100%;
     height: 800px;
@@ -177,3 +178,184 @@ input{
 #controlArea i{
     font-size: 30px;
 }
+=======
+.container{
+    width: 100%;
+    height: 800px;
+    min-width: 800px;
+
+}
+
+#netDrawArea{
+    border: 1px solid black;
+    width: 100%;
+    height: 85%;
+}
+#controlArea{
+    border: 1px solid black;
+    width: 100%;
+    height: 15%;
+}
+input{
+    margin: 3px;
+    padding: 5px;
+}
+.background{
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: lightgray;
+    position: absolute;
+}
+
+.popup{
+    display: none;
+    top : 0px;
+    bottom:0px;
+    left: 0px;
+    right: 0px;
+
+    height: 300px;
+    width: 500px;
+
+    margin: auto;
+
+    position: absolute;
+    background: white;
+
+    border: 1px solid black;
+
+    text-align: center;
+
+}
+
+.popup .close{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 35px;
+    color:#ff6666;
+
+}
+
+.popup .close:hover{
+    color: #ff1a1a;
+    cursor: pointer;
+}
+.popup .question{
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 28px;
+    text-align: center ;
+    
+}
+
+.popup .popup-input{
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    height: 30px;
+    line-height: 30px;
+    font-size: 28px;
+}
+
+.popup .button-group{
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    bottom:10px;
+}
+
+.popup .button-group .save, .popup .button-group .cancel{
+    height: 100%;
+    width: 100px;
+    background-color: cornflowerblue;
+    font-size: 23px;
+    vertical-align: middle;
+    line-height: 35px;
+    color: white;
+}
+
+.popup .button-group .save:hover, .popup .button-group .cancel:hover{
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+.popup .button-group .save{
+     float: right;
+     margin-right: 5%;
+ }
+
+.popup .button-group .cancel{
+    float: left;
+    margin-left: 5%;
+}
+
+.blur{
+    filter: blur(5px) grayscale(20%);
+    -webkit-filter: blur(5px);
+}
+/*---------------*/
+
+#controlArea ul li input:hover{
+    cursor:pointer;
+}
+
+#controlArea input {
+    opacity: 0;
+    position: absolute;
+ /*sirkaaaa ako*/  
+   
+}
+#controlArea ul li input{
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin :0;
+    padding :0;
+}
+
+#controlArea input + label{
+    margin: 10px;
+    color: #B0B0B0;
+    margin: 0;
+    text-shadow: 1px 1px #fff;
+}
+
+#controlArea input:checked + label{
+    /*color:#5F6F81;*/
+    color:#5F6FF1;
+}
+
+#controlArea li{
+    display: inline-block;
+    /*margin: 2% 0 1%;*/
+}
+
+#controlArea ul li {
+    margin : 0 10px;
+}
+
+#controlArea ul{
+    border: 1px solid #D1D8DD;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 35px;
+    background: #FAFAFA;
+    text-align: center;
+}
+#controlArea i{
+    font-size: 30px;
+}
+>>>>>>> f59f1f213137aef5897a82b4bcd8e11e144b759a
