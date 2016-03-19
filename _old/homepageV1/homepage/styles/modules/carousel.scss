@@ -1,14 +1,33 @@
-.car{
+.carousel{
+  height: 380px;;
+  width: 100%;
+  position: relative;
+
+
+
+  .background{
+    position: absolute;
+    top:0;
+    left: 0;
     width: 100%;
-    position: relative;
-    background: #000;
-    
+    height: 100%;
+
+    background-image: url(" ../../../global/content/background.jpg");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    background-position-y: 90%;
+  }
+
+  .container{
+    height: 100%;
     .drop-buttons{
       position: absolute;
       top:0;
-      left: 20px;
+      left: 0px;
       width: 270px;
-      z-index: 99999;
 
       .button{
         height: 40px;
@@ -52,14 +71,7 @@
         }
       }
     }
-}
+  }
 
-.carousel-middle{
-    @extend .car;
-    height: 140px;
-    
-    .row{
-        margin-top: $gap50;
-    }
-}
 
+}

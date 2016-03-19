@@ -1,5 +1,5 @@
 
 .idea/*
 node_modules/
-.sass-cache/
-/nbproject/private/
+.sass-cache/*
+/nbproject/*

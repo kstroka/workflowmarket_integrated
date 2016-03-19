@@ -1,0 +1,225 @@
+@mixin button($color,$fontColor,$hovercolor,$hoverFontColor,$height:30px){
+  padding: 0px 20px;
+  height: $height;
+  background-color: $color;
+  color:$fontColor;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: 0;
+  line-height: $height;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  &:hover{
+    background-color: $hovercolor;
+    color:$hoverFontColor;
+  }
+  &:focus{
+    outline:0;
+  }
+}
+
+@mixin input($color,$fontColor,$hovercolor,$hoverFontColor,$height:30px){
+  padding: 10px;
+  height: $height;
+  background-color: $color;
+  box-sizing: border-box;
+  color:$fontColor;
+  border: 1px solid $gray2;
+  border-radius: 2px;
+  &:hover{
+    background-color: $hovercolor;
+    color:$hoverFontColor;
+  }
+  &:focus{
+    outline:1px solid $gray2;
+  }
+}
+
+@mixin ellipsis ($line-height, $lines: 2) {
+
+    overflow: hidden;
+    height: $line-height*$lines;
+
+    max-height: $line-height*$lines;
+    line-height: $line-height;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+
+    // Solution for Opera
+    text-overflow: -o-ellipsis-lastline;
+}
+
+@mixin cardlist($color:$blue,$color2:$blue2){
+  width: 100%;
+  height: 500px;
+  padding: 60px 0;
+
+  box-sizing: border-box;
+  .header{
+    font-size: $h2Size;
+    color:$color;
+    margin-bottom: 20px;
+    i{
+      margin-right: 10px;
+    }
+  }
+
+  .card-list{
+    max-height: 335px;
+    overflow: hidden;
+    .pcard,.fcard{
+      width: 270px;
+      height: 310px;
+      margin-left: 40px;
+      border: 1px solid $gray2;
+      display: inline-block;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      color:$gray;
+      font-size: $textSize;
+      position: relative;
+      margin-bottom: 25px;
+
+      @include large{
+        width: 230px;
+        margin-left: 13px;
+      }
+
+    }
+    .pcard{
+
+      .header,.description,.create-number,.download-number,.footer{
+        margin-bottom: 15px;
+        width: 100%;
+      }
+
+      .header{
+        font-size: $h3Size;
+        @include ellipsis($h3Size+3px,2);
+      }
+      &:first-child{
+        margin-left: 0;
+      }
+
+      .description{
+        font-size: $textSmallSize;
+        @include ellipsis($textSmallSize+2,3);
+        color: $gray;
+      }
+
+      .create-number,.download-number{
+        i{
+          font-size: $h2Size;
+          margin-right: 10px;
+        }
+        span{
+          font-size: $textSmallSize;
+        }
+      }
+
+      .create-number{
+        i{
+          color:$color
+        }
+      }
+
+      .download-number{
+        i{
+          color:$color
+        }
+      }
+
+      .footer{
+        padding-top: 10px;
+        border-top: 1px solid $gray2;
+        position: relative;
+        .price,.detail{
+          position: absolute;
+        }
+        .price{
+          float: left;
+          height: 30px;
+          line-height: 30px;
+          vertical-align: middle;
+          i{
+            margin-left: 5px;
+            font-size: $textSize+5;
+            color: #eca83b;
+          }
+        }
+        .detail{
+          @include button($gray2,$color,$gray,$color2,30px);
+          float: right;
+        }
+      }
+
+    }
+    .fcard{
+      .header,.description,.membercount,.processcount,.footer{
+        margin-bottom: 15px;
+        width: 100%;
+      }
+
+      .header{
+        font-size: $h3Size;
+        @include ellipsis($h3Size+3px,2);
+      }
+      &:first-child{
+        margin-left: 0;
+      }
+
+      .description{
+        font-size: $textSmallSize;
+        @include ellipsis($textSmallSize+2,3);
+        color: $gray;
+      }
+
+      .membercount,.processcount{
+        i{
+          font-size: $h2Size;
+          margin-right: 10px;
+        }
+        span{
+          font-size: $textSmallSize;
+        }
+      }
+
+      .membercount{
+        i{
+          color:$color
+        }
+      }
+
+      .processcount{
+        i{
+          color:$color
+        }
+      }
+
+      .footer{
+        padding-top: 10px;
+        border-top: 1px solid $gray2;
+        position: relative;
+        .profil{
+          @include button($gray2,$color,$gray,$color2,30px);
+          float: right;
+        }
+      }
+
+    }
+  }
+  .more-cards{
+    width: 100%;
+    position: relative;
+    height:40px;
+    text-align: center;
+    .more-button{
+      @include button($color,white,$color2,white,100%);
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+    }
+  }
+}
