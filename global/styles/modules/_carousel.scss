@@ -1,9 +1,72 @@
+.car{
+    width: 100%;
+    position: relative;
+    background: #000;
+    
+    .drop-buttons{
+      position: absolute;
+      top:0;
+      left: 20px;
+      width: 270px;
+      z-index: 99999;
+
+      .button{
+        height: 40px;
+        padding: 10px 20px;
+        border-radius: 0 0 5px 5px;
+        font-size: 15px;
+        box-sizing: border-box;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        margin-right: 10px;
+
+        i{
+          margin-right: 15px;
+          font-size: 15px;
+          padding-bottom: 2px;
+        }
+
+        &:hover{
+          -moz-border-radius-bottomleft: 0;
+          -webkit-border-bottom-left-radius: 0;
+          .drop-card{
+            display: block;
+          }
+        }
+      }
+      .process{
+        left:0;
+        background-color: $blue;
+        color:white;
+        &:hover{
+          background-color: $blue2;
+        }
+      }
+
+      .firm{
+        background-color: $purple;
+        color:white;
+        &:hover{
+          background-color: $purple2;
+        }
+      }
+    }
+}
+
+.carousel-middle{
+    @extend .car;
+    height: 140px;
+    
+    .row{
+        margin-top: $gap50;
+    }
+}
+
 .carousel{
-  height: 380px;;
+  height: 380px;
   width: 100%;
   position: relative;
-
-
 
   .background{
     position: absolute;
@@ -28,6 +91,7 @@
       top:0;
       left: 0px;
       width: 270px;
+      z-index: 99999;
 
       .button{
         height: 40px;

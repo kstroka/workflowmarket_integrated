@@ -184,6 +184,10 @@ body .container {
     body .container {
       max-width: 480px; } }
 
+h1 {
+  font-size: 45px;
+  color: #fff; }
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -934,6 +938,52 @@ body .container {
 .overlay, #form-login {
   display: none; }
 
+.car, .carousel-middle {
+  width: 100%;
+  position: relative;
+  background: #000; }
+  .car .drop-buttons, .carousel-middle .drop-buttons {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 270px;
+    z-index: 99999; }
+    .car .drop-buttons .button, .carousel-middle .drop-buttons .button {
+      height: 40px;
+      padding: 10px 20px;
+      border-radius: 0 0 5px 5px;
+      font-size: 15px;
+      box-sizing: border-box;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      margin-right: 10px; }
+      .car .drop-buttons .button i, .carousel-middle .drop-buttons .button i {
+        margin-right: 15px;
+        font-size: 15px;
+        padding-bottom: 2px; }
+      .car .drop-buttons .button:hover, .carousel-middle .drop-buttons .button:hover {
+        -moz-border-radius-bottomleft: 0;
+        -webkit-border-bottom-left-radius: 0; }
+        .car .drop-buttons .button:hover .drop-card, .carousel-middle .drop-buttons .button:hover .drop-card {
+          display: block; }
+    .car .drop-buttons .process, .carousel-middle .drop-buttons .process {
+      left: 0;
+      background-color: #00a5c3;
+      color: white; }
+      .car .drop-buttons .process:hover, .carousel-middle .drop-buttons .process:hover {
+        background-color: #0085a2; }
+    .car .drop-buttons .firm, .carousel-middle .drop-buttons .firm {
+      background-color: #e51a6b;
+      color: white; }
+      .car .drop-buttons .firm:hover, .carousel-middle .drop-buttons .firm:hover {
+        background-color: #b10047; }
+
+.carousel-middle {
+  height: 140px; }
+  .carousel-middle .row {
+    margin-top: 50px; }
+
 .carousel {
   height: 380px;
   width: 100%;
@@ -956,7 +1006,8 @@ body .container {
       position: absolute;
       top: 0;
       left: 0px;
-      width: 270px; }
+      width: 270px;
+      z-index: 99999; }
       .carousel .container .drop-buttons .button {
         height: 40px;
         padding: 10px 20px;
