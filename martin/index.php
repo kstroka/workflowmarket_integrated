@@ -1,8 +1,4 @@
 <?php       
-   
-    //define("SITE_PATH" , str_replace("\\","/",dirname(__FILE__) . "/"));
-    //define("HTML_PATH" , "workflowmarket_integrated/martin/"); // definovane aj v template/js/define.js
-
     require_once("config.php");
     require_once("includes/start_session.php");
     require_once("core/Registry.class.php");
