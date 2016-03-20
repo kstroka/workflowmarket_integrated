@@ -80,28 +80,28 @@ module.exports = function(grunt) {
         files: [
           '<%= globalConfig.jan.src  %>/styles/**/*.scss',
           '<%= globalConfig.global.src  %>/styles/**/*.scss'],
-        tasks: ['clean','sass','concat','mustache','copy'],
+        tasks: ['build'],
         options: {
           livereload: true
         }
       },
       js: {
         files: ['<%= globalConfig.jan.src  %>/js/**/*.js'],
-        tasks: ['clean','sass','concat','mustache','copy'],
+        tasks: ['build'],
         options: {
           livereload: true
         }
       },
       mustache:{
         files: ['<%= globalConfig.jan.src  %>/templates/**/*.mustache'],
-        tasks: ['clean','sass','concat','mustache','copy'],
+        tasks: ['build'],
         options: {
           livereload: true
         }
       },
       other:{
         files: ['<%= globalConfig.jan.src  %>/content/*','<%= globalConfig.jan.src  %>/vendor/*'],
-        tasks: ['clean','sass','concat','mustache','copy'],
+        tasks: ['build'],
         options: {
           livereload: true
         }
@@ -120,12 +120,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mustache');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  
 
-
-  grunt.registerTask('default',['clean','sass','concat','mustache','copy','watch']);
-  grunt.registerTask('dist', ['uglify', 'cssmin']);
   grunt.registerTask('font-build', ['webfont']);
-  grunt.registerTask('build', ['concat:dist', 'uglify:dist']);
+  grunt.registerTask('build', ['clean','sass','concat','mustache','copy']);
+  grunt.registerTask('default',['build','watch']);
 
 
 
