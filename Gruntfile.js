@@ -17,7 +17,9 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '<%= globalConfig.jan.build  %>/mainformsstyles.css': '<%= globalConfig.jan.src  %>/styles/mainformsstyles.scss',
-          '<%= globalConfig.global.src  %>/styles/global.css' : '<%= globalConfig.global.src  %>/styles/global.scss'
+          '<%= globalConfig.global.src  %>/styles/global.css' : '<%= globalConfig.global.src  %>/styles/global.scss',
+          '<%= globalConfig.jan.build  %>/font-icon.css' : '<%= globalConfig.jan.src  %>/styles/_font-icon.scss'
+
         }
       }
     },
@@ -42,6 +44,7 @@ module.exports = function(grunt) {
         options: {
             font:'font-icon',
              stylesheet: 'scss',
+             relativeFontPath: '/jan/build/content/fonts',
             templateOptions: {
             baseClass: 'icon',
             classPrefix: 'icon-',

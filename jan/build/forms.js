@@ -4,7 +4,7 @@ var MAX_FORM_ID = 0;
 var MAX_INPUT_ID = 0;
 
 _WMGlobal.forms = [];
-_WMGlobal.$el = $(".app");
+_WMGlobal.$el = $(".wm-form-creator-app");
 
 _WMGlobal.loadData = function(){
 

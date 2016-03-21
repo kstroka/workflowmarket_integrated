@@ -1,4 +1,4 @@
-.app{
+.wm-form-creator-app{
   .formMapper{
     display: none;
     height: 100%;
@@ -122,14 +122,25 @@
         position: relative;
         height: auto;
         width: calc( (100% - 6*2% - 6*2px ) / 3);
-        margin-top: 20px;
+        margin-top: 15px;
         border-radius: 2px;
         float: left;
         margin-left: 2%;
         margin-right: 2%;
         cursor: pointer;
         box-sizing: border-box;
+        padding: 5px 0;
 
+        .edit-button,.rename-button,.remove-button{
+          display: block;
+          height: 32px;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 5px;
+          i{
+            font-size: 32px;
+          }
+        }
 
         .label{
           text-align: center;
@@ -137,23 +148,12 @@
         }
 
         &:hover{
-          margin-top: 19px;
+          margin-top: 14px;
           border: 1px solid $gray;
         }
 
       }
 
-
-      .change-form{
-      }
-
-      .remove-form {
-
-      }
-
-      .edit-form{
-
-      }
 
     }
 

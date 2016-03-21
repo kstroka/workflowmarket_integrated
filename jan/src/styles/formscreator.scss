@@ -16,7 +16,7 @@ body{
 }
 
 
-.app{
+.wm-form-creator-app{
   font-weight: lighter;
   position: absolute;
   top: 60px;
@@ -67,9 +67,7 @@ body{
           position: absolute;
           color:$backgroundColor;
           border: none;
-          //&:focus{
-          //  outline: 0;
-          //}
+
         }
         &.error{
           .form-icon{
