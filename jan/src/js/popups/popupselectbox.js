@@ -60,7 +60,13 @@
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(selectboxToolbarHTML);
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupselectbox,{},controls));
         _WMGlobal.utilities.attachAddChoiceHandler($toolb);
         _WMGlobal.utilities.attachChangeChoiceHandler($toolb.find('.choice-block'),$toolb);
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
@@ -91,7 +97,7 @@
 
     function buildPreview(popup,data){
         var showPreview = false;
-        var $preview = $(selectboxAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.selectboxpreview));
         var selectbox = $preview.find('.selectbox-input');
 
 
@@ -183,155 +189,9 @@
             }
             selectbox.val(oldV);
         });
-
-
-
+        
     }
 
-
-
-    var selectboxAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="selectbox"> \
-                <select class="selectbox-input"></select>\
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">BACK</div> \
-             <div class="preview-next-button">NEXT</div> \
-             </div> \
-        </div> ';
-
-
-    var selectboxToolbarHTML =
-        '<div class="inputfield-name"> \
-    <div class="inputfield-icon"> \
-    </div> \
-    <div class= "inputfield-name-inner">Selectbox</div> \
-</div> \
-<div class="inputfield-setting"> \
-    <div class="block"> \
-        <div class="heading">Question</div> \
-        <div class="block-body"> \
-            <input type="text" class="small-input fieldname"> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Description \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover off-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-            <div class="description-block"> \
-                <textarea type="text" class="large-input description"></textarea> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Add choices \
-            <div class="description"> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="choices"> \
-                <div class="choice-block"> \
-                    <input type="text" class="choice"> \
-                        <div class="controls"> \
-                            <div class="add-choice-icon">\
-                            </div> \
-                    </div>\
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Alphabetical order \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover alph-order on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Dataset variable\
-            <div class="description"> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <select class="selectbox dataset"> \
-            </select> \
-            <div class="dataset-add-icon"></div>\
-            <div class="add-dataset-block"> \
-                <div class="label"> Set dataset name</div> \
-                <input type="text" class="small-input new-dataset"> \
-                <div class="dataset-save"> \
-                    <div class="dataset-save-button">Save</div> \
-                    <div class="dataset-cancel-button">Cancel</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Required \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover required on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Editable \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover editable on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Visible \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover visible on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-</div>';
 
     _WMGlobal.selectboxAnswer = _sb;
 }(_WMGlobal))

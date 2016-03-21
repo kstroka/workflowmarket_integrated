@@ -334,7 +334,7 @@
 
         for (var i = 0; i < _fcm.form.inputs.length; i++) {
             data = _fcm.form.inputs[i];
-            _fcm.form.inputs[i].$el = $(InputfieldElement(data.id, data.type, data.fieldname));
+            _fcm.form.inputs[i].$el = InputfieldElement(data.id, data.type, data.fieldname);
             attachInputfieldHandler(_fcm.form.inputs[i]);
             _fcm.main.find('.inputfields-group').append( _fcm.form.inputs[i].$el);
         }
@@ -342,7 +342,7 @@
     };
 
     _fcm.buildFormCreator = function (){
-        _fcm.$el = $(formCreatorHTML);
+        _fcm.$el = $(Mustache.render(_WMGlobal.templates.formcreator));
 
         _fcm.popup = _fcm.$el.find(".popup");
         _fcm.main = _fcm.$el.find(".main");
@@ -513,7 +513,7 @@
             isDone = false;
         }
 
-        var $el = $(InputfieldElement(id,type,fieldname));
+        var $el = InputfieldElement(id,type,fieldname);
 
 
         var inputData = {
@@ -537,12 +537,8 @@
 
     //element constructor
     function InputfieldElement(id,type,fieldname){
-        var inputfield = '<li class="inputfield" draggable="true" data-id ="' + id + '">'+
-            '<div class="input-icon"><i class="icon icon-'+ type  +'"></i></div>'+
-            '<span class="input-fieldname">'+ fieldname +'</span>'+
-            '<div class="input-remove-icon"><i class="icon icon-close"></i></div></li>';
-
-        return inputfield;
+        var context = {id:id,type:type,fieldname:fieldname};
+        return $(Mustache.render(_WMGlobal.templates.inputfield,context));
     }
 
     //popup dont save inputfield
@@ -554,8 +550,7 @@
         }
     }
 
-
-
+    
     function attachInputfieldHandler(inputfield){
         inputfield.$el.find('.input-remove-icon').on('click',function(event){
             event.stopPropagation();
@@ -569,54 +564,6 @@
             _fcm.buildPopup(_WMGlobal.openedInputfieldToEdit);
         });
     }
-    var formCreatorHTML =
-        '<div class= "formCreator"> \
-            <div class="main"> \
-                <div class="form-name">\
-                        <div class="form-icon"></div>\
-                        <input class="form-name-value" type="text">\
-                    </div>\
-                <div class="toolbar "> \
-                    <div class="content"> \
-                        <ul class="buttons-group"> \
-                            <li class="button-large" draggable="true" data-type="shortanswer"> <div class="button-icon"></div> Short answer </li> \
-                            <li class="button-large" draggable="true" data-type="longanswer"> <div class="button-icon"></div> Long answer </li> \
-                            <li class="button-large" draggable="true" data-type="selectbox"> <div class="button-icon"></div> Selectbox </li> \
-                            <li class="button-large" draggable="true" data-type="checkbox"> <div class="button-icon"></div> Checkbox </li> \
-                        </ul> \
-                        <div class="cancel-save">\
-                                <div class="cancel-button">Cancel</div>\
-                        </div> \
-                        <div class="close-form-creator">\
-                            <div class="close-button">Finish</div>\
-                        </div>\
-                    </div> \
-                </div> \
-                <div class="window "> \
-                    <div class="content"> \
-                         <ul class="inputfields-group"> \
-                        </ul> \
-                        <ul class="newinputfield-group">\
-                           <li class="newinputfield" draggable="true"> <div class="input-icon"></div> \
-                                 <span class="input-text">Add next field by click or use Drag & Drop</span> \
-                            </li> \
-                        </ul>\
-                    </div> \
-                </div> \
-            </div> \
-             <div class="popup"> \
-                <div class="toolbar-editor"> \
-                    <div class="inputfield-save"> \
-                        <div class="inputfield-save-button">Save</div> \
-                         <div class="inputfield-cancel-button">Cancel</div> \
-                    </div> \
-                </div> \
-                <div class="preview"> \
-                    <div class="close"> \
-                    </div> \
-                </div> \
-            </div>\
-        </div>';
 
 
 

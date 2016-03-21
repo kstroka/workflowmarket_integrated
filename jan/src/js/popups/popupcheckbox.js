@@ -64,7 +64,14 @@
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(Mustache.render(_WMGlobal.templates.popupcheckbox));
+
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupcheckbox,{},controls));
 
         _WMGlobal.utilities.attachAddChoiceHandler($toolb);
         _WMGlobal.utilities.attachChangeChoiceHandler($toolb.find('.choice-block'),$toolb);

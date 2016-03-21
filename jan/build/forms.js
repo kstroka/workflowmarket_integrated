@@ -1050,7 +1050,14 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(Mustache.render(_WMGlobal.templates.popupcheckbox));
+
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupcheckbox,{},controls));
 
         _WMGlobal.utilities.attachAddChoiceHandler($toolb);
         _WMGlobal.utilities.attachChangeChoiceHandler($toolb.find('.choice-block'),$toolb);
@@ -1213,7 +1220,14 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(longAnswerToolbarHTML);
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popuplonganswer,{},controls));
+        
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
         _WMGlobal.utilities.attachAddToDatasetHandler($toolb,'longanswer');
         _WMGlobal.utilities.popupBuildSelectboxDataset($toolb,'longanswer');
@@ -1241,7 +1255,7 @@ function loadVariables(){
 
     function buildPreview(popup,data){
         var showPreview = false;
-        var $preview = $(longAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.longanswerpreview));
 
         if(!$.isEmptyObject(data)) {
             if (data['fieldname'] !== '' && data['fieldname'] !== undefined) {
@@ -1268,125 +1282,8 @@ function loadVariables(){
     }
 
 
-    var longAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="longanswer"> \
-                <textarea  class="longanswer-input" type="text"></textarea> \
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">BACK</div> \
-             <div class="preview-next-button">NEXT</div> \
-             </div> \
-        </div> ';
 
-
-    var longAnswerToolbarHTML =
-        '<div class="inputfield-name"> \
-            <div class="inputfield-icon"> \
-            </div> \
-            <div class= "inputfield-name-inner">Long answer</div> \
-        </div> \
-        <div class="inputfield-setting"> \
-            <div class="block"> \
-                <div class="heading">Question</div> \
-                <div class="block-body"> \
-                    <input type="text" class="small-input fieldname"> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Description \
-                        <div class="description"> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover off-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                    <div class="description-block"> \
-                        <textarea type="text" class="large-input description"></textarea> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="heading">Max length \
-                    <div class="description"> \
-                    </div> \
-                </div> \
-                <div class="block-body"> \
-                    <input type="text" class="max-length"> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="heading">Dataset variable\
-                    <div class="description"> \
-                    </div> \
-                </div> \
-                <div class="block-body"> \
-                    <select class="selectbox dataset"> \
-                    </select> \
-                    <div class="dataset-add-icon"></div>\
-                    <div class="add-dataset-block"> \
-                        <div class="label"> Set dataset name</div> \
-                        <input type="text" class="small-input new-dataset"> \
-                        <div class="dataset-save"> \
-                            <div class="dataset-save-button">Save</div> \
-                            <div class="dataset-cancel-button">Cancel</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Required \
-                        <div class="description"> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover required on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Editable \
-                        <div class="description"> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover editable on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Visible \
-                        <div class="description"> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover visible on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-        </div>';
+ 
 
     _WMGlobal.longAnswer = _la;
 }(_WMGlobal));/**
@@ -1451,7 +1348,13 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(selectboxToolbarHTML);
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupselectbox,{},controls));
         _WMGlobal.utilities.attachAddChoiceHandler($toolb);
         _WMGlobal.utilities.attachChangeChoiceHandler($toolb.find('.choice-block'),$toolb);
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
@@ -1482,7 +1385,7 @@ function loadVariables(){
 
     function buildPreview(popup,data){
         var showPreview = false;
-        var $preview = $(selectboxAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.selectboxpreview));
         var selectbox = $preview.find('.selectbox-input');
 
 
@@ -1574,155 +1477,9 @@ function loadVariables(){
             }
             selectbox.val(oldV);
         });
-
-
-
+        
     }
 
-
-
-    var selectboxAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="selectbox"> \
-                <select class="selectbox-input"></select>\
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">BACK</div> \
-             <div class="preview-next-button">NEXT</div> \
-             </div> \
-        </div> ';
-
-
-    var selectboxToolbarHTML =
-        '<div class="inputfield-name"> \
-    <div class="inputfield-icon"> \
-    </div> \
-    <div class= "inputfield-name-inner">Selectbox</div> \
-</div> \
-<div class="inputfield-setting"> \
-    <div class="block"> \
-        <div class="heading">Question</div> \
-        <div class="block-body"> \
-            <input type="text" class="small-input fieldname"> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Description \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover off-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-            <div class="description-block"> \
-                <textarea type="text" class="large-input description"></textarea> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Add choices \
-            <div class="description"> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="choices"> \
-                <div class="choice-block"> \
-                    <input type="text" class="choice"> \
-                        <div class="controls"> \
-                            <div class="add-choice-icon">\
-                            </div> \
-                    </div>\
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Alphabetical order \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover alph-order on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Dataset variable\
-            <div class="description"> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <select class="selectbox dataset"> \
-            </select> \
-            <div class="dataset-add-icon"></div>\
-            <div class="add-dataset-block"> \
-                <div class="label"> Set dataset name</div> \
-                <input type="text" class="small-input new-dataset"> \
-                <div class="dataset-save"> \
-                    <div class="dataset-save-button">Save</div> \
-                    <div class="dataset-cancel-button">Cancel</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Required \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover required on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Editable \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover editable on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Visible \
-                <div class="description"> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover visible on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-</div>';
 
     _WMGlobal.selectboxAnswer = _sb;
 }(_WMGlobal));(function (_WMGlobal) {
@@ -1775,7 +1532,14 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(shortAnswerToolbarHTML);
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupshortanswer,{},controls));
+        
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
         _WMGlobal.utilities.attachAddToDatasetHandler($toolb,'shortanswer');
         _WMGlobal.utilities.popupBuildSelectboxDataset($toolb,'shortanswer');
@@ -1803,7 +1567,7 @@ function loadVariables(){
 
     function buildPreview(popup,data){
         var showPreview = false;
-        var $preview = $(shortAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.shortanswerpreview));
 
         if(!$.isEmptyObject(data)) {
             if (data['fieldname'] !== '' && data['fieldname'] !== undefined) {
@@ -1828,126 +1592,6 @@ function loadVariables(){
         var $toolbar = $popup.find('.toolbar-editor');
     }
 
-
-    var shortAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="shortanswer"> \
-                <input  class="shortanswer-input" type="text"> \
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">Back</div> \
-             <div class="preview-next-button">Next</div> \
-             </div> \
-        </div> ';
-
-
-    var shortAnswerToolbarHTML =
-        '<div class="inputfield-name"> \
-            <div class="inputfield-icon"> \
-            </div> \
-            <div class= "inputfield-name-inner">Short answer</div> \
-        </div> \
-        <div class="inputfield-setting"> \
-            <div class="block"> \
-                <div class="heading">Question</div> \
-                <div class="block-body"> \
-                    <input type="text" class="small-input fieldname"> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Description \
-                        <div class="description"> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover off-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                    <div class="description-block"> \
-                        <textarea type="text" class="large-input description"></textarea> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="heading">Max length \
-                    <div class="description"> \
-                    </div> \
-                </div> \
-                <div class="block-body"> \
-                    <input type="text" class="max-length"> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="heading">Dataset variable\
-                    <div class="description"> \
-                    </div> \
-                </div> \
-                <div class="block-body"> \
-                    <select class="selectbox dataset"> \
-                    </select> \
-                    <div class="dataset-add-icon"></div>\
-                    <div class="add-dataset-block"> \
-                        <div class="label"> Set dataset name</div> \
-                        <input type="text" class="small-input new-dataset"> \
-                        <div class="dataset-save"> \
-                            <div class="dataset-save-button">Save</div> \
-                            <div class="dataset-cancel-button">Cancel</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Required \
-                        <div class="description"> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover required on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Editable \
-                        <div class="description"> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover editable on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Visible \
-                        <div class="description"> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover visible on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-        </div>';
 
     _WMGlobal.shortAnswer = _sa;
 }(_WMGlobal));(function (_WMGlobal) {
@@ -2286,7 +1930,7 @@ function loadVariables(){
 
         for (var i = 0; i < _fcm.form.inputs.length; i++) {
             data = _fcm.form.inputs[i];
-            _fcm.form.inputs[i].$el = $(InputfieldElement(data.id, data.type, data.fieldname));
+            _fcm.form.inputs[i].$el = InputfieldElement(data.id, data.type, data.fieldname);
             attachInputfieldHandler(_fcm.form.inputs[i]);
             _fcm.main.find('.inputfields-group').append( _fcm.form.inputs[i].$el);
         }
@@ -2294,7 +1938,7 @@ function loadVariables(){
     };
 
     _fcm.buildFormCreator = function (){
-        _fcm.$el = $(formCreatorHTML);
+        _fcm.$el = $(Mustache.render(_WMGlobal.templates.formcreator));
 
         _fcm.popup = _fcm.$el.find(".popup");
         _fcm.main = _fcm.$el.find(".main");
@@ -2465,7 +2109,7 @@ function loadVariables(){
             isDone = false;
         }
 
-        var $el = $(InputfieldElement(id,type,fieldname));
+        var $el = InputfieldElement(id,type,fieldname);
 
 
         var inputData = {
@@ -2489,12 +2133,8 @@ function loadVariables(){
 
     //element constructor
     function InputfieldElement(id,type,fieldname){
-        var inputfield = '<li class="inputfield" draggable="true" data-id ="' + id + '">'+
-            '<div class="input-icon"><i class="icon icon-'+ type  +'"></i></div>'+
-            '<span class="input-fieldname">'+ fieldname +'</span>'+
-            '<div class="input-remove-icon"><i class="icon icon-close"></i></div></li>';
-
-        return inputfield;
+        var context = {id:id,type:type,fieldname:fieldname};
+        return $(Mustache.render(_WMGlobal.templates.inputfield,context));
     }
 
     //popup dont save inputfield
@@ -2506,8 +2146,7 @@ function loadVariables(){
         }
     }
 
-
-
+    
     function attachInputfieldHandler(inputfield){
         inputfield.$el.find('.input-remove-icon').on('click',function(event){
             event.stopPropagation();
@@ -2521,54 +2160,6 @@ function loadVariables(){
             _fcm.buildPopup(_WMGlobal.openedInputfieldToEdit);
         });
     }
-    var formCreatorHTML =
-        '<div class= "formCreator"> \
-            <div class="main"> \
-                <div class="form-name">\
-                        <div class="form-icon"></div>\
-                        <input class="form-name-value" type="text">\
-                    </div>\
-                <div class="toolbar "> \
-                    <div class="content"> \
-                        <ul class="buttons-group"> \
-                            <li class="button-large" draggable="true" data-type="shortanswer"> <div class="button-icon"></div> Short answer </li> \
-                            <li class="button-large" draggable="true" data-type="longanswer"> <div class="button-icon"></div> Long answer </li> \
-                            <li class="button-large" draggable="true" data-type="selectbox"> <div class="button-icon"></div> Selectbox </li> \
-                            <li class="button-large" draggable="true" data-type="checkbox"> <div class="button-icon"></div> Checkbox </li> \
-                        </ul> \
-                        <div class="cancel-save">\
-                                <div class="cancel-button">Cancel</div>\
-                        </div> \
-                        <div class="close-form-creator">\
-                            <div class="close-button">Finish</div>\
-                        </div>\
-                    </div> \
-                </div> \
-                <div class="window "> \
-                    <div class="content"> \
-                         <ul class="inputfields-group"> \
-                        </ul> \
-                        <ul class="newinputfield-group">\
-                           <li class="newinputfield" draggable="true"> <div class="input-icon"></div> \
-                                 <span class="input-text">Add next field by click or use Drag & Drop</span> \
-                            </li> \
-                        </ul>\
-                    </div> \
-                </div> \
-            </div> \
-             <div class="popup"> \
-                <div class="toolbar-editor"> \
-                    <div class="inputfield-save"> \
-                        <div class="inputfield-save-button">Save</div> \
-                         <div class="inputfield-cancel-button">Cancel</div> \
-                    </div> \
-                </div> \
-                <div class="preview"> \
-                    <div class="close"> \
-                    </div> \
-                </div> \
-            </div>\
-        </div>';
 
 
 

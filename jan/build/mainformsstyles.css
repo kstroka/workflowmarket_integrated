@@ -881,7 +881,6 @@ body {
   body .button-small {
     box-sizing: border-box;
     display: block;
-    padding: 0;
     position: relative;
     float: left;
     width: 72.5px;
@@ -890,24 +889,20 @@ body {
     margin-bottom: 12px;
     background-color: #0672AF;
     color: white;
-    padding-left: 22px;
     vertical-align: middle;
     line-height: 38px;
     border-radius: 2px;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 0 10px; }
     body .button-small:hover {
       background-color: #034369; }
     body .button-small .button-icon {
-      position: absolute;
+      position: relative;
       display: inline-block;
-      left: 4px;
-      height: 14px;
-      width: 14px;
-      padding-top: 12px; }
+      margin-right: 5px; }
   body .button-medium {
     box-sizing: border-box;
     display: block;
-    padding: 0;
     position: relative;
     float: left;
     width: 165px;
@@ -916,24 +911,20 @@ body {
     margin-bottom: 12px;
     background-color: #1289D0;
     color: white;
-    padding-left: 22px;
     vertical-align: middle;
     line-height: 38px;
     border-radius: 2px;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 0 10px; }
     body .button-medium:hover {
       background-color: #045483; }
     body .button-medium .button-icon {
-      position: absolute;
+      position: relative;
       display: inline-block;
-      left: 4px;
-      height: 14px;
-      width: 14px;
-      padding-top: 12px; }
+      margin-right: 5px; }
   body .button-large {
     box-sizing: border-box;
     display: block;
-    padding: 0;
     position: relative;
     float: left;
     width: 350px;
@@ -942,20 +933,17 @@ body {
     margin-bottom: 12px;
     background-color: #5562AA;
     color: white;
-    padding-left: 22px;
     vertical-align: middle;
     line-height: 38px;
     border-radius: 2px;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 0 10px; }
     body .button-large:hover {
       background-color: #24327D; }
     body .button-large .button-icon {
-      position: absolute;
+      position: relative;
       display: inline-block;
-      left: 4px;
-      height: 14px;
-      width: 14px;
-      padding-top: 12px; }
+      margin-right: 5px; }
 
 .wm-form-creator-app {
   font-weight: lighter;
@@ -1039,7 +1027,6 @@ body {
           .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small {
             box-sizing: border-box;
             display: block;
-            padding: 0;
             position: relative;
             float: left;
             width: 220px;
@@ -1048,28 +1035,24 @@ body {
             margin-bottom: 12px;
             background-color: #0672AF;
             color: white;
-            padding-left: 22px;
             vertical-align: middle;
             line-height: 38px;
             border-radius: 2px;
             cursor: pointer;
+            padding: 0 10px;
             -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small:hover {
               background-color: #034369; }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small .button-icon {
-              position: absolute;
+              position: relative;
               display: inline-block;
-              left: 4px;
-              height: 14px;
-              width: 14px;
-              padding-top: 12px; }
+              margin-right: 5px; }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small.dragged {
               background-color: #045483; }
           .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium {
             box-sizing: border-box;
             display: block;
-            padding: 0;
             position: relative;
             float: left;
             width: 220px;
@@ -1078,28 +1061,24 @@ body {
             margin-bottom: 12px;
             background-color: #1289D0;
             color: white;
-            padding-left: 22px;
             vertical-align: middle;
             line-height: 38px;
             border-radius: 2px;
             cursor: pointer;
+            padding: 0 10px;
             -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium:hover {
               background-color: #045483; }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium .button-icon {
-              position: absolute;
+              position: relative;
               display: inline-block;
-              left: 4px;
-              height: 14px;
-              width: 14px;
-              padding-top: 12px; }
+              margin-right: 5px; }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium.dragged {
               background-color: #045483; }
           .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large {
             box-sizing: border-box;
             display: block;
-            padding: 0;
             position: relative;
             float: left;
             width: 260px;
@@ -1108,22 +1087,19 @@ body {
             margin-bottom: 12px;
             background-color: #5562AA;
             color: white;
-            padding-left: 22px;
             vertical-align: middle;
             line-height: 38px;
             border-radius: 2px;
             cursor: pointer;
+            padding: 0 10px;
             -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large:hover {
               background-color: #24327D; }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large .button-icon {
-              position: absolute;
+              position: relative;
               display: inline-block;
-              left: 4px;
-              height: 14px;
-              width: 14px;
-              padding-top: 12px; }
+              margin-right: 5px; }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large.dragged {
               background-color: #045483; }
         .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save {
@@ -1202,7 +1178,7 @@ body {
             margin-bottom: 10px;
             background-color: #FDFFFC;
             color: #000543;
-            padding: 0 25px 0 28px;
+            padding: 0 40px;
             vertical-align: middle;
             line-height: 60px;
             border-radius: 2px;
@@ -1216,7 +1192,7 @@ body {
             .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon {
               position: absolute;
               display: inline-block;
-              left: 4px;
+              left: 10px;
               height: 20px;
               width: 20px; }
             .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon {
@@ -1234,7 +1210,7 @@ body {
             margin-bottom: 10px;
             background-color: rgba(253, 255, 252, 0.2);
             color: #000543;
-            padding: 0 25px 0 28px;
+            padding: 0 40px;
             vertical-align: middle;
             line-height: 60px;
             border-radius: 2px;
@@ -1247,7 +1223,7 @@ body {
             .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon {
               position: absolute;
               display: inline-block;
-              left: 4px;
+              left: 10px;
               height: 20px;
               width: 20px; }
             .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon {
@@ -1265,7 +1241,7 @@ body {
             margin-bottom: 10px;
             background-color: #2bf4b1;
             color: #000543;
-            padding: 0 25px 0 28px;
+            padding: 0 40px;
             vertical-align: middle;
             line-height: 60px;
             border-radius: 2px;
@@ -1280,7 +1256,7 @@ body {
             .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
               position: absolute;
               display: inline-block;
-              left: 4px;
+              left: 10px;
               height: 20px;
               width: 20px; }
             .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon {

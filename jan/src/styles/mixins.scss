@@ -23,7 +23,6 @@ $desktop-width: 1024px;
 @mixin button($width:155px,$background:black ,$color:white, $hover:black){
   box-sizing: border-box;
   display: block;
-  padding: 0;
   position: relative;
   float: left;
   width: $width ;
@@ -32,22 +31,19 @@ $desktop-width: 1024px;
   margin-bottom: 12px;
   background-color: $background;
   color : $color;
-  padding-left: 22px;
   vertical-align: middle;
   line-height: 38px;
   border-radius: 2px;
   cursor: pointer;
+  padding: 0 10px;
 
   &:hover{
     background-color: $hover;
   }
   .button-icon{
-    position: absolute;
+    position: relative;
     display: inline-block;
-    left: 4px;
-    height: 14px;
-    width: 14px;
-    padding-top: 12px;
+    margin-right: 5px;
   }
 }
 
