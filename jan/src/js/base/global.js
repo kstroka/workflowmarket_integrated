@@ -1,6 +1,5 @@
 "use strict";
 
-var _WMGlobal = {};
 var MAX_FORM_ID = 0;
 var MAX_INPUT_ID = 0;
 

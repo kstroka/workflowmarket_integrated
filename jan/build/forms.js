@@ -1,6 +1,5 @@
 "use strict";
 
-var _WMGlobal = {};
 var MAX_FORM_ID = 0;
 var MAX_INPUT_ID = 0;
 
@@ -271,6 +270,25 @@ function loadVariables(){
         return;
     };
 
+    Forms.setForm = function(id,newForm){
+
+        if( id === undefined ){
+            console.error('Forms setForm : not id provided')
+            return;
+        }
+
+        var length = this.array.length;
+        for(var i = 0; i <length; i++){
+            if(this.array[i].id === id ){
+                this.array[i] = newForm;
+                return this.array[i];
+            }
+        }
+
+        console.error('form to get not found');
+        return;
+    };
+
     Forms.getFormsByList = function(idList){
         if(!idList ){
             console.error('Forms getFormList : list not provided');
@@ -519,6 +537,65 @@ function loadVariables(){
 
     "use strict";
 
+    function checkboxChoice(choice,id){
+        this.init(choice,id);
+        this.attachEventHandlers();
+    }
+
+    checkboxChoice.prototype.init = function (choice,id) {
+        var context={choice:choice,id:id};
+        this.$el = $(Mustache.render(_WMGlobal.templates.checkboxchoice,context));
+    };
+
+    checkboxChoice.prototype.attachEventHandlers = function () {
+        this.$el.off('click').on('click',function(event){
+            event.stopPropagation();
+            event.preventDefault();
+            //var $checkbox = $(event.target).closest('.checkbox-input-block');
+            console.log(this.$el);
+            switchCheckbox.call(this);
+        }.bind(this));
+
+    };
+
+    checkboxChoice.prototype.setCheckboxValue = function (value) {
+        var $label = this.$el.find('.label');
+        var $input = this.$el.find('.checkbox-input');
+
+        if(value === true) {
+            if(!$label.hasClass('checked')){
+                $label.addClass('checked');
+            }
+            $input.prop('checked', true);
+        }else{
+            if($label.hasClass('checked')){
+                $label.removeClass('checked');
+            }
+            $input.prop('checked', false);
+        }
+    };
+
+
+    function switchCheckbox(){
+
+        var $label = this.$el.find('.label');
+        var $input = this.$el.find('.checkbox-input');
+
+        if($label.hasClass('checked')){
+            $label.removeClass('checked');
+            $input.prop('checked', false);
+        }else{
+            $label.addClass('checked');
+            $input.prop('checked', true);
+        }
+    }
+
+    _WMGlobal.checkboxChoice = checkboxChoice;
+
+}(_WMGlobal));(function (_WMGlobal) {
+
+    "use strict";
+
     function formControls($parent,$transitionEl,form){
         this.init($parent,$transitionEl,form);
     }
@@ -533,12 +610,21 @@ function loadVariables(){
             console.error('formControls init : not $transitionEl provided');
             return;
         }
+
+        
         this.$parent = $parent;
         this.$transition = $transitionEl;
         this.form = form;
+
         this.id = $transitionEl.attr('id') || $transitionEl.attr('data-id');
-        this.$el = $(controlsHTML);
-        this.$el.attr('data-id',this.id);
+
+        var context = {
+            id : this.id,
+            formname : this.form.name
+        };
+
+        this.$el = $(Mustache.render(_WMGlobal.templates.mappingcontrols,context));
+        
         this.$el.css('top',this.$transition.position().top - 132);
         this.$el.css('left',this.$transition.position().left -120 + 20);
 
@@ -549,11 +635,6 @@ function loadVariables(){
         this.$editIcon = this.$el.find('.edit-form');
         this.$renameIcon = this.$el.find('.change-form');
         this.$removeIcon = this.$el.find('.remove-form');
-
-
-        this.$menu.find('.headline').text(this.form.name);
-        this.$remove.find('.headline').text(this.form.name);
-        this.$rename.find('.form-name').val(this.form.name);
 
         this.$parent.append(this.$el);
 
@@ -593,7 +674,6 @@ function loadVariables(){
     }
 
     function openControls(){
-        console.log('click');
         this.$el.show();
     }
 
@@ -646,36 +726,6 @@ function loadVariables(){
         }.call(this));
     }
 
-
-
-    var controlsHTML =
-        '<div class="transition-controlls"  data-id=""> \
-            <div class="close-controlls"><div class="icon-close"></div></div>\
-            <div class="action-selector">\
-                <div class="headline"></div> \
-                <div class="edit-form">\
-                    <div class="icon-add"></div>\
-                    <div class="label">Edit</div>\
-                </div>\
-                <div class="change-form"><div class="icon-test1"></div><div class="label">Rename</div></div>\
-                <div class="remove-form"><div class="icon-close"></div><div class="label">Remove</div></div> \
-            </div>\
-            \
-            <div class="remove-form-confirm" >\
-                <div class="headline"></div> \
-                <div class="question">Are you sure you want to remove this form from transition ?</div>\
-                <div class="cancel">Cancel</div>\
-                <div class="remove">Remove</div>\
-            </div>\
-            \
-            <div class="change-form-name-confirm">\
-                <div class="headline">Rename form</div> \
-                <input class="form-name" value="Example of name">\
-                <div class="cancel">Cancel</div>\
-                <div class="save">Save</div>\
-            </div>\
-            \
-        </div>\ ' ;
 
     _WMGlobal.formControls = formControls;
 
@@ -803,7 +853,6 @@ function loadVariables(){
                 <input type="text" class="choice"> \
                 <div class="controls"> \
                     <div class="remove-choice-icon"> \
-                        <div class="icon-close"></div>\
                     </div>\
                 </div>\
             </div> \ ';
@@ -980,7 +1029,8 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(checkboxToolbarHTML);
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupcheckbox));
+
         _WMGlobal.utilities.attachAddChoiceHandler($toolb);
         _WMGlobal.utilities.attachChangeChoiceHandler($toolb.find('.choice-block'),$toolb);
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
@@ -1011,7 +1061,7 @@ function loadVariables(){
 
     function buildPreview($popup,data){
         var showPreview = false;
-        var $preview = $(checkboxAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.checkboxpreview));
 
         if(!$.isEmptyObject(data)){
             if(data['fieldname'] !== ''  &&  data['fieldname'] !== undefined){
@@ -1064,44 +1114,19 @@ function loadVariables(){
         }
 
         for(var i in choices) {
-            var val = choices[i];
-            var $newchoice = $('<div class="checkbox-input-block"></di><input type="checkbox" value="'+val+'" class="checkbox-input" id="checkbox'+i+'">' +
-                '<label class="label" for="checkbox'+i+'"><div class="check-icon"><div class="icon-check"></div></div>'+val+'</label><div>');
 
-            attachCheckboxHandler($newchoice);
+            var val = choices[i];
+            var Choice = new _WMGlobal.checkboxChoice(val,i);
 
             if($.inArray(val,oldselected) !== -1){
-                setCheckboxValue($newchoice,true);
+                Choice.setCheckboxValue(true);
             }
-            checkbox.append($newchoice);
+            checkbox.append(Choice.$el);
         }    
     }
-    
-    function attachCheckboxHandler($checkbox){
-        $checkbox.off('click').on('click',function(event){
-            event.stopPropagation();
-            event.preventDefault();
-            var $checkboxVal = $(event.target).closest('.checkbox-input-block');
-            switchCheckbox($checkboxVal);
-        });
-    }
 
-    function setCheckboxValue($el,value){
-        var $label = $el.find('.label');
-        var $input = $el.find('.checkbox-input');
 
-        if(value === true) {
-            if(!$label.hasClass('checked')){
-                $label.addClass('checked');
-            }
-            $input.prop('checked', true);
-        }else{
-            if($label.hasClass('checked')){
-                $label.removeClass('checked');
-            }
-            $input.prop('checked', false);
-        }
-    }
+
 
     function getCheckedList($checkbox){
         var list = [];
@@ -1114,192 +1139,9 @@ function loadVariables(){
         return list;
     }
     
-    function switchCheckbox($checkbox){
-
-        var $label = $checkbox.find('.label');
-        var $input = $checkbox.find('.checkbox-input');
-
-        if($label.hasClass('checked')){
-            $label.removeClass('checked');
-            $input.prop('checked', false);
-        }else{
-            $label.addClass('checked');
-            $input.prop('checked', true);
-        }
-    }
 
 
 
-    var checkboxAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="checkbox"> \
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">BACK</div> \
-             <div class="preview-next-button">NEXT</div> \
-             </div> \
-        </div> ';
-
-
-    var checkboxToolbarHTML =
-        '<div class="inputfield-name"> \
-    <div class="inputfield-icon"> \
-        <div class="icon-checkbox"></div> \
-    </div> \
-    <div class= "inputfield-name-inner">Checkbox</div> \
-</div> \
-<div class="inputfield-setting"> \
-    <div class="block"> \
-        <div class="heading">Question</div> \
-        <div class="block-body"> \
-            <input type="text" class="small-input fieldname"> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Description \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover off-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-            <div class="description-block"> \
-                <textarea type="text" class="large-input description"></textarea> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Add choices \
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="choices"> \
-                <div class="choice-block"> \
-                    <input type="text" class="choice"> \
-                        <div class="controls"> \
-                            <div class="add-choice-icon">\
-                                <div class="icon-add"></div> \
-                            </div> \
-                    </div>\
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Selection count \
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="selection-count">\
-                <div class="min-selection">\
-                    <div class="label">Minimum</div>\
-                    <input type="text" class="min-selected"> \
-                </div> \
-                <div class="max-selection">\
-                    <div class="label">Maximum</div>\
-                    <input type="text" class="max-selected"> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Alphabetical order \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover alph-order on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Dataset variable\
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <select class="selectbox dataset"> \
-            </select> \
-            <div class="dataset-add-icon"><div class="icon-add"></div></div>\
-            <div class="add-dataset-block"> \
-                <div class="label"> Set dataset name</div> \
-                <input type="text" class="small-input new-dataset"> \
-                <div class="dataset-save"> \
-                    <div class="dataset-save-button">Save</div> \
-                    <div class="dataset-cancel-button">Cancel</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Required \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover required on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Editable \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover editable on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Visible \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover visible on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-</div>';
 
     _WMGlobal.checkbox = _cb;
 }(_WMGlobal));(function (_WMGlobal) {
@@ -1422,7 +1264,6 @@ function loadVariables(){
     var longAnswerToolbarHTML =
         '<div class="inputfield-name"> \
             <div class="inputfield-icon"> \
-                <div class="icon-longanswer"></div> \
             </div> \
             <div class= "inputfield-name-inner">Long answer</div> \
         </div> \
@@ -1437,7 +1278,6 @@ function loadVariables(){
                 <div class="block-body"> \
                     <div class="label">Description \
                         <div class="description"> \
-                            <div class="icon-description"></div> \
                         </div> \
                     </div> \
                     <div class="on-off-setup"> \
@@ -1455,7 +1295,6 @@ function loadVariables(){
             <div class="block"> \
                 <div class="heading">Max length \
                     <div class="description"> \
-                        <div class="icon-description"></div> \
                     </div> \
                 </div> \
                 <div class="block-body"> \
@@ -1465,13 +1304,12 @@ function loadVariables(){
             <div class="block"> \
                 <div class="heading">Dataset variable\
                     <div class="description"> \
-                        <div class="icon-description"></div> \
                     </div> \
                 </div> \
                 <div class="block-body"> \
                     <select class="selectbox dataset"> \
                     </select> \
-                    <div class="dataset-add-icon"><div class="icon-add"></div></div>\
+                    <div class="dataset-add-icon"></div>\
                     <div class="add-dataset-block"> \
                         <div class="label"> Set dataset name</div> \
                         <input type="text" class="small-input new-dataset"> \
@@ -1486,7 +1324,6 @@ function loadVariables(){
                 <div class="block-body"> \
                     <div class="label">Required \
                         <div class="description"> \
-                            <div class="icon-description"></div> \
                         </div> \
                     </div> \
                     <div class="on-off-setup"> \
@@ -1502,7 +1339,6 @@ function loadVariables(){
                 <div class="block-body"> \
                     <div class="label">Editable \
                         <div class="description"> \
-                            <div class="icon-description"></div> \
                         </div> \
                     </div> \
                     <div class="on-off-setup"> \
@@ -1518,7 +1354,6 @@ function loadVariables(){
                 <div class="block-body"> \
                     <div class="label">Visible \
                         <div class="description"> \
-                            <div class="icon-description"></div> \
                         </div> \
                     </div> \
                     <div class="on-off-setup"> \
@@ -1742,7 +1577,6 @@ function loadVariables(){
     var selectboxToolbarHTML =
         '<div class="inputfield-name"> \
     <div class="inputfield-icon"> \
-        <div class="icon-selectbox"></div> \
     </div> \
     <div class= "inputfield-name-inner">Selectbox</div> \
 </div> \
@@ -1757,7 +1591,6 @@ function loadVariables(){
         <div class="block-body"> \
             <div class="label">Description \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -1775,7 +1608,6 @@ function loadVariables(){
     <div class="block"> \
         <div class="heading">Add choices \
             <div class="description"> \
-                <div class="icon-description"></div> \
             </div> \
         </div> \
         <div class="block-body"> \
@@ -1784,7 +1616,6 @@ function loadVariables(){
                     <input type="text" class="choice"> \
                         <div class="controls"> \
                             <div class="add-choice-icon">\
-                                <div class="icon-add"></div> \
                             </div> \
                     </div>\
                 </div> \
@@ -1795,7 +1626,6 @@ function loadVariables(){
         <div class="block-body"> \
             <div class="label">Alphabetical order \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -1810,13 +1640,12 @@ function loadVariables(){
     <div class="block"> \
         <div class="heading">Dataset variable\
             <div class="description"> \
-                <div class="icon-description"></div> \
             </div> \
         </div> \
         <div class="block-body"> \
             <select class="selectbox dataset"> \
             </select> \
-            <div class="dataset-add-icon"><div class="icon-add"></div></div>\
+            <div class="dataset-add-icon"></div>\
             <div class="add-dataset-block"> \
                 <div class="label"> Set dataset name</div> \
                 <input type="text" class="small-input new-dataset"> \
@@ -1831,7 +1660,6 @@ function loadVariables(){
         <div class="block-body"> \
             <div class="label">Required \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -1847,7 +1675,6 @@ function loadVariables(){
         <div class="block-body"> \
             <div class="label">Editable \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -1863,7 +1690,6 @@ function loadVariables(){
         <div class="block-body"> \
             <div class="label">Visible \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -1999,7 +1825,6 @@ function loadVariables(){
     var shortAnswerToolbarHTML =
         '<div class="inputfield-name"> \
             <div class="inputfield-icon"> \
-                <div class="icon-shortanswer"></div> \
             </div> \
             <div class= "inputfield-name-inner">Short answer</div> \
         </div> \
@@ -2014,7 +1839,6 @@ function loadVariables(){
                 <div class="block-body"> \
                     <div class="label">Description \
                         <div class="description"> \
-                            <div class="icon-description"></div> \
                         </div> \
                     </div> \
                     <div class="on-off-setup"> \
@@ -2032,7 +1856,6 @@ function loadVariables(){
             <div class="block"> \
                 <div class="heading">Max length \
                     <div class="description"> \
-                        <div class="icon-description"></div> \
                     </div> \
                 </div> \
                 <div class="block-body"> \
@@ -2042,13 +1865,12 @@ function loadVariables(){
             <div class="block"> \
                 <div class="heading">Dataset variable\
                     <div class="description"> \
-                        <div class="icon-description"></div> \
                     </div> \
                 </div> \
                 <div class="block-body"> \
                     <select class="selectbox dataset"> \
                     </select> \
-                    <div class="dataset-add-icon"><div class="icon-add"></div></div>\
+                    <div class="dataset-add-icon"></div></div>\
                     <div class="add-dataset-block"> \
                         <div class="label"> Set dataset name</div> \
                         <input type="text" class="small-input new-dataset"> \
@@ -2063,7 +1885,6 @@ function loadVariables(){
                 <div class="block-body"> \
                     <div class="label">Required \
                         <div class="description"> \
-                            <div class="icon-description"></div> \
                         </div> \
                     </div> \
                     <div class="on-off-setup"> \
@@ -2079,7 +1900,6 @@ function loadVariables(){
                 <div class="block-body"> \
                     <div class="label">Editable \
                         <div class="description"> \
-                            <div class="icon-description"></div> \
                         </div> \
                     </div> \
                     <div class="on-off-setup"> \
@@ -2095,7 +1915,6 @@ function loadVariables(){
                 <div class="block-body"> \
                     <div class="label">Visible \
                         <div class="description"> \
-                            <div class="icon-description"></div> \
                         </div> \
                     </div> \
                     <div class="on-off-setup"> \
@@ -2427,12 +2246,7 @@ function loadVariables(){
 
     _fcm.saveFormsData = function(){
 
-        for(var i in _WMGlobal.forms){
-            if(_WMGlobal.forms[i].id === _fcm.form.id){
-                _WMGlobal.forms[i].inputs = _fcm.form.inputs;
-            }
-        }
-
+        _WMGlobal.forms.setForm(_fcm.form.id, _fcm.form);
         _WMGlobal.saveData();
     };
 
@@ -2655,9 +2469,9 @@ function loadVariables(){
     //element constructor
     function InputfieldElement(id,type,fieldname){
         var inputfield = '<li class="inputfield" draggable="true" data-id ="' + id + '">'+
-            '<div class="input-icon"><div class="icon-'+ type  +'"></div></div>'+
+            '<div class="input-icon"><i class="icon icon-'+ type  +'"></i></div>'+
             '<span class="input-fieldname">'+ fieldname +'</span>'+
-            '<div class="input-remove-icon"><div class="icon-close"></div></div></li>';
+            '<div class="input-remove-icon"><i class="icon icon-close"></i></div></li>';
 
         return inputfield;
     }
@@ -2690,16 +2504,16 @@ function loadVariables(){
         '<div class= "formCreator"> \
             <div class="main"> \
                 <div class="form-name">\
-                        <div class="form-icon"><div class="icon-check"></div></div>\
+                        <div class="form-icon"></div>\
                         <input class="form-name-value" type="text">\
                     </div>\
                 <div class="toolbar "> \
                     <div class="content"> \
                         <ul class="buttons-group"> \
-                            <li class="button-medium" draggable="true" data-type="shortanswer"> <div class="button-icon"><div class="icon-shortanswer"></div></div> Short answer </li> \
-                            <li class="button-medium" draggable="true" data-type="longanswer"> <div class="button-icon"><div class="icon-longanswer"></div></div> Long answer </li> \
-                            <li class="button-medium" draggable="true" data-type="selectbox"> <div class="button-icon"><div class="icon-selectbox"></div></div> Selectbox </li> \
-                            <li class="button-medium" draggable="true" data-type="checkbox"> <div class="button-icon"><div class="icon-checkbox"></div></div> Checkbox </li> \
+                            <li class="button-medium" draggable="true" data-type="shortanswer"> <div class="button-icon"></div> Short answer </li> \
+                            <li class="button-medium" draggable="true" data-type="longanswer"> <div class="button-icon"></div> Long answer </li> \
+                            <li class="button-medium" draggable="true" data-type="selectbox"> <div class="button-icon"></div> Selectbox </li> \
+                            <li class="button-medium" draggable="true" data-type="checkbox"> <div class="button-icon"></div> Checkbox </li> \
                         </ul> \
                         <div class="cancel-save">\
                                 <div class="cancel-button">Cancel</div>\
@@ -2714,7 +2528,7 @@ function loadVariables(){
                          <ul class="inputfields-group"> \
                         </ul> \
                         <ul class="newinputfield-group">\
-                           <li class="newinputfield" draggable="true"> <div class="input-icon"><div class="icon-add"></div></div> \
+                           <li class="newinputfield" draggable="true"> <div class="input-icon"></div> \
                                  <span class="input-text">Add next field by click or use Drag & Drop</span> \
                             </li> \
                         </ul>\
@@ -2730,7 +2544,6 @@ function loadVariables(){
                 </div> \
                 <div class="preview"> \
                     <div class="close"> \
-                        <div class="icon-close"></div> \
                     </div> \
                 </div> \
             </div>\
@@ -2953,13 +2766,11 @@ function loadVariables(){
                 <div class="select-icons">\
                     <div class="copy-form">\
                         <div class="copy-form-icon">\
-                            <div class="icon-add"></div>\
                             <div class="label">Select form</div>\
                         </div>\
                     </div>\
                     <div class="new-form">\
                         <div class="new-form-icon">\
-                            <div class="icon-shortanswer"></div>\
                             <div class="label">Create form</div>\
                         </div>\
                     </div>\
@@ -2982,7 +2793,6 @@ function loadVariables(){
                 </div> \
             </div>\
             <div class="close-form-selector">\
-                <div class="icon-close"></div>\
             </div>\
         </div>\ ';
 
@@ -3105,7 +2915,7 @@ function loadVariables(){
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','width',width);
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','x',x);
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','y',y);
-        svgimg.setAttributeNS('http://www.w3.org/1999/xlink','href','../global/content/svg/bookmark49.svg');
+        svgimg.setAttributeNS('http://www.w3.org/1999/xlink','href','./build/content/svg/form.svg');
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','class','transition-icon');
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','id',transitionID);
 

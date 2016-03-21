@@ -56,9 +56,6 @@ body{
           position: absolute;
           top:0;
           left:0;
-          .icon-check{
-            background-color: $backgroundColor;
-          }
         }
         .form-name-value{
           width: calc(100% - 2px - 34px);
@@ -76,9 +73,6 @@ body{
         }
         &.error{
           .form-icon{
-            .icon-check{
-              background-color: red;
-            }
           }
         }
 
@@ -232,10 +226,7 @@ body{
                 left: 4px;
                 height: 20px;
                 width: 20px;
-                padding-top: ($height - 20px )/2 ;
-                *{
-                  background-color:$color;
-                }
+
               }
               .input-remove-icon{
                 position: absolute;
@@ -243,10 +234,6 @@ body{
                 right: 10px;
                 height: 20px;
                 width: 20px;
-                padding-top: 20px;
-                *{
-                  background-color:$color;
-                }
               }
 
             }
@@ -429,9 +416,6 @@ body{
                 width: $popupinputheight - 4px;
                 padding-top : 2px;
                 padding-left: 5px;
-                .icon-description{
-                  background-color: white;
-                }
               }
             }
             .block-body {
@@ -456,9 +440,7 @@ body{
                   width: $popupinputheight - 4px;
                   padding-top: 2px;
                   padding-left: 5px;
-                  .icon-description {
-                    background-color: white;
-                  }
+
                 }
 
               }
@@ -534,12 +516,6 @@ body{
                       width: 23px;
                       padding-right: 5px;
                       cursor: pointer;
-                      .icon-add{
-                        background-color: $mainToolbarColor;
-                      }
-                      .icon-close {
-                        background-color: $mainWindowColor;
-                      }
                     }
                   }
 
@@ -599,9 +575,6 @@ body{
                 padding-right: 5px;
                 cursor: pointer;
 
-                .icon-add {
-                  background-color: white;
-                }
               }
 
               .description-block {
@@ -861,9 +834,7 @@ body{
                   bottom: 0;
                   left: 0;
                   width: 34px;
-                  .icon-check{
-                    background-color: darkgray;
-                  }
+
                 }
               }
               .checked{
@@ -871,9 +842,6 @@ body{
 
                 .check-icon {
                   background-color: $mainToolbarColor;
-                  .icon-check{
-                    background-color: white;
-                  }
                 }
               }
             }
@@ -917,9 +885,6 @@ body{
           height: 40px;
           cursor: pointer;
 
-          .icon-close{
-            background-color: $backgroundColor;
-          }
         }
       }
     }

@@ -16,12 +16,21 @@
             console.error('formControls init : not $transitionEl provided');
             return;
         }
+
+        
         this.$parent = $parent;
         this.$transition = $transitionEl;
         this.form = form;
+
         this.id = $transitionEl.attr('id') || $transitionEl.attr('data-id');
-        this.$el = $(controlsHTML);
-        this.$el.attr('data-id',this.id);
+
+        var context = {
+            id : this.id,
+            formname : this.form.name
+        };
+
+        this.$el = $(Mustache.render(_WMGlobal.templates.mappingcontrols,context));
+        
         this.$el.css('top',this.$transition.position().top - 132);
         this.$el.css('left',this.$transition.position().left -120 + 20);
 
@@ -32,11 +41,6 @@
         this.$editIcon = this.$el.find('.edit-form');
         this.$renameIcon = this.$el.find('.change-form');
         this.$removeIcon = this.$el.find('.remove-form');
-
-
-        this.$menu.find('.headline').text(this.form.name);
-        this.$remove.find('.headline').text(this.form.name);
-        this.$rename.find('.form-name').val(this.form.name);
 
         this.$parent.append(this.$el);
 
@@ -76,7 +80,6 @@
     }
 
     function openControls(){
-        console.log('click');
         this.$el.show();
     }
 
@@ -129,36 +132,6 @@
         }.call(this));
     }
 
-
-
-    var controlsHTML =
-        '<div class="transition-controlls"  data-id=""> \
-            <div class="close-controlls"><div class="icon-close"></div></div>\
-            <div class="action-selector">\
-                <div class="headline"></div> \
-                <div class="edit-form">\
-                    <div class="icon-add"></div>\
-                    <div class="label">Edit</div>\
-                </div>\
-                <div class="change-form"><div class="icon-test1"></div><div class="label">Rename</div></div>\
-                <div class="remove-form"><div class="icon-close"></div><div class="label">Remove</div></div> \
-            </div>\
-            \
-            <div class="remove-form-confirm" >\
-                <div class="headline"></div> \
-                <div class="question">Are you sure you want to remove this form from transition ?</div>\
-                <div class="cancel">Cancel</div>\
-                <div class="remove">Remove</div>\
-            </div>\
-            \
-            <div class="change-form-name-confirm">\
-                <div class="headline">Rename form</div> \
-                <input class="form-name" value="Example of name">\
-                <div class="cancel">Cancel</div>\
-                <div class="save">Save</div>\
-            </div>\
-            \
-        </div>\ ' ;
 
     _WMGlobal.formControls = formControls;
 

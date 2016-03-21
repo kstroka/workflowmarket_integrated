@@ -43,6 +43,25 @@
         return;
     };
 
+    Forms.setForm = function(id,newForm){
+
+        if( id === undefined ){
+            console.error('Forms setForm : not id provided')
+            return;
+        }
+
+        var length = this.array.length;
+        for(var i = 0; i <length; i++){
+            if(this.array[i].id === id ){
+                this.array[i] = newForm;
+                return this.array[i];
+            }
+        }
+
+        console.error('form to get not found');
+        return;
+    };
+
     Forms.getFormsByList = function(idList){
         if(!idList ){
             console.error('Forms getFormList : list not provided');

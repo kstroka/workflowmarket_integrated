@@ -122,7 +122,6 @@
                 <input type="text" class="choice"> \
                 <div class="controls"> \
                     <div class="remove-choice-icon"> \
-                        <div class="icon-close"></div>\
                     </div>\
                 </div>\
             </div> \ ';

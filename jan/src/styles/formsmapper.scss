@@ -30,9 +30,7 @@
       top: 0;
       position: absolute;
       z-index: 15;
-      .icon-close{
-        background-color: $mainWindowColor3;
-      }
+
     }
 
     &:before{
@@ -132,12 +130,6 @@
         cursor: pointer;
         box-sizing: border-box;
 
-        .icon-add,.icon-close,.icon-test1{
-          height: 40px;
-          width: 40px;
-          margin: auto;
-          background-color: black;
-        }
 
         .label{
           text-align: center;
@@ -153,23 +145,14 @@
 
 
       .change-form{
-        .icon-test1{
-          background-color: $buttonColor2;
-        }
       }
 
       .remove-form {
-        .icon-close {
-          background-color: $mainWindowColor2;
-        }
 
       }
 
       .edit-form{
-        .icon-add{
-          background-color: $mainToolbarColor3;
 
-        }
       }
 
     }

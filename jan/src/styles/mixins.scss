@@ -19,12 +19,6 @@ $desktop-width: 1024px;
   }
 }
 
-@mixin icon($url,$color:black){
-  background-color: $color;
-  -webkit-mask-image: url($url);
-  mask-image: url($url);
-}
-
 
 $backgroundColor : #040520;
 $backgroundColor2 : #10042f;

@@ -315,12 +315,7 @@
 
     _fcm.saveFormsData = function(){
 
-        for(var i in _WMGlobal.forms){
-            if(_WMGlobal.forms[i].id === _fcm.form.id){
-                _WMGlobal.forms[i].inputs = _fcm.form.inputs;
-            }
-        }
-
+        _WMGlobal.forms.setForm(_fcm.form.id, _fcm.form);
         _WMGlobal.saveData();
     };
 
@@ -543,9 +538,9 @@
     //element constructor
     function InputfieldElement(id,type,fieldname){
         var inputfield = '<li class="inputfield" draggable="true" data-id ="' + id + '">'+
-            '<div class="input-icon"><div class="icon-'+ type  +'"></div></div>'+
+            '<div class="input-icon"><i class="icon icon-'+ type  +'"></i></div>'+
             '<span class="input-fieldname">'+ fieldname +'</span>'+
-            '<div class="input-remove-icon"><div class="icon-close"></div></div></li>';
+            '<div class="input-remove-icon"><i class="icon icon-close"></i></div></li>';
 
         return inputfield;
     }
@@ -578,16 +573,16 @@
         '<div class= "formCreator"> \
             <div class="main"> \
                 <div class="form-name">\
-                        <div class="form-icon"><div class="icon-check"></div></div>\
+                        <div class="form-icon"></div>\
                         <input class="form-name-value" type="text">\
                     </div>\
                 <div class="toolbar "> \
                     <div class="content"> \
                         <ul class="buttons-group"> \
-                            <li class="button-medium" draggable="true" data-type="shortanswer"> <div class="button-icon"><div class="icon-shortanswer"></div></div> Short answer </li> \
-                            <li class="button-medium" draggable="true" data-type="longanswer"> <div class="button-icon"><div class="icon-longanswer"></div></div> Long answer </li> \
-                            <li class="button-medium" draggable="true" data-type="selectbox"> <div class="button-icon"><div class="icon-selectbox"></div></div> Selectbox </li> \
-                            <li class="button-medium" draggable="true" data-type="checkbox"> <div class="button-icon"><div class="icon-checkbox"></div></div> Checkbox </li> \
+                            <li class="button-medium" draggable="true" data-type="shortanswer"> <div class="button-icon"></div> Short answer </li> \
+                            <li class="button-medium" draggable="true" data-type="longanswer"> <div class="button-icon"></div> Long answer </li> \
+                            <li class="button-medium" draggable="true" data-type="selectbox"> <div class="button-icon"></div> Selectbox </li> \
+                            <li class="button-medium" draggable="true" data-type="checkbox"> <div class="button-icon"></div> Checkbox </li> \
                         </ul> \
                         <div class="cancel-save">\
                                 <div class="cancel-button">Cancel</div>\
@@ -602,7 +597,7 @@
                          <ul class="inputfields-group"> \
                         </ul> \
                         <ul class="newinputfield-group">\
-                           <li class="newinputfield" draggable="true"> <div class="input-icon"><div class="icon-add"></div></div> \
+                           <li class="newinputfield" draggable="true"> <div class="input-icon"></div> \
                                  <span class="input-text">Add next field by click or use Drag & Drop</span> \
                             </li> \
                         </ul>\
@@ -618,7 +613,6 @@
                 </div> \
                 <div class="preview"> \
                     <div class="close"> \
-                        <div class="icon-close"></div> \
                     </div> \
                 </div> \
             </div>\

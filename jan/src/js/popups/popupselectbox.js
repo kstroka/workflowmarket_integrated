@@ -207,7 +207,6 @@
     var selectboxToolbarHTML =
         '<div class="inputfield-name"> \
     <div class="inputfield-icon"> \
-        <div class="icon-selectbox"></div> \
     </div> \
     <div class= "inputfield-name-inner">Selectbox</div> \
 </div> \
@@ -222,7 +221,6 @@
         <div class="block-body"> \
             <div class="label">Description \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -240,7 +238,6 @@
     <div class="block"> \
         <div class="heading">Add choices \
             <div class="description"> \
-                <div class="icon-description"></div> \
             </div> \
         </div> \
         <div class="block-body"> \
@@ -249,7 +246,6 @@
                     <input type="text" class="choice"> \
                         <div class="controls"> \
                             <div class="add-choice-icon">\
-                                <div class="icon-add"></div> \
                             </div> \
                     </div>\
                 </div> \
@@ -260,7 +256,6 @@
         <div class="block-body"> \
             <div class="label">Alphabetical order \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -275,13 +270,12 @@
     <div class="block"> \
         <div class="heading">Dataset variable\
             <div class="description"> \
-                <div class="icon-description"></div> \
             </div> \
         </div> \
         <div class="block-body"> \
             <select class="selectbox dataset"> \
             </select> \
-            <div class="dataset-add-icon"><div class="icon-add"></div></div>\
+            <div class="dataset-add-icon"></div>\
             <div class="add-dataset-block"> \
                 <div class="label"> Set dataset name</div> \
                 <input type="text" class="small-input new-dataset"> \
@@ -296,7 +290,6 @@
         <div class="block-body"> \
             <div class="label">Required \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -312,7 +305,6 @@
         <div class="block-body"> \
             <div class="label">Editable \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \
@@ -328,7 +320,6 @@
         <div class="block-body"> \
             <div class="label">Visible \
                 <div class="description"> \
-                    <div class="icon-description"></div> \
                 </div> \
             </div> \
             <div class="on-off-setup"> \

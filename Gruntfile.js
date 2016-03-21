@@ -37,7 +37,7 @@ module.exports = function(grunt) {
     webfont: {
       icons: {
         src: '<%= globalConfig.jan.src  %>/content/svg/*.svg',
-        dest: '<%= globalConfig.jan.src  %>/styles/fonts/',
+        dest: '<%= globalConfig.jan.src  %>/content/fonts/',
         destCss: '<%= globalConfig.jan.src  %>/styles/',
         options: {
             font:'font-icon',

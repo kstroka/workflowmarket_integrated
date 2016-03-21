@@ -207,13 +207,11 @@
                 <div class="select-icons">\
                     <div class="copy-form">\
                         <div class="copy-form-icon">\
-                            <div class="icon-add"></div>\
                             <div class="label">Select form</div>\
                         </div>\
                     </div>\
                     <div class="new-form">\
                         <div class="new-form-icon">\
-                            <div class="icon-shortanswer"></div>\
                             <div class="label">Create form</div>\
                         </div>\
                     </div>\
@@ -236,7 +234,6 @@
                 </div> \
             </div>\
             <div class="close-form-selector">\
-                <div class="icon-close"></div>\
             </div>\
         </div>\ ';
 

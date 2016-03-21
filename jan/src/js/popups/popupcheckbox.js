@@ -64,7 +64,8 @@
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(checkboxToolbarHTML);
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupcheckbox));
+
         _WMGlobal.utilities.attachAddChoiceHandler($toolb);
         _WMGlobal.utilities.attachChangeChoiceHandler($toolb.find('.choice-block'),$toolb);
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
@@ -95,7 +96,7 @@
 
     function buildPreview($popup,data){
         var showPreview = false;
-        var $preview = $(checkboxAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.checkboxpreview));
 
         if(!$.isEmptyObject(data)){
             if(data['fieldname'] !== ''  &&  data['fieldname'] !== undefined){
@@ -148,44 +149,19 @@
         }
 
         for(var i in choices) {
-            var val = choices[i];
-            var $newchoice = $('<div class="checkbox-input-block"></di><input type="checkbox" value="'+val+'" class="checkbox-input" id="checkbox'+i+'">' +
-                '<label class="label" for="checkbox'+i+'"><div class="check-icon"><div class="icon-check"></div></div>'+val+'</label><div>');
 
-            attachCheckboxHandler($newchoice);
+            var val = choices[i];
+            var Choice = new _WMGlobal.checkboxChoice(val,i);
 
             if($.inArray(val,oldselected) !== -1){
-                setCheckboxValue($newchoice,true);
+                Choice.setCheckboxValue(true);
             }
-            checkbox.append($newchoice);
+            checkbox.append(Choice.$el);
         }    
     }
-    
-    function attachCheckboxHandler($checkbox){
-        $checkbox.off('click').on('click',function(event){
-            event.stopPropagation();
-            event.preventDefault();
-            var $checkboxVal = $(event.target).closest('.checkbox-input-block');
-            switchCheckbox($checkboxVal);
-        });
-    }
 
-    function setCheckboxValue($el,value){
-        var $label = $el.find('.label');
-        var $input = $el.find('.checkbox-input');
 
-        if(value === true) {
-            if(!$label.hasClass('checked')){
-                $label.addClass('checked');
-            }
-            $input.prop('checked', true);
-        }else{
-            if($label.hasClass('checked')){
-                $label.removeClass('checked');
-            }
-            $input.prop('checked', false);
-        }
-    }
+
 
     function getCheckedList($checkbox){
         var list = [];
@@ -198,192 +174,9 @@
         return list;
     }
     
-    function switchCheckbox($checkbox){
-
-        var $label = $checkbox.find('.label');
-        var $input = $checkbox.find('.checkbox-input');
-
-        if($label.hasClass('checked')){
-            $label.removeClass('checked');
-            $input.prop('checked', false);
-        }else{
-            $label.addClass('checked');
-            $input.prop('checked', true);
-        }
-    }
 
 
 
-    var checkboxAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="checkbox"> \
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">BACK</div> \
-             <div class="preview-next-button">NEXT</div> \
-             </div> \
-        </div> ';
-
-
-    var checkboxToolbarHTML =
-        '<div class="inputfield-name"> \
-    <div class="inputfield-icon"> \
-        <div class="icon-checkbox"></div> \
-    </div> \
-    <div class= "inputfield-name-inner">Checkbox</div> \
-</div> \
-<div class="inputfield-setting"> \
-    <div class="block"> \
-        <div class="heading">Question</div> \
-        <div class="block-body"> \
-            <input type="text" class="small-input fieldname"> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Description \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover off-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-            <div class="description-block"> \
-                <textarea type="text" class="large-input description"></textarea> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Add choices \
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="choices"> \
-                <div class="choice-block"> \
-                    <input type="text" class="choice"> \
-                        <div class="controls"> \
-                            <div class="add-choice-icon">\
-                                <div class="icon-add"></div> \
-                            </div> \
-                    </div>\
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Selection count \
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="selection-count">\
-                <div class="min-selection">\
-                    <div class="label">Minimum</div>\
-                    <input type="text" class="min-selected"> \
-                </div> \
-                <div class="max-selection">\
-                    <div class="label">Maximum</div>\
-                    <input type="text" class="max-selected"> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Alphabetical order \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover alph-order on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Dataset variable\
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <select class="selectbox dataset"> \
-            </select> \
-            <div class="dataset-add-icon"><div class="icon-add"></div></div>\
-            <div class="add-dataset-block"> \
-                <div class="label"> Set dataset name</div> \
-                <input type="text" class="small-input new-dataset"> \
-                <div class="dataset-save"> \
-                    <div class="dataset-save-button">Save</div> \
-                    <div class="dataset-cancel-button">Cancel</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Required \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover required on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Editable \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover editable on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Visible \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover visible on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-</div>';
 
     _WMGlobal.checkbox = _cb;
 }(_WMGlobal))

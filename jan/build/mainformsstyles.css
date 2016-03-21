@@ -672,145 +672,142 @@ h1 {
 
   .col-lg-offset-12 {
     margin-left: 100%; } }
-.icon-add {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/round75.svg");
-  mask-image: url("../../global/content/svg/round75.svg");
-  width: 100%;
-  height: 100%; }
+@font-face {
+  font-family: "font-icon";
+  src: url("content/fonts/font-icon.eot?c1013eda9d48b1db146b1b2ef851e4f2");
+  src: url("content/fonts/font-icon.eot?#iefix") format("embedded-opentype"), url("content/fonts/font-icon.woff?c1013eda9d48b1db146b1b2ef851e4f2") format("woff"), url("content/fonts/font-icon.ttf?c1013eda9d48b1db146b1b2ef851e4f2") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+.icon {
+  font-family: "font-icon";
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-.icon-close {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/delete85.svg");
-  mask-image: url("../../global/content/svg/delete85.svg");
-  width: 100%;
-  height: 100%; }
+.icon-arrow-left:before {
+  content: "\f101"; }
 
-.icon-check {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/basic14.svg");
-  mask-image: url("../../global/content/svg/basic14.svg");
-  width: 100%;
-  height: 100%; }
+.icon-arrow-right:before {
+  content: "\f102"; }
 
-.icon-date {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/basic17.svg");
-  mask-image: url("../../global/content/svg/basic17.svg");
-  width: 100%;
-  height: 100%; }
+.icon-arrow-simple-down:before {
+  content: "\f103"; }
 
-.icon-description {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/warning39.svg");
-  mask-image: url("../../global/content/svg/warning39.svg");
-  width: 100%;
-  height: 100%; }
+.icon-arrow-simple-left:before {
+  content: "\f104"; }
 
-.icon-selectbox {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/expand42.svg");
-  mask-image: url("../../global/content/svg/expand42.svg");
-  width: 100%;
-  height: 100%; }
+.icon-arrow-simple-right:before {
+  content: "\f105"; }
 
-.icon-email {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/basic16.svg");
-  mask-image: url("../../global/content/svg/basic16.svg");
-  width: 100%;
-  height: 100%; }
+.icon-arrows-4:before {
+  content: "\f106"; }
 
-.icon-fileupload {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/rocket74.svg");
-  mask-image: url("../../global/content/svg/rocket74.svg");
-  width: 100%;
-  height: 100%; }
+.icon-checkbox:before {
+  content: "\f107"; }
 
-.icon-longanswer {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/center13.svg");
-  mask-image: url("../../global/content/svg/center13.svg");
-  width: 100%;
-  height: 100%; }
+.icon-close:before {
+  content: "\f108"; }
 
-.icon-checkbox {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/bookmark49.svg");
-  mask-image: url("../../global/content/svg/bookmark49.svg");
-  width: 100%;
-  height: 100%; }
+.icon-delete:before {
+  content: "\f109"; }
 
-.icon-number {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/home153.svg");
-  mask-image: url("../../global/content/svg/home153.svg");
-  width: 100%;
-  height: 100%; }
+.icon-download:before {
+  content: "\f10a"; }
 
-.icon-pictureupload {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/print45.svg");
-  mask-image: url("../../global/content/svg/print45.svg");
-  width: 100%;
-  height: 100%; }
+.icon-ellipses:before {
+  content: "\f10b"; }
 
-.icon-shortanswer {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/left225.svg");
-  mask-image: url("../../global/content/svg/left225.svg");
-  width: 100%;
-  height: 100%; }
+.icon-facebook:before {
+  content: "\f10c"; }
 
-.icon-test1 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/wrench73.svg");
-  mask-image: url("../../global/content/svg/wrench73.svg");
-  width: 100%;
-  height: 100%; }
+.icon-form:before {
+  content: "\f10d"; }
 
-.icon-test2 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/thumbtack1.svg");
-  mask-image: url("../../global/content/svg/thumbtack1.svg");
-  width: 100%;
-  height: 100%; }
+.icon-googleplus:before {
+  content: "\f10e"; }
 
-.icon-test3 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/unlocked46.svg");
-  mask-image: url("../../global/content/svg/unlocked46.svg");
-  width: 100%;
-  height: 100%; }
+.icon-informations:before {
+  content: "\f10f"; }
 
-.icon-test4 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/expand43.svg");
-  mask-image: url("../../global/content/svg/expand43.svg");
-  width: 100%;
-  height: 100%; }
+.icon-instagram:before {
+  content: "\f110"; }
 
-.icon-test5 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/dollar178.svg");
-  mask-image: url("../../global/content/svg/dollar178.svg");
-  width: 100%;
-  height: 100%; }
+.icon-key:before {
+  content: "\f111"; }
 
-.icon-yesno {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/navigation12.svg");
-  mask-image: url("../../global/content/svg/navigation12.svg");
-  width: 100%;
-  height: 100%; }
+.icon-lock:before {
+  content: "\f112"; }
 
-.icon-right {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/right164.svg");
-  mask-image: url("../../global/content/svg/right164.svg");
-  width: 100%;
-  height: 100%; }
+.icon-longanswer:before {
+  content: "\f113"; }
+
+.icon-menu:before {
+  content: "\f114"; }
+
+.icon-message:before {
+  content: "\f115"; }
+
+.icon-money:before {
+  content: "\f116"; }
+
+.icon-monitor:before {
+  content: "\f117"; }
+
+.icon-people:before {
+  content: "\f118"; }
+
+.icon-phone:before {
+  content: "\f119"; }
+
+.icon-plus:before {
+  content: "\f11a"; }
+
+.icon-quote:before {
+  content: "\f11b"; }
+
+.icon-rename:before {
+  content: "\f11c"; }
+
+.icon-save:before {
+  content: "\f11d"; }
+
+.icon-selectbox:before {
+  content: "\f11e"; }
+
+.icon-settings:before {
+  content: "\f11f"; }
+
+.icon-shopping:before {
+  content: "\f120"; }
+
+.icon-shortanswer:before {
+  content: "\f121"; }
+
+.icon-svg:before {
+  content: "\f122"; }
+
+.icon-tick:before {
+  content: "\f123"; }
+
+.icon-trend:before {
+  content: "\f124"; }
+
+.icon-twitter:before {
+  content: "\f125"; }
+
+.icon-warning:before {
+  content: "\f126"; }
+
+.icon-xml:before {
+  content: "\f127"; }
 
 body {
   background-color: #040520;
@@ -936,8 +933,6 @@ body {
         position: absolute;
         top: 0;
         left: 0; }
-        .app .formCreator .main .form-name .form-icon .icon-check {
-          background-color: #040520; }
       .app .formCreator .main .form-name .form-name-value {
         width: calc(100% - 2px - 34px);
         height: 32px;
@@ -948,8 +943,6 @@ body {
         position: absolute;
         color: #040520;
         border: none; }
-      .app .formCreator .main .form-name.error .form-icon .icon-check {
-        background-color: red; }
     .app .formCreator .main .toolbar {
       background-color: #2bf4b1;
       background-color: #29e9a9;
@@ -1157,19 +1150,13 @@ body {
               display: inline-block;
               left: 4px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .inputfield .input-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon * {
-                background-color: #000543; }
+              width: 20px; }
             .app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon {
               position: absolute;
               display: inline-block;
               right: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon * {
-                background-color: #000543; }
+              width: 20px; }
           .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder {
             box-sizing: border-box;
             display: block;
@@ -1194,19 +1181,13 @@ body {
               display: inline-block;
               left: 4px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon * {
-                background-color: #000543; }
+              width: 20px; }
             .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon {
               position: absolute;
               display: inline-block;
               right: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon * {
-                background-color: #000543; }
+              width: 20px; }
           .app .formCreator .main .window .content .inputfields-group .newinputfield, .app .formCreator .main .window .content .newinputfield-group .newinputfield {
             box-sizing: border-box;
             display: block;
@@ -1233,19 +1214,13 @@ body {
               display: inline-block;
               left: 4px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon *, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon * {
-                background-color: #000543; }
+              width: 20px; }
             .app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon {
               position: absolute;
               display: inline-block;
               right: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon * {
-                background-color: #000543; }
+              width: 20px; }
             .app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
               position: absolute;
               display: inline-block;
@@ -1389,8 +1364,6 @@ body {
                 width: 21px;
                 padding-top: 2px;
                 padding-left: 5px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading .description .icon-description {
-                  background-color: white; }
             .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body {
               width: 100%;
               height: auto;
@@ -1412,8 +1385,6 @@ body {
                   width: 21px;
                   padding-top: 2px;
                   padding-left: 5px; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label .description .icon-description {
-                    background-color: white; }
               .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .small-input {
                 width: calc(100% - 2px);
                 height: 23px;
@@ -1460,10 +1431,6 @@ body {
                     width: 23px;
                     padding-right: 5px;
                     cursor: pointer; }
-                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon .icon-add, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon .icon-add {
-                      background-color: #2bf4b1; }
-                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon .icon-close, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon .icon-close {
-                      background-color: #E93255; }
               .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count {
                 width: 100%;
                 margin-top: 3px; }
@@ -1499,8 +1466,6 @@ body {
                 float: right;
                 padding-right: 5px;
                 cursor: pointer; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon .icon-add {
-                  background-color: white; }
               .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .description-block {
                 display: none;
                 width: 100%; }
@@ -1705,14 +1670,10 @@ body {
                 bottom: 0;
                 left: 0;
                 width: 34px; }
-                .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon .icon-check {
-                  background-color: darkgray; }
             .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked {
               border: 1px solid #2bf4b1; }
               .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon {
                 background-color: #2bf4b1; }
-                .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon .icon-check {
-                  background-color: white; }
           .app .formCreator .popup .preview .preview-block .preview-save {
             display: block;
             height: 50px;
@@ -1744,8 +1705,6 @@ body {
           width: 40px;
           height: 40px;
           cursor: pointer; }
-          .app .formCreator .popup .preview .close .icon-close {
-            background-color: #040520; }
 
 .blur {
   -webkit-filter: blur(1px) grayscale(0.2) opacity(0.8);
@@ -1783,8 +1742,6 @@ body {
       top: 0;
       position: absolute;
       z-index: 15; }
-      .app .formMapper .transition-controlls .close-controlls .icon-close {
-        background-color: #680014; }
     .app .formMapper .transition-controlls:before {
       content: '';
       display: block;
@@ -1858,23 +1815,12 @@ body {
       margin-right: 2%;
       cursor: pointer;
       box-sizing: border-box; }
-      .app .formMapper .transition-controlls .action-selector .change-form .icon-add, .app .formMapper .transition-controlls .action-selector .change-form .icon-close, .app .formMapper .transition-controlls .action-selector .change-form .icon-test1, .app .formMapper .transition-controlls .action-selector .remove-form .icon-add, .app .formMapper .transition-controlls .action-selector .remove-form .icon-close, .app .formMapper .transition-controlls .action-selector .remove-form .icon-test1, .app .formMapper .transition-controlls .action-selector .edit-form .icon-add, .app .formMapper .transition-controlls .action-selector .edit-form .icon-close, .app .formMapper .transition-controlls .action-selector .edit-form .icon-test1 {
-        height: 40px;
-        width: 40px;
-        margin: auto;
-        background-color: black; }
       .app .formMapper .transition-controlls .action-selector .change-form .label, .app .formMapper .transition-controlls .action-selector .remove-form .label, .app .formMapper .transition-controlls .action-selector .edit-form .label {
         text-align: center;
         color: #040520; }
       .app .formMapper .transition-controlls .action-selector .change-form:hover, .app .formMapper .transition-controlls .action-selector .remove-form:hover, .app .formMapper .transition-controlls .action-selector .edit-form:hover {
         margin-top: 19px;
         border: 1px solid #757575; }
-    .app .formMapper .transition-controlls .action-selector .change-form .icon-test1 {
-      background-color: #1289D0; }
-    .app .formMapper .transition-controlls .action-selector .remove-form .icon-close {
-      background-color: #AE1331; }
-    .app .formMapper .transition-controlls .action-selector .edit-form .icon-add {
-      background-color: #009464; }
     .app .formMapper .transition-controlls .remove-form-confirm .question {
       height: 40px;
       margin-top: 5px;
@@ -1935,8 +1881,6 @@ body {
     right: -2px;
     width: 20px;
     height: 20px; }
-    .app .formSelector .close-form-selector .icon-close {
-      background-color: #040520; }
   .app .formSelector .select-block {
     width: 100%;
     margin: auto;
