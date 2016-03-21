@@ -7,13 +7,16 @@
 
     _fm.attachEvents = function () {
 
-        $(document).off('click').on('click',function(event){
+        $(document).on('click',function(event){
+            event.stopPropagation();
+            event.preventDefault();
 
             if( (Object.keys(_WMGlobal.formSelector.$el).length !== 0)){
                 if(_WMGlobal.formSelector.$el.has( $(event.target) ).length === 0 && _WMGlobal.formSelector.$el.hasClass('opened')){
                     _WMGlobal.formSelector.destroySelector();
                 }
             }
+
         });
 
         _fm.$el.find(".transition").add(".transition-icon").on('click',function(event){
@@ -23,6 +26,7 @@
 
             }else{
                 _WMGlobal.formSelector.init(transitionID);
+                $(document).trigger('closeControls');
                 return;
             }
 

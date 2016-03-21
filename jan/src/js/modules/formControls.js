@@ -4,6 +4,8 @@
 
     function formControls($parent,$transitionEl,form){
         this.init($parent,$transitionEl,form);
+        this.attachEventHandlers.call(this);
+
     }
 
     formControls.prototype.init = function($parent,$transitionEl,form){
@@ -44,7 +46,6 @@
 
         this.$parent.append(this.$el);
 
-        this.attachEventHandlers.call(this);
     };
 
 
@@ -68,6 +69,20 @@
 
         this.$remove.find('.remove').on('click',function(){confirmRemove.call(this)}.bind(this));
 
+        $(document).on('click',function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+
+            if(this.$el.has( $(event.target) ).length === 0 &&
+                $(event.target).closest('.transition-icon,.transition').length === 0){
+
+                closeControls.call(this);
+            }
+        }.bind(this));
+
+        $(document).on('closeControls',function () {
+            closeControls.call(this);
+        }.bind(this))
     };
 
     function closeControls(){
@@ -80,6 +95,12 @@
     }
 
     function openControls(){
+        var $visible = $('.transition-controlls:visible');
+        if($visible.length > 0){
+            $visible.each(function() {
+                $( this ).hide();
+            });
+        }
         this.$el.show();
     }
 

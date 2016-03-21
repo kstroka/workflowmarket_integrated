@@ -870,14 +870,14 @@ h1 {
   content: "\f13b"; }
 
 body {
-  background-color: #040520;
-  background-image: -webkit-gradient(linear, left top, right top, from(#040520), to(#10042f));
-  background-image: -webkit-linear-gradient(left, #040520, #10042f);
-  background-image: -moz-linear-gradient(left, #040520, #10042f);
-  background-image: -ms-linear-gradient(left, #040520, #10042f);
-  background-image: -o-linear-gradient(left, #040520, #10042f);
-  background-image: linear-gradient(left, #040520, #10042f);
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#040520', end-colourStr='#10042f', gradientType='1'); }
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(left, #fff, #fff);
+  background-image: -moz-linear-gradient(left, #fff, #fff);
+  background-image: -ms-linear-gradient(left, #fff, #fff);
+  background-image: -o-linear-gradient(left, #fff, #fff);
+  background-image: linear-gradient(left, #fff, #fff);
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#fff', end-colourStr='#fff', gradientType='1'); }
   body .button-small {
     box-sizing: border-box;
     display: block;
@@ -960,7 +960,7 @@ body {
 .wm-form-creator-app {
   font-weight: lighter;
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: 0;
   bottom: 60px;
   left: 0;
@@ -968,7 +968,7 @@ body {
   height: auto;
   margin: 0 20px;
   text-align: left;
-  background-color: #f0f0f0;
+  background-color: #fff;
   zoom: 1;
   z-index: 1; }
   .wm-form-creator-app .formCreator {
@@ -981,7 +981,7 @@ body {
     z-index: 2; }
     .wm-form-creator-app .formCreator .main .form-name {
       display: block;
-      width: 390px;
+      width: 300px;
       height: 34px;
       position: absolute;
       top: -34px;
@@ -1001,7 +1001,7 @@ body {
         top: 0;
         left: 34px;
         position: absolute;
-        color: #040520;
+        color: #fff;
         border: none; }
     .wm-form-creator-app .formCreator .main .toolbar {
       background-color: #2bf4b1;
@@ -1014,12 +1014,12 @@ body {
       background-image: linear-gradient(left, #29e9a9, #2bf4b1);
       filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#29e9a9', end-colourStr='#2bf4b1', gradientType='1');
       position: absolute;
-      width: 390px;
+      width: 300px;
       height: 100%;
       overflow-y: auto;
       overflow-x: hidden;
       z-index: 4;
-      box-shadow: 6px 0 8px -6px #10042f; }
+      box-shadow: 6px 0 8px -6px #757575; }
       .wm-form-creator-app .formCreator .main .toolbar .content {
         display: inline-block;
         margin: 20px;
@@ -1042,7 +1042,7 @@ body {
             padding: 0;
             position: relative;
             float: left;
-            width: 72.5px;
+            width: 220px;
             height: 38px;
             margin-right: 20px;
             margin-bottom: 12px;
@@ -1052,7 +1052,9 @@ body {
             vertical-align: middle;
             line-height: 38px;
             border-radius: 2px;
-            cursor: pointer; }
+            cursor: pointer;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small:hover {
               background-color: #034369; }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small .button-icon {
@@ -1062,13 +1064,15 @@ body {
               height: 14px;
               width: 14px;
               padding-top: 12px; }
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small.dragged {
+              background-color: #045483; }
           .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium {
             box-sizing: border-box;
             display: block;
             padding: 0;
             position: relative;
             float: left;
-            width: 165px;
+            width: 220px;
             height: 38px;
             margin-right: 20px;
             margin-bottom: 12px;
@@ -1098,7 +1102,7 @@ body {
             padding: 0;
             position: relative;
             float: left;
-            width: 350px;
+            width: 260px;
             height: 38px;
             margin-right: 20px;
             margin-bottom: 12px;
@@ -1108,7 +1112,9 @@ body {
             vertical-align: middle;
             line-height: 38px;
             border-radius: 2px;
-            cursor: pointer; }
+            cursor: pointer;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large:hover {
               background-color: #24327D; }
             .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large .button-icon {
@@ -1118,6 +1124,8 @@ body {
               height: 14px;
               width: 14px;
               padding-top: 12px; }
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large.dragged {
+              background-color: #045483; }
         .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save {
           position: absolute;
           bottom: 5px;
@@ -1154,7 +1162,7 @@ body {
       top: 0;
       right: 0;
       bottom: 0;
-      left: 390px;
+      left: 300px;
       overflow-y: auto;
       overflow-x: hidden;
       background-color: #E93255;
@@ -1329,10 +1337,10 @@ body {
           background-color: #1289D0; }
           .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-icon {
             position: absolute;
-            width: 20px;
-            height: 20px;
             left: 20px;
-            top: 10px; }
+            top: 7px;
+            font-size: 20px;
+            color: #fff; }
           .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-name-inner {
             display: inline-block;
             height: inherit;
@@ -1559,7 +1567,7 @@ body {
                     .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup:hover {
                       background-color: #00E499; }
                   .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
-                    background-color: #040520;
+                    background-color: #fff;
                     border-radius: 2px; }
                   .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup {
                     background-color: #E93255;
@@ -1639,7 +1647,7 @@ body {
             display: block;
             width: 100%;
             position: relative;
-            color: #040520;
+            color: #fff;
             vertical-align: middle;
             line-height: 30px;
             font-size: 30px;
@@ -1648,7 +1656,7 @@ body {
             box-sizing: border-box;
             width: 100%;
             position: relative;
-            color: #040520;
+            color: #fff;
             margin-top: 10px;
             vertical-align: middle;
             line-height: 20px;
@@ -1694,7 +1702,7 @@ body {
               width: calc(100% - 4px);
               height: 100%;
               font-size: 22px;
-              border: #f0f0f0 1px solid;
+              border: #fff 1px solid;
               border-radius: 2px;
               display: inline-block; }
           .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox {
@@ -1828,7 +1836,8 @@ body {
         vertical-align: middle;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap; }
+        white-space: nowrap;
+        color: #040520; }
     .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm {
       display: none; }
       .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .save, .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .cancel, .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .save, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .cancel, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove {
@@ -1881,7 +1890,8 @@ body {
         height: 32px;
         width: 100%;
         text-align: center;
-        margin-bottom: 5px; }
+        margin-bottom: 5px;
+        color: #040520; }
         .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .edit-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .rename-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .remove-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .edit-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .rename-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .remove-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .edit-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .rename-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .remove-button i {
           font-size: 32px; }
       .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .label, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .label, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .label {

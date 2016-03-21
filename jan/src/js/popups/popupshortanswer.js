@@ -164,7 +164,7 @@
                 <div class="block-body"> \
                     <select class="selectbox dataset"> \
                     </select> \
-                    <div class="dataset-add-icon"></div></div>\
+                    <div class="dataset-add-icon"></div>\
                     <div class="add-dataset-block"> \
                         <div class="label"> Set dataset name</div> \
                         <input type="text" class="small-input new-dataset"> \

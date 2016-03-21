@@ -14,10 +14,7 @@
 
 <body>
 
-<?php
-    @include ('../martin/template/header.php');
-?>
-
+<nav style="width: 100%;height: 80px;background-color: #f0f0f0"></nav>
 <section class="wm-form-creator-app">
 
 </section>

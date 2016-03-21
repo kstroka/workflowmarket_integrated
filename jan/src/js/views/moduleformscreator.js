@@ -15,7 +15,7 @@
         var $formName = _fcm.main.find('.form-name');
         var $formNameInput = _fcm.main.find('.form-name-value');
 
-        $(document).off('click');
+        // $(document).off('click');
 
 
         $('.inputfields-group').sortable({
@@ -579,10 +579,10 @@
                 <div class="toolbar "> \
                     <div class="content"> \
                         <ul class="buttons-group"> \
-                            <li class="button-medium" draggable="true" data-type="shortanswer"> <div class="button-icon"></div> Short answer </li> \
-                            <li class="button-medium" draggable="true" data-type="longanswer"> <div class="button-icon"></div> Long answer </li> \
-                            <li class="button-medium" draggable="true" data-type="selectbox"> <div class="button-icon"></div> Selectbox </li> \
-                            <li class="button-medium" draggable="true" data-type="checkbox"> <div class="button-icon"></div> Checkbox </li> \
+                            <li class="button-large" draggable="true" data-type="shortanswer"> <div class="button-icon"></div> Short answer </li> \
+                            <li class="button-large" draggable="true" data-type="longanswer"> <div class="button-icon"></div> Long answer </li> \
+                            <li class="button-large" draggable="true" data-type="selectbox"> <div class="button-icon"></div> Selectbox </li> \
+                            <li class="button-large" draggable="true" data-type="checkbox"> <div class="button-icon"></div> Checkbox </li> \
                         </ul> \
                         <div class="cancel-save">\
                                 <div class="cancel-button">Cancel</div>\

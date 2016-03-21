@@ -19,7 +19,7 @@ body{
 .wm-form-creator-app{
   font-weight: lighter;
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: 0;
   bottom: 60px;
   left: 0;
@@ -44,7 +44,7 @@ body{
     .main{
       .form-name{
         display: block;
-        width: 390px;
+        width: $toolbar-width;
         height:34px;
         position: absolute;
         top: -34px;
@@ -81,12 +81,12 @@ body{
         @include gradient($mainToolbarColor1,$mainToolbarColor);
 
         position: absolute;
-        width: 390px;
+        width: $toolbar-width;
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
         z-index: 4;
-        box-shadow: 6px 0 8px -6px $backgroundColor2;
+        box-shadow: 6px 0 8px -6px $gray;
 
         .content{
           display: inline-block;
@@ -107,18 +107,26 @@ body{
             padding-left: 0;
 
             .button-small{
-              @include button( 72.5px,$buttonColor3,white,$buttonColor32);
+              @include button( $toolbar-width - 4*$spacing,$buttonColor3,white,$buttonColor32);
+              @include shadow(0.4);
+              &.dragged{
+                background-color: $buttonColor22;
+              }
             }
 
             .button-medium {
-              @include button( 165px,$buttonColor2,white,$buttonColor22);
+              @include button( $toolbar-width - 4*$spacing,$buttonColor2,white,$buttonColor22);
               @include shadow(0.4);
               &.dragged{
                   background-color: $buttonColor22;
               }
             }
             .button-large {
-              @include button( 350px,$buttonColor1,white,$buttonColor12);
+              @include button( $toolbar-width - 2*$spacing,$buttonColor1,white,$buttonColor12);
+              @include shadow(0.4);
+              &.dragged{
+                background-color: $buttonColor22;
+              }
             }
 
 
@@ -170,7 +178,7 @@ body{
         top: 0;
         right: 0;
         bottom: 0;
-        left: 390px;
+        left: $toolbar-width;
         overflow-y: auto;
         overflow-x: hidden;
         background-color: $mainWindowColor;
@@ -310,10 +318,11 @@ body{
           background-color: $buttonColor2;
           .inputfield-icon{
             position: absolute;
-            width: 20px;
-            height: 20px;
             left: 20px;
-            top: 10px;
+            top: 7px;
+            font-size: 20px;
+            color:$white;
+
 
           }
           .inputfield-name-inner{

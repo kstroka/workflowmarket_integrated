@@ -598,6 +598,8 @@ function loadVariables(){
 
     function formControls($parent,$transitionEl,form){
         this.init($parent,$transitionEl,form);
+        this.attachEventHandlers.call(this);
+
     }
 
     formControls.prototype.init = function($parent,$transitionEl,form){
@@ -638,7 +640,6 @@ function loadVariables(){
 
         this.$parent.append(this.$el);
 
-        this.attachEventHandlers.call(this);
     };
 
 
@@ -662,6 +663,20 @@ function loadVariables(){
 
         this.$remove.find('.remove').on('click',function(){confirmRemove.call(this)}.bind(this));
 
+        $(document).on('click',function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+
+            if(this.$el.has( $(event.target) ).length === 0 &&
+                $(event.target).closest('.transition-icon,.transition').length === 0){
+
+                closeControls.call(this);
+            }
+        }.bind(this));
+
+        $(document).on('closeControls',function () {
+            closeControls.call(this);
+        }.bind(this))
     };
 
     function closeControls(){
@@ -674,6 +689,12 @@ function loadVariables(){
     }
 
     function openControls(){
+        var $visible = $('.transition-controlls:visible');
+        if($visible.length > 0){
+            $visible.each(function() {
+                $( this ).hide();
+            });
+        }
         this.$el.show();
     }
 
@@ -1870,7 +1891,7 @@ function loadVariables(){
                 <div class="block-body"> \
                     <select class="selectbox dataset"> \
                     </select> \
-                    <div class="dataset-add-icon"></div></div>\
+                    <div class="dataset-add-icon"></div>\
                     <div class="add-dataset-block"> \
                         <div class="label"> Set dataset name</div> \
                         <input type="text" class="small-input new-dataset"> \
@@ -1946,7 +1967,7 @@ function loadVariables(){
         var $formName = _fcm.main.find('.form-name');
         var $formNameInput = _fcm.main.find('.form-name-value');
 
-        $(document).off('click');
+        // $(document).off('click');
 
 
         $('.inputfields-group').sortable({
@@ -2510,10 +2531,10 @@ function loadVariables(){
                 <div class="toolbar "> \
                     <div class="content"> \
                         <ul class="buttons-group"> \
-                            <li class="button-medium" draggable="true" data-type="shortanswer"> <div class="button-icon"></div> Short answer </li> \
-                            <li class="button-medium" draggable="true" data-type="longanswer"> <div class="button-icon"></div> Long answer </li> \
-                            <li class="button-medium" draggable="true" data-type="selectbox"> <div class="button-icon"></div> Selectbox </li> \
-                            <li class="button-medium" draggable="true" data-type="checkbox"> <div class="button-icon"></div> Checkbox </li> \
+                            <li class="button-large" draggable="true" data-type="shortanswer"> <div class="button-icon"></div> Short answer </li> \
+                            <li class="button-large" draggable="true" data-type="longanswer"> <div class="button-icon"></div> Long answer </li> \
+                            <li class="button-large" draggable="true" data-type="selectbox"> <div class="button-icon"></div> Selectbox </li> \
+                            <li class="button-large" draggable="true" data-type="checkbox"> <div class="button-icon"></div> Checkbox </li> \
                         </ul> \
                         <div class="cancel-save">\
                                 <div class="cancel-button">Cancel</div>\
@@ -2810,13 +2831,16 @@ function loadVariables(){
 
     _fm.attachEvents = function () {
 
-        $(document).off('click').on('click',function(event){
+        $(document).on('click',function(event){
+            event.stopPropagation();
+            event.preventDefault();
 
             if( (Object.keys(_WMGlobal.formSelector.$el).length !== 0)){
                 if(_WMGlobal.formSelector.$el.has( $(event.target) ).length === 0 && _WMGlobal.formSelector.$el.hasClass('opened')){
                     _WMGlobal.formSelector.destroySelector();
                 }
             }
+
         });
 
         _fm.$el.find(".transition").add(".transition-icon").on('click',function(event){
@@ -2826,6 +2850,7 @@ function loadVariables(){
 
             }else{
                 _WMGlobal.formSelector.init(transitionID);
+                $(document).trigger('closeControls');
                 return;
             }
 
