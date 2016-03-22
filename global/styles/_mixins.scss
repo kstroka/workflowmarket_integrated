@@ -1,0 +1,52 @@
+@mixin button($color,$fontColor,$hovercolor,$hoverFontColor,$height:30px){
+  padding: 0px 20px;
+  height: $height;
+  background-color: $color;
+  color:$fontColor;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: 0;
+  line-height: $height;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  &:hover{
+    background-color: $hovercolor;
+    color:$hoverFontColor;
+  }
+  &:focus{
+    outline:0;
+  }
+}
+
+@mixin input($color,$fontColor,$hovercolor,$hoverFontColor,$height:30px){
+  padding: 10px;
+  height: $height;
+  background-color: $color;
+  box-sizing: border-box;
+  color:$fontColor;
+  border: 1px solid $gray2;
+  border-radius: 2px;
+  &:hover{
+    background-color: $hovercolor;
+    color:$hoverFontColor;
+  }
+  &:focus{
+    outline:1px solid $gray2;
+  }
+}
+
+@mixin ellipsis ($line-height, $lines: 2) {
+
+    overflow: hidden;
+    height: $line-height*$lines;
+
+    max-height: $line-height*$lines;
+    line-height: $line-height;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+
+    // Solution for Opera
+    text-overflow: -o-ellipsis-lastline;
+}

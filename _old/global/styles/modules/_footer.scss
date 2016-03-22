@@ -1,0 +1,41 @@
+.footer{
+    width: 100%;
+    padding: $gap40 0px;
+    background: $gray2;
+    color: $gray;
+    
+    .bottomrow{
+        font-size: $textSmallSize;
+        p{
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+    .heading{
+        margin: 0 0 $gap30 0;
+        font-weight: bold;
+        font-size: $textSize;
+    }
+    
+    ul{
+        width: 100%;
+        margin: 0;  
+        padding: 0;
+        list-style-type: none;
+        
+        li{ 
+            margin: 0 0 $gap20 0;
+            font-size: $textSmallSize;
+        }
+        
+        li:last-child{
+            margin: 0;
+        }
+    }
+            
+    ul.last{
+        border-right: 1px solid $gray3;
+    }
+
+}

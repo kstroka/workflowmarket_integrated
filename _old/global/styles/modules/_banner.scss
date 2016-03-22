@@ -1,0 +1,66 @@
+.banner{
+  background-color: $gray2;
+  height: 25px;
+  width: 100%;
+  position: relative;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+
+  .content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+    .tip-text,.navigation{
+      position: absolute;               /* 2 */
+      top: 50%;                         /* 3 */
+      transform: translate(0, -50%); /* 4 */
+    }
+
+    .tip-text{
+      display: inline-block;
+      max-width: 40%;
+      left:0;
+      color:$gray;
+      cursor: pointer;
+      &:hover{
+        color:$gray3;
+      }
+    }
+
+    .navigation{
+      display: inline-block;
+      max-width: 60%;
+      right:0;
+
+      .banner-td{
+        display: inline-block;
+        padding:0 6px;
+        border-right: 1px solid white;
+        &:last-child{
+          margin-right: 0;
+          border-right: 0;
+        }
+        a{
+          color: $gray;
+          text-decoration: none;
+
+          &:hover{
+            color:$gray3;
+          }
+        }
+      }
+
+      .forms{
+        a{
+          color:$purple;
+          &:hover{
+            color:$purple2;
+          }
+        }
+      }
+
+    }
+  }
+}

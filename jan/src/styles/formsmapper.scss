@@ -1,0 +1,207 @@
+.wm-form-creator-app{
+  .formMapper{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    .transition,.transition-icon{
+      cursor: pointer;
+    }
+
+  .transition-controlls{
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 240px;
+    height: 120px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 8px 4px;
+    border-radius:2px;
+    @include shadow();
+
+    .close-controlls{
+      width: 24px;
+      height: 24px;
+      right: 0;
+      top: 0;
+      position: absolute;
+      z-index: 15;
+
+    }
+
+    &:before{
+      content:'';
+      display:block;
+      width:0;
+      height:0;
+      position:absolute;
+
+      border-top: 12px solid white;
+      border-right:12px solid transparent;
+      border-left: 12px solid transparent;
+
+      left:120px - 12px;
+      bottom:-12px;
+    }
+
+    .action-selector,.remove-form-confirm, .change-form-name-confirm{
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      .headline{
+        width: calc(100% - 40px);
+        margin: auto;
+        height: 24px;
+        line-height: 24px;
+        font-size: 22px;
+        text-align: center;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color:$darkblue;
+      }
+
+    }
+
+    .remove-form-confirm, .change-form-name-confirm{
+      display: none;
+      .save,.cancel,.remove{
+        position: absolute;
+        bottom: 0;
+        width: 30%;
+        height: 25px;
+        line-height: 25px;
+        font-size: 15px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 2px;
+        background-color: lightgray;
+        right: 0;
+        &:hover{
+          background-color: grey;
+          color:white;
+          cursor: pointer;
+        }
+      }
+
+      .cancel{
+        left: 0;
+      }
+
+      .remove{
+        background-color: $mainWindowColor;
+        color: black;
+        &:hover{
+          background-color: $mainWindowColor2;
+        }
+      }
+
+      .remove{
+        background-color: $mainWindowColor;
+        color: $mainWindowColor3;
+        &:hover{
+          background-color: $mainWindowColor2;
+        }
+      }
+      .save{
+        background-color: $mainToolbarColor;
+        color: $mainToolbarColor4;
+        &:hover{
+          background-color: $mainToolbarColor4;
+        }
+      }
+    }
+
+    .action-selector{
+      .change-form, .remove-form, .edit-form{
+        position: relative;
+        height: auto;
+        width: calc( (100% - 6*2% - 6*2px ) / 3);
+        margin-top: 15px;
+        border-radius: 2px;
+        float: left;
+        margin-left: 2%;
+        margin-right: 2%;
+        cursor: pointer;
+        box-sizing: border-box;
+        padding: 5px 0;
+
+        .edit-button,.rename-button,.remove-button{
+          display: block;
+          height: 32px;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 5px;
+          color : $darkblue;
+          i{
+            font-size: 32px;
+          }
+        }
+
+        .label{
+          text-align: center;
+          color:$darkblue
+        }
+
+        &:hover{
+          margin-top: 14px;
+          border: 1px solid $gray;
+        }
+
+      }
+
+
+    }
+
+    .remove-form-confirm{
+      .question{
+        height: 40px;
+        margin-top: 5px;
+        line-height: 20px;
+        font-size: 15px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
+    .change-form-name-confirm{
+      .form-name{
+        margin-top: 15px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 18px;
+        vertical-align: middle;
+        width: calc(100% - 6px);
+      }
+    }
+  }
+
+    .close-mapper{
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      .close-button{
+        display: block;
+        width: 120px;
+        height: 30px;
+        float:right;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 30px;
+        font-size: 22px;
+        border-radius: 2px;
+        background-color: $mainToolbarColor;
+        color:white;
+        cursor: pointer;
+
+        @include gradient($mainToolbarColor4,$mainToolbarColor3);
+      }
+    }
+  }
+}

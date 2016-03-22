@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="sheet.css">
+        <link rel="stylesheet" type="text/css" href="myFonts/style.css">
+	<script src="jquery-1.11.3.min.js"></script>
+
+	<script src="script.js"></script>
+        
+	<title>Petri net modeler</title>
+</head>
+<body>
+	<div class="container">
+		<div id="controlArea">
+                    <ul>
+                        
+                        <li>
+                            <input type="button" id="clearButton" title="Clear net area" value="clear" onClick="clearNetArea()"/>
+                            <label for="clearButton" ><i class="icon-deleteAll"></i></label>
+                        </li>
+                        <li>
+                            <input type="file" id="inportButton" title="Load XML from file" onchange="openFile(event)"/>
+                            <label for="inportButton" ><i class="icon-upload"></i></label>
+                        </li>
+                        <li>
+                            <input type="button" id="saveButton" value="save" title="Save as XML" onClick="exportAsXML()"/>
+                            <label for="saveButton" ><i class="icon-xml" ></i></label>
+                        </li>
+                        <li>
+                            <input type="button" id="svgSaveButton" title="Save as SVG" value="saveSVG" onClick="saveAsSVG()"/>
+                            <label for="svgSaveButton" ><i class="icon-svg"></i></label>
+                        </li>
+                        <li>
+                            <input type="button" id="databaseSaveButton" title="Save net into database" value="saveDatabase" onClick="postDataToDB()"/>
+                            <label for="databaseSaveButton" ><i class="icon-upload-database"></i></label>
+                        </li>
+                        <li>
+                            <input type="button" id="databaseLoadButton" title="Load net from database" value="loadDatabase" onClick="getDataFromDB()"/>
+                            <label for="databaseLoadButton" ><i class="icon-download-database"></i></label>
+                        </li>
+                     <!--   <li>
+                            <input type="button" id="descriptionButton" title="describe net" value="descrube net" onClick="describeNet()"/>
+                            <label for="descriptionButton" ><i class="icon-floppy-disk"></i></label>
+                        </li> -->
+                    </ul>
+                    <ul>
+                        <li>
+                            
+                            <input type="radio"
+                                        name="netControls"
+                                        id="placeRadio"
+                                        value="place"
+                                        title="place"/>
+                            <label for="placeRadio" ><i class="icon-place"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="transitionRadio"
+                                        value="transition"
+                                        title="transition"/>
+                            <label for="transitionRadio" ><i class="icon-transition"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="moveRadio"
+                                        value="move"
+                                        title="move"/>
+                            <label for="moveRadio" ><i class="icon-move"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="removeRadio"
+                                        value="remove"
+                                        title="remove"/>
+                            <label for="removeRadio" ><i class="icon-remove"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="fireRadio"
+                                        value="fire"
+                                        title="fire"/>
+                            <label for="fireRadio" ><i class="icon-fire"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="arcRadio"
+                                        value="arc"
+                                        title="regular arc"/>
+                            <label for="arcRadio" ><i class="icon-regular_arc_arrow"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="resetArcRadio"
+                                        value="resetArc"
+                                        title="reset arc"/>
+                            <label for="resetArcRadio" ><i class="icon-reset_arc_arrow"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="inhibitorArcRadio"
+                                        value="inhibitorArc"
+                                        title="inhibitor arc"/>
+                            <label for="inhibitorArcRadio" ><i class="icon-inhibitor_arc_arrow"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="arcWeightRadio"
+                                        value="arcWeight"
+                                        title="arc weight"/>
+                            <label for="arcWeightRadio" ><i class="icon-arc_weight"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="markRadio"
+                                        value="mark"
+                                        title="marking"/>
+                            <label for="markRadio" ><i class="icon-marking"></i></label>
+                        </li>
+                        <li>
+                            <input type="radio"
+                                        name="netControls"
+                                        id="labelRadio"
+                                        value="label"
+                                        title="label"/>
+                            <label for="labelRadio" ><i class="icon-label"></i></label>
+                        </li>
+                </ul>         
+		</div>
+                
+                    
+                    <svg id="netDrawArea" >
+                    
+                    </svg>
+                
+	</div>
+</body>
+</html>

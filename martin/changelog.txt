@@ -1,0 +1,1 @@
+idem robit views na 4 casti, header,carousel,body,footer

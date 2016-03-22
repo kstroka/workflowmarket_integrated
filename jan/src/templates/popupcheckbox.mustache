@@ -1,0 +1,67 @@
+<div class="inputfield-name">
+    <div class="inputfield-icon"> 
+        <i class="icon icon-checkbox"></i>
+    </div>
+    <div class= "inputfield-name-inner">Checkbox</div> 
+</div>
+
+<div class="inputfield-setting"> 
+    {{>topcontrols}}
+    <div class="block"> 
+        <div class="heading">Add choices 
+            <div class="description"> 
+                <div class="icon-description"></div> 
+            </div> 
+        </div> 
+        <div class="block-body"> 
+            <div class="choices"> 
+                <div class="choice-block"> 
+                    <input type="text" class="choice"> 
+                    <div class="controls"> 
+                        <div class="add-choice-icon">
+                            <i class="icon icon-plus"></i>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <div class="block"> 
+        <div class="heading">Selection count 
+            <div class="description"> 
+                <div class="icon-description"></div> 
+            </div> 
+        </div> 
+        <div class="block-body"> 
+            <div class="selection-count">
+                <div class="min-selection">
+                    <div class="label">Minimum</div>
+                    <input type="text" class="min-selected"> 
+                </div> 
+                <div class="max-selection">
+                    <div class="label">Maximum</div>
+                    <input type="text" class="max-selected"> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    
+    <div class="block"> 
+        <div class="block-body"> 
+            <div class="label">Alphabetical order 
+                <div class="description"> 
+                    <div class="icon-description"></div> 
+                </div> 
+            </div> 
+            <div class="on-off-setup"> 
+                <div class="mover alph-order on-selected"> 
+                    <div class="on-setup">On</div> 
+                    <div class="slider"></div> 
+                    <div class="off-setup">Off</div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    {{>dataset}}
+    {{>bottomcontrols}}
+</div>

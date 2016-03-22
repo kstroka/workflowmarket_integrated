@@ -1,7 +1,681 @@
+h1 {
+  font-size: 45px;
+  color: #fff; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .container:before, .container:after {
+    content: " ";
+    display: table; }
+  .container:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    .container {
+      width: 760px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 980px; } }
+  @media (min-width: 1160px) {
+    .container {
+      width: 1200px; } }
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .container-fluid:before, .container-fluid:after {
+    content: " ";
+    display: table; }
+  .container-fluid:after {
+    clear: both; }
+
+.row {
+  margin-left: -20px;
+  margin-right: -20px; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left; }
+
+.col-xs-1 {
+  width: 8.33333%; }
+
+.col-xs-2 {
+  width: 16.66667%; }
+
+.col-xs-3 {
+  width: 25%; }
+
+.col-xs-4 {
+  width: 33.33333%; }
+
+.col-xs-5 {
+  width: 41.66667%; }
+
+.col-xs-6 {
+  width: 50%; }
+
+.col-xs-7 {
+  width: 58.33333%; }
+
+.col-xs-8 {
+  width: 66.66667%; }
+
+.col-xs-9 {
+  width: 75%; }
+
+.col-xs-10 {
+  width: 83.33333%; }
+
+.col-xs-11 {
+  width: 91.66667%; }
+
+.col-xs-12 {
+  width: 100%; }
+
+.col-xs-pull-0 {
+  right: auto; }
+
+.col-xs-pull-1 {
+  right: 8.33333%; }
+
+.col-xs-pull-2 {
+  right: 16.66667%; }
+
+.col-xs-pull-3 {
+  right: 25%; }
+
+.col-xs-pull-4 {
+  right: 33.33333%; }
+
+.col-xs-pull-5 {
+  right: 41.66667%; }
+
+.col-xs-pull-6 {
+  right: 50%; }
+
+.col-xs-pull-7 {
+  right: 58.33333%; }
+
+.col-xs-pull-8 {
+  right: 66.66667%; }
+
+.col-xs-pull-9 {
+  right: 75%; }
+
+.col-xs-pull-10 {
+  right: 83.33333%; }
+
+.col-xs-pull-11 {
+  right: 91.66667%; }
+
+.col-xs-pull-12 {
+  right: 100%; }
+
+.col-xs-push-0 {
+  left: auto; }
+
+.col-xs-push-1 {
+  left: 8.33333%; }
+
+.col-xs-push-2 {
+  left: 16.66667%; }
+
+.col-xs-push-3 {
+  left: 25%; }
+
+.col-xs-push-4 {
+  left: 33.33333%; }
+
+.col-xs-push-5 {
+  left: 41.66667%; }
+
+.col-xs-push-6 {
+  left: 50%; }
+
+.col-xs-push-7 {
+  left: 58.33333%; }
+
+.col-xs-push-8 {
+  left: 66.66667%; }
+
+.col-xs-push-9 {
+  left: 75%; }
+
+.col-xs-push-10 {
+  left: 83.33333%; }
+
+.col-xs-push-11 {
+  left: 91.66667%; }
+
+.col-xs-push-12 {
+  left: 100%; }
+
+.col-xs-offset-0 {
+  margin-left: 0%; }
+
+.col-xs-offset-1 {
+  margin-left: 8.33333%; }
+
+.col-xs-offset-2 {
+  margin-left: 16.66667%; }
+
+.col-xs-offset-3 {
+  margin-left: 25%; }
+
+.col-xs-offset-4 {
+  margin-left: 33.33333%; }
+
+.col-xs-offset-5 {
+  margin-left: 41.66667%; }
+
+.col-xs-offset-6 {
+  margin-left: 50%; }
+
+.col-xs-offset-7 {
+  margin-left: 58.33333%; }
+
+.col-xs-offset-8 {
+  margin-left: 66.66667%; }
+
+.col-xs-offset-9 {
+  margin-left: 75%; }
+
+.col-xs-offset-10 {
+  margin-left: 83.33333%; }
+
+.col-xs-offset-11 {
+  margin-left: 91.66667%; }
+
+.col-xs-offset-12 {
+  margin-left: 100%; }
+
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left; }
+
+  .col-sm-1 {
+    width: 8.33333%; }
+
+  .col-sm-2 {
+    width: 16.66667%; }
+
+  .col-sm-3 {
+    width: 25%; }
+
+  .col-sm-4 {
+    width: 33.33333%; }
+
+  .col-sm-5 {
+    width: 41.66667%; }
+
+  .col-sm-6 {
+    width: 50%; }
+
+  .col-sm-7 {
+    width: 58.33333%; }
+
+  .col-sm-8 {
+    width: 66.66667%; }
+
+  .col-sm-9 {
+    width: 75%; }
+
+  .col-sm-10 {
+    width: 83.33333%; }
+
+  .col-sm-11 {
+    width: 91.66667%; }
+
+  .col-sm-12 {
+    width: 100%; }
+
+  .col-sm-pull-0 {
+    right: auto; }
+
+  .col-sm-pull-1 {
+    right: 8.33333%; }
+
+  .col-sm-pull-2 {
+    right: 16.66667%; }
+
+  .col-sm-pull-3 {
+    right: 25%; }
+
+  .col-sm-pull-4 {
+    right: 33.33333%; }
+
+  .col-sm-pull-5 {
+    right: 41.66667%; }
+
+  .col-sm-pull-6 {
+    right: 50%; }
+
+  .col-sm-pull-7 {
+    right: 58.33333%; }
+
+  .col-sm-pull-8 {
+    right: 66.66667%; }
+
+  .col-sm-pull-9 {
+    right: 75%; }
+
+  .col-sm-pull-10 {
+    right: 83.33333%; }
+
+  .col-sm-pull-11 {
+    right: 91.66667%; }
+
+  .col-sm-pull-12 {
+    right: 100%; }
+
+  .col-sm-push-0 {
+    left: auto; }
+
+  .col-sm-push-1 {
+    left: 8.33333%; }
+
+  .col-sm-push-2 {
+    left: 16.66667%; }
+
+  .col-sm-push-3 {
+    left: 25%; }
+
+  .col-sm-push-4 {
+    left: 33.33333%; }
+
+  .col-sm-push-5 {
+    left: 41.66667%; }
+
+  .col-sm-push-6 {
+    left: 50%; }
+
+  .col-sm-push-7 {
+    left: 58.33333%; }
+
+  .col-sm-push-8 {
+    left: 66.66667%; }
+
+  .col-sm-push-9 {
+    left: 75%; }
+
+  .col-sm-push-10 {
+    left: 83.33333%; }
+
+  .col-sm-push-11 {
+    left: 91.66667%; }
+
+  .col-sm-push-12 {
+    left: 100%; }
+
+  .col-sm-offset-0 {
+    margin-left: 0%; }
+
+  .col-sm-offset-1 {
+    margin-left: 8.33333%; }
+
+  .col-sm-offset-2 {
+    margin-left: 16.66667%; }
+
+  .col-sm-offset-3 {
+    margin-left: 25%; }
+
+  .col-sm-offset-4 {
+    margin-left: 33.33333%; }
+
+  .col-sm-offset-5 {
+    margin-left: 41.66667%; }
+
+  .col-sm-offset-6 {
+    margin-left: 50%; }
+
+  .col-sm-offset-7 {
+    margin-left: 58.33333%; }
+
+  .col-sm-offset-8 {
+    margin-left: 66.66667%; }
+
+  .col-sm-offset-9 {
+    margin-left: 75%; }
+
+  .col-sm-offset-10 {
+    margin-left: 83.33333%; }
+
+  .col-sm-offset-11 {
+    margin-left: 91.66667%; }
+
+  .col-sm-offset-12 {
+    margin-left: 100%; } }
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left; }
+
+  .col-md-1 {
+    width: 8.33333%; }
+
+  .col-md-2 {
+    width: 16.66667%; }
+
+  .col-md-3 {
+    width: 25%; }
+
+  .col-md-4 {
+    width: 33.33333%; }
+
+  .col-md-5 {
+    width: 41.66667%; }
+
+  .col-md-6 {
+    width: 50%; }
+
+  .col-md-7 {
+    width: 58.33333%; }
+
+  .col-md-8 {
+    width: 66.66667%; }
+
+  .col-md-9 {
+    width: 75%; }
+
+  .col-md-10 {
+    width: 83.33333%; }
+
+  .col-md-11 {
+    width: 91.66667%; }
+
+  .col-md-12 {
+    width: 100%; }
+
+  .col-md-pull-0 {
+    right: auto; }
+
+  .col-md-pull-1 {
+    right: 8.33333%; }
+
+  .col-md-pull-2 {
+    right: 16.66667%; }
+
+  .col-md-pull-3 {
+    right: 25%; }
+
+  .col-md-pull-4 {
+    right: 33.33333%; }
+
+  .col-md-pull-5 {
+    right: 41.66667%; }
+
+  .col-md-pull-6 {
+    right: 50%; }
+
+  .col-md-pull-7 {
+    right: 58.33333%; }
+
+  .col-md-pull-8 {
+    right: 66.66667%; }
+
+  .col-md-pull-9 {
+    right: 75%; }
+
+  .col-md-pull-10 {
+    right: 83.33333%; }
+
+  .col-md-pull-11 {
+    right: 91.66667%; }
+
+  .col-md-pull-12 {
+    right: 100%; }
+
+  .col-md-push-0 {
+    left: auto; }
+
+  .col-md-push-1 {
+    left: 8.33333%; }
+
+  .col-md-push-2 {
+    left: 16.66667%; }
+
+  .col-md-push-3 {
+    left: 25%; }
+
+  .col-md-push-4 {
+    left: 33.33333%; }
+
+  .col-md-push-5 {
+    left: 41.66667%; }
+
+  .col-md-push-6 {
+    left: 50%; }
+
+  .col-md-push-7 {
+    left: 58.33333%; }
+
+  .col-md-push-8 {
+    left: 66.66667%; }
+
+  .col-md-push-9 {
+    left: 75%; }
+
+  .col-md-push-10 {
+    left: 83.33333%; }
+
+  .col-md-push-11 {
+    left: 91.66667%; }
+
+  .col-md-push-12 {
+    left: 100%; }
+
+  .col-md-offset-0 {
+    margin-left: 0%; }
+
+  .col-md-offset-1 {
+    margin-left: 8.33333%; }
+
+  .col-md-offset-2 {
+    margin-left: 16.66667%; }
+
+  .col-md-offset-3 {
+    margin-left: 25%; }
+
+  .col-md-offset-4 {
+    margin-left: 33.33333%; }
+
+  .col-md-offset-5 {
+    margin-left: 41.66667%; }
+
+  .col-md-offset-6 {
+    margin-left: 50%; }
+
+  .col-md-offset-7 {
+    margin-left: 58.33333%; }
+
+  .col-md-offset-8 {
+    margin-left: 66.66667%; }
+
+  .col-md-offset-9 {
+    margin-left: 75%; }
+
+  .col-md-offset-10 {
+    margin-left: 83.33333%; }
+
+  .col-md-offset-11 {
+    margin-left: 91.66667%; }
+
+  .col-md-offset-12 {
+    margin-left: 100%; } }
+@media (min-width: 1160px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left; }
+
+  .col-lg-1 {
+    width: 8.33333%; }
+
+  .col-lg-2 {
+    width: 16.66667%; }
+
+  .col-lg-3 {
+    width: 25%; }
+
+  .col-lg-4 {
+    width: 33.33333%; }
+
+  .col-lg-5 {
+    width: 41.66667%; }
+
+  .col-lg-6 {
+    width: 50%; }
+
+  .col-lg-7 {
+    width: 58.33333%; }
+
+  .col-lg-8 {
+    width: 66.66667%; }
+
+  .col-lg-9 {
+    width: 75%; }
+
+  .col-lg-10 {
+    width: 83.33333%; }
+
+  .col-lg-11 {
+    width: 91.66667%; }
+
+  .col-lg-12 {
+    width: 100%; }
+
+  .col-lg-pull-0 {
+    right: auto; }
+
+  .col-lg-pull-1 {
+    right: 8.33333%; }
+
+  .col-lg-pull-2 {
+    right: 16.66667%; }
+
+  .col-lg-pull-3 {
+    right: 25%; }
+
+  .col-lg-pull-4 {
+    right: 33.33333%; }
+
+  .col-lg-pull-5 {
+    right: 41.66667%; }
+
+  .col-lg-pull-6 {
+    right: 50%; }
+
+  .col-lg-pull-7 {
+    right: 58.33333%; }
+
+  .col-lg-pull-8 {
+    right: 66.66667%; }
+
+  .col-lg-pull-9 {
+    right: 75%; }
+
+  .col-lg-pull-10 {
+    right: 83.33333%; }
+
+  .col-lg-pull-11 {
+    right: 91.66667%; }
+
+  .col-lg-pull-12 {
+    right: 100%; }
+
+  .col-lg-push-0 {
+    left: auto; }
+
+  .col-lg-push-1 {
+    left: 8.33333%; }
+
+  .col-lg-push-2 {
+    left: 16.66667%; }
+
+  .col-lg-push-3 {
+    left: 25%; }
+
+  .col-lg-push-4 {
+    left: 33.33333%; }
+
+  .col-lg-push-5 {
+    left: 41.66667%; }
+
+  .col-lg-push-6 {
+    left: 50%; }
+
+  .col-lg-push-7 {
+    left: 58.33333%; }
+
+  .col-lg-push-8 {
+    left: 66.66667%; }
+
+  .col-lg-push-9 {
+    left: 75%; }
+
+  .col-lg-push-10 {
+    left: 83.33333%; }
+
+  .col-lg-push-11 {
+    left: 91.66667%; }
+
+  .col-lg-push-12 {
+    left: 100%; }
+
+  .col-lg-offset-0 {
+    margin-left: 0%; }
+
+  .col-lg-offset-1 {
+    margin-left: 8.33333%; }
+
+  .col-lg-offset-2 {
+    margin-left: 16.66667%; }
+
+  .col-lg-offset-3 {
+    margin-left: 25%; }
+
+  .col-lg-offset-4 {
+    margin-left: 33.33333%; }
+
+  .col-lg-offset-5 {
+    margin-left: 41.66667%; }
+
+  .col-lg-offset-6 {
+    margin-left: 50%; }
+
+  .col-lg-offset-7 {
+    margin-left: 58.33333%; }
+
+  .col-lg-offset-8 {
+    margin-left: 66.66667%; }
+
+  .col-lg-offset-9 {
+    margin-left: 75%; }
+
+  .col-lg-offset-10 {
+    margin-left: 83.33333%; }
+
+  .col-lg-offset-11 {
+    margin-left: 91.66667%; }
+
+  .col-lg-offset-12 {
+    margin-left: 100%; } }
 @font-face {
   font-family: "font-icon";
-  src: url("../../global/styles/fonts/font-icon.eot");
-  src: url("../../global/styles/fonts/font-icon.eot?#iefix") format("embedded-opentype"), url("../../../global/styles/fonts/font-icon.woff") format("woff"), url("../../../global/styles/fonts/font-icon.ttf") format("truetype");
+  src: url("/jan/build/content/fonts/font-icon.eot?08e24913891a1e60745f5e7ed3ad59ec");
+  src: url("/jan/build/content/fonts/font-icon.eot?#iefix") format("embedded-opentype"), url("/jan/build/content/fonts/font-icon.woff?08e24913891a1e60745f5e7ed3ad59ec") format("woff"), url("/jan/build/content/fonts/font-icon.ttf?08e24913891a1e60745f5e7ed3ad59ec") format("truetype");
   font-weight: normal;
   font-style: normal; }
 .icon {
@@ -18,325 +692,195 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-add189:before {
+.icon-add_user:before {
   content: "\f101"; }
 
-.icon-alarm52:before {
+.icon-arc_weight:before {
   content: "\f102"; }
 
-.icon-basic14:before {
+.icon-arrow-left:before {
   content: "\f103"; }
 
-.icon-basic15:before {
+.icon-arrow-right:before {
   content: "\f104"; }
 
-.icon-basic16:before {
+.icon-arrow-simple-down:before {
   content: "\f105"; }
 
-.icon-basic17:before {
+.icon-arrow-simple-left:before {
   content: "\f106"; }
 
-.icon-blank38:before {
+.icon-arrow-simple-right:before {
   content: "\f107"; }
 
-.icon-bookmark49:before {
+.icon-arrows-4:before {
   content: "\f108"; }
 
-.icon-center13:before {
+.icon-checkbox:before {
   content: "\f109"; }
 
-.icon-clasic:before {
+.icon-close:before {
   content: "\f10a"; }
 
-.icon-delete85:before {
+.icon-cross:before {
   content: "\f10b"; }
 
-.icon-dollar178:before {
+.icon-delete:before {
   content: "\f10c"; }
 
-.icon-door24:before {
+.icon-download-database:before {
   content: "\f10d"; }
 
-.icon-down124:before {
+.icon-download:before {
   content: "\f10e"; }
 
-.icon-download168:before {
+.icon-ellipses:before {
   content: "\f10f"; }
 
-.icon-expand42:before {
+.icon-facebook:before {
   content: "\f110"; }
 
-.icon-expand43:before {
+.icon-fire:before {
   content: "\f111"; }
 
-.icon-eye106:before {
+.icon-form:before {
   content: "\f112"; }
 
-.icon-film63:before {
+.icon-googleplus:before {
   content: "\f113"; }
 
-.icon-heart297:before {
+.icon-informations:before {
   content: "\f114"; }
 
-.icon-home153:before {
+.icon-inhibitor_ARC_arrow:before {
   content: "\f115"; }
 
-.icon-left-arrow:before {
+.icon-instagram:before {
   content: "\f116"; }
 
-.icon-left224:before {
+.icon-key:before {
   content: "\f117"; }
 
-.icon-left225:before {
+.icon-label:before {
   content: "\f118"; }
 
-.icon-location44:before {
+.icon-lock:before {
   content: "\f119"; }
 
-.icon-locked61:before {
+.icon-longanswer:before {
   content: "\f11a"; }
 
-.icon-mail80:before {
+.icon-marking:before {
   content: "\f11b"; }
 
-.icon-navigation12:before {
+.icon-menu:before {
   content: "\f11c"; }
 
-.icon-pause46:before {
+.icon-message:before {
   content: "\f11d"; }
 
-.icon-print45:before {
+.icon-minus:before {
   content: "\f11e"; }
 
-.icon-refresh62:before {
+.icon-money:before {
   content: "\f11f"; }
 
-.icon-remove22:before {
+.icon-monitor:before {
   content: "\f120"; }
 
-.icon-right-arrow:before {
+.icon-move:before {
   content: "\f121"; }
 
-.icon-right164:before {
+.icon-people:before {
   content: "\f122"; }
 
-.icon-right247:before {
+.icon-phone:before {
   content: "\f123"; }
 
-.icon-rocket74:before {
+.icon-place:before {
   content: "\f124"; }
 
-.icon-round75:before {
+.icon-plus:before {
   content: "\f125"; }
 
-.icon-round77:before {
+.icon-quote:before {
   content: "\f126"; }
 
-.icon-smartphone24:before {
+.icon-regular_ARC_arrow:before {
   content: "\f127"; }
 
-.icon-speaker111:before {
+.icon-rename:before {
   content: "\f128"; }
 
-.icon-speaker112:before {
+.icon-reset_ARC_arrow:before {
   content: "\f129"; }
 
-.icon-speaker113:before {
+.icon-save:before {
   content: "\f12a"; }
 
-.icon-star174:before {
+.icon-selectbox:before {
   content: "\f12b"; }
 
-.icon-thumbtack1:before {
+.icon-settings:before {
   content: "\f12c"; }
 
-.icon-unlocked46:before {
+.icon-shopping:before {
   content: "\f12d"; }
 
-.icon-warning39:before {
+.icon-shortanswer:before {
   content: "\f12e"; }
 
-.icon-widescreen9:before {
+.icon-svg:before {
   content: "\f12f"; }
 
-.icon-window58:before {
+.icon-svgIcon:before {
   content: "\f130"; }
 
-.icon-wrench73:before {
+.icon-tick:before {
   content: "\f131"; }
 
-.icon-zoom71:before {
+.icon-transition:before {
   content: "\f132"; }
 
-body .container {
-  margin: 0 auto;
-  position: relative; }
-  @media screen and (min-width: 1200px) {
-    body .container {
-      max-width: 1200px; } }
-  @media screen and (min-width: 960px) and (max-width: 1199px) {
-    body .container {
-      max-width: 960px; } }
-  @media screen and (min-width: 720px) and (max-width: 959px) {
-    body .container {
-      max-width: 720px; } }
-  @media screen and (max-width: 479px) {
-    body .container {
-      max-width: 480px; } }
+.icon-trash:before {
+  content: "\f133"; }
 
-.icon-add {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/round75.svg");
-  mask-image: url("../../global/content/svg/round75.svg");
-  width: 100%;
-  height: 100%; }
+.icon-trend:before {
+  content: "\f134"; }
 
-.icon-close {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/delete85.svg");
-  mask-image: url("../../global/content/svg/delete85.svg");
-  width: 100%;
-  height: 100%; }
+.icon-twitter:before {
+  content: "\f135"; }
 
-.icon-check {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/basic14.svg");
-  mask-image: url("../../global/content/svg/basic14.svg");
-  width: 100%;
-  height: 100%; }
+.icon-upload-database:before {
+  content: "\f136"; }
 
-.icon-date {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/basic17.svg");
-  mask-image: url("../../global/content/svg/basic17.svg");
-  width: 100%;
-  height: 100%; }
+.icon-upload:before {
+  content: "\f137"; }
 
-.icon-description {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/warning39.svg");
-  mask-image: url("../../global/content/svg/warning39.svg");
-  width: 100%;
-  height: 100%; }
+.icon-user:before {
+  content: "\f138"; }
 
-.icon-selectbox {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/expand42.svg");
-  mask-image: url("../../global/content/svg/expand42.svg");
-  width: 100%;
-  height: 100%; }
+.icon-warning:before {
+  content: "\f139"; }
 
-.icon-email {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/basic16.svg");
-  mask-image: url("../../global/content/svg/basic16.svg");
-  width: 100%;
-  height: 100%; }
+.icon-xml:before {
+  content: "\f13a"; }
 
-.icon-fileupload {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/rocket74.svg");
-  mask-image: url("../../global/content/svg/rocket74.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-longanswer {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/center13.svg");
-  mask-image: url("../../global/content/svg/center13.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-checkbox {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/bookmark49.svg");
-  mask-image: url("../../global/content/svg/bookmark49.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-number {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/home153.svg");
-  mask-image: url("../../global/content/svg/home153.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-pictureupload {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/print45.svg");
-  mask-image: url("../../global/content/svg/print45.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-shortanswer {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/left225.svg");
-  mask-image: url("../../global/content/svg/left225.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-test1 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/wrench73.svg");
-  mask-image: url("../../global/content/svg/wrench73.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-test2 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/thumbtack1.svg");
-  mask-image: url("../../global/content/svg/thumbtack1.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-test3 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/unlocked46.svg");
-  mask-image: url("../../global/content/svg/unlocked46.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-test4 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/expand43.svg");
-  mask-image: url("../../global/content/svg/expand43.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-test5 {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/dollar178.svg");
-  mask-image: url("../../global/content/svg/dollar178.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-yesno {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/navigation12.svg");
-  mask-image: url("../../global/content/svg/navigation12.svg");
-  width: 100%;
-  height: 100%; }
-
-.icon-right {
-  background-color: white;
-  -webkit-mask-image: url("../../global/content/svg/right164.svg");
-  mask-image: url("../../global/content/svg/right164.svg");
-  width: 100%;
-  height: 100%; }
+.icon-xmlIcon:before {
+  content: "\f13b"; }
 
 body {
-  background-color: #040520;
-  background-image: -webkit-gradient(linear, left top, right top, from(#040520), to(#10042f));
-  background-image: -webkit-linear-gradient(left, #040520, #10042f);
-  background-image: -moz-linear-gradient(left, #040520, #10042f);
-  background-image: -ms-linear-gradient(left, #040520, #10042f);
-  background-image: -o-linear-gradient(left, #040520, #10042f);
-  background-image: linear-gradient(left, #040520, #10042f);
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#040520', end-colourStr='#10042f', gradientType='1'); }
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: -webkit-linear-gradient(left, #fff, #fff);
+  background-image: -moz-linear-gradient(left, #fff, #fff);
+  background-image: -ms-linear-gradient(left, #fff, #fff);
+  background-image: -o-linear-gradient(left, #fff, #fff);
+  background-image: linear-gradient(left, #fff, #fff);
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#fff', end-colourStr='#fff', gradientType='1'); }
   body .button-small {
     box-sizing: border-box;
     display: block;
-    padding: 0;
     position: relative;
     float: left;
     width: 72.5px;
@@ -345,24 +889,20 @@ body {
     margin-bottom: 12px;
     background-color: #0672AF;
     color: white;
-    padding-left: 22px;
     vertical-align: middle;
     line-height: 38px;
     border-radius: 2px;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 0 10px; }
     body .button-small:hover {
       background-color: #034369; }
     body .button-small .button-icon {
-      position: absolute;
+      position: relative;
       display: inline-block;
-      left: 4px;
-      height: 14px;
-      width: 14px;
-      padding-top: 12px; }
+      margin-right: 5px; }
   body .button-medium {
     box-sizing: border-box;
     display: block;
-    padding: 0;
     position: relative;
     float: left;
     width: 165px;
@@ -371,24 +911,20 @@ body {
     margin-bottom: 12px;
     background-color: #1289D0;
     color: white;
-    padding-left: 22px;
     vertical-align: middle;
     line-height: 38px;
     border-radius: 2px;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 0 10px; }
     body .button-medium:hover {
       background-color: #045483; }
     body .button-medium .button-icon {
-      position: absolute;
+      position: relative;
       display: inline-block;
-      left: 4px;
-      height: 14px;
-      width: 14px;
-      padding-top: 12px; }
+      margin-right: 5px; }
   body .button-large {
     box-sizing: border-box;
     display: block;
-    padding: 0;
     position: relative;
     float: left;
     width: 350px;
@@ -397,25 +933,22 @@ body {
     margin-bottom: 12px;
     background-color: #5562AA;
     color: white;
-    padding-left: 22px;
     vertical-align: middle;
     line-height: 38px;
     border-radius: 2px;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 0 10px; }
     body .button-large:hover {
       background-color: #24327D; }
     body .button-large .button-icon {
-      position: absolute;
+      position: relative;
       display: inline-block;
-      left: 4px;
-      height: 14px;
-      width: 14px;
-      padding-top: 12px; }
+      margin-right: 5px; }
 
-.app {
+.wm-form-creator-app {
   font-weight: lighter;
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: 0;
   bottom: 60px;
   left: 0;
@@ -423,10 +956,10 @@ body {
   height: auto;
   margin: 0 20px;
   text-align: left;
-  background-color: #f0f0f0;
+  background-color: #fff;
   zoom: 1;
   z-index: 1; }
-  .app .formCreator {
+  .wm-form-creator-app .formCreator {
     display: none;
     height: 100%;
     width: 100%;
@@ -434,23 +967,21 @@ body {
     top: 0;
     left: 0;
     z-index: 2; }
-    .app .formCreator .main .form-name {
+    .wm-form-creator-app .formCreator .main .form-name {
       display: block;
-      width: 390px;
+      width: 300px;
       height: 34px;
       position: absolute;
       top: -34px;
       background-color: white;
       z-index: 2; }
-      .app .formCreator .main .form-name .form-icon {
+      .wm-form-creator-app .formCreator .main .form-name .form-icon {
         width: 34px;
         height: 34px;
         position: absolute;
-        top: 0;
-        left: 0; }
-        .app .formCreator .main .form-name .form-icon .icon-check {
-          background-color: #040520; }
-      .app .formCreator .main .form-name .form-name-value {
+        font-size: 25px;
+        text-align: center; }
+      .wm-form-creator-app .formCreator .main .form-name .form-name-value {
         width: calc(100% - 2px - 34px);
         height: 32px;
         font-size: 28px;
@@ -460,9 +991,7 @@ body {
         position: absolute;
         color: #040520;
         border: none; }
-      .app .formCreator .main .form-name.error .form-icon .icon-check {
-        background-color: red; }
-    .app .formCreator .main .toolbar {
+    .wm-form-creator-app .formCreator .main .toolbar {
       background-color: #2bf4b1;
       background-color: #29e9a9;
       background-image: -webkit-gradient(linear, left top, right top, from(#29e9a9), to(#2bf4b1));
@@ -473,13 +1002,13 @@ body {
       background-image: linear-gradient(left, #29e9a9, #2bf4b1);
       filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#29e9a9', end-colourStr='#2bf4b1', gradientType='1');
       position: absolute;
-      width: 390px;
+      width: 300px;
       height: 100%;
       overflow-y: auto;
       overflow-x: hidden;
       z-index: 4;
-      box-shadow: 6px 0 8px -6px #10042f; }
-      .app .formCreator .main .toolbar .content {
+      box-shadow: 6px 0 8px -6px #757575; }
+      .wm-form-creator-app .formCreator .main .toolbar .content {
         display: inline-block;
         margin: 20px;
         margin-right: 0;
@@ -487,7 +1016,7 @@ body {
         top: 0;
         bottom: 0;
         height: calc(100% - 40px); }
-        .app .formCreator .main .toolbar .content .buttons-group {
+        .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group {
           overflow: auto;
           list-style: none;
           display: block;
@@ -495,94 +1024,90 @@ body {
           width: inherit;
           margin: 10px 0;
           padding-left: 0; }
-          .app .formCreator .main .toolbar .content .buttons-group .button-small {
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small {
             box-sizing: border-box;
             display: block;
-            padding: 0;
             position: relative;
             float: left;
-            width: 72.5px;
+            width: 220px;
             height: 38px;
             margin-right: 20px;
             margin-bottom: 12px;
             background-color: #0672AF;
             color: white;
-            padding-left: 22px;
             vertical-align: middle;
             line-height: 38px;
             border-radius: 2px;
-            cursor: pointer; }
-            .app .formCreator .main .toolbar .content .buttons-group .button-small:hover {
+            cursor: pointer;
+            padding: 0 10px;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small:hover {
               background-color: #034369; }
-            .app .formCreator .main .toolbar .content .buttons-group .button-small .button-icon {
-              position: absolute;
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small .button-icon {
+              position: relative;
               display: inline-block;
-              left: 4px;
-              height: 14px;
-              width: 14px;
-              padding-top: 12px; }
-          .app .formCreator .main .toolbar .content .buttons-group .button-medium {
+              margin-right: 5px; }
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small.dragged {
+              background-color: #045483; }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium {
             box-sizing: border-box;
             display: block;
-            padding: 0;
             position: relative;
             float: left;
-            width: 165px;
+            width: 220px;
             height: 38px;
             margin-right: 20px;
             margin-bottom: 12px;
             background-color: #1289D0;
             color: white;
-            padding-left: 22px;
             vertical-align: middle;
             line-height: 38px;
             border-radius: 2px;
             cursor: pointer;
+            padding: 0 10px;
             -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
-            .app .formCreator .main .toolbar .content .buttons-group .button-medium:hover {
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium:hover {
               background-color: #045483; }
-            .app .formCreator .main .toolbar .content .buttons-group .button-medium .button-icon {
-              position: absolute;
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium .button-icon {
+              position: relative;
               display: inline-block;
-              left: 4px;
-              height: 14px;
-              width: 14px;
-              padding-top: 12px; }
-            .app .formCreator .main .toolbar .content .buttons-group .button-medium.dragged {
+              margin-right: 5px; }
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium.dragged {
               background-color: #045483; }
-          .app .formCreator .main .toolbar .content .buttons-group .button-large {
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large {
             box-sizing: border-box;
             display: block;
-            padding: 0;
             position: relative;
             float: left;
-            width: 350px;
+            width: 260px;
             height: 38px;
             margin-right: 20px;
             margin-bottom: 12px;
             background-color: #5562AA;
             color: white;
-            padding-left: 22px;
             vertical-align: middle;
             line-height: 38px;
             border-radius: 2px;
-            cursor: pointer; }
-            .app .formCreator .main .toolbar .content .buttons-group .button-large:hover {
+            cursor: pointer;
+            padding: 0 10px;
+            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large:hover {
               background-color: #24327D; }
-            .app .formCreator .main .toolbar .content .buttons-group .button-large .button-icon {
-              position: absolute;
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large .button-icon {
+              position: relative;
               display: inline-block;
-              left: 4px;
-              height: 14px;
-              width: 14px;
-              padding-top: 12px; }
-        .app .formCreator .main .toolbar .content .close-form-creator, .app .formCreator .main .toolbar .content .cancel-save {
+              margin-right: 5px; }
+            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large.dragged {
+              background-color: #045483; }
+        .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save {
           position: absolute;
           bottom: 5px;
           right: 10px;
           width: 100px; }
-          .app .formCreator .main .toolbar .content .close-form-creator .close-button, .app .formCreator .main .toolbar .content .close-form-creator .cancel-button, .app .formCreator .main .toolbar .content .cancel-save .close-button, .app .formCreator .main .toolbar .content .cancel-save .cancel-button {
+          .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator .close-button, .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator .cancel-button, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .close-button, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button {
             display: block;
             width: 100%;
             height: 35px;
@@ -597,15 +1122,15 @@ body {
             cursor: pointer;
             -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
-            .app .formCreator .main .toolbar .content .close-form-creator .close-button:hover, .app .formCreator .main .toolbar .content .close-form-creator .cancel-button:hover, .app .formCreator .main .toolbar .content .cancel-save .close-button:hover, .app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
+            .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator .close-button:hover, .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator .cancel-button:hover, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .close-button:hover, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
               background-color: #003F24; }
-        .app .formCreator .main .toolbar .content .cancel-save {
+        .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save {
           left: 10px; }
-          .app .formCreator .main .toolbar .content .cancel-save .cancel-button {
+          .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button {
             background-color: #AE1331; }
-            .app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
+            .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
               background-color: #680014; }
-    .app .formCreator .main .window {
+    .wm-form-creator-app .formCreator .main .window {
       z-index: 2;
       position: absolute;
       width: auto;
@@ -613,7 +1138,7 @@ body {
       top: 0;
       right: 0;
       bottom: 0;
-      left: 390px;
+      left: 300px;
       overflow-y: auto;
       overflow-x: hidden;
       background-color: #E93255;
@@ -625,7 +1150,7 @@ body {
       background-image: -o-linear-gradient(left, #e63255, #E93255);
       background-image: linear-gradient(left, #e63255, #E93255);
       filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#e63255', end-colourStr='#E93255', gradientType='1'); }
-      .app .formCreator .main .window .content {
+      .wm-form-creator-app .formCreator .main .window .content {
         display: inline-block;
         margin: 20px;
         position: absolute;
@@ -635,7 +1160,7 @@ body {
         bottom: 0;
         width: calc(100% - 40px);
         height: calc(100% - 50px); }
-        .app .formCreator .main .window .content .inputfields-group, .app .formCreator .main .window .content .newinputfield-group {
+        .wm-form-creator-app .formCreator .main .window .content .inputfields-group, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group {
           overflow: auto;
           list-style: none;
           float: left;
@@ -644,7 +1169,7 @@ body {
           min-height: 60px;
           margin-top: 10px;
           padding-left: 0; }
-          .app .formCreator .main .window .content .inputfields-group .inputfield, .app .formCreator .main .window .content .newinputfield-group .inputfield {
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield {
             box-sizing: border-box;
             display: block;
             width: 100%;
@@ -653,7 +1178,7 @@ body {
             margin-bottom: 10px;
             background-color: #FDFFFC;
             color: #000543;
-            padding: 0 25px 0 28px;
+            padding: 0 40px;
             vertical-align: middle;
             line-height: 60px;
             border-radius: 2px;
@@ -664,25 +1189,19 @@ body {
             cursor: pointer;
             -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
-            .app .formCreator .main .window .content .inputfields-group .inputfield .input-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon {
+            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon {
               position: absolute;
               display: inline-block;
-              left: 4px;
+              left: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .inputfield .input-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon * {
-                background-color: #000543; }
-            .app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon {
+              width: 20px; }
+            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon {
               position: absolute;
               display: inline-block;
               right: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon * {
-                background-color: #000543; }
-          .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder {
+              width: 20px; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder {
             box-sizing: border-box;
             display: block;
             width: 100%;
@@ -691,7 +1210,7 @@ body {
             margin-bottom: 10px;
             background-color: rgba(253, 255, 252, 0.2);
             color: #000543;
-            padding: 0 25px 0 28px;
+            padding: 0 40px;
             vertical-align: middle;
             line-height: 60px;
             border-radius: 2px;
@@ -701,25 +1220,19 @@ body {
             white-space: nowrap;
             cursor: pointer;
             border: 2px dashed #FDFFFC; }
-            .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon {
+            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon {
               position: absolute;
               display: inline-block;
-              left: 4px;
+              left: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon * {
-                background-color: #000543; }
-            .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon {
+              width: 20px; }
+            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon {
               position: absolute;
               display: inline-block;
               right: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon * {
-                background-color: #000543; }
-          .app .formCreator .main .window .content .inputfields-group .newinputfield, .app .formCreator .main .window .content .newinputfield-group .newinputfield {
+              width: 20px; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield {
             box-sizing: border-box;
             display: block;
             width: 100%;
@@ -728,7 +1241,7 @@ body {
             margin-bottom: 10px;
             background-color: #2bf4b1;
             color: #000543;
-            padding: 0 25px 0 28px;
+            padding: 0 40px;
             vertical-align: middle;
             line-height: 60px;
             border-radius: 2px;
@@ -740,38 +1253,32 @@ body {
             -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
             cursor: default; }
-            .app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
+            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
               position: absolute;
               display: inline-block;
-              left: 4px;
+              left: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon *, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon * {
-                background-color: #000543; }
-            .app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon {
+              width: 20px; }
+            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon {
               position: absolute;
               display: inline-block;
               right: 10px;
               height: 20px;
-              width: 20px;
-              padding-top: 20px; }
-              .app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon *, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon * {
-                background-color: #000543; }
-            .app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
+              width: 20px; }
+            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
               position: absolute;
               display: inline-block;
-              left: 4px;
-              height: 24px;
-              width: 24px;
-              padding-top: 18px; }
-        .app .formCreator .main .window .content .newinputfield-group {
+              left: 10px;
+              font-size: 25px;
+              height: 100%;
+              width: 20px; }
+        .wm-form-creator-app .formCreator .main .window .content .newinputfield-group {
           margin-bottom: 20px; }
-        .app .formCreator .main .window .content .inputfield-group-border {
+        .wm-form-creator-app .formCreator .main .window .content .inputfield-group-border {
           border: 2px dashed white;
           border-radius: 2px;
           box-sizing: border-box; }
-    .app .formCreator .popup {
+    .wm-form-creator-app .formCreator .popup {
       position: absolute;
       margin-left: auto;
       margin-right: auto;
@@ -786,7 +1293,7 @@ body {
       right: 18px;
       background-color: white;
       z-index: 15; }
-      .app .formCreator .popup .toolbar-editor {
+      .wm-form-creator-app .formCreator .popup .toolbar-editor {
         padding: 0;
         display: block;
         position: absolute;
@@ -795,7 +1302,7 @@ body {
         width: 350px;
         height: 100%;
         background-color: #E93255; }
-        .app .formCreator .popup .toolbar-editor .inputfield-name {
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name {
           padding: 0 15px 0 10px;
           display: block;
           position: absolute;
@@ -804,13 +1311,13 @@ body {
           top: 0;
           left: 0;
           background-color: #1289D0; }
-          .app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-icon {
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-icon {
             position: absolute;
-            width: 20px;
-            height: 20px;
             left: 20px;
-            top: 10px; }
-          .app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-name-inner {
+            top: 7px;
+            font-size: 20px;
+            color: #fff; }
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-name-inner {
             display: inline-block;
             height: inherit;
             width: auto;
@@ -821,7 +1328,7 @@ body {
             box-sizing: border-box;
             padding-left: 35px;
             font-size: 20px; }
-        .app .formCreator .popup .toolbar-editor .inputfield-save {
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save {
           padding: 0;
           display: block;
           position: absolute;
@@ -832,7 +1339,7 @@ body {
           padding-top: 10px;
           box-sizing: border-box;
           background-color: #1289D0; }
-          .app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button {
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button {
             display: block;
             width: 60px;
             height: 30px;
@@ -844,9 +1351,9 @@ body {
             background-color: #0672AF;
             color: white;
             cursor: pointer; }
-            .app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button:hover {
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button:hover {
               background-color: #034369; }
-          .app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button {
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button {
             display: block;
             width: 80px;
             height: 30px;
@@ -858,9 +1365,9 @@ body {
             color: white;
             background-color: #5562AA;
             cursor: pointer; }
-            .app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button:hover {
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button:hover {
               background-color: #24327D; }
-        .app .formCreator .popup .toolbar-editor .inputfield-setting {
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting {
           box-sizing: border-box;
           display: block;
           position: absolute;
@@ -879,21 +1386,21 @@ body {
           background-image: linear-gradient(left, #3A4895, #394793);
           filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#3A4895', end-colourStr='#394793', gradientType='1');
           overflow-y: auto; }
-          .app .formCreator .popup .toolbar-editor .inputfield-setting .block {
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block {
             width: 100%;
             height: auto;
             display: inline-block;
             box-sizing: border-box;
             padding: 8px 16px;
             border-bottom: 1px solid #FDFFFC; }
-            .app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading {
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading {
               display: block;
               width: 100%;
               height: 25px;
               line-height: 25px;
               font-size: 16px;
               color: #FDFFFC; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading .description {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading .description {
                 display: inline-block;
                 position: absolute;
                 display: none;
@@ -901,13 +1408,11 @@ body {
                 width: 21px;
                 padding-top: 2px;
                 padding-left: 5px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading .description .icon-description {
-                  background-color: white; }
-            .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body {
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body {
               width: 100%;
               height: auto;
               clear: both; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label {
                 text-align: left;
                 float: left;
                 width: calc(100% - 120px);
@@ -916,7 +1421,7 @@ body {
                 font-size: 16px;
                 color: #FDFFFC;
                 margin-bottom: 3px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label .description {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label .description {
                   display: inline-block;
                   position: absolute;
                   display: none;
@@ -924,9 +1429,7 @@ body {
                   width: 21px;
                   padding-top: 2px;
                   padding-left: 5px; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label .description .icon-description {
-                    background-color: white; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .small-input {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .small-input {
                 width: calc(100% - 2px);
                 height: 23px;
                 border: none;
@@ -935,7 +1438,7 @@ body {
                 margin-bottom: 3px;
                 box-sizing: border-box;
                 padding-left: 5px; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .max-length {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .max-length {
                 width: calc(30% - 2px);
                 height: 25px;
                 border: none;
@@ -944,7 +1447,7 @@ body {
                 margin-bottom: 3px;
                 box-sizing: border-box;
                 padding-left: 5px; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .large-input {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .large-input {
                 width: calc(100% - 4px);
                 height: 55px;
                 border: none;
@@ -952,39 +1455,38 @@ body {
                 display: inline-block;
                 resize: none;
                 margin-bottom: 3px; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block {
                 width: 100%;
                 margin-bottom: 10px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block:last-child {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block:last-child {
                   margin-bottom: 3px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .choice {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .choice {
                   width: calc(100% - 30px - 15px - 4px);
                   border: none;
                   height: 23px;
                   border-radius: 2px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls {
                   width: 30px;
                   float: right; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
                     position: relative;
                     float: left;
                     height: 23px;
                     width: 23px;
                     padding-right: 5px;
-                    cursor: pointer; }
-                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon .icon-add, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon .icon-add {
-                      background-color: #2bf4b1; }
-                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon .icon-close, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon .icon-close {
-                      background-color: #E93255; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count {
+                    cursor: pointer;
+                    color: #00E499; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
+                    color: #AE1331; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count {
                 width: 100%;
                 margin-top: 3px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .label {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .label {
                   width: 100%; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
                   width: calc(50% - 5px);
                   float: left; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .min-selected, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .max-selected, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .min-selected, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .max-selected {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .min-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .max-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .min-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .max-selected {
                     width: calc(100% - 6px);
                     height: 25px;
                     border: none;
@@ -993,9 +1495,9 @@ body {
                     margin-bottom: 3px;
                     box-sizing: border-box;
                     padding-left: 5px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
                   float: right; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset {
                 width: calc(100% - 45px - 2px);
                 height: 23px;
                 border: none;
@@ -1004,19 +1506,23 @@ body {
                 margin-bottom: 3px;
                 box-sizing: border-box;
                 padding-left: 5px; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon {
                 position: relative;
                 height: 23px;
                 width: 23px;
                 float: right;
-                padding-right: 5px;
+                margin-right: 5px;
+                margin-top: -3px;
                 cursor: pointer; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon .icon-add {
-                  background-color: white; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .description-block {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon i {
+                  color: #fff;
+                  border-radius: 50%;
+                  padding: 5px;
+                  border: 1px solid white; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .description-block {
                 display: none;
                 width: 100%; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup {
                 width: 90px;
                 height: 25px;
                 border: none;
@@ -1025,12 +1531,12 @@ body {
                 float: right;
                 overflow: hidden;
                 margin-bottom: 3px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover {
                   position: relative;
                   width: 135px;
                   left: -45px;
                   cursor: pointer; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup, .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
                     float: left;
                     width: 45px;
                     height: 25px;
@@ -1039,40 +1545,40 @@ body {
                     text-align: center;
                     color: white;
                     border-radius: 0; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup {
                     background-color: #2bf4b1;
                     border-top-left-radius: 2px;
                     border-bottom-left-radius: 2px; }
-                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup:hover {
+                    .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup:hover {
                       background-color: #00E499; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
-                    background-color: #040520;
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
+                    background-color: #fff;
                     border-radius: 2px; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup {
                     background-color: #E93255;
                     border-top-right-radius: 2px;
                     border-bottom-right-radius: 2px; }
-                    .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup:hover {
+                    .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup:hover {
                       background-color: #AE1331; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected {
                   left: 0; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected .slider {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected .slider {
                     border-top-left-radius: 0px;
                     border-bottom-left-radius: 0px;
                     border-top-right-radius: 2px;
                     border-bottom-right-radius: 2px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected {
                   left: -45px; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected .slider {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected .slider {
                     border-top-left-radius: 2px;
                     border-bottom-left-radius: 2px;
                     border-top-right-radius: 0px;
                     border-bottom-right-radius: 0px; }
-              .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block {
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block {
                 border-top: 1px solid white;
                 display: none;
                 margin-top: 5px; }
-                .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save {
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save {
                   padding: 0;
                   display: block;
                   width: 100%;
@@ -1080,7 +1586,7 @@ body {
                   left: 0;
                   padding-top: 10px;
                   box-sizing: border-box; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-save-button {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-save-button {
                     display: block;
                     width: 60px;
                     height: 30px;
@@ -1092,7 +1598,7 @@ body {
                     background-color: #0672AF;
                     color: white;
                     cursor: pointer; }
-                  .app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-cancel-button {
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-cancel-button {
                     display: block;
                     width: 80px;
                     height: 30px;
@@ -1104,7 +1610,7 @@ body {
                     color: white;
                     background-color: #1289D0;
                     cursor: pointer; }
-      .app .formCreator .popup .preview {
+      .wm-form-creator-app .formCreator .popup .preview {
         position: absolute;
         width: auto;
         height: 100%;
@@ -1115,54 +1621,54 @@ body {
         overflow: auto;
         overflow-x: hidden;
         background-color: #FDFFFC; }
-        .app .formCreator .popup .preview .preview-block {
+        .wm-form-creator-app .formCreator .popup .preview .preview-block {
           width: 450px;
           padding-left: 40px;
           box-sizing: border-box;
           margin-top: 200px;
           visibility: hidden; }
-          .app .formCreator .popup .preview .preview-block .fieldname {
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .fieldname {
             box-sizing: border-box;
             display: block;
             width: 100%;
             position: relative;
-            color: #040520;
+            color: #fff;
             vertical-align: middle;
             line-height: 30px;
             font-size: 30px;
             cursor: pointer; }
-          .app .formCreator .popup .preview .preview-block .description {
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .description {
             box-sizing: border-box;
             width: 100%;
             position: relative;
-            color: #040520;
+            color: #fff;
             margin-top: 10px;
             vertical-align: middle;
             line-height: 20px;
             font-size: 20px;
             cursor: pointer; }
-          .app .formCreator .popup .preview .preview-block .shortanswer {
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .shortanswer {
             width: 100%;
             height: 38px;
             border: none;
             display: inline-block;
             margin-top: 15px;
             margin-bottom: 20px; }
-            .app .formCreator .popup .preview .preview-block .shortanswer .shortanswer-input {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .shortanswer .shortanswer-input {
               width: calc(100% - 4px);
               height: 100%;
               font-size: 32px;
               border: #757575 1px solid;
               border-radius: 2px;
               display: inline-block; }
-          .app .formCreator .popup .preview .preview-block .longanswer {
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .longanswer {
             width: 100%;
             height: 120px;
             border: none;
             display: inline-block;
             margin-top: 15px;
             margin-bottom: 20px; }
-            .app .formCreator .popup .preview .preview-block .longanswer .longanswer-input {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .longanswer .longanswer-input {
               resize: none;
               width: calc(100% - 4px);
               height: 100%;
@@ -1170,29 +1676,29 @@ body {
               border: #757575 1px solid;
               border-radius: 2px;
               display: inline-block; }
-          .app .formCreator .popup .preview .preview-block .selectbox {
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .selectbox {
             width: 100%;
             height: 38px;
             border: none;
             display: inline-block;
             margin-top: 15px;
             margin-bottom: 20px; }
-            .app .formCreator .popup .preview .preview-block .selectbox .selectbox-input {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .selectbox .selectbox-input {
               width: calc(100% - 4px);
               height: 100%;
               font-size: 22px;
-              border: #f0f0f0 1px solid;
+              border: #fff 1px solid;
               border-radius: 2px;
               display: inline-block; }
-          .app .formCreator .popup .preview .preview-block .checkbox {
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox {
             width: 100%;
             border: none;
             display: inline-block;
             margin-top: 15px;
             margin-bottom: 20px; }
-            .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checkbox-input {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checkbox-input {
               display: none; }
-            .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label {
               width: 100%;
               display: block;
               height: 34px;
@@ -1209,7 +1715,7 @@ body {
               white-space: nowrap;
               border-radius: 2px;
               border: 1px solid #E93255; }
-              .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon {
+              .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon {
                 display: block;
                 position: absolute;
                 background-color: #E93255;
@@ -1217,19 +1723,15 @@ body {
                 bottom: 0;
                 left: 0;
                 width: 34px; }
-                .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon .icon-check {
-                  background-color: darkgray; }
-            .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked {
               border: 1px solid #2bf4b1; }
-              .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon {
+              .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon {
                 background-color: #2bf4b1; }
-                .app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon .icon-check {
-                  background-color: white; }
-          .app .formCreator .popup .preview .preview-block .preview-save {
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save {
             display: block;
             height: 50px;
             box-sizing: border-box; }
-            .app .formCreator .popup .preview .preview-block .preview-save .preview-next-button, .app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button, .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
               display: block;
               width: 80px;
               height: 30px;
@@ -1242,13 +1744,13 @@ body {
               background-color: #2bf4b1;
               color: white;
               cursor: pointer; }
-            .app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
               float: left;
               background-color: #E93255; }
-            .app .formCreator .popup .preview .preview-block .preview-save .preview-next-button {
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button {
               float: right;
               background-color: #2bf4b1; }
-        .app .formCreator .popup .preview .close {
+        .wm-form-creator-app .formCreator .popup .preview .close {
           position: absolute;
           top: 10px;
           right: 10px;
@@ -1256,8 +1758,6 @@ body {
           width: 40px;
           height: 40px;
           cursor: pointer; }
-          .app .formCreator .popup .preview .close .icon-close {
-            background-color: #040520; }
 
 .blur {
   -webkit-filter: blur(1px) grayscale(0.2) opacity(0.8);
@@ -1266,16 +1766,16 @@ body {
   -ms-filter: blur(1px);
   filter: blur(1px) grayscale(0.2) opacity(0.8); }
 
-.app .formMapper {
+.wm-form-creator-app .formMapper {
   display: none;
   height: 100%;
   width: 100%;
   position: relative;
   top: 0;
   left: 0; }
-  .app .formMapper .transition, .app .formMapper .transition-icon {
+  .wm-form-creator-app .formMapper .transition, .wm-form-creator-app .formMapper .transition-icon {
     cursor: pointer; }
-  .app .formMapper .transition-controlls {
+  .wm-form-creator-app .formMapper .transition-controlls {
     display: none;
     position: absolute;
     left: 20px;
@@ -1288,16 +1788,14 @@ body {
     border-radius: 2px;
     -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
-    .app .formMapper .transition-controlls .close-controlls {
+    .wm-form-creator-app .formMapper .transition-controlls .close-controlls {
       width: 24px;
       height: 24px;
       right: 0;
       top: 0;
       position: absolute;
       z-index: 15; }
-      .app .formMapper .transition-controlls .close-controlls .icon-close {
-        background-color: #680014; }
-    .app .formMapper .transition-controlls:before {
+    .wm-form-creator-app .formMapper .transition-controlls:before {
       content: '';
       display: block;
       width: 0;
@@ -1308,12 +1806,12 @@ body {
       border-left: 12px solid transparent;
       left: 108px;
       bottom: -12px; }
-    .app .formMapper .transition-controlls .action-selector, .app .formMapper .transition-controlls .remove-form-confirm, .app .formMapper .transition-controlls .change-form-name-confirm {
+    .wm-form-creator-app .formMapper .transition-controlls .action-selector, .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm {
       position: relative;
       display: block;
       width: 100%;
       height: 100%; }
-      .app .formMapper .transition-controlls .action-selector .headline, .app .formMapper .transition-controlls .remove-form-confirm .headline, .app .formMapper .transition-controlls .change-form-name-confirm .headline {
+      .wm-form-creator-app .formMapper .transition-controlls .action-selector .headline, .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .headline, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .headline {
         width: calc(100% - 40px);
         margin: auto;
         height: 24px;
@@ -1323,10 +1821,11 @@ body {
         vertical-align: middle;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap; }
-    .app .formMapper .transition-controlls .remove-form-confirm, .app .formMapper .transition-controlls .change-form-name-confirm {
+        white-space: nowrap;
+        color: #040520; }
+    .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm {
       display: none; }
-      .app .formMapper .transition-controlls .remove-form-confirm .save, .app .formMapper .transition-controlls .remove-form-confirm .cancel, .app .formMapper .transition-controlls .remove-form-confirm .remove, .app .formMapper .transition-controlls .change-form-name-confirm .save, .app .formMapper .transition-controlls .change-form-name-confirm .cancel, .app .formMapper .transition-controlls .change-form-name-confirm .remove {
+      .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .save, .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .cancel, .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .save, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .cancel, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove {
         position: absolute;
         bottom: 0;
         width: 30%;
@@ -1338,74 +1837,73 @@ body {
         border-radius: 2px;
         background-color: lightgray;
         right: 0; }
-        .app .formMapper .transition-controlls .remove-form-confirm .save:hover, .app .formMapper .transition-controlls .remove-form-confirm .cancel:hover, .app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .app .formMapper .transition-controlls .change-form-name-confirm .save:hover, .app .formMapper .transition-controlls .change-form-name-confirm .cancel:hover, .app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
+        .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .save:hover, .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .cancel:hover, .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .save:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .cancel:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
           background-color: grey;
           color: white;
           cursor: pointer; }
-      .app .formMapper .transition-controlls .remove-form-confirm .cancel, .app .formMapper .transition-controlls .change-form-name-confirm .cancel {
+      .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .cancel, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .cancel {
         left: 0; }
-      .app .formMapper .transition-controlls .remove-form-confirm .remove, .app .formMapper .transition-controlls .change-form-name-confirm .remove {
+      .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove {
         background-color: #E93255;
         color: black; }
-        .app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
+        .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
           background-color: #AE1331; }
-      .app .formMapper .transition-controlls .remove-form-confirm .remove, .app .formMapper .transition-controlls .change-form-name-confirm .remove {
+      .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove {
         background-color: #E93255;
         color: #680014; }
-        .app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
+        .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
           background-color: #AE1331; }
-      .app .formMapper .transition-controlls .remove-form-confirm .save, .app .formMapper .transition-controlls .change-form-name-confirm .save {
+      .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .save, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .save {
         background-color: #2bf4b1;
         color: #003F24; }
-        .app .formMapper .transition-controlls .remove-form-confirm .save:hover, .app .formMapper .transition-controlls .change-form-name-confirm .save:hover {
+        .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .save:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .save:hover {
           background-color: #003F24; }
-    .app .formMapper .transition-controlls .action-selector .change-form, .app .formMapper .transition-controlls .action-selector .remove-form, .app .formMapper .transition-controlls .action-selector .edit-form {
+    .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form {
       position: relative;
       height: auto;
       width: calc( (100% - 6*2% - 6*2px ) / 3);
-      margin-top: 20px;
+      margin-top: 15px;
       border-radius: 2px;
       float: left;
       margin-left: 2%;
       margin-right: 2%;
       cursor: pointer;
-      box-sizing: border-box; }
-      .app .formMapper .transition-controlls .action-selector .change-form .icon-add, .app .formMapper .transition-controlls .action-selector .change-form .icon-close, .app .formMapper .transition-controlls .action-selector .change-form .icon-test1, .app .formMapper .transition-controlls .action-selector .remove-form .icon-add, .app .formMapper .transition-controlls .action-selector .remove-form .icon-close, .app .formMapper .transition-controlls .action-selector .remove-form .icon-test1, .app .formMapper .transition-controlls .action-selector .edit-form .icon-add, .app .formMapper .transition-controlls .action-selector .edit-form .icon-close, .app .formMapper .transition-controlls .action-selector .edit-form .icon-test1 {
-        height: 40px;
-        width: 40px;
-        margin: auto;
-        background-color: black; }
-      .app .formMapper .transition-controlls .action-selector .change-form .label, .app .formMapper .transition-controlls .action-selector .remove-form .label, .app .formMapper .transition-controlls .action-selector .edit-form .label {
+      box-sizing: border-box;
+      padding: 5px 0; }
+      .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .edit-button, .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .rename-button, .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .remove-button, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .edit-button, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .rename-button, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .remove-button, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .edit-button, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .rename-button, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .remove-button {
+        display: block;
+        height: 32px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+        color: #040520; }
+        .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .edit-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .rename-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .remove-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .edit-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .rename-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .remove-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .edit-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .rename-button i, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .remove-button i {
+          font-size: 32px; }
+      .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form .label, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form .label, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form .label {
         text-align: center;
         color: #040520; }
-      .app .formMapper .transition-controlls .action-selector .change-form:hover, .app .formMapper .transition-controlls .action-selector .remove-form:hover, .app .formMapper .transition-controlls .action-selector .edit-form:hover {
-        margin-top: 19px;
+      .wm-form-creator-app .formMapper .transition-controlls .action-selector .change-form:hover, .wm-form-creator-app .formMapper .transition-controlls .action-selector .remove-form:hover, .wm-form-creator-app .formMapper .transition-controlls .action-selector .edit-form:hover {
+        margin-top: 14px;
         border: 1px solid #757575; }
-    .app .formMapper .transition-controlls .action-selector .change-form .icon-test1 {
-      background-color: #1289D0; }
-    .app .formMapper .transition-controlls .action-selector .remove-form .icon-close {
-      background-color: #AE1331; }
-    .app .formMapper .transition-controlls .action-selector .edit-form .icon-add {
-      background-color: #009464; }
-    .app .formMapper .transition-controlls .remove-form-confirm .question {
+    .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .question {
       height: 40px;
       margin-top: 5px;
       line-height: 20px;
       font-size: 15px;
       text-align: center;
       vertical-align: middle; }
-    .app .formMapper .transition-controlls .change-form-name-confirm .form-name {
+    .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .form-name {
       margin-top: 15px;
       height: 20px;
       line-height: 20px;
       font-size: 18px;
       vertical-align: middle;
       width: calc(100% - 6px); }
-  .app .formMapper .close-mapper {
+  .wm-form-creator-app .formMapper .close-mapper {
     position: absolute;
     bottom: 5px;
     right: 5px; }
-    .app .formMapper .close-mapper .close-button {
+    .wm-form-creator-app .formMapper .close-mapper .close-button {
       display: block;
       width: 120px;
       height: 30px;
@@ -1427,7 +1925,7 @@ body {
       background-image: linear-gradient(left, #003F24, #009464);
       filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#003F24', end-colourStr='#009464', gradientType='1'); }
 
-.app .formSelector {
+.wm-form-creator-app .formSelector {
   display: none;
   background-color: white;
   position: absolute;
@@ -1441,20 +1939,18 @@ body {
   padding: 4px;
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
-  .app .formSelector .close-form-selector {
+  .wm-form-creator-app .formSelector .close-form-selector {
     position: absolute;
     top: -2px;
     right: -2px;
     width: 20px;
     height: 20px; }
-    .app .formSelector .close-form-selector .icon-close {
-      background-color: #040520; }
-  .app .formSelector .select-block {
+  .wm-form-creator-app .formSelector .select-block {
     width: 100%;
     margin: auto;
     height: 100%;
     position: relative; }
-    .app .formSelector .select-block .select-icons {
+    .wm-form-creator-app .formSelector .select-block .select-icons {
       display: block;
       height: calc(100% - 20px);
       width: calc(100% - 20px);
@@ -1464,40 +1960,44 @@ body {
       right: 0;
       bottom: 0;
       position: absolute; }
-      .app .formSelector .select-block .select-icons .copy-form, .app .formSelector .select-block .select-icons .new-form {
+      .wm-form-creator-app .formSelector .select-block .select-icons .copy-form, .wm-form-creator-app .formSelector .select-block .select-icons .new-form {
         width: calc(50% - 5px);
         height: 100%;
         border-radius: 2px;
-        position: relative; }
-        .app .formSelector .select-block .select-icons .copy-form .label, .app .formSelector .select-block .select-icons .new-form .label {
+        position: relative;
+        cursor: pointer; }
+        .wm-form-creator-app .formSelector .select-block .select-icons .copy-form .label, .wm-form-creator-app .formSelector .select-block .select-icons .new-form .label {
           position: absolute;
           bottom: 10px;
           left: 0;
           width: 100%;
           line-height: 30px;
           font-size: 25px;
-          color: white;
+          color: #040520;
           text-align: center; }
-        .app .formSelector .select-block .select-icons .copy-form .copy-form-icon, .app .formSelector .select-block .select-icons .copy-form .new-form-icon, .app .formSelector .select-block .select-icons .new-form .copy-form-icon, .app .formSelector .select-block .select-icons .new-form .new-form-icon {
-          height: 150px;
+        .wm-form-creator-app .formSelector .select-block .select-icons .copy-form .copy-form-icon, .wm-form-creator-app .formSelector .select-block .select-icons .copy-form .new-form-icon, .wm-form-creator-app .formSelector .select-block .select-icons .new-form .copy-form-icon, .wm-form-creator-app .formSelector .select-block .select-icons .new-form .new-form-icon {
           width: 150px;
+          text-align: center;
           margin: auto;
+          margin-top: 20px;
+          font-size: 110px;
+          color: #040520;
           margin-top: 20px; }
-      .app .formSelector .select-block .select-icons .copy-form {
+      .wm-form-creator-app .formSelector .select-block .select-icons .copy-form {
         float: left;
         background-color: #00E499; }
-        .app .formSelector .select-block .select-icons .copy-form:hover {
+        .wm-form-creator-app .formSelector .select-block .select-icons .copy-form:hover {
           background-color: #009464; }
-      .app .formSelector .select-block .select-icons .new-form {
+      .wm-form-creator-app .formSelector .select-block .select-icons .new-form {
         float: right;
         background-color: #E93255; }
-        .app .formSelector .select-block .select-icons .new-form:hover {
+        .wm-form-creator-app .formSelector .select-block .select-icons .new-form:hover {
           background-color: #AE1331; }
-      .app .formSelector .select-block .select-icons .new-form.disabled:hover {
+      .wm-form-creator-app .formSelector .select-block .select-icons .new-form.disabled:hover {
         background-color: #E93255; }
-      .app .formSelector .select-block .select-icons .copy-form.disabled:hover {
+      .wm-form-creator-app .formSelector .select-block .select-icons .copy-form.disabled:hover {
         background-color: #2bf4b1; }
-    .app .formSelector .select-block .select-name, .app .formSelector .select-block .select-form {
+    .wm-form-creator-app .formSelector .select-block .select-name, .wm-form-creator-app .formSelector .select-block .select-form {
       display: none;
       width: 100%;
       height: 150px;
@@ -1509,19 +2009,19 @@ body {
       bottom: 0;
       left: 0;
       right: 0; }
-      .app .formSelector .select-block .select-name .label, .app .formSelector .select-block .select-form .label {
+      .wm-form-creator-app .formSelector .select-block .select-name .label, .wm-form-creator-app .formSelector .select-block .select-form .label {
         margin-bottom: 20px;
         text-align: center; }
-      .app .formSelector .select-block .select-name .form-outer-block, .app .formSelector .select-block .select-form .form-outer-block {
+      .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block {
         width: 100%;
         height: 30px;
         margin-bottom: 20px;
         position: relative; }
-        .app .formSelector .select-block .select-name .form-outer-block .form-name, .app .formSelector .select-block .select-name .form-outer-block .form-selector, .app .formSelector .select-block .select-form .form-outer-block .form-name, .app .formSelector .select-block .select-form .form-outer-block .form-selector {
+        .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block .form-name, .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block .form-selector, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block .form-name, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block .form-selector {
           width: calc(100% - 6px);
           height: 30px;
           line-height: 30px; }
-      .app .formSelector .select-block .select-name .save-form-name, .app .formSelector .select-block .select-name .save-form-selection, .app .formSelector .select-block .select-form .save-form-name, .app .formSelector .select-block .select-form .save-form-selection {
+      .wm-form-creator-app .formSelector .select-block .select-name .save-form-name, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection {
         padding: 0;
         display: block;
         position: relative;
@@ -1530,7 +2030,7 @@ body {
         box-sizing: border-box;
         margin: auto;
         width: 290px; }
-        .app .formSelector .select-block .select-name .save-form-name .cancel-save, .app .formSelector .select-block .select-name .save-form-name .confirm-save, .app .formSelector .select-block .select-name .save-form-selection .cancel-save, .app .formSelector .select-block .select-name .save-form-selection .confirm-save, .app .formSelector .select-block .select-form .save-form-name .cancel-save, .app .formSelector .select-block .select-form .save-form-name .confirm-save, .app .formSelector .select-block .select-form .save-form-selection .cancel-save, .app .formSelector .select-block .select-form .save-form-selection .confirm-save {
+        .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .cancel-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .cancel-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .cancel-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .cancel-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save {
           display: inline-block;
           width: 120px;
           height: 30px;
@@ -1543,17 +2043,17 @@ body {
           color: white;
           cursor: pointer;
           border-radius: 2px; }
-          .app .formSelector .select-block .select-name .save-form-name .cancel-save:hover, .app .formSelector .select-block .select-name .save-form-name .confirm-save:hover, .app .formSelector .select-block .select-name .save-form-selection .cancel-save:hover, .app .formSelector .select-block .select-name .save-form-selection .confirm-save:hover, .app .formSelector .select-block .select-form .save-form-name .cancel-save:hover, .app .formSelector .select-block .select-form .save-form-name .confirm-save:hover, .app .formSelector .select-block .select-form .save-form-selection .cancel-save:hover, .app .formSelector .select-block .select-form .save-form-selection .confirm-save:hover {
+          .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save:hover {
             background-color: #034369; }
-        .app .formSelector .select-block .select-name .save-form-name .confirm-save, .app .formSelector .select-block .select-name .save-form-selection .confirm-save, .app .formSelector .select-block .select-form .save-form-name .confirm-save, .app .formSelector .select-block .select-form .save-form-selection .confirm-save {
+        .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save {
           background-color: #5562AA;
           float: right; }
-          .app .formSelector .select-block .select-name .save-form-name .confirm-save:hover, .app .formSelector .select-block .select-name .save-form-selection .confirm-save:hover, .app .formSelector .select-block .select-form .save-form-name .confirm-save:hover, .app .formSelector .select-block .select-form .save-form-selection .confirm-save:hover {
+          .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save:hover {
             background-color: #24327D; }
-    .app .formSelector .select-block .select-form .form-outer-block .form-selector {
+    .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block .form-selector {
       width: 100%;
       -webkit-appearance: menulist-button; }
-.app .disabled {
+.wm-form-creator-app .disabled {
   -webkit-filter: grayscale(95%);
   -moz-filter: grayscale(95%);
   -ms-filter: grayscale(95%);
@@ -1563,9 +2063,9 @@ body {
   /* Firefox 4+ */
   filter: gray;
   /* IE 6-9 */ }
-.app .error {
+.wm-form-creator-app .error {
   outline: 2px solid red; }
-  .app .error:focus {
+  .wm-form-creator-app .error:focus {
     outline: 2px solid red; }
 
 /*# sourceMappingURL=mainformsstyles.css.map */

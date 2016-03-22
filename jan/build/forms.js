@@ -1,11 +1,10 @@
 "use strict";
 
-var _WMGlobal = {};
 var MAX_FORM_ID = 0;
 var MAX_INPUT_ID = 0;
 
 _WMGlobal.forms = [];
-_WMGlobal.$el = $(".app");
+_WMGlobal.$el = $(".wm-form-creator-app");
 
 _WMGlobal.loadData = function(){
 
@@ -271,6 +270,25 @@ function loadVariables(){
         return;
     };
 
+    Forms.setForm = function(id,newForm){
+
+        if( id === undefined ){
+            console.error('Forms setForm : not id provided')
+            return;
+        }
+
+        var length = this.array.length;
+        for(var i = 0; i <length; i++){
+            if(this.array[i].id === id ){
+                this.array[i] = newForm;
+                return this.array[i];
+            }
+        }
+
+        console.error('form to get not found');
+        return;
+    };
+
     Forms.getFormsByList = function(idList){
         if(!idList ){
             console.error('Forms getFormList : list not provided');
@@ -519,8 +537,69 @@ function loadVariables(){
 
     "use strict";
 
+    function checkboxChoice(choice,id){
+        this.init(choice,id);
+        this.attachEventHandlers();
+    }
+
+    checkboxChoice.prototype.init = function (choice,id) {
+        var context={choice:choice,id:id};
+        this.$el = $(Mustache.render(_WMGlobal.templates.checkboxchoice,context));
+    };
+
+    checkboxChoice.prototype.attachEventHandlers = function () {
+        this.$el.off('click').on('click',function(event){
+            event.stopPropagation();
+            event.preventDefault();
+            //var $checkbox = $(event.target).closest('.checkbox-input-block');
+            console.log(this.$el);
+            switchCheckbox.call(this);
+        }.bind(this));
+
+    };
+
+    checkboxChoice.prototype.setCheckboxValue = function (value) {
+        var $label = this.$el.find('.label');
+        var $input = this.$el.find('.checkbox-input');
+
+        if(value === true) {
+            if(!$label.hasClass('checked')){
+                $label.addClass('checked');
+            }
+            $input.prop('checked', true);
+        }else{
+            if($label.hasClass('checked')){
+                $label.removeClass('checked');
+            }
+            $input.prop('checked', false);
+        }
+    };
+
+
+    function switchCheckbox(){
+
+        var $label = this.$el.find('.label');
+        var $input = this.$el.find('.checkbox-input');
+
+        if($label.hasClass('checked')){
+            $label.removeClass('checked');
+            $input.prop('checked', false);
+        }else{
+            $label.addClass('checked');
+            $input.prop('checked', true);
+        }
+    }
+
+    _WMGlobal.checkboxChoice = checkboxChoice;
+
+}(_WMGlobal));(function (_WMGlobal) {
+
+    "use strict";
+
     function formControls($parent,$transitionEl,form){
         this.init($parent,$transitionEl,form);
+        this.attachEventHandlers.call(this);
+
     }
 
     formControls.prototype.init = function($parent,$transitionEl,form){
@@ -533,12 +612,21 @@ function loadVariables(){
             console.error('formControls init : not $transitionEl provided');
             return;
         }
+
+        
         this.$parent = $parent;
         this.$transition = $transitionEl;
         this.form = form;
+
         this.id = $transitionEl.attr('id') || $transitionEl.attr('data-id');
-        this.$el = $(controlsHTML);
-        this.$el.attr('data-id',this.id);
+
+        var context = {
+            id : this.id,
+            formname : this.form.name
+        };
+
+        this.$el = $(Mustache.render(_WMGlobal.templates.mappingcontrols,context));
+        
         this.$el.css('top',this.$transition.position().top - 132);
         this.$el.css('left',this.$transition.position().left -120 + 20);
 
@@ -550,14 +638,8 @@ function loadVariables(){
         this.$renameIcon = this.$el.find('.change-form');
         this.$removeIcon = this.$el.find('.remove-form');
 
-
-        this.$menu.find('.headline').text(this.form.name);
-        this.$remove.find('.headline').text(this.form.name);
-        this.$rename.find('.form-name').val(this.form.name);
-
         this.$parent.append(this.$el);
 
-        this.attachEventHandlers.call(this);
     };
 
 
@@ -581,6 +663,20 @@ function loadVariables(){
 
         this.$remove.find('.remove').on('click',function(){confirmRemove.call(this)}.bind(this));
 
+        $(document).on('click',function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+
+            if(this.$el.has( $(event.target) ).length === 0 &&
+                $(event.target).closest('.transition-icon,.transition').length === 0){
+
+                closeControls.call(this);
+            }
+        }.bind(this));
+
+        $(document).on('closeControls',function () {
+            closeControls.call(this);
+        }.bind(this))
     };
 
     function closeControls(){
@@ -593,7 +689,12 @@ function loadVariables(){
     }
 
     function openControls(){
-        console.log('click');
+        var $visible = $('.transition-controlls:visible');
+        if($visible.length > 0){
+            $visible.each(function() {
+                $( this ).hide();
+            });
+        }
         this.$el.show();
     }
 
@@ -646,36 +747,6 @@ function loadVariables(){
         }.call(this));
     }
 
-
-
-    var controlsHTML =
-        '<div class="transition-controlls"  data-id=""> \
-            <div class="close-controlls"><div class="icon-close"></div></div>\
-            <div class="action-selector">\
-                <div class="headline"></div> \
-                <div class="edit-form">\
-                    <div class="icon-add"></div>\
-                    <div class="label">Edit</div>\
-                </div>\
-                <div class="change-form"><div class="icon-test1"></div><div class="label">Rename</div></div>\
-                <div class="remove-form"><div class="icon-close"></div><div class="label">Remove</div></div> \
-            </div>\
-            \
-            <div class="remove-form-confirm" >\
-                <div class="headline"></div> \
-                <div class="question">Are you sure you want to remove this form from transition ?</div>\
-                <div class="cancel">Cancel</div>\
-                <div class="remove">Remove</div>\
-            </div>\
-            \
-            <div class="change-form-name-confirm">\
-                <div class="headline">Rename form</div> \
-                <input class="form-name" value="Example of name">\
-                <div class="cancel">Cancel</div>\
-                <div class="save">Save</div>\
-            </div>\
-            \
-        </div>\ ' ;
 
     _WMGlobal.formControls = formControls;
 
@@ -746,19 +817,9 @@ function loadVariables(){
     _utils.popupBuildSelectboxDataset = function($el,type){
 
         var $select = $el.find('.dataset');
-        $select.empty();
-        $select.append($('<option selected value="undefined"> Select from dataset </option>'));
-
-        //only dataset of selected type
         var dataset = _WMGlobal.getDatasetTypeList(type);
-        //console.log(dataset);
-        //console.log($select);
-        //console.log(type);
 
-        for(var data in dataset) {
-            var $newOpt =   $('<option value="'+dataset[data].key+'">'+dataset[data].key+'</option>');
-            $select.append($newOpt);
-        }
+        $select.empty().append(Mustache.render(_WMGlobal.templates.datasetoptions,dataset));
     };
 
     _utils.attachOnOffHanlder = function($el){
@@ -798,16 +859,8 @@ function loadVariables(){
     _utils.addChoice = function ($el){
         var $choices = $el.find('.choices');
 
-        var choiceHTML =
-            ' <div class="choice-block"> \
-                <input type="text" class="choice"> \
-                <div class="controls"> \
-                    <div class="remove-choice-icon"> \
-                        <div class="icon-close"></div>\
-                    </div>\
-                </div>\
-            </div> \ ';
-        var $choice = $(choiceHTML);
+
+        var $choice = $(Mustache.render(_WMGlobal.templates.toolbarchoice));
         var $last = $choices.find('.choice-block:last');
         _utils.attachRemoveChoiceHandler($choice,$el);
         _utils.attachChangeChoiceHandler($choice,$el);
@@ -980,7 +1033,15 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(checkboxToolbarHTML);
+
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupcheckbox,{},controls));
+
         _WMGlobal.utilities.attachAddChoiceHandler($toolb);
         _WMGlobal.utilities.attachChangeChoiceHandler($toolb.find('.choice-block'),$toolb);
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
@@ -1011,7 +1072,7 @@ function loadVariables(){
 
     function buildPreview($popup,data){
         var showPreview = false;
-        var $preview = $(checkboxAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.checkboxpreview));
 
         if(!$.isEmptyObject(data)){
             if(data['fieldname'] !== ''  &&  data['fieldname'] !== undefined){
@@ -1064,44 +1125,19 @@ function loadVariables(){
         }
 
         for(var i in choices) {
-            var val = choices[i];
-            var $newchoice = $('<div class="checkbox-input-block"></di><input type="checkbox" value="'+val+'" class="checkbox-input" id="checkbox'+i+'">' +
-                '<label class="label" for="checkbox'+i+'"><div class="check-icon"><div class="icon-check"></div></div>'+val+'</label><div>');
 
-            attachCheckboxHandler($newchoice);
+            var val = choices[i];
+            var Choice = new _WMGlobal.checkboxChoice(val,i);
 
             if($.inArray(val,oldselected) !== -1){
-                setCheckboxValue($newchoice,true);
+                Choice.setCheckboxValue(true);
             }
-            checkbox.append($newchoice);
+            checkbox.append(Choice.$el);
         }    
     }
-    
-    function attachCheckboxHandler($checkbox){
-        $checkbox.off('click').on('click',function(event){
-            event.stopPropagation();
-            event.preventDefault();
-            var $checkboxVal = $(event.target).closest('.checkbox-input-block');
-            switchCheckbox($checkboxVal);
-        });
-    }
 
-    function setCheckboxValue($el,value){
-        var $label = $el.find('.label');
-        var $input = $el.find('.checkbox-input');
 
-        if(value === true) {
-            if(!$label.hasClass('checked')){
-                $label.addClass('checked');
-            }
-            $input.prop('checked', true);
-        }else{
-            if($label.hasClass('checked')){
-                $label.removeClass('checked');
-            }
-            $input.prop('checked', false);
-        }
-    }
+
 
     function getCheckedList($checkbox){
         var list = [];
@@ -1114,192 +1150,9 @@ function loadVariables(){
         return list;
     }
     
-    function switchCheckbox($checkbox){
-
-        var $label = $checkbox.find('.label');
-        var $input = $checkbox.find('.checkbox-input');
-
-        if($label.hasClass('checked')){
-            $label.removeClass('checked');
-            $input.prop('checked', false);
-        }else{
-            $label.addClass('checked');
-            $input.prop('checked', true);
-        }
-    }
 
 
 
-    var checkboxAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="checkbox"> \
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">BACK</div> \
-             <div class="preview-next-button">NEXT</div> \
-             </div> \
-        </div> ';
-
-
-    var checkboxToolbarHTML =
-        '<div class="inputfield-name"> \
-    <div class="inputfield-icon"> \
-        <div class="icon-checkbox"></div> \
-    </div> \
-    <div class= "inputfield-name-inner">Checkbox</div> \
-</div> \
-<div class="inputfield-setting"> \
-    <div class="block"> \
-        <div class="heading">Question</div> \
-        <div class="block-body"> \
-            <input type="text" class="small-input fieldname"> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Description \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover off-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-            <div class="description-block"> \
-                <textarea type="text" class="large-input description"></textarea> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Add choices \
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="choices"> \
-                <div class="choice-block"> \
-                    <input type="text" class="choice"> \
-                        <div class="controls"> \
-                            <div class="add-choice-icon">\
-                                <div class="icon-add"></div> \
-                            </div> \
-                    </div>\
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Selection count \
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="selection-count">\
-                <div class="min-selection">\
-                    <div class="label">Minimum</div>\
-                    <input type="text" class="min-selected"> \
-                </div> \
-                <div class="max-selection">\
-                    <div class="label">Maximum</div>\
-                    <input type="text" class="max-selected"> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Alphabetical order \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover alph-order on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Dataset variable\
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <select class="selectbox dataset"> \
-            </select> \
-            <div class="dataset-add-icon"><div class="icon-add"></div></div>\
-            <div class="add-dataset-block"> \
-                <div class="label"> Set dataset name</div> \
-                <input type="text" class="small-input new-dataset"> \
-                <div class="dataset-save"> \
-                    <div class="dataset-save-button">Save</div> \
-                    <div class="dataset-cancel-button">Cancel</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Required \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover required on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Editable \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover editable on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Visible \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover visible on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-</div>';
 
     _WMGlobal.checkbox = _cb;
 }(_WMGlobal));(function (_WMGlobal) {
@@ -1350,7 +1203,14 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(longAnswerToolbarHTML);
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popuplonganswer,{},controls));
+        
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
         _WMGlobal.utilities.attachAddToDatasetHandler($toolb,'longanswer');
         _WMGlobal.utilities.popupBuildSelectboxDataset($toolb,'longanswer');
@@ -1378,7 +1238,7 @@ function loadVariables(){
 
     function buildPreview(popup,data){
         var showPreview = false;
-        var $preview = $(longAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.longanswerpreview));
 
         if(!$.isEmptyObject(data)) {
             if (data['fieldname'] !== '' && data['fieldname'] !== undefined) {
@@ -1405,132 +1265,8 @@ function loadVariables(){
     }
 
 
-    var longAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="longanswer"> \
-                <textarea  class="longanswer-input" type="text"></textarea> \
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">BACK</div> \
-             <div class="preview-next-button">NEXT</div> \
-             </div> \
-        </div> ';
 
-
-    var longAnswerToolbarHTML =
-        '<div class="inputfield-name"> \
-            <div class="inputfield-icon"> \
-                <div class="icon-longanswer"></div> \
-            </div> \
-            <div class= "inputfield-name-inner">Long answer</div> \
-        </div> \
-        <div class="inputfield-setting"> \
-            <div class="block"> \
-                <div class="heading">Question</div> \
-                <div class="block-body"> \
-                    <input type="text" class="small-input fieldname"> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Description \
-                        <div class="description"> \
-                            <div class="icon-description"></div> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover off-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                    <div class="description-block"> \
-                        <textarea type="text" class="large-input description"></textarea> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="heading">Max length \
-                    <div class="description"> \
-                        <div class="icon-description"></div> \
-                    </div> \
-                </div> \
-                <div class="block-body"> \
-                    <input type="text" class="max-length"> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="heading">Dataset variable\
-                    <div class="description"> \
-                        <div class="icon-description"></div> \
-                    </div> \
-                </div> \
-                <div class="block-body"> \
-                    <select class="selectbox dataset"> \
-                    </select> \
-                    <div class="dataset-add-icon"><div class="icon-add"></div></div>\
-                    <div class="add-dataset-block"> \
-                        <div class="label"> Set dataset name</div> \
-                        <input type="text" class="small-input new-dataset"> \
-                        <div class="dataset-save"> \
-                            <div class="dataset-save-button">Save</div> \
-                            <div class="dataset-cancel-button">Cancel</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Required \
-                        <div class="description"> \
-                            <div class="icon-description"></div> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover required on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Editable \
-                        <div class="description"> \
-                            <div class="icon-description"></div> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover editable on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Visible \
-                        <div class="description"> \
-                            <div class="icon-description"></div> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover visible on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-        </div>';
+ 
 
     _WMGlobal.longAnswer = _la;
 }(_WMGlobal));/**
@@ -1595,7 +1331,13 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(selectboxToolbarHTML);
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupselectbox,{},controls));
         _WMGlobal.utilities.attachAddChoiceHandler($toolb);
         _WMGlobal.utilities.attachChangeChoiceHandler($toolb.find('.choice-block'),$toolb);
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
@@ -1626,7 +1368,7 @@ function loadVariables(){
 
     function buildPreview(popup,data){
         var showPreview = false;
-        var $preview = $(selectboxAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.selectboxpreview));
         var selectbox = $preview.find('.selectbox-input');
 
 
@@ -1718,164 +1460,9 @@ function loadVariables(){
             }
             selectbox.val(oldV);
         });
-
-
-
+        
     }
 
-
-
-    var selectboxAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="selectbox"> \
-                <select class="selectbox-input"></select>\
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">BACK</div> \
-             <div class="preview-next-button">NEXT</div> \
-             </div> \
-        </div> ';
-
-
-    var selectboxToolbarHTML =
-        '<div class="inputfield-name"> \
-    <div class="inputfield-icon"> \
-        <div class="icon-selectbox"></div> \
-    </div> \
-    <div class= "inputfield-name-inner">Selectbox</div> \
-</div> \
-<div class="inputfield-setting"> \
-    <div class="block"> \
-        <div class="heading">Question</div> \
-        <div class="block-body"> \
-            <input type="text" class="small-input fieldname"> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Description \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover off-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-            <div class="description-block"> \
-                <textarea type="text" class="large-input description"></textarea> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Add choices \
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <div class="choices"> \
-                <div class="choice-block"> \
-                    <input type="text" class="choice"> \
-                        <div class="controls"> \
-                            <div class="add-choice-icon">\
-                                <div class="icon-add"></div> \
-                            </div> \
-                    </div>\
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Alphabetical order \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover alph-order on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="heading">Dataset variable\
-            <div class="description"> \
-                <div class="icon-description"></div> \
-            </div> \
-        </div> \
-        <div class="block-body"> \
-            <select class="selectbox dataset"> \
-            </select> \
-            <div class="dataset-add-icon"><div class="icon-add"></div></div>\
-            <div class="add-dataset-block"> \
-                <div class="label"> Set dataset name</div> \
-                <input type="text" class="small-input new-dataset"> \
-                <div class="dataset-save"> \
-                    <div class="dataset-save-button">Save</div> \
-                    <div class="dataset-cancel-button">Cancel</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Required \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover required on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Editable \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover editable on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-    <div class="block"> \
-        <div class="block-body"> \
-            <div class="label">Visible \
-                <div class="description"> \
-                    <div class="icon-description"></div> \
-                </div> \
-            </div> \
-            <div class="on-off-setup"> \
-                <div class="mover visible on-selected"> \
-                    <div class="on-setup">On</div> \
-                    <div class="slider"></div> \
-                    <div class="off-setup">Off</div> \
-                </div> \
-            </div> \
-        </div> \
-    </div> \
-</div>';
 
     _WMGlobal.selectboxAnswer = _sb;
 }(_WMGlobal));(function (_WMGlobal) {
@@ -1928,7 +1515,14 @@ function loadVariables(){
     };
 
     function buildToolbar (popup,data){
-        var $toolb = $(shortAnswerToolbarHTML);
+
+        var controls = {
+            topcontrols:Mustache.render(_WMGlobal.templates.topcontrols),
+            dataset:Mustache.render(_WMGlobal.templates.dataset),
+            bottomcontrols:Mustache.render(_WMGlobal.templates.bottomcontrols)
+        };
+        var $toolb = $(Mustache.render(_WMGlobal.templates.popupshortanswer,{},controls));
+        
         _WMGlobal.utilities.attachOnOffHanlder($toolb);
         _WMGlobal.utilities.attachAddToDatasetHandler($toolb,'shortanswer');
         _WMGlobal.utilities.popupBuildSelectboxDataset($toolb,'shortanswer');
@@ -1956,7 +1550,7 @@ function loadVariables(){
 
     function buildPreview(popup,data){
         var showPreview = false;
-        var $preview = $(shortAnswerPreviewHTML);
+        var $preview = $(Mustache.render(_WMGlobal.templates.shortanswerpreview));
 
         if(!$.isEmptyObject(data)) {
             if (data['fieldname'] !== '' && data['fieldname'] !== undefined) {
@@ -1982,133 +1576,6 @@ function loadVariables(){
     }
 
 
-    var shortAnswerPreviewHTML =
-        '<div class="preview-block"> \
-            <div class="fieldname"></div> \
-            <div class="description"></div> \
-            <div class="shortanswer"> \
-                <input  class="shortanswer-input" type="text"> \
-            </div> \
-            <div class="preview-save"> \
-                <div class="preview-back-button">Back</div> \
-             <div class="preview-next-button">Next</div> \
-             </div> \
-        </div> ';
-
-
-    var shortAnswerToolbarHTML =
-        '<div class="inputfield-name"> \
-            <div class="inputfield-icon"> \
-                <div class="icon-shortanswer"></div> \
-            </div> \
-            <div class= "inputfield-name-inner">Short answer</div> \
-        </div> \
-        <div class="inputfield-setting"> \
-            <div class="block"> \
-                <div class="heading">Question</div> \
-                <div class="block-body"> \
-                    <input type="text" class="small-input fieldname"> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Description \
-                        <div class="description"> \
-                            <div class="icon-description"></div> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover off-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                    <div class="description-block"> \
-                        <textarea type="text" class="large-input description"></textarea> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="heading">Max length \
-                    <div class="description"> \
-                        <div class="icon-description"></div> \
-                    </div> \
-                </div> \
-                <div class="block-body"> \
-                    <input type="text" class="max-length"> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="heading">Dataset variable\
-                    <div class="description"> \
-                        <div class="icon-description"></div> \
-                    </div> \
-                </div> \
-                <div class="block-body"> \
-                    <select class="selectbox dataset"> \
-                    </select> \
-                    <div class="dataset-add-icon"><div class="icon-add"></div></div>\
-                    <div class="add-dataset-block"> \
-                        <div class="label"> Set dataset name</div> \
-                        <input type="text" class="small-input new-dataset"> \
-                        <div class="dataset-save"> \
-                            <div class="dataset-save-button">Save</div> \
-                            <div class="dataset-cancel-button">Cancel</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Required \
-                        <div class="description"> \
-                            <div class="icon-description"></div> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover required on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Editable \
-                        <div class="description"> \
-                            <div class="icon-description"></div> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover editable on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-            <div class="block"> \
-                <div class="block-body"> \
-                    <div class="label">Visible \
-                        <div class="description"> \
-                            <div class="icon-description"></div> \
-                        </div> \
-                    </div> \
-                    <div class="on-off-setup"> \
-                        <div class="mover visible on-selected"> \
-                            <div class="on-setup">On</div> \
-                            <div class="slider"></div> \
-                            <div class="off-setup">Off</div> \
-                        </div> \
-                    </div> \
-                </div> \
-            </div> \
-        </div>';
-
     _WMGlobal.shortAnswer = _sa;
 }(_WMGlobal));(function (_WMGlobal) {
     "use strict";
@@ -2127,7 +1594,7 @@ function loadVariables(){
         var $formName = _fcm.main.find('.form-name');
         var $formNameInput = _fcm.main.find('.form-name-value');
 
-        $(document).off('click');
+        // $(document).off('click');
 
 
         $('.inputfields-group').sortable({
@@ -2427,12 +1894,7 @@ function loadVariables(){
 
     _fcm.saveFormsData = function(){
 
-        for(var i in _WMGlobal.forms){
-            if(_WMGlobal.forms[i].id === _fcm.form.id){
-                _WMGlobal.forms[i].inputs = _fcm.form.inputs;
-            }
-        }
-
+        _WMGlobal.forms.setForm(_fcm.form.id, _fcm.form);
         _WMGlobal.saveData();
     };
 
@@ -2451,7 +1913,7 @@ function loadVariables(){
 
         for (var i = 0; i < _fcm.form.inputs.length; i++) {
             data = _fcm.form.inputs[i];
-            _fcm.form.inputs[i].$el = $(InputfieldElement(data.id, data.type, data.fieldname));
+            _fcm.form.inputs[i].$el = InputfieldElement(data.id, data.type, data.fieldname);
             attachInputfieldHandler(_fcm.form.inputs[i]);
             _fcm.main.find('.inputfields-group').append( _fcm.form.inputs[i].$el);
         }
@@ -2459,7 +1921,7 @@ function loadVariables(){
     };
 
     _fcm.buildFormCreator = function (){
-        _fcm.$el = $(formCreatorHTML);
+        _fcm.$el = $(Mustache.render(_WMGlobal.templates.formcreator));
 
         _fcm.popup = _fcm.$el.find(".popup");
         _fcm.main = _fcm.$el.find(".main");
@@ -2630,7 +2092,7 @@ function loadVariables(){
             isDone = false;
         }
 
-        var $el = $(InputfieldElement(id,type,fieldname));
+        var $el = InputfieldElement(id,type,fieldname);
 
 
         var inputData = {
@@ -2654,12 +2116,8 @@ function loadVariables(){
 
     //element constructor
     function InputfieldElement(id,type,fieldname){
-        var inputfield = '<li class="inputfield" draggable="true" data-id ="' + id + '">'+
-            '<div class="input-icon"><div class="icon-'+ type  +'"></div></div>'+
-            '<span class="input-fieldname">'+ fieldname +'</span>'+
-            '<div class="input-remove-icon"><div class="icon-close"></div></div></li>';
-
-        return inputfield;
+        var context = {id:id,type:type,fieldname:fieldname};
+        return $(Mustache.render(_WMGlobal.templates.inputfield,context));
     }
 
     //popup dont save inputfield
@@ -2671,8 +2129,7 @@ function loadVariables(){
         }
     }
 
-
-
+    
     function attachInputfieldHandler(inputfield){
         inputfield.$el.find('.input-remove-icon').on('click',function(event){
             event.stopPropagation();
@@ -2686,55 +2143,6 @@ function loadVariables(){
             _fcm.buildPopup(_WMGlobal.openedInputfieldToEdit);
         });
     }
-    var formCreatorHTML =
-        '<div class= "formCreator"> \
-            <div class="main"> \
-                <div class="form-name">\
-                        <div class="form-icon"><div class="icon-check"></div></div>\
-                        <input class="form-name-value" type="text">\
-                    </div>\
-                <div class="toolbar "> \
-                    <div class="content"> \
-                        <ul class="buttons-group"> \
-                            <li class="button-medium" draggable="true" data-type="shortanswer"> <div class="button-icon"><div class="icon-shortanswer"></div></div> Short answer </li> \
-                            <li class="button-medium" draggable="true" data-type="longanswer"> <div class="button-icon"><div class="icon-longanswer"></div></div> Long answer </li> \
-                            <li class="button-medium" draggable="true" data-type="selectbox"> <div class="button-icon"><div class="icon-selectbox"></div></div> Selectbox </li> \
-                            <li class="button-medium" draggable="true" data-type="checkbox"> <div class="button-icon"><div class="icon-checkbox"></div></div> Checkbox </li> \
-                        </ul> \
-                        <div class="cancel-save">\
-                                <div class="cancel-button">Cancel</div>\
-                        </div> \
-                        <div class="close-form-creator">\
-                            <div class="close-button">Finish</div>\
-                        </div>\
-                    </div> \
-                </div> \
-                <div class="window "> \
-                    <div class="content"> \
-                         <ul class="inputfields-group"> \
-                        </ul> \
-                        <ul class="newinputfield-group">\
-                           <li class="newinputfield" draggable="true"> <div class="input-icon"><div class="icon-add"></div></div> \
-                                 <span class="input-text">Add next field by click or use Drag & Drop</span> \
-                            </li> \
-                        </ul>\
-                    </div> \
-                </div> \
-            </div> \
-             <div class="popup"> \
-                <div class="toolbar-editor"> \
-                    <div class="inputfield-save"> \
-                        <div class="inputfield-save-button">Save</div> \
-                         <div class="inputfield-cancel-button">Cancel</div> \
-                    </div> \
-                </div> \
-                <div class="preview"> \
-                    <div class="close"> \
-                        <div class="icon-close"></div> \
-                    </div> \
-                </div> \
-            </div>\
-        </div>';
 
 
 
@@ -2902,7 +2310,7 @@ function loadVariables(){
 
         _fs.transitionID = transitionID;
 
-        _fs.$el = $(formSelectorHTML);
+        _fs.$el = $(Mustache.render(_WMGlobal.templates.formselector));
         _WMGlobal.formMapper.$el.addClass('blur');
         _WMGlobal.$el.append(_fs.$el);
 
@@ -2930,62 +2338,16 @@ function loadVariables(){
         })
     };
 
-
     function buildFormSelectionSelectbox($el,selected){
         var $select = $el.find('.form-selector');
         var nonEmpty = _WMGlobal.forms.getForms();
 
-        $select.empty();
-        $select.append($('<option selected value="undefined" data-id = "undefined"> Select from forms </option> ') );
-
-        for(var i in nonEmpty){
-            $select.append($('<option value="'+ nonEmpty[i].name +'" data-id = " '+ nonEmpty[i].id +' "> '+ nonEmpty[i].name  +' </option>'));
-        }
+        $select.empty().append(Mustache.render(_WMGlobal.templates.formselectoroptions,nonEmpty));
 
         if(selected){
             $select.val(selected);
         }
     }
-
-    var formSelectorHTML =
-        '<div class="formSelector"> \
-            <div class="select-block">\
-                <div class="select-icons">\
-                    <div class="copy-form">\
-                        <div class="copy-form-icon">\
-                            <div class="icon-add"></div>\
-                            <div class="label">Select form</div>\
-                        </div>\
-                    </div>\
-                    <div class="new-form">\
-                        <div class="new-form-icon">\
-                            <div class="icon-shortanswer"></div>\
-                            <div class="label">Create form</div>\
-                        </div>\
-                    </div>\
-                </div>\
-                <div class="select-name">\
-                    <div class="label">Insert name</div>\
-                    <div class="form-outer-block"><input class="form-name" type="text"></div>\
-                    <div class="save-form-name">\
-                        <div class="cancel-save">Back</div>\
-                        <div class="confirm-save">Create</div>\
-                    </div>\
-                </div> \
-                <div class="select-form">\
-                    <div class="label">Select form</div>\
-                    <div class="form-outer-block"><select class="form-selector"></select> </div> \
-                    <div class="save-form-selection">\
-                        <div class="cancel-save">Back</div>\
-                        <div class="confirm-save">Select</div>\
-                    </div>\
-                </div> \
-            </div>\
-            <div class="close-form-selector">\
-                <div class="icon-close"></div>\
-            </div>\
-        </div>\ ';
-
 
     _WMGlobal.formSelector = _fs;
 
@@ -3000,13 +2362,16 @@ function loadVariables(){
 
     _fm.attachEvents = function () {
 
-        $(document).off('click').on('click',function(event){
+        $(document).on('click',function(event){
+            event.stopPropagation();
+            event.preventDefault();
 
             if( (Object.keys(_WMGlobal.formSelector.$el).length !== 0)){
                 if(_WMGlobal.formSelector.$el.has( $(event.target) ).length === 0 && _WMGlobal.formSelector.$el.hasClass('opened')){
                     _WMGlobal.formSelector.destroySelector();
                 }
             }
+
         });
 
         _fm.$el.find(".transition").add(".transition-icon").on('click',function(event){
@@ -3016,6 +2381,7 @@ function loadVariables(){
 
             }else{
                 _WMGlobal.formSelector.init(transitionID);
+                $(document).trigger('closeControls');
                 return;
             }
 
@@ -3033,7 +2399,7 @@ function loadVariables(){
     };
 
     _fm.showPetriNet = function(){
-        _fm.$el = $(petrinetHTML);
+        _fm.$el = $(Mustache.render(_WMGlobal.templates.formmapper,{},{petrinet:petrinetSVG}));
 
         addIconsToMapped();
 
@@ -3105,7 +2471,7 @@ function loadVariables(){
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','width',width);
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','x',x);
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','y',y);
-        svgimg.setAttributeNS('http://www.w3.org/1999/xlink','href','../global/content/svg/bookmark49.svg');
+        svgimg.setAttributeNS('http://www.w3.org/1999/xlink','href','./build/content/svg/form.svg');
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','class','transition-icon');
         svgimg.setAttributeNS('http://www.w3.org/2000/svg','id',transitionID);
 
@@ -3120,9 +2486,8 @@ function loadVariables(){
     }
 
 
-    var petrinetHTML =
-        '<div class="formMapper"> \
-            <svg width="800" height="500"> \
+    var petrinetSVG =
+        '<svg width="800" height="500"> \
                  <circle id="0" cx="231" cy="182" r="20" fill="white" stroke="black" stroke-width="2" class="place"></circle>\
                  <text x="226.5" y="185.75" font-family="verdana" font-weight="bold" font-size="12" fill="black">8</text>\
                  <rect id="1" x="336" y="68" width="40" height="40" fill="white" class="transition" stroke="green" stroke-width="2"></rect>\
@@ -3150,43 +2515,8 @@ function loadVariables(){
                  <polyline points="632,185.36305732484075 739.015202036022,181.95492987146426" fill="none" stroke-width="2" stroke="black"></polyline>\
                  <polygon points="749.0101346906813,181.6366199143095 739.1743570145993,186.95239619879393 738.8560470574446,176.95746354413458" stroke="black" fill="black"></polygon><rect x="689.5050673453406" y="186.49983861957514" stroke="black" stroke-width="1" fill="white" width="2" height="0"></rect>\
                  <text font-family="verdana" font-weight="bold" font-size="12"></text>\
-             </svg> \
-            <div class="close-mapper"> \
-                <div class="close-button">Log data </div> \
-            </div> \
-        </div>';
-
-    var transitionPop =
-        '<div class="transition-controlls"  data-id=""> \
-            <div class="close-controlls"><div class="icon-close"></div></div>\
-            <div class="action-selector">\
-                <div class="headline"></div> \
-                <div class="edit-form">\
-                    <div class="icon-add"></div>\
-                    <div class="label">Edit</div>\
-                </div>\
-                <div class="change-form"><div class="icon-test1"></div><div class="label">Rename</div></div>\
-                <div class="remove-form"><div class="icon-close"></div><div class="label">Remove</div></div> \
-            </div>\
-            \
-            <div class="remove-form-confirm" >\
-                <div class="headline"></div> \
-                <div class="question">Are you sure you want to remove this form from transition ?</div>\
-                <div class="cancel">Cancel</div>\
-                <div class="remove">Remove</div>\
-            </div>\
-            \
-            <div class="change-form-name-confirm">\
-                <div class="headline">Rename form</div> \
-                <input class="form-name" value="Example of name">\
-                <div class="cancel">Cancel</div>\
-                <div class="save">Save</div>\
-            </div>\
-            \
-        </div>\ ' ;
-
-
-
+             </svg>';
+    
 
     _WMGlobal.formMapper = _fm;
 
