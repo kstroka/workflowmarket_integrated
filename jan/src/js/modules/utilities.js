@@ -65,19 +65,9 @@
     _utils.popupBuildSelectboxDataset = function($el,type){
 
         var $select = $el.find('.dataset');
-        $select.empty();
-        $select.append($('<option selected value="undefined"> Select from dataset </option>'));
-
-        //only dataset of selected type
         var dataset = _WMGlobal.getDatasetTypeList(type);
-        //console.log(dataset);
-        //console.log($select);
-        //console.log(type);
 
-        for(var data in dataset) {
-            var $newOpt =   $('<option value="'+dataset[data].key+'">'+dataset[data].key+'</option>');
-            $select.append($newOpt);
-        }
+        $select.empty().append(Mustache.render(_WMGlobal.templates.datasetoptions,dataset));
     };
 
     _utils.attachOnOffHanlder = function($el){
@@ -117,15 +107,8 @@
     _utils.addChoice = function ($el){
         var $choices = $el.find('.choices');
 
-        var choiceHTML =
-            ' <div class="choice-block"> \
-                <input type="text" class="choice"> \
-                <div class="controls"> \
-                    <div class="remove-choice-icon"> \
-                    </div>\
-                </div>\
-            </div> \ ';
-        var $choice = $(choiceHTML);
+
+        var $choice = $(Mustache.render(_WMGlobal.templates.toolbarchoice));
         var $last = $choices.find('.choice-block:last');
         _utils.attachRemoveChoiceHandler($choice,$el);
         _utils.attachChangeChoiceHandler($choice,$el);

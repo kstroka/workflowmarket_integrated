@@ -817,19 +817,9 @@ function loadVariables(){
     _utils.popupBuildSelectboxDataset = function($el,type){
 
         var $select = $el.find('.dataset');
-        $select.empty();
-        $select.append($('<option selected value="undefined"> Select from dataset </option>'));
-
-        //only dataset of selected type
         var dataset = _WMGlobal.getDatasetTypeList(type);
-        //console.log(dataset);
-        //console.log($select);
-        //console.log(type);
 
-        for(var data in dataset) {
-            var $newOpt =   $('<option value="'+dataset[data].key+'">'+dataset[data].key+'</option>');
-            $select.append($newOpt);
-        }
+        $select.empty().append(Mustache.render(_WMGlobal.templates.datasetoptions,dataset));
     };
 
     _utils.attachOnOffHanlder = function($el){
@@ -869,15 +859,8 @@ function loadVariables(){
     _utils.addChoice = function ($el){
         var $choices = $el.find('.choices');
 
-        var choiceHTML =
-            ' <div class="choice-block"> \
-                <input type="text" class="choice"> \
-                <div class="controls"> \
-                    <div class="remove-choice-icon"> \
-                    </div>\
-                </div>\
-            </div> \ ';
-        var $choice = $(choiceHTML);
+
+        var $choice = $(Mustache.render(_WMGlobal.templates.toolbarchoice));
         var $last = $choices.find('.choice-block:last');
         _utils.attachRemoveChoiceHandler($choice,$el);
         _utils.attachChangeChoiceHandler($choice,$el);
@@ -2327,7 +2310,7 @@ function loadVariables(){
 
         _fs.transitionID = transitionID;
 
-        _fs.$el = $(formSelectorHTML);
+        _fs.$el = $(Mustache.render(_WMGlobal.templates.formselector));
         _WMGlobal.formMapper.$el.addClass('blur');
         _WMGlobal.$el.append(_fs.$el);
 
@@ -2355,59 +2338,16 @@ function loadVariables(){
         })
     };
 
-
     function buildFormSelectionSelectbox($el,selected){
         var $select = $el.find('.form-selector');
         var nonEmpty = _WMGlobal.forms.getForms();
 
-        $select.empty();
-        $select.append($('<option selected value="undefined" data-id = "undefined"> Select from forms </option> ') );
-
-        for(var i in nonEmpty){
-            $select.append($('<option value="'+ nonEmpty[i].name +'" data-id = " '+ nonEmpty[i].id +' "> '+ nonEmpty[i].name  +' </option>'));
-        }
+        $select.empty().append(Mustache.render(_WMGlobal.templates.formselectoroptions,nonEmpty));
 
         if(selected){
             $select.val(selected);
         }
     }
-
-    var formSelectorHTML =
-        '<div class="formSelector"> \
-            <div class="select-block">\
-                <div class="select-icons">\
-                    <div class="copy-form">\
-                        <div class="copy-form-icon">\
-                            <div class="label">Select form</div>\
-                        </div>\
-                    </div>\
-                    <div class="new-form">\
-                        <div class="new-form-icon">\
-                            <div class="label">Create form</div>\
-                        </div>\
-                    </div>\
-                </div>\
-                <div class="select-name">\
-                    <div class="label">Insert name</div>\
-                    <div class="form-outer-block"><input class="form-name" type="text"></div>\
-                    <div class="save-form-name">\
-                        <div class="cancel-save">Back</div>\
-                        <div class="confirm-save">Create</div>\
-                    </div>\
-                </div> \
-                <div class="select-form">\
-                    <div class="label">Select form</div>\
-                    <div class="form-outer-block"><select class="form-selector"></select> </div> \
-                    <div class="save-form-selection">\
-                        <div class="cancel-save">Back</div>\
-                        <div class="confirm-save">Select</div>\
-                    </div>\
-                </div> \
-            </div>\
-            <div class="close-form-selector">\
-            </div>\
-        </div>\ ';
-
 
     _WMGlobal.formSelector = _fs;
 
@@ -2459,7 +2399,7 @@ function loadVariables(){
     };
 
     _fm.showPetriNet = function(){
-        _fm.$el = $(petrinetHTML);
+        _fm.$el = $(Mustache.render(_WMGlobal.templates.formmapper,{},{petrinet:petrinetSVG}));
 
         addIconsToMapped();
 
@@ -2546,9 +2486,8 @@ function loadVariables(){
     }
 
 
-    var petrinetHTML =
-        '<div class="formMapper"> \
-            <svg width="800" height="500"> \
+    var petrinetSVG =
+        '<svg width="800" height="500"> \
                  <circle id="0" cx="231" cy="182" r="20" fill="white" stroke="black" stroke-width="2" class="place"></circle>\
                  <text x="226.5" y="185.75" font-family="verdana" font-weight="bold" font-size="12" fill="black">8</text>\
                  <rect id="1" x="336" y="68" width="40" height="40" fill="white" class="transition" stroke="green" stroke-width="2"></rect>\
@@ -2576,43 +2515,8 @@ function loadVariables(){
                  <polyline points="632,185.36305732484075 739.015202036022,181.95492987146426" fill="none" stroke-width="2" stroke="black"></polyline>\
                  <polygon points="749.0101346906813,181.6366199143095 739.1743570145993,186.95239619879393 738.8560470574446,176.95746354413458" stroke="black" fill="black"></polygon><rect x="689.5050673453406" y="186.49983861957514" stroke="black" stroke-width="1" fill="white" width="2" height="0"></rect>\
                  <text font-family="verdana" font-weight="bold" font-size="12"></text>\
-             </svg> \
-            <div class="close-mapper"> \
-                <div class="close-button">Log data </div> \
-            </div> \
-        </div>';
-
-    var transitionPop =
-        '<div class="transition-controlls"  data-id=""> \
-            <div class="close-controlls"><div class="icon-close"></div></div>\
-            <div class="action-selector">\
-                <div class="headline"></div> \
-                <div class="edit-form">\
-                    <div class="icon-add"></div>\
-                    <div class="label">Edit</div>\
-                </div>\
-                <div class="change-form"><div class="icon-test1"></div><div class="label">Rename</div></div>\
-                <div class="remove-form"><div class="icon-close"></div><div class="label">Remove</div></div> \
-            </div>\
-            \
-            <div class="remove-form-confirm" >\
-                <div class="headline"></div> \
-                <div class="question">Are you sure you want to remove this form from transition ?</div>\
-                <div class="cancel">Cancel</div>\
-                <div class="remove">Remove</div>\
-            </div>\
-            \
-            <div class="change-form-name-confirm">\
-                <div class="headline">Rename form</div> \
-                <input class="form-name" value="Example of name">\
-                <div class="cancel">Cancel</div>\
-                <div class="save">Save</div>\
-            </div>\
-            \
-        </div>\ ' ;
-
-
-
+             </svg>';
+    
 
     _WMGlobal.formMapper = _fm;
 

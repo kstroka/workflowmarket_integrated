@@ -45,6 +45,7 @@
           height: 100%;
           border-radius: 2px;
           position: relative;
+          cursor: pointer;
           .label{
             position: absolute;
             bottom : 10px;
@@ -52,15 +53,17 @@
             width: 100%;
             line-height: 30px;
             font-size: 25px;
-            color: white;
+            color: $darkblue;
             text-align: center;
           }
           .copy-form-icon,.new-form-icon{
-            height: 150px;
             width: 150px;
+            text-align: center;
             margin: auto;
-            margin-top:20px;
-
+            margin-top: 20px;
+            font-size: 110px;
+            color: $darkblue;
+            margin-top : 20px;
           }
 
 

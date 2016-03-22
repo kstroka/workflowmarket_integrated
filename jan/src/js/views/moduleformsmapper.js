@@ -44,7 +44,7 @@
     };
 
     _fm.showPetriNet = function(){
-        _fm.$el = $(petrinetHTML);
+        _fm.$el = $(Mustache.render(_WMGlobal.templates.formmapper,{},{petrinet:petrinetSVG}));
 
         addIconsToMapped();
 
@@ -131,9 +131,8 @@
     }
 
 
-    var petrinetHTML =
-        '<div class="formMapper"> \
-            <svg width="800" height="500"> \
+    var petrinetSVG =
+        '<svg width="800" height="500"> \
                  <circle id="0" cx="231" cy="182" r="20" fill="white" stroke="black" stroke-width="2" class="place"></circle>\
                  <text x="226.5" y="185.75" font-family="verdana" font-weight="bold" font-size="12" fill="black">8</text>\
                  <rect id="1" x="336" y="68" width="40" height="40" fill="white" class="transition" stroke="green" stroke-width="2"></rect>\
@@ -161,43 +160,8 @@
                  <polyline points="632,185.36305732484075 739.015202036022,181.95492987146426" fill="none" stroke-width="2" stroke="black"></polyline>\
                  <polygon points="749.0101346906813,181.6366199143095 739.1743570145993,186.95239619879393 738.8560470574446,176.95746354413458" stroke="black" fill="black"></polygon><rect x="689.5050673453406" y="186.49983861957514" stroke="black" stroke-width="1" fill="white" width="2" height="0"></rect>\
                  <text font-family="verdana" font-weight="bold" font-size="12"></text>\
-             </svg> \
-            <div class="close-mapper"> \
-                <div class="close-button">Log data </div> \
-            </div> \
-        </div>';
-
-    var transitionPop =
-        '<div class="transition-controlls"  data-id=""> \
-            <div class="close-controlls"><div class="icon-close"></div></div>\
-            <div class="action-selector">\
-                <div class="headline"></div> \
-                <div class="edit-form">\
-                    <div class="icon-add"></div>\
-                    <div class="label">Edit</div>\
-                </div>\
-                <div class="change-form"><div class="icon-test1"></div><div class="label">Rename</div></div>\
-                <div class="remove-form"><div class="icon-close"></div><div class="label">Remove</div></div> \
-            </div>\
-            \
-            <div class="remove-form-confirm" >\
-                <div class="headline"></div> \
-                <div class="question">Are you sure you want to remove this form from transition ?</div>\
-                <div class="cancel">Cancel</div>\
-                <div class="remove">Remove</div>\
-            </div>\
-            \
-            <div class="change-form-name-confirm">\
-                <div class="headline">Rename form</div> \
-                <input class="form-name" value="Example of name">\
-                <div class="cancel">Cancel</div>\
-                <div class="save">Save</div>\
-            </div>\
-            \
-        </div>\ ' ;
-
-
-
+             </svg>';
+    
 
     _WMGlobal.formMapper = _fm;
 

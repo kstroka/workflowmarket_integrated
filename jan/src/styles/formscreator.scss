@@ -54,8 +54,8 @@ body{
           width: 34px;
           height: 34px;
           position: absolute;
-          top:0;
-          left:0;
+          font-size: 25px;
+          text-align: center;
         }
         .form-name-value{
           width: calc(100% - 2px - 34px);
@@ -65,7 +65,7 @@ body{
           top:0;
           left:34px;
           position: absolute;
-          color:$backgroundColor;
+          color:$darkblue;
           border: none;
 
         }
@@ -261,10 +261,10 @@ body{
               .input-icon{
                 position: absolute;
                 display: inline-block;
-                left: 4px;
-                height: 24px;
-                width: 24px;
-                padding-top: (60px - 24px )/2 ;
+                left: 10px;
+                font-size: 25px;
+                height: 100%;
+                width: 20px;
               }
             }
 
@@ -523,6 +523,11 @@ body{
                       width: 23px;
                       padding-right: 5px;
                       cursor: pointer;
+                      color:$mainToolbarColor2;
+                    }
+                    .remove-choice-icon{
+                      color:$mainWindowColor2;
+
                     }
                   }
 
@@ -579,8 +584,15 @@ body{
                 height: 23px;
                 width: 23px;
                 float: right;
-                padding-right: 5px;
+                margin-right: 5px;
+                margin-top: -3px;
                 cursor: pointer;
+                i{
+                  color:$white;
+                  border-radius: 50%;
+                  padding: 5px;
+                  border: 1px solid white;
+                }
 
               }
 

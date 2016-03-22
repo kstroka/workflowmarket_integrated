@@ -156,7 +156,7 @@
 
         _fs.transitionID = transitionID;
 
-        _fs.$el = $(formSelectorHTML);
+        _fs.$el = $(Mustache.render(_WMGlobal.templates.formselector));
         _WMGlobal.formMapper.$el.addClass('blur');
         _WMGlobal.$el.append(_fs.$el);
 
@@ -184,59 +184,16 @@
         })
     };
 
-
     function buildFormSelectionSelectbox($el,selected){
         var $select = $el.find('.form-selector');
         var nonEmpty = _WMGlobal.forms.getForms();
 
-        $select.empty();
-        $select.append($('<option selected value="undefined" data-id = "undefined"> Select from forms </option> ') );
-
-        for(var i in nonEmpty){
-            $select.append($('<option value="'+ nonEmpty[i].name +'" data-id = " '+ nonEmpty[i].id +' "> '+ nonEmpty[i].name  +' </option>'));
-        }
+        $select.empty().append(Mustache.render(_WMGlobal.templates.formselectoroptions,nonEmpty));
 
         if(selected){
             $select.val(selected);
         }
     }
-
-    var formSelectorHTML =
-        '<div class="formSelector"> \
-            <div class="select-block">\
-                <div class="select-icons">\
-                    <div class="copy-form">\
-                        <div class="copy-form-icon">\
-                            <div class="label">Select form</div>\
-                        </div>\
-                    </div>\
-                    <div class="new-form">\
-                        <div class="new-form-icon">\
-                            <div class="label">Create form</div>\
-                        </div>\
-                    </div>\
-                </div>\
-                <div class="select-name">\
-                    <div class="label">Insert name</div>\
-                    <div class="form-outer-block"><input class="form-name" type="text"></div>\
-                    <div class="save-form-name">\
-                        <div class="cancel-save">Back</div>\
-                        <div class="confirm-save">Create</div>\
-                    </div>\
-                </div> \
-                <div class="select-form">\
-                    <div class="label">Select form</div>\
-                    <div class="form-outer-block"><select class="form-selector"></select> </div> \
-                    <div class="save-form-selection">\
-                        <div class="cancel-save">Back</div>\
-                        <div class="confirm-save">Select</div>\
-                    </div>\
-                </div> \
-            </div>\
-            <div class="close-form-selector">\
-            </div>\
-        </div>\ ';
-
 
     _WMGlobal.formSelector = _fs;
 

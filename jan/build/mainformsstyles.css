@@ -979,8 +979,8 @@ body {
         width: 34px;
         height: 34px;
         position: absolute;
-        top: 0;
-        left: 0; }
+        font-size: 25px;
+        text-align: center; }
       .wm-form-creator-app .formCreator .main .form-name .form-name-value {
         width: calc(100% - 2px - 34px);
         height: 32px;
@@ -989,7 +989,7 @@ body {
         top: 0;
         left: 34px;
         position: absolute;
-        color: #fff;
+        color: #040520;
         border: none; }
     .wm-form-creator-app .formCreator .main .toolbar {
       background-color: #2bf4b1;
@@ -1268,10 +1268,10 @@ body {
             .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
               position: absolute;
               display: inline-block;
-              left: 4px;
-              height: 24px;
-              width: 24px;
-              padding-top: 18px; }
+              left: 10px;
+              font-size: 25px;
+              height: 100%;
+              width: 20px; }
         .wm-form-creator-app .formCreator .main .window .content .newinputfield-group {
           margin-bottom: 20px; }
         .wm-form-creator-app .formCreator .main .window .content .inputfield-group-border {
@@ -1474,7 +1474,10 @@ body {
                     height: 23px;
                     width: 23px;
                     padding-right: 5px;
-                    cursor: pointer; }
+                    cursor: pointer;
+                    color: #00E499; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
+                    color: #AE1331; }
               .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count {
                 width: 100%;
                 margin-top: 3px; }
@@ -1508,8 +1511,14 @@ body {
                 height: 23px;
                 width: 23px;
                 float: right;
-                padding-right: 5px;
+                margin-right: 5px;
+                margin-top: -3px;
                 cursor: pointer; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon i {
+                  color: #fff;
+                  border-radius: 50%;
+                  padding: 5px;
+                  border: 1px solid white; }
               .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .description-block {
                 display: none;
                 width: 100%; }
@@ -1955,7 +1964,8 @@ body {
         width: calc(50% - 5px);
         height: 100%;
         border-radius: 2px;
-        position: relative; }
+        position: relative;
+        cursor: pointer; }
         .wm-form-creator-app .formSelector .select-block .select-icons .copy-form .label, .wm-form-creator-app .formSelector .select-block .select-icons .new-form .label {
           position: absolute;
           bottom: 10px;
@@ -1963,12 +1973,15 @@ body {
           width: 100%;
           line-height: 30px;
           font-size: 25px;
-          color: white;
+          color: #040520;
           text-align: center; }
         .wm-form-creator-app .formSelector .select-block .select-icons .copy-form .copy-form-icon, .wm-form-creator-app .formSelector .select-block .select-icons .copy-form .new-form-icon, .wm-form-creator-app .formSelector .select-block .select-icons .new-form .copy-form-icon, .wm-form-creator-app .formSelector .select-block .select-icons .new-form .new-form-icon {
-          height: 150px;
           width: 150px;
+          text-align: center;
           margin: auto;
+          margin-top: 20px;
+          font-size: 110px;
+          color: #040520;
           margin-top: 20px; }
       .wm-form-creator-app .formSelector .select-block .select-icons .copy-form {
         float: left;
