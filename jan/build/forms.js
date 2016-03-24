@@ -2054,14 +2054,14 @@ function loadVariables(){
 
     //open popup
     function openPopup(module){
-        module.main.addClass("blur");
+        //module.main.addClass("blur");
         module.popup.addClass('opened');
         module.popup.fadeIn(200);
         $(".toolbar-editor input:text,.toolbar-editor textarea").first().focus();
     }
 
     function closePopup(module){
-        module.main.removeClass("blur");
+        //module.main.removeClass("blur");
         module.popup.removeClass('opened');
         module.popup.fadeOut(100);
     }
