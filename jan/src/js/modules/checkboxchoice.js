@@ -48,9 +48,11 @@
 
         if($label.hasClass('checked')){
             $label.removeClass('checked');
+            $label.find('.icon').removeClass('icon-tick').addClass('icon-cross');
             $input.prop('checked', false);
         }else{
             $label.addClass('checked');
+            $label.find('.icon').removeClass('icon-cross').addClass('icon-tick');
             $input.prop('checked', true);
         }
     }

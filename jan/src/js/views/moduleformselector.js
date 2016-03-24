@@ -160,7 +160,7 @@
         _WMGlobal.formMapper.$el.addClass('blur');
         _WMGlobal.$el.append(_fs.$el);
 
-        if(_WMGlobal.forms.length === 0){
+        if(_WMGlobal.forms.getForms().length === 0){
             _fs.$el.find('.copy-form').addClass('disabled');
         }
 

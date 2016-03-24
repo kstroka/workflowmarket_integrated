@@ -9,6 +9,8 @@
     }
 
     formControls.prototype.init = function($parent,$transitionEl,form){
+        
+
         if(!$parent){
             console.error('formControls init : not $parent provided');
             return;
@@ -33,8 +35,11 @@
 
         this.$el = $(Mustache.render(_WMGlobal.templates.mappingcontrols,context));
         
-        this.$el.css('top',this.$transition.position().top - 132);
-        this.$el.css('left',this.$transition.position().left -120 + 20);
+        // this.$el.css('top',this.$transition.position().top - 132);
+        // this.$el.css('left',this.$transition.position().left -120 + 20);
+
+        this.$el.css('top',this.$transition.offset().top - 132);
+        this.$el.css('left',this.$transition.offset().left -120 + 20);
 
         this.$menu = this.$el.find('.action-selector');
         this.$remove = this.$el.find('.remove-form-confirm');
@@ -44,7 +49,8 @@
         this.$renameIcon = this.$el.find('.change-form');
         this.$removeIcon = this.$el.find('.remove-form');
 
-        this.$parent.append(this.$el);
+        //this.$parent.append(this.$el);
+        $('body').append(this.$el);
 
     };
 
@@ -82,8 +88,16 @@
 
         $(document).on('closeControls',function () {
             closeControls.call(this);
-        }.bind(this))
+        }.bind(this));
+
+        $(document).on('destroyControls',function () {
+            destroy.call(this);
+        }.bind(this));
     };
+
+    function destroy() {
+        this.$el.remove();
+    }
 
     function closeControls(){
         this.$el.fadeOut(100);

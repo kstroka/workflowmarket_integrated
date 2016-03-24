@@ -236,6 +236,7 @@ function loadVariables(){
 
     Forms.addForm = function(name,inputs){
 
+
         if(!name){
             console.error('Forms addForm : not name provided');
             return -1;
@@ -244,10 +245,12 @@ function loadVariables(){
             inputs = [];
         }
 
+
         this.array.push({
             name:name || "", id : _WMGlobal.getFormID() , inputs : inputs ||[]
         });
 
+        console.log('add',this.array[this.array.length - 1]);
         return this.array[this.array.length - 1];
 
     };
@@ -350,9 +353,55 @@ function loadVariables(){
     };
 
     Forms.saveToLocalStorage = function(){
+        removeEl.call(this);
         localStorage.setItem("forms",JSON.stringify(this.array));
     };
 
+    function isCyclic (obj) {
+        var seenObjects = [];
+
+        function detect (obj) {
+            if (obj && typeof obj === 'object') {
+                if (seenObjects.indexOf(obj) !== -1) {
+                    return true;
+                }
+                seenObjects.push(obj);
+                for (var key in obj) {
+                    if (obj.hasOwnProperty(key) && detect(obj[key])) {
+                        console.log(obj, 'cycle at ' + key);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        return detect(obj);
+    }
+
+    function removeEl(){
+        if(this.array === undefined){
+            return;
+        }
+        var formslen = this.array.length;
+        console.log('formsLen',formslen);
+        for(var i = 0; i < formslen; i++){
+
+            var inputslen = this.array[i].inputs.length;
+            // console.log('inputslen',inputslen);
+            // console.log(this.array);
+            // console.log(this.array[i]);
+            // console.log(i);
+            // console.log('=====');
+
+            for(var j = 0; j < inputslen; j++){
+                if( this.array[i].inputs[j].$el !== undefined){
+                    delete this.array[i].inputs[j].$el;
+                }
+            }
+        }
+
+    }
 
     _WMGlobal.forms = Forms;
 
@@ -583,9 +632,11 @@ function loadVariables(){
 
         if($label.hasClass('checked')){
             $label.removeClass('checked');
+            $label.find('.icon').removeClass('icon-tick').addClass('icon-cross');
             $input.prop('checked', false);
         }else{
             $label.addClass('checked');
+            $label.find('.icon').removeClass('icon-cross').addClass('icon-tick');
             $input.prop('checked', true);
         }
     }
@@ -603,6 +654,8 @@ function loadVariables(){
     }
 
     formControls.prototype.init = function($parent,$transitionEl,form){
+        
+
         if(!$parent){
             console.error('formControls init : not $parent provided');
             return;
@@ -627,8 +680,11 @@ function loadVariables(){
 
         this.$el = $(Mustache.render(_WMGlobal.templates.mappingcontrols,context));
         
-        this.$el.css('top',this.$transition.position().top - 132);
-        this.$el.css('left',this.$transition.position().left -120 + 20);
+        // this.$el.css('top',this.$transition.position().top - 132);
+        // this.$el.css('left',this.$transition.position().left -120 + 20);
+
+        this.$el.css('top',this.$transition.offset().top - 132);
+        this.$el.css('left',this.$transition.offset().left -120 + 20);
 
         this.$menu = this.$el.find('.action-selector');
         this.$remove = this.$el.find('.remove-form-confirm');
@@ -638,7 +694,8 @@ function loadVariables(){
         this.$renameIcon = this.$el.find('.change-form');
         this.$removeIcon = this.$el.find('.remove-form');
 
-        this.$parent.append(this.$el);
+        //this.$parent.append(this.$el);
+        $('body').append(this.$el);
 
     };
 
@@ -676,8 +733,16 @@ function loadVariables(){
 
         $(document).on('closeControls',function () {
             closeControls.call(this);
-        }.bind(this))
+        }.bind(this));
+
+        $(document).on('destroyControls',function () {
+            destroy.call(this);
+        }.bind(this));
     };
+
+    function destroy() {
+        this.$el.remove();
+    }
 
     function closeControls(){
         this.$el.fadeOut(100);
@@ -1670,17 +1735,20 @@ function loadVariables(){
         });
 
         //finish button
-        _fcm.main.find(".close-button").on('click', function (event) {
+        _fcm.main.find(".finish-creator-button").on('click', function (event) {
 
             _fcm.saveFormsData();
-            _WMGlobal.formMapper.init();
-            _fcm.destroyFormCreator();
+            _fcm.destroyFormCreator().done(
+                _WMGlobal.formMapper.init
+            );
+
         });
 
 
         _fcm.main.find(".cancel-button").on('click', function (event) {
-            _WMGlobal.formMapper.init();
-            _fcm.destroyFormCreator();
+            _fcm.destroyFormCreator().done(
+                _WMGlobal.formMapper.init
+            );
         });
 
 
@@ -1725,46 +1793,6 @@ function loadVariables(){
 
             _fcm.form.name = val;
         });
-
-
-
-        //key triggers
-        $(document).off('keydown').on('keydown',function(event){
-            //editing inputfield
-            if(_fcm.popup.hasClass('opened')){
-                if (event.which === 27){
-                    popupCancel(_fcm,_fcm.openedInputfieldToEdit);
-                    _fcm.openedInputfieldToEdit = {};
-                    closePopup(_fcm);
-                }
-
-                if (event.which === 13) {
-                    _fcm.saveInputfield(_fcm.openedInputfieldToEdit);
-                    _fcm.openedInputfieldToEdit = {};
-                    closePopup(_fcm);
-                }
-            }
-            //not editing inputfield
-            if(!_fcm.popup.hasClass('opened')) {
-                if (event.which === 27) {
-
-                    if($formNameInput.is(":focus")){
-
-                        if($formNameInput.val() === ''){
-                            $formNameInput.val(_fcm.oldFormName);
-                        }
-                        $formNameInput.blur();
-                        return;
-                    }
-
-                    if(_WMGlobal.formMapper.$el.length !== undefined){
-                        return;
-                    }
-                    _fcm.main.find(".close-button").trigger('click');
-                }
-            }
-        });
-
     };
 
     _fcm.init = function(form){
@@ -1931,13 +1959,17 @@ function loadVariables(){
     };
 
     _fcm.destroyFormCreator = function(){
-
+        var $deff = $.Deferred();
         _fcm.$el.fadeOut(100,function(){
+            console.log('remove');
             _fcm.$el.remove();
             _fcm.openedInputfieldToEdit = {};
             _fcm.form = {};
             _fcm.openedInputfieldToEdit = {};
+            $deff.resolve();
         });
+
+        return $deff.promise();
     };
 
     _fcm.clearForm = function(){
@@ -2314,7 +2346,7 @@ function loadVariables(){
         _WMGlobal.formMapper.$el.addClass('blur');
         _WMGlobal.$el.append(_fs.$el);
 
-        if(_WMGlobal.forms.length === 0){
+        if(_WMGlobal.forms.getForms().length === 0){
             _fs.$el.find('.copy-form').addClass('disabled');
         }
 
@@ -2357,7 +2389,8 @@ function loadVariables(){
 "use strict";
 
     var _fm = {
-        $el : {}
+        $el : {},
+        controls : []
     };
 
     _fm.attachEvents = function () {
@@ -2408,9 +2441,13 @@ function loadVariables(){
     };
 
     _fm.destroyMapper = function(){
+        
+
         _fm.$el.hide(0,function(){
             _fm.$el.remove();
             _fm.$el = {};
+            _fm.controls = [];
+            $(document).trigger('destroyControls');
         });
 
     };
@@ -2442,7 +2479,8 @@ function loadVariables(){
             var icon = parent.find('image[id="'+mapped[i]+'"]');
             var form = _WMGlobal.getFormById(_WMGlobal.mapping.getFormID(transition.attr('id')));
             if(form){
-                var control = new  _WMGlobal.formControls(_fm.$el,transition.add(icon),form);
+                var control = new  _WMGlobal.formControls($('body'),transition.add(icon),form);
+                this.controls.push(control);
             }
         }
 

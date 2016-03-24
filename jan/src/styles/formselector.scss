@@ -2,26 +2,26 @@
   .formSelector{
 
     display: none;
-    background-color: white;
+    background-color: $mainWindowColor;
     position: absolute;
     top: 0;
     bottom: 0;
-    left:0;
+    left: 0;
     right: 0;
     width: 440px;
-    height: 250px ;
+    height: 220px ;
     margin: auto;
-    padding: 4px;
-
     @include shadow();
 
 
     .close-form-selector{
       position: absolute;
-      top: -2px;
-      right: -2px;
+      top: 0px;
+      right: 0px;
       width: 20px;
       height: 20px;
+      color : $fontcolor;
+      font-size: 16px;
     }
 
     .select-block{
@@ -31,8 +31,8 @@
       position: relative;
       .select-icons{
         display: block;
-        height: calc(100% - 20px);
-        width: calc(100% - 20px);
+        height: 100%;
+        width: 100%;
         margin: auto;
         top: 0;
         left: 0;
@@ -41,7 +41,7 @@
         position: absolute;
 
         .copy-form,.new-form {
-          width: calc(50% - 5px);
+          width: 50%;
           height: 100%;
           border-radius: 2px;
           position: relative;
@@ -53,37 +53,41 @@
             width: 100%;
             line-height: 30px;
             font-size: 25px;
-            color: $darkblue;
+            color: $fontcolor;
             text-align: center;
           }
           .copy-form-icon,.new-form-icon{
             width: 150px;
             text-align: center;
             margin: auto;
-            margin-top: 20px;
             font-size: 110px;
-            color: $darkblue;
-            margin-top : 20px;
+            color: $fontcolor;
           }
 
 
         }
         .copy-form{
           float: left;
-          background-color: $mainToolbarColor2;
+          background-color: $inputfieldcolor;
           &:hover{
-            background-color: $mainToolbarColor3;
+            background-color: $infobuttoncolor2;
           }
           .copy-form-icon{
+            i,.label{
+              color: $fontcolor;
+            }
           }
         }
         .new-form{
           float: right;
-          background-color: $mainWindowColor;
+          background-color: $newinputfieldcolor;
           &:hover{
-            background-color: $mainWindowColor2;
+            background-color: $newinputfieldcolor2;
           }
           .new-form-icon{
+            i,.label{
+              color: $fontcolor;
+            }
           }
         }
 
@@ -94,14 +98,21 @@
         }
 
         .copy-form.disabled{
+          background-color: $bordercolor;
           &:hover{
-            background-color: $mainToolbarColor;
+            background-color: $bordercolor;
+          }
+          .copy-form-icon{
+            i,.label{
+              color : $bordercolor2;
+            }
           }
         }
       }
 
 
       .select-name,.select-form{
+
         display: none;
         width: 100%;
         height: 150px;
@@ -111,8 +122,9 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left:0;
+        left: 0;
         right: 0;
+        padding: 0 20px;
 
         .label{
           margin-bottom: 20px;
@@ -124,10 +136,18 @@
           margin-bottom: 20px;
           position: relative;
 
+          input,select,textarea,option{
+            border: 1px solid $bordercolor3;
+            color: $fontcolor;
+            padding: 2px;
+            box-sizing: border-box;
+            background-color: white;
+          }
+
           .form-name,.form-selector{
             width: calc(100% - 6px);
-            height: 30px;
-            line-height: 30px;
+            height: 35px;
+            line-height: 35px;
 
             //&:focus{
             //  outline: 0;
@@ -144,33 +164,23 @@
           padding-top: 10px;
           box-sizing: border-box;
           margin: auto;
-          width: 290px;
+          width: 100%;
 
           .cancel-save, .confirm-save{
-            display: inline-block;
-            width: 120px;
-            height: 30px;
-            float: left;
-            vertical-align: middle;
             text-align: center;
-            line-height: 30px;
-            font-size: 24px;
-            background-color: $buttonColor3;
-            color:white;
-            cursor: pointer;
-            border-radius: 2px;
-
-            &:hover{
-              background-color: $buttonColor32;
-            }
           }
 
+          .cancel-save{
+            @include button(130px,$dangerbuttoncolor2,white,$dangerbuttoncolor,38px);
+            margin: 0;
+            float: left;
+            font-size: 20px;
+          }
           .confirm-save{
-            background-color: $buttonColor1;
+            @include button(130px,$successbuttoncolor2,white,$successbuttoncolor,38px);
+            margin: 0;
             float: right;
-            &:hover{
-              background-color: $buttonColor12;
-            }
+            font-size: 20px;
           }
         }
 

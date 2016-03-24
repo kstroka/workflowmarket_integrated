@@ -10,6 +10,76 @@
       cursor: pointer;
     }
 
+  .navigation-toolbar{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: $navigationtoolbarHeight;
+    line-height: $navigationtoolbarHeight;
+    background-color: $toolbarColor3;
+    border-bottom: 1px solid $bordercolor;
+    padding: 0 20px;
+    box-sizing: border-box;
+    @include shadowBottom(0.4,0,7px,7px,$bordercolor2);
+    .content{
+      width: 100%;
+      height:100%;
+      .toolbar-button{
+        position: relative;
+        color: $fontcolor;
+        display: inline-block;
+        padding: 0 10px;
+        height: 100%;
+        border-right: 1px solid $toolbarColor3;
+        min-width: 40px;
+        font-size: 35px;
+        cursor: pointer;
+
+        &:last-child{
+          border-right: 0;
+        }
+
+        &:hover{
+          background-color: $toolbarColor2;
+          .tooltip{
+            display: block;
+          }
+        }
+
+        .tooltip{
+          padding: 5px;
+          display: none;
+          height: 50px;
+          width: 80px;
+          font-size: 14px;
+          line-height: 20px;
+          background-color: $fontcolor;
+          color : white;
+          position: absolute;
+          bottom: -$navigationtoolbarHeight - 12.5px ;
+          left: -12.5px;
+          text-align: center;
+
+          &:before{
+            content:'';
+            display:block;
+            width:0;
+            height:0;
+            position:absolute;
+
+            border-bottom: 12px solid $fontcolor;
+            border-right: 12px solid transparent;
+            border-left: 12px solid transparent;
+
+            left: 40px - 12px;
+            top: -12px;
+          }
+
+        }
+      }
+    }
+  }
   .transition-controlls{
     display: none;
     position: absolute;
@@ -20,7 +90,8 @@
     background-color: white;
     box-sizing: border-box;
     padding: 8px 4px;
-    border-radius:2px;
+    z-index: 15;
+    border-radius: 2px;
     @include shadow();
 
     .close-controlls{
@@ -29,7 +100,6 @@
       right: 0;
       top: 0;
       position: absolute;
-      z-index: 15;
 
     }
 
@@ -41,7 +111,7 @@
       position:absolute;
 
       border-top: 12px solid white;
-      border-right:12px solid transparent;
+      border-right: 12px solid transparent;
       border-left: 12px solid transparent;
 
       left:120px - 12px;
@@ -64,7 +134,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        color:$darkblue;
+        color: $fontcolor;
       }
 
     }
@@ -138,7 +208,7 @@
           width: 100%;
           text-align: center;
           margin-bottom: 5px;
-          color : $darkblue;
+          color : $fontcolor;
           i{
             font-size: 32px;
           }
@@ -146,12 +216,12 @@
 
         .label{
           text-align: center;
-          color:$darkblue
+          color: $fontcolor
         }
 
         &:hover{
           margin-top: 14px;
-          border: 1px solid $gray;
+          border: 1px solid $shadowcolor;
         }
 
       }
@@ -184,24 +254,45 @@
 
     .close-mapper{
       position: absolute;
-      bottom: 5px;
-      right: 5px;
+      bottom: 10px;
+      right: 10px;
       .close-button{
-        display: block;
-        width: 120px;
-        height: 30px;
-        float:right;
-        vertical-align: middle;
+        @include button(130px,$successbuttoncolor,white,$successbuttoncolor2,38px);
         text-align: center;
-        line-height: 30px;
-        font-size: 22px;
-        border-radius: 2px;
-        background-color: $mainToolbarColor;
-        color:white;
-        cursor: pointer;
-
-        @include gradient($mainToolbarColor4,$mainToolbarColor3);
+        margin: 0;
+        font-size: 20px;
       }
     }
   }
+}
+
+.tooltip{
+  padding: 5px;
+  display: none;
+  height: 50px;
+  width: 80px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: $fontcolor;
+  color : white;
+  position: absolute;
+  bottom: -$navigationtoolbarHeight - 12.5px ;
+  left: -12.5px;
+  text-align: center;
+
+  &:before{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+
+    border-bottom: 12px solid $fontcolor;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+
+    left: 40px - 12px;
+    top: -12px;
+  }
+
 }

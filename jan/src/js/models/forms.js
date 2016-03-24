@@ -9,6 +9,7 @@
 
     Forms.addForm = function(name,inputs){
 
+
         if(!name){
             console.error('Forms addForm : not name provided');
             return -1;
@@ -17,10 +18,12 @@
             inputs = [];
         }
 
+
         this.array.push({
             name:name || "", id : _WMGlobal.getFormID() , inputs : inputs ||[]
         });
 
+        console.log('add',this.array[this.array.length - 1]);
         return this.array[this.array.length - 1];
 
     };
@@ -123,9 +126,55 @@
     };
 
     Forms.saveToLocalStorage = function(){
+        removeEl.call(this);
         localStorage.setItem("forms",JSON.stringify(this.array));
     };
 
+    function isCyclic (obj) {
+        var seenObjects = [];
+
+        function detect (obj) {
+            if (obj && typeof obj === 'object') {
+                if (seenObjects.indexOf(obj) !== -1) {
+                    return true;
+                }
+                seenObjects.push(obj);
+                for (var key in obj) {
+                    if (obj.hasOwnProperty(key) && detect(obj[key])) {
+                        console.log(obj, 'cycle at ' + key);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        return detect(obj);
+    }
+
+    function removeEl(){
+        if(this.array === undefined){
+            return;
+        }
+        var formslen = this.array.length;
+        console.log('formsLen',formslen);
+        for(var i = 0; i < formslen; i++){
+
+            var inputslen = this.array[i].inputs.length;
+            // console.log('inputslen',inputslen);
+            // console.log(this.array);
+            // console.log(this.array[i]);
+            // console.log(i);
+            // console.log('=====');
+
+            for(var j = 0; j < inputslen; j++){
+                if( this.array[i].inputs[j].$el !== undefined){
+                    delete this.array[i].inputs[j].$el;
+                }
+            }
+        }
+
+    }
 
     _WMGlobal.forms = Forms;
 

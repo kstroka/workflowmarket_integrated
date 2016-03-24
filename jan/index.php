@@ -14,10 +14,14 @@
 
 <body>
 
-<nav style="width: 100%;height: 80px;background-color: #f0f0f0"></nav>
+<nav class="nav"><h1>Vytváranie formulárov</h1></nav>
+
 <section class="wm-form-creator-app">
 
 </section>
+
+<footer class="footer">Ján Polaček 2016</footer>
+
 
 <script src="build/vendor/jquery.min.js"></script>
 <script src="build/vendor/jquery-ui.min.js"></script>
@@ -30,5 +34,6 @@
 <script src="build/templates.js"></script>
 <script src="build/forms.js"></script>
 </body>
+
 
 </html>

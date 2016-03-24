@@ -1,10 +1,6 @@
-//$backgroundColor : #040520;
-//$backgroundColor2 : #10042f;
-//$mainAppColor : #f0f0f0;
-$backgroundColor : #fff;
-$backgroundColor2 : #fff;
-$mainAppColor : #fff;
-
+$backgroundColor : #040520;
+$backgroundColor2 : #10042f;
+$mainAppColor : #f0f0f0;
 
 $mainToolbarColor: #2bf4b1;
 $mainToolbarColor1: #29e9a9;
@@ -31,12 +27,66 @@ $buttonColor23 : #158DD4;
 $buttonColor3 : #0672AF;
 $buttonColor32: #034369;
 
-$gray : #757575;
 $fieldColor : #FDFFFC;
-$fieldFontColor : #000543;
-$darkblue : #040520;
+
+$fontcolor : #040520;
+
+
+//new colors
+
+$backgroundColor : #eeeeee;
+$mainWindowColor : #fafafa;
+$mainToolbarColor:#fff;
+$previewColor : #fafafa;
+
+$fontcolor : #040520;
+
+$toolbarColor : #fff;
+$toolbarColor2 : #cccccc;
+$toolbarColor3 : #e5e5e5;
+
+$newinputfieldcolor: #3CBC8D;
+$newinputfieldcolor2 : #37a277;
+
+$inputfieldcolor : #E6E6E6;
+$inputfieldcolor2 : #dedede;
+$inputfieldbordercolor : #929292;
+
+$toolbarbuttoncolor: #3fb0ac;
+$toolbarbuttoncolor2 : #173e43;
+
+
+$navcolor: #0084ff;
+$footercolor :#3a3a3a;
+$shadowcolor: #757575;
+$bannercolor : #f1f1f1;
+
+$bordercolor : #e5e5e5;
+$bordercolor2: #666;
+$bordercolor3 : #BBBBBB;
+
+$successbuttoncolor : #2ecc71;
+$successbuttoncolor2 : #239e59;
+
+$dangerbuttoncolor : #e74c3c;
+$dangerbuttoncolor2 : #c9302c;
+
+$infobuttoncolor : #cdcdcd;
+$infobuttoncolor2 : #b7b7b7;
+
+$sliderColor : #BBBBBB;
+
+
+
+//
 
 $popupinputheight : 25px;
-$on-off-width : 45px;
+$on-off-width : 40px;
+
 $toolbar-width : 300px;
+
 $spacing : 20px;
+
+$navigationtoolbarHeight : 50px;
+$headerHeight : 80px;
+$footerHeight : 40px;

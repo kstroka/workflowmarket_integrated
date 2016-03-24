@@ -91,17 +91,20 @@
         });
 
         //finish button
-        _fcm.main.find(".close-button").on('click', function (event) {
+        _fcm.main.find(".finish-creator-button").on('click', function (event) {
 
             _fcm.saveFormsData();
-            _WMGlobal.formMapper.init();
-            _fcm.destroyFormCreator();
+            _fcm.destroyFormCreator().done(
+                _WMGlobal.formMapper.init
+            );
+
         });
 
 
         _fcm.main.find(".cancel-button").on('click', function (event) {
-            _WMGlobal.formMapper.init();
-            _fcm.destroyFormCreator();
+            _fcm.destroyFormCreator().done(
+                _WMGlobal.formMapper.init
+            );
         });
 
 
@@ -146,46 +149,6 @@
 
             _fcm.form.name = val;
         });
-
-
-
-        //key triggers
-        $(document).off('keydown').on('keydown',function(event){
-            //editing inputfield
-            if(_fcm.popup.hasClass('opened')){
-                if (event.which === 27){
-                    popupCancel(_fcm,_fcm.openedInputfieldToEdit);
-                    _fcm.openedInputfieldToEdit = {};
-                    closePopup(_fcm);
-                }
-
-                if (event.which === 13) {
-                    _fcm.saveInputfield(_fcm.openedInputfieldToEdit);
-                    _fcm.openedInputfieldToEdit = {};
-                    closePopup(_fcm);
-                }
-            }
-            //not editing inputfield
-            if(!_fcm.popup.hasClass('opened')) {
-                if (event.which === 27) {
-
-                    if($formNameInput.is(":focus")){
-
-                        if($formNameInput.val() === ''){
-                            $formNameInput.val(_fcm.oldFormName);
-                        }
-                        $formNameInput.blur();
-                        return;
-                    }
-
-                    if(_WMGlobal.formMapper.$el.length !== undefined){
-                        return;
-                    }
-                    _fcm.main.find(".close-button").trigger('click');
-                }
-            }
-        });
-
     };
 
     _fcm.init = function(form){
@@ -352,13 +315,17 @@
     };
 
     _fcm.destroyFormCreator = function(){
-
+        var $deff = $.Deferred();
         _fcm.$el.fadeOut(100,function(){
+            console.log('remove');
             _fcm.$el.remove();
             _fcm.openedInputfieldToEdit = {};
             _fcm.form = {};
             _fcm.openedInputfieldToEdit = {};
+            $deff.resolve();
         });
+
+        return $deff.promise();
     };
 
     _fcm.clearForm = function(){

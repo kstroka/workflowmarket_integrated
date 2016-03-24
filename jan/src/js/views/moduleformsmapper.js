@@ -2,7 +2,8 @@
 "use strict";
 
     var _fm = {
-        $el : {}
+        $el : {},
+        controls : []
     };
 
     _fm.attachEvents = function () {
@@ -53,9 +54,13 @@
     };
 
     _fm.destroyMapper = function(){
+        
+
         _fm.$el.hide(0,function(){
             _fm.$el.remove();
             _fm.$el = {};
+            _fm.controls = [];
+            $(document).trigger('destroyControls');
         });
 
     };
@@ -87,7 +92,8 @@
             var icon = parent.find('image[id="'+mapped[i]+'"]');
             var form = _WMGlobal.getFormById(_WMGlobal.mapping.getFormID(transition.attr('id')));
             if(form){
-                var control = new  _WMGlobal.formControls(_fm.$el,transition.add(icon),form);
+                var control = new  _WMGlobal.formControls($('body'),transition.add(icon),form);
+                this.controls.push(control);
             }
         }
 

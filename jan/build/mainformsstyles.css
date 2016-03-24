@@ -674,8 +674,8 @@ h1 {
     margin-left: 100%; } }
 @font-face {
   font-family: "font-icon";
-  src: url("/jan/build/content/fonts/font-icon.eot?08e24913891a1e60745f5e7ed3ad59ec");
-  src: url("/jan/build/content/fonts/font-icon.eot?#iefix") format("embedded-opentype"), url("/jan/build/content/fonts/font-icon.woff?08e24913891a1e60745f5e7ed3ad59ec") format("woff"), url("/jan/build/content/fonts/font-icon.ttf?08e24913891a1e60745f5e7ed3ad59ec") format("truetype");
+  src: url("/jan/build/content/fonts/font-icon.eot?278997300f43f631decca8650d87944b");
+  src: url("/jan/build/content/fonts/font-icon.eot?#iefix") format("embedded-opentype"), url("/jan/build/content/fonts/font-icon.woff?278997300f43f631decca8650d87944b") format("woff"), url("/jan/build/content/fonts/font-icon.ttf?278997300f43f631decca8650d87944b") format("truetype");
   font-weight: normal;
   font-style: normal; }
 .icon {
@@ -734,150 +734,152 @@ h1 {
 .icon-download:before {
   content: "\f10e"; }
 
-.icon-ellipses:before {
+.icon-edit:before {
   content: "\f10f"; }
 
-.icon-facebook:before {
+.icon-ellipses:before {
   content: "\f110"; }
 
-.icon-fire:before {
+.icon-facebook:before {
   content: "\f111"; }
 
-.icon-form:before {
+.icon-fire:before {
   content: "\f112"; }
 
-.icon-googleplus:before {
+.icon-form:before {
   content: "\f113"; }
 
-.icon-informations:before {
+.icon-googleplus:before {
   content: "\f114"; }
 
-.icon-inhibitor_ARC_arrow:before {
+.icon-informations:before {
   content: "\f115"; }
 
-.icon-instagram:before {
+.icon-inhibitor_ARC_arrow:before {
   content: "\f116"; }
 
-.icon-key:before {
+.icon-instagram:before {
   content: "\f117"; }
 
-.icon-label:before {
+.icon-key:before {
   content: "\f118"; }
 
-.icon-lock:before {
+.icon-label:before {
   content: "\f119"; }
 
-.icon-longanswer:before {
+.icon-lock:before {
   content: "\f11a"; }
 
-.icon-marking:before {
+.icon-longanswer:before {
   content: "\f11b"; }
 
-.icon-menu:before {
+.icon-marking:before {
   content: "\f11c"; }
 
-.icon-message:before {
+.icon-menu:before {
   content: "\f11d"; }
 
-.icon-minus:before {
+.icon-message:before {
   content: "\f11e"; }
 
-.icon-money:before {
+.icon-minus:before {
   content: "\f11f"; }
 
-.icon-monitor:before {
+.icon-money:before {
   content: "\f120"; }
 
-.icon-move:before {
+.icon-monitor:before {
   content: "\f121"; }
 
-.icon-people:before {
+.icon-move:before {
   content: "\f122"; }
 
-.icon-phone:before {
+.icon-people:before {
   content: "\f123"; }
 
-.icon-place:before {
+.icon-phone:before {
   content: "\f124"; }
 
-.icon-plus:before {
+.icon-place:before {
   content: "\f125"; }
 
-.icon-quote:before {
+.icon-plus-circle:before {
   content: "\f126"; }
 
-.icon-regular_ARC_arrow:before {
+.icon-plus:before {
   content: "\f127"; }
 
-.icon-rename:before {
+.icon-quote:before {
   content: "\f128"; }
 
-.icon-reset_ARC_arrow:before {
+.icon-radio:before {
   content: "\f129"; }
 
-.icon-save:before {
+.icon-regular_ARC_arrow:before {
   content: "\f12a"; }
 
-.icon-selectbox:before {
+.icon-rename:before {
   content: "\f12b"; }
 
-.icon-settings:before {
+.icon-reset_ARC_arrow:before {
   content: "\f12c"; }
 
-.icon-shopping:before {
+.icon-save:before {
   content: "\f12d"; }
 
-.icon-shortanswer:before {
+.icon-selectbox:before {
   content: "\f12e"; }
 
-.icon-svg:before {
+.icon-settings:before {
   content: "\f12f"; }
 
-.icon-svgIcon:before {
+.icon-shopping:before {
   content: "\f130"; }
 
-.icon-tick:before {
+.icon-shortanswer:before {
   content: "\f131"; }
 
-.icon-transition:before {
+.icon-svg:before {
   content: "\f132"; }
 
-.icon-trash:before {
+.icon-svgIcon:before {
   content: "\f133"; }
 
-.icon-trend:before {
+.icon-tick:before {
   content: "\f134"; }
 
-.icon-twitter:before {
+.icon-transition:before {
   content: "\f135"; }
 
-.icon-upload-database:before {
+.icon-trash:before {
   content: "\f136"; }
 
-.icon-upload:before {
+.icon-trend:before {
   content: "\f137"; }
 
-.icon-user:before {
+.icon-twitter:before {
   content: "\f138"; }
 
-.icon-warning:before {
+.icon-upload-database:before {
   content: "\f139"; }
 
-.icon-xml:before {
+.icon-upload:before {
   content: "\f13a"; }
 
-.icon-xmlIcon:before {
+.icon-user:before {
   content: "\f13b"; }
 
+.icon-warning:before {
+  content: "\f13c"; }
+
+.icon-xml:before {
+  content: "\f13d"; }
+
+.icon-xmlIcon:before {
+  content: "\f13e"; }
+
 body {
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
-  background-image: -webkit-linear-gradient(left, #fff, #fff);
-  background-image: -moz-linear-gradient(left, #fff, #fff);
-  background-image: -ms-linear-gradient(left, #fff, #fff);
-  background-image: -o-linear-gradient(left, #fff, #fff);
-  background-image: linear-gradient(left, #fff, #fff);
-  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#fff', end-colourStr='#fff', gradientType='1'); }
+  background-color: #eeeeee; }
   body .button-small {
     box-sizing: border-box;
     display: block;
@@ -931,7 +933,7 @@ body {
     height: 38px;
     margin-right: 20px;
     margin-bottom: 12px;
-    background-color: #5562AA;
+    background-color: #3fb0ac;
     color: white;
     vertical-align: middle;
     line-height: 38px;
@@ -939,468 +941,583 @@ body {
     cursor: pointer;
     padding: 0 10px; }
     body .button-large:hover {
-      background-color: #24327D; }
+      background-color: #173e43; }
     body .button-large .button-icon {
       position: relative;
       display: inline-block;
       margin-right: 5px; }
 
+.nav {
+  color: white;
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+  height: 80px;
+  line-height: 80px;
+  background-color: #0084ff;
+  border-bottom: 1px solid #666;
+  z-index: 2;
+  -webkit-box-shadow: 0 7px 7px -6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 7px 7px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 7px 7px -6px rgba(0, 0, 0, 0.3); }
+  .nav h1 {
+    margin: 0;
+    font-size: 35px;
+    font-weight: lighter; }
+
+.footer {
+  color: white;
+  position: relative;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background-color: #3a3a3a;
+  border-top: 1px solid #e5e5e5; }
+
 .wm-form-creator-app {
+  margin: 0 auto;
+  position: relative;
   font-weight: lighter;
-  position: absolute;
-  top: 80px;
-  right: 0;
-  bottom: 60px;
-  left: 0;
-  min-height: 500px;
-  height: auto;
-  margin: 0 20px;
   text-align: left;
-  background-color: #fff;
   zoom: 1;
-  z-index: 1; }
-  .wm-form-creator-app .formCreator {
+  z-index: 1;
+  height: calc( 100vh - 80px - 40px );
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  background-color: #fafafa; }
+  @media screen and (min-width: 1200px) {
+    .wm-form-creator-app {
+      max-width: 1200px; } }
+  @media screen and (min-width: 960px) and (max-width: 1199px) {
+    .wm-form-creator-app {
+      max-width: 960px; } }
+  @media screen and (min-width: 720px) and (max-width: 959px) {
+    .wm-form-creator-app {
+      max-width: 720px; } }
+  @media screen and (max-width: 479px) {
+    .wm-form-creator-app {
+      max-width: 480px; } }
+
+.wm-form-creator-app .formCreator {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+  .wm-form-creator-app .formCreator .main .toolbar {
+    background-color: #fff;
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 4;
+    box-shadow: 6px 0 8px -6px #757575; }
+    .wm-form-creator-app .formCreator .main .toolbar .content {
+      display: inline-block;
+      margin: 20px;
+      margin-right: 0;
+      margin-bottom: 10px;
+      top: 0;
+      bottom: 0;
+      height: calc(100% - 40px); }
+      .wm-form-creator-app .formCreator .main .toolbar .content .form-name {
+        display: block;
+        width: 260px;
+        height: 34px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: white;
+        z-index: 2; }
+        .wm-form-creator-app .formCreator .main .toolbar .content .form-name .form-icon {
+          width: 34px;
+          height: 34px;
+          position: absolute;
+          font-size: 25px;
+          text-align: center; }
+        .wm-form-creator-app .formCreator .main .toolbar .content .form-name .form-name-value {
+          width: calc(100% - 2px - 34px);
+          height: 32px;
+          font-size: 28px;
+          line-height: 32px;
+          top: 0;
+          left: 34px;
+          position: absolute;
+          color: #040520;
+          border: none; }
+      .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group {
+        overflow: auto;
+        list-style: none;
+        display: block;
+        float: left;
+        width: inherit;
+        margin: 10px 0;
+        padding-left: 0; }
+        .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small {
+          box-sizing: border-box;
+          display: block;
+          position: relative;
+          float: left;
+          width: 220px;
+          height: 38px;
+          margin-right: 20px;
+          margin-bottom: 12px;
+          background-color: #0672AF;
+          color: white;
+          vertical-align: middle;
+          line-height: 38px;
+          border-radius: 2px;
+          cursor: pointer;
+          padding: 0 10px;
+          -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small:hover {
+            background-color: #034369; }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small .button-icon {
+            position: relative;
+            display: inline-block;
+            margin-right: 5px; }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small.dragged {
+            background-color: #045483; }
+        .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium {
+          box-sizing: border-box;
+          display: block;
+          position: relative;
+          float: left;
+          width: 220px;
+          height: 38px;
+          margin-right: 20px;
+          margin-bottom: 12px;
+          background-color: #1289D0;
+          color: white;
+          vertical-align: middle;
+          line-height: 38px;
+          border-radius: 2px;
+          cursor: pointer;
+          padding: 0 10px;
+          -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium:hover {
+            background-color: #045483; }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium .button-icon {
+            position: relative;
+            display: inline-block;
+            margin-right: 5px; }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium.dragged {
+            background-color: #045483; }
+        .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large {
+          box-sizing: border-box;
+          display: block;
+          position: relative;
+          float: left;
+          width: 260px;
+          height: 38px;
+          margin-right: 20px;
+          margin-bottom: 12px;
+          background-color: #3fb0ac;
+          color: white;
+          vertical-align: middle;
+          line-height: 38px;
+          border-radius: 2px;
+          cursor: pointer;
+          padding: 0 10px;
+          -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large:hover {
+            background-color: #173e43; }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large .button-icon {
+            position: relative;
+            display: inline-block;
+            margin-right: 5px; }
+          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large.dragged {
+            background-color: #173e43; }
+      .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save {
+        left: 10px; }
+        .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button {
+          background-color: #AE1331; }
+          .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
+            background-color: #680014; }
+  .wm-form-creator-app .formCreator .main .window {
+    z-index: 2;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 300px;
+    overflow: hidden;
+    background-color: #fafafa; }
+    .wm-form-creator-app .formCreator .main .window .content {
+      display: inline-block;
+      margin: 20px;
+      position: absolute;
+      margin-bottom: 40px;
+      margin-right: 0;
+      top: 0;
+      bottom: 0;
+      width: calc(100% - 40px);
+      height: calc(100% - 80px);
+      overflow-y: scroll; }
+      .wm-form-creator-app .formCreator .main .window .content .inputfields-group, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group {
+        overflow: auto;
+        list-style: none;
+        float: left;
+        width: 100%;
+        margin: 0;
+        min-height: 60px;
+        margin-top: 10px;
+        padding-left: 0; }
+        .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield {
+          box-sizing: border-box;
+          display: block;
+          width: 100%;
+          height: 60px;
+          position: relative;
+          margin-bottom: 10px;
+          background-color: #E6E6E6;
+          color: #040520;
+          padding: 0 40px;
+          vertical-align: middle;
+          line-height: 60px;
+          border-radius: 2px;
+          font-size: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          cursor: pointer;
+          -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield:hover, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield:hover {
+            background-color: #dedede; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield.dragged, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield.dragged {
+            background-color: #dedede; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon {
+            position: absolute;
+            display: inline-block;
+            left: 10px;
+            height: 20px;
+            width: 20px; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon {
+            position: absolute;
+            display: inline-block;
+            right: 10px;
+            height: 20px;
+            width: 20px;
+            font-size: 16px; }
+        .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder {
+          box-sizing: border-box;
+          display: block;
+          width: 100%;
+          height: 60px;
+          position: relative;
+          margin-bottom: 10px;
+          background-color: rgba(230, 230, 230, 0.2);
+          color: #E6E6E6;
+          padding: 0 40px;
+          vertical-align: middle;
+          line-height: 60px;
+          border-radius: 2px;
+          font-size: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          cursor: pointer;
+          border: 2px dashed #929292; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder:hover, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder:hover {
+            background-color: gray; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder.dragged, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder.dragged {
+            background-color: gray; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon {
+            position: absolute;
+            display: inline-block;
+            left: 10px;
+            height: 20px;
+            width: 20px; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon {
+            position: absolute;
+            display: inline-block;
+            right: 10px;
+            height: 20px;
+            width: 20px;
+            font-size: 16px; }
+        .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield {
+          box-sizing: border-box;
+          display: block;
+          width: 100%;
+          height: 60px;
+          position: relative;
+          margin-bottom: 10px;
+          background-color: #3CBC8D;
+          color: #040520;
+          padding: 0 40px;
+          vertical-align: middle;
+          line-height: 60px;
+          border-radius: 2px;
+          font-size: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          cursor: pointer;
+          -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          cursor: default; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield:hover, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield:hover {
+            background-color: 60px; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield.dragged, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield.dragged {
+            background-color: 60px; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
+            position: absolute;
+            display: inline-block;
+            left: 10px;
+            height: 20px;
+            width: 20px; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon {
+            position: absolute;
+            display: inline-block;
+            right: 10px;
+            height: 20px;
+            width: 20px;
+            font-size: 16px; }
+          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
+            position: absolute;
+            display: inline-block;
+            left: 10px;
+            font-size: 25px;
+            height: 100%;
+            width: 20px; }
+      .wm-form-creator-app .formCreator .main .window .content .newinputfield-group {
+        margin-bottom: 20px; }
+      .wm-form-creator-app .formCreator .main .window .content .inputfield-group-border {
+        border: 2px dashed #929292;
+        border-radius: 2px;
+        box-sizing: border-box; }
+    .wm-form-creator-app .formCreator .main .window .controls {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      left: 0; }
+      .wm-form-creator-app .formCreator .main .window .controls .cancel-save .cancel-button, .wm-form-creator-app .formCreator .main .window .controls .cancel-save .finish-creator-button, .wm-form-creator-app .formCreator .main .window .controls .close-form-creator .cancel-button, .wm-form-creator-app .formCreator .main .window .controls .close-form-creator .finish-creator-button {
+        margin: 0 20px;
+        font-size: 20px;
+        text-align: center; }
+      .wm-form-creator-app .formCreator .main .window .controls .cancel-save .cancel-button {
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        float: left;
+        width: 140px;
+        height: 38px;
+        margin-right: 20px;
+        margin-bottom: 12px;
+        background-color: #e74c3c;
+        color: white;
+        vertical-align: middle;
+        line-height: 38px;
+        border-radius: 2px;
+        cursor: pointer;
+        padding: 0 10px;
+        float: left; }
+        .wm-form-creator-app .formCreator .main .window .controls .cancel-save .cancel-button:hover {
+          background-color: #c9302c; }
+        .wm-form-creator-app .formCreator .main .window .controls .cancel-save .cancel-button .button-icon {
+          position: relative;
+          display: inline-block;
+          margin-right: 5px; }
+      .wm-form-creator-app .formCreator .main .window .controls .close-form-creator .finish-creator-button {
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        float: left;
+        width: 140px;
+        height: 38px;
+        margin-right: 20px;
+        margin-bottom: 12px;
+        background-color: #2ecc71;
+        color: white;
+        vertical-align: middle;
+        line-height: 38px;
+        border-radius: 2px;
+        cursor: pointer;
+        padding: 0 10px;
+        float: right; }
+        .wm-form-creator-app .formCreator .main .window .controls .close-form-creator .finish-creator-button:hover {
+          background-color: #239e59; }
+        .wm-form-creator-app .formCreator .main .window .controls .close-form-creator .finish-creator-button .button-icon {
+          position: relative;
+          display: inline-block;
+          margin-right: 5px; }
+  .wm-form-creator-app .formCreator .popup {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     display: none;
+    overflow: hidden;
+    border-radius: 2px;
     height: 100%;
     width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 2; }
-    .wm-form-creator-app .formCreator .main .form-name {
+    background-color: white;
+    color: #040520;
+    z-index: 15; }
+    .wm-form-creator-app .formCreator .popup .toolbar-editor {
+      padding: 20px 0 20px 20px;
       display: block;
-      width: 300px;
-      height: 34px;
       position: absolute;
-      top: -34px;
-      background-color: white;
-      z-index: 2; }
-      .wm-form-creator-app .formCreator .main .form-name .form-icon {
-        width: 34px;
-        height: 34px;
-        position: absolute;
-        font-size: 25px;
-        text-align: center; }
-      .wm-form-creator-app .formCreator .main .form-name .form-name-value {
-        width: calc(100% - 2px - 34px);
-        height: 32px;
-        font-size: 28px;
-        line-height: 32px;
-        top: 0;
-        left: 34px;
-        position: absolute;
-        color: #040520;
-        border: none; }
-    .wm-form-creator-app .formCreator .main .toolbar {
-      background-color: #2bf4b1;
-      background-color: #29e9a9;
-      background-image: -webkit-gradient(linear, left top, right top, from(#29e9a9), to(#2bf4b1));
-      background-image: -webkit-linear-gradient(left, #29e9a9, #2bf4b1);
-      background-image: -moz-linear-gradient(left, #29e9a9, #2bf4b1);
-      background-image: -ms-linear-gradient(left, #29e9a9, #2bf4b1);
-      background-image: -o-linear-gradient(left, #29e9a9, #2bf4b1);
-      background-image: linear-gradient(left, #29e9a9, #2bf4b1);
-      filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#29e9a9', end-colourStr='#2bf4b1', gradientType='1');
-      position: absolute;
-      width: 300px;
-      height: 100%;
-      overflow-y: auto;
-      overflow-x: hidden;
-      z-index: 4;
-      box-shadow: 6px 0 8px -6px #757575; }
-      .wm-form-creator-app .formCreator .main .toolbar .content {
-        display: inline-block;
-        margin: 20px;
-        margin-right: 0;
-        margin-bottom: 10px;
-        top: 0;
-        bottom: 0;
-        height: calc(100% - 40px); }
-        .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group {
-          overflow: auto;
-          list-style: none;
-          display: block;
-          float: left;
-          width: inherit;
-          margin: 10px 0;
-          padding-left: 0; }
-          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small {
-            box-sizing: border-box;
-            display: block;
-            position: relative;
-            float: left;
-            width: 220px;
-            height: 38px;
-            margin-right: 20px;
-            margin-bottom: 12px;
-            background-color: #0672AF;
-            color: white;
-            vertical-align: middle;
-            line-height: 38px;
-            border-radius: 2px;
-            cursor: pointer;
-            padding: 0 10px;
-            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small:hover {
-              background-color: #034369; }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small .button-icon {
-              position: relative;
-              display: inline-block;
-              margin-right: 5px; }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-small.dragged {
-              background-color: #045483; }
-          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium {
-            box-sizing: border-box;
-            display: block;
-            position: relative;
-            float: left;
-            width: 220px;
-            height: 38px;
-            margin-right: 20px;
-            margin-bottom: 12px;
-            background-color: #1289D0;
-            color: white;
-            vertical-align: middle;
-            line-height: 38px;
-            border-radius: 2px;
-            cursor: pointer;
-            padding: 0 10px;
-            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium:hover {
-              background-color: #045483; }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium .button-icon {
-              position: relative;
-              display: inline-block;
-              margin-right: 5px; }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-medium.dragged {
-              background-color: #045483; }
-          .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large {
-            box-sizing: border-box;
-            display: block;
-            position: relative;
-            float: left;
-            width: 260px;
-            height: 38px;
-            margin-right: 20px;
-            margin-bottom: 12px;
-            background-color: #5562AA;
-            color: white;
-            vertical-align: middle;
-            line-height: 38px;
-            border-radius: 2px;
-            cursor: pointer;
-            padding: 0 10px;
-            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large:hover {
-              background-color: #24327D; }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large .button-icon {
-              position: relative;
-              display: inline-block;
-              margin-right: 5px; }
-            .wm-form-creator-app .formCreator .main .toolbar .content .buttons-group .button-large.dragged {
-              background-color: #045483; }
-        .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save {
-          position: absolute;
-          bottom: 5px;
-          right: 10px;
-          width: 100px; }
-          .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator .close-button, .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator .cancel-button, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .close-button, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button {
-            display: block;
-            width: 100%;
-            height: 35px;
-            float: right;
-            vertical-align: middle;
-            text-align: center;
-            line-height: 35px;
-            font-size: 20px;
-            border-radius: 2px;
-            background-color: #007041;
-            color: white;
-            cursor: pointer;
-            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
-            .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator .close-button:hover, .wm-form-creator-app .formCreator .main .toolbar .content .close-form-creator .cancel-button:hover, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .close-button:hover, .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
-              background-color: #003F24; }
-        .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save {
-          left: 10px; }
-          .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button {
-            background-color: #AE1331; }
-            .wm-form-creator-app .formCreator .main .toolbar .content .cancel-save .cancel-button:hover {
-              background-color: #680014; }
-    .wm-form-creator-app .formCreator .main .window {
-      z-index: 2;
-      position: absolute;
-      width: auto;
-      height: auto;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 300px;
-      overflow-y: auto;
-      overflow-x: hidden;
-      background-color: #E93255;
-      background-color: #e63255;
-      background-image: -webkit-gradient(linear, left top, right top, from(#e63255), to(#E93255));
-      background-image: -webkit-linear-gradient(left, #e63255, #E93255);
-      background-image: -moz-linear-gradient(left, #e63255, #E93255);
-      background-image: -ms-linear-gradient(left, #e63255, #E93255);
-      background-image: -o-linear-gradient(left, #e63255, #E93255);
-      background-image: linear-gradient(left, #e63255, #E93255);
-      filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#e63255', end-colourStr='#E93255', gradientType='1'); }
-      .wm-form-creator-app .formCreator .main .window .content {
-        display: inline-block;
-        margin: 20px;
-        position: absolute;
-        margin-bottom: 30px;
-        margin-right: 0;
-        top: 0;
-        bottom: 0;
-        width: calc(100% - 40px);
-        height: calc(100% - 50px); }
-        .wm-form-creator-app .formCreator .main .window .content .inputfields-group, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group {
-          overflow: auto;
-          list-style: none;
-          float: left;
-          width: 100%;
-          margin: 0;
-          min-height: 60px;
-          margin-top: 10px;
-          padding-left: 0; }
-          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield {
-            box-sizing: border-box;
-            display: block;
-            width: 100%;
-            height: 60px;
-            position: relative;
-            margin-bottom: 10px;
-            background-color: #FDFFFC;
-            color: #000543;
-            padding: 0 40px;
-            vertical-align: middle;
-            line-height: 60px;
-            border-radius: 2px;
-            font-size: 20px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            cursor: pointer;
-            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); }
-            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield .input-icon {
-              position: absolute;
-              display: inline-block;
-              left: 10px;
-              height: 20px;
-              width: 20px; }
-            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield .input-remove-icon {
-              position: absolute;
-              display: inline-block;
-              right: 10px;
-              height: 20px;
-              width: 20px; }
-          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder {
-            box-sizing: border-box;
-            display: block;
-            width: 100%;
-            height: 60px;
-            position: relative;
-            margin-bottom: 10px;
-            background-color: rgba(253, 255, 252, 0.2);
-            color: #000543;
-            padding: 0 40px;
-            vertical-align: middle;
-            line-height: 60px;
-            border-radius: 2px;
-            font-size: 20px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            cursor: pointer;
-            border: 2px dashed #FDFFFC; }
-            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-icon {
-              position: absolute;
-              display: inline-block;
-              left: 10px;
-              height: 20px;
-              width: 20px; }
-            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .inputfield-placeholder .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .inputfield-placeholder .input-remove-icon {
-              position: absolute;
-              display: inline-block;
-              right: 10px;
-              height: 20px;
-              width: 20px; }
-          .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield {
-            box-sizing: border-box;
-            display: block;
-            width: 100%;
-            height: 60px;
-            position: relative;
-            margin-bottom: 10px;
-            background-color: #2bf4b1;
-            color: #000543;
-            padding: 0 40px;
-            vertical-align: middle;
-            line-height: 60px;
-            border-radius: 2px;
-            font-size: 20px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            cursor: pointer;
-            -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            cursor: default; }
-            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
-              position: absolute;
-              display: inline-block;
-              left: 10px;
-              height: 20px;
-              width: 20px; }
-            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-remove-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-remove-icon {
-              position: absolute;
-              display: inline-block;
-              right: 10px;
-              height: 20px;
-              width: 20px; }
-            .wm-form-creator-app .formCreator .main .window .content .inputfields-group .newinputfield .input-icon, .wm-form-creator-app .formCreator .main .window .content .newinputfield-group .newinputfield .input-icon {
-              position: absolute;
-              display: inline-block;
-              left: 10px;
-              font-size: 25px;
-              height: 100%;
-              width: 20px; }
-        .wm-form-creator-app .formCreator .main .window .content .newinputfield-group {
-          margin-bottom: 20px; }
-        .wm-form-creator-app .formCreator .main .window .content .inputfield-group-border {
-          border: 2px dashed white;
-          border-radius: 2px;
-          box-sizing: border-box; }
-    .wm-form-creator-app .formCreator .popup {
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      display: none;
       overflow: hidden;
-      border-radius: 2px;
-      height: auto;
-      width: auto;
-      top: 18px;
-      bottom: 18px;
-      left: 18px;
-      right: 18px;
-      background-color: white;
-      z-index: 15; }
-      .wm-form-creator-app .formCreator .popup .toolbar-editor {
-        padding: 0;
+      text-align: left;
+      width: 350px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 6px 0 8px -6px #757575;
+      z-index: 10; }
+      .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name {
+        padding: 0 20px 0 10px;
         display: block;
         position: absolute;
-        overflow: hidden;
-        text-align: left;
-        width: 350px;
-        height: 100%;
-        background-color: #E93255; }
-        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name {
-          padding: 0 15px 0 10px;
-          display: block;
+        width: 100%;
+        left: 0;
+        height: 40px;
+        background-color: #fff;
+        border-bottom: 1px solid #BBBBBB; }
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-icon {
           position: absolute;
-          width: 100%;
-          height: 40px;
-          top: 0;
-          left: 0;
-          background-color: #1289D0; }
-          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-icon {
-            position: absolute;
-            left: 20px;
-            top: 7px;
-            font-size: 20px;
-            color: #fff; }
-          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-name-inner {
+          left: 20px;
+          font-size: 25px;
+          color: #040520; }
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-name .inputfield-name-inner {
+          display: inline-block;
+          height: inherit;
+          width: auto;
+          color: #040520;
+          line-height: 30px;
+          vertical-align: middle;
+          text-align: left;
+          box-sizing: border-box;
+          padding-left: 40px;
+          font-size: 25px; }
+      .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save {
+        padding: 0;
+        padding-left: 20px;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        padding-top: 10px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-top: 1px solid #BBBBBB; }
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button {
+          box-sizing: border-box;
+          display: block;
+          position: relative;
+          float: left;
+          width: 60px;
+          height: 30px;
+          margin-right: 20px;
+          margin-bottom: 12px;
+          background-color: #2ecc71;
+          color: white;
+          vertical-align: middle;
+          line-height: 30px;
+          border-radius: 2px;
+          cursor: pointer;
+          padding: 0 10px;
+          float: right; }
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button:hover {
+            background-color: #239e59; }
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button .button-icon {
+            position: relative;
             display: inline-block;
-            height: inherit;
-            width: auto;
-            color: white;
-            line-height: 40px;
-            vertical-align: middle;
-            text-align: left;
-            box-sizing: border-box;
-            padding-left: 35px;
-            font-size: 20px; }
-        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save {
-          padding: 0;
-          display: block;
-          position: absolute;
-          width: 100%;
-          height: 50px;
-          bottom: 0;
-          left: 0;
-          padding-top: 10px;
-          box-sizing: border-box;
-          background-color: #1289D0; }
-          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button {
-            display: block;
-            width: 60px;
-            height: 30px;
-            float: right;
-            margin-right: 15px;
-            vertical-align: middle;
-            text-align: center;
-            line-height: 30px;
-            background-color: #0672AF;
-            color: white;
-            cursor: pointer; }
-            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-save-button:hover {
-              background-color: #034369; }
-          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button {
-            display: block;
-            width: 80px;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            vertical-align: middle;
-            float: right;
-            margin-right: 5px;
-            color: white;
-            background-color: #5562AA;
-            cursor: pointer; }
-            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button:hover {
-              background-color: #24327D; }
-        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting {
+            margin-right: 5px; }
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button {
           box-sizing: border-box;
           display: block;
-          position: absolute;
-          width: 100%;
+          position: relative;
+          float: left;
+          width: 60px;
+          height: 30px;
+          margin-right: 20px;
+          margin-bottom: 12px;
+          background-color: #e74c3c;
+          color: white;
+          vertical-align: middle;
+          line-height: 30px;
+          border-radius: 2px;
+          cursor: pointer;
+          padding: 0 10px;
+          float: left; }
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button:hover {
+            background-color: #c9302c; }
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-save .inputfield-cancel-button .button-icon {
+            position: relative;
+            display: inline-block;
+            margin-right: 5px; }
+      .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting {
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: calc(100% - 70px);
+        top: 40px;
+        bottom: 50px;
+        left: 0;
+        background-color: #fff;
+        overflow-y: auto; }
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting input, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting textarea, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting select, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting option {
+          border: 1px solid #BBBBBB;
+          color: #040520;
+          padding: 2px;
+          box-sizing: border-box; }
+        .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block {
+          width: calc(100% - 20px);
           height: auto;
-          top: 40px;
-          bottom: 50px;
-          left: 0;
-          background-color: #5562AA;
-          background-color: #3A4895;
-          background-image: -webkit-gradient(linear, left top, right top, from(#3A4895), to(#394793));
-          background-image: -webkit-linear-gradient(left, #3A4895, #394793);
-          background-image: -moz-linear-gradient(left, #3A4895, #394793);
-          background-image: -ms-linear-gradient(left, #3A4895, #394793);
-          background-image: -o-linear-gradient(left, #3A4895, #394793);
-          background-image: linear-gradient(left, #3A4895, #394793);
-          filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#3A4895', end-colourStr='#394793', gradientType='1');
-          overflow-y: auto; }
-          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block {
+          min-height: 45px;
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 10px 0;
+          overflow: hidden;
+          border-bottom: 1px solid #e5e5e5; }
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block:last-child {
+            border-bottom: 0; }
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading {
+            display: block;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            font-size: 16px;
+            color: #040520; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading .description {
+              display: inline-block;
+              position: absolute;
+              display: none;
+              height: 21px;
+              width: 21px;
+              padding-top: 2px;
+              padding-left: 5px; }
+          .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body {
             width: 100%;
             height: auto;
-            display: inline-block;
-            box-sizing: border-box;
-            padding: 8px 16px;
-            border-bottom: 1px solid #FDFFFC; }
-            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading {
-              display: block;
-              width: 100%;
+            clear: both; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label {
+              text-align: left;
+              float: left;
+              width: calc(100% - 120px);
               height: 25px;
               line-height: 25px;
               font-size: 16px;
-              color: #FDFFFC; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .heading .description {
+              color: #040520; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label .description {
                 display: inline-block;
                 position: absolute;
                 display: none;
@@ -1408,363 +1525,416 @@ body {
                 width: 21px;
                 padding-top: 2px;
                 padding-left: 5px; }
-            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body {
-              width: 100%;
-              height: auto;
-              clear: both; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label {
-                text-align: left;
-                float: left;
-                width: calc(100% - 120px);
-                height: 25px;
-                line-height: 25px;
-                font-size: 16px;
-                color: #FDFFFC;
-                margin-bottom: 3px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .label .description {
-                  display: inline-block;
-                  position: absolute;
-                  display: none;
-                  height: 21px;
-                  width: 21px;
-                  padding-top: 2px;
-                  padding-left: 5px; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .small-input {
-                width: calc(100% - 2px);
-                height: 23px;
-                border: none;
-                border-radius: 2px;
-                display: inline-block;
-                margin-bottom: 3px;
-                box-sizing: border-box;
-                padding-left: 5px; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .max-length {
-                width: calc(30% - 2px);
-                height: 25px;
-                border: none;
-                border-radius: 2px;
-                display: inline-block;
-                margin-bottom: 3px;
-                box-sizing: border-box;
-                padding-left: 5px; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .large-input {
-                width: calc(100% - 4px);
-                height: 55px;
-                border: none;
-                border-radius: 2px;
-                display: inline-block;
-                resize: none;
-                margin-bottom: 3px; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block {
-                width: 100%;
-                margin-bottom: 10px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block:last-child {
-                  margin-bottom: 3px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .choice {
-                  width: calc(100% - 30px - 15px - 4px);
-                  border: none;
-                  height: 23px;
-                  border-radius: 2px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls {
-                  width: 30px;
-                  float: right; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
-                    position: relative;
-                    float: left;
-                    height: 23px;
-                    width: 23px;
-                    padding-right: 5px;
-                    cursor: pointer;
-                    color: #00E499; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
-                    color: #AE1331; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count {
-                width: 100%;
-                margin-top: 3px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .label {
-                  width: 100%; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
-                  width: calc(50% - 5px);
-                  float: left; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .min-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .max-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .min-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .max-selected {
-                    width: calc(100% - 6px);
-                    height: 25px;
-                    border: none;
-                    border-radius: 2px;
-                    display: inline-block;
-                    margin-bottom: 3px;
-                    box-sizing: border-box;
-                    padding-left: 5px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
-                  float: right; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset {
-                width: calc(100% - 45px - 2px);
-                height: 23px;
-                border: none;
-                border-radius: 2px;
-                display: inline-block;
-                margin-bottom: 3px;
-                box-sizing: border-box;
-                padding-left: 5px; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon {
-                position: relative;
-                height: 23px;
-                width: 23px;
-                float: right;
-                margin-right: 5px;
-                margin-top: -3px;
-                cursor: pointer; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon i {
-                  color: #fff;
-                  border-radius: 50%;
-                  padding: 5px;
-                  border: 1px solid white; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .description-block {
-                display: none;
-                width: 100%; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup {
-                width: 90px;
-                height: 25px;
-                border: none;
-                border-radius: 2px;
-                display: block;
-                float: right;
-                overflow: hidden;
-                margin-bottom: 3px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover {
-                  position: relative;
-                  width: 135px;
-                  left: -45px;
-                  cursor: pointer; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
-                    float: left;
-                    width: 45px;
-                    height: 25px;
-                    line-height: 25px;
-                    vertical-align: middle;
-                    text-align: center;
-                    color: white;
-                    border-radius: 0; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup {
-                    background-color: #2bf4b1;
-                    border-top-left-radius: 2px;
-                    border-bottom-left-radius: 2px; }
-                    .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup:hover {
-                      background-color: #00E499; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
-                    background-color: #fff;
-                    border-radius: 2px; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup {
-                    background-color: #E93255;
-                    border-top-right-radius: 2px;
-                    border-bottom-right-radius: 2px; }
-                    .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup:hover {
-                      background-color: #AE1331; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected {
-                  left: 0; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected .slider {
-                    border-top-left-radius: 0px;
-                    border-bottom-left-radius: 0px;
-                    border-top-right-radius: 2px;
-                    border-bottom-right-radius: 2px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected {
-                  left: -45px; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected .slider {
-                    border-top-left-radius: 2px;
-                    border-bottom-left-radius: 2px;
-                    border-top-right-radius: 0px;
-                    border-bottom-right-radius: 0px; }
-              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block {
-                border-top: 1px solid white;
-                display: none;
-                margin-top: 5px; }
-                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save {
-                  padding: 0;
-                  display: block;
-                  width: 100%;
-                  bottom: 0;
-                  left: 0;
-                  padding-top: 10px;
-                  box-sizing: border-box; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-save-button {
-                    display: block;
-                    width: 60px;
-                    height: 30px;
-                    float: right;
-                    margin-right: 15px;
-                    vertical-align: middle;
-                    text-align: center;
-                    line-height: 30px;
-                    background-color: #0672AF;
-                    color: white;
-                    cursor: pointer; }
-                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-cancel-button {
-                    display: block;
-                    width: 80px;
-                    height: 30px;
-                    line-height: 30px;
-                    text-align: center;
-                    vertical-align: middle;
-                    float: right;
-                    margin-right: 5px;
-                    color: white;
-                    background-color: #1289D0;
-                    cursor: pointer; }
-      .wm-form-creator-app .formCreator .popup .preview {
-        position: absolute;
-        width: auto;
-        height: 100%;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 350px;
-        overflow: auto;
-        overflow-x: hidden;
-        background-color: #FDFFFC; }
-        .wm-form-creator-app .formCreator .popup .preview .preview-block {
-          width: 450px;
-          padding-left: 40px;
-          box-sizing: border-box;
-          margin-top: 200px;
-          visibility: hidden; }
-          .wm-form-creator-app .formCreator .popup .preview .preview-block .fieldname {
-            box-sizing: border-box;
-            display: block;
-            width: 100%;
-            position: relative;
-            color: #fff;
-            vertical-align: middle;
-            line-height: 30px;
-            font-size: 30px;
-            cursor: pointer; }
-          .wm-form-creator-app .formCreator .popup .preview .preview-block .description {
-            box-sizing: border-box;
-            width: 100%;
-            position: relative;
-            color: #fff;
-            margin-top: 10px;
-            vertical-align: middle;
-            line-height: 20px;
-            font-size: 20px;
-            cursor: pointer; }
-          .wm-form-creator-app .formCreator .popup .preview .preview-block .shortanswer {
-            width: 100%;
-            height: 38px;
-            border: none;
-            display: inline-block;
-            margin-top: 15px;
-            margin-bottom: 20px; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .shortanswer .shortanswer-input {
-              width: calc(100% - 4px);
-              height: 100%;
-              font-size: 32px;
-              border: #757575 1px solid;
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .small-input {
+              width: calc(100% - 2px);
+              height: 25px;
               border-radius: 2px;
-              display: inline-block; }
-          .wm-form-creator-app .formCreator .popup .preview .preview-block .longanswer {
-            width: 100%;
-            height: 120px;
-            border: none;
-            display: inline-block;
-            margin-top: 15px;
-            margin-bottom: 20px; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .longanswer .longanswer-input {
-              resize: none;
-              width: calc(100% - 4px);
-              height: 100%;
-              font-size: 20px;
-              border: #757575 1px solid;
-              border-radius: 2px;
-              display: inline-block; }
-          .wm-form-creator-app .formCreator .popup .preview .preview-block .selectbox {
-            width: 100%;
-            height: 38px;
-            border: none;
-            display: inline-block;
-            margin-top: 15px;
-            margin-bottom: 20px; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .selectbox .selectbox-input {
-              width: calc(100% - 4px);
-              height: 100%;
-              font-size: 22px;
-              border: #fff 1px solid;
-              border-radius: 2px;
-              display: inline-block; }
-          .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox {
-            width: 100%;
-            border: none;
-            display: inline-block;
-            margin-top: 15px;
-            margin-bottom: 20px; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checkbox-input {
-              display: none; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label {
-              width: 100%;
-              display: block;
-              height: 34px;
-              position: relative;
-              cursor: pointer;
-              background-color: white;
-              font-size: 24px;
-              line-height: 34px;
-              margin-bottom: 6px;
-              padding-left: 40px;
+              display: inline-block;
               box-sizing: border-box;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
+              padding-left: 5px; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .max-length {
+              width: calc(30% - 2px);
+              height: 25px;
               border-radius: 2px;
-              border: 1px solid #E93255; }
-              .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon {
+              display: inline-block;
+              box-sizing: border-box;
+              padding-left: 5px; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .large-input {
+              width: calc(100% - 4px);
+              height: 55px;
+              border-radius: 2px;
+              display: inline-block;
+              resize: none; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block {
+              width: 100%;
+              margin-bottom: 10px; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block:last-child {
+                margin-bottom: 0; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .choice {
+                width: calc(100% - 30px - 15px - 4px);
+                height: 25px;
+                border-radius: 2px; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls {
+                width: 23px;
+                float: right; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
+                  position: relative;
+                  float: left;
+                  height: 25px;
+                  width: 25px;
+                  line-height: 25px;
+                  padding-right: 5px;
+                  cursor: pointer;
+                  color: #239e59;
+                  font-size: 23px;
+                  top: -2px; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .add-choice-icon:hover, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon:hover {
+                    color: #2ecc71; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon {
+                  color: #c9302c; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .choices .choice-block .controls .remove-choice-icon:hover {
+                    color: #e74c3c; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count {
+              width: 100%;
+              margin-top: 3px; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .label {
+                width: 100%; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
+                width: calc(50% - 5px);
+                float: left; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .min-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .min-selection .max-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .min-selected, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection .max-selected {
+                  width: calc(100% - 6px);
+                  height: 25px;
+                  border-radius: 2px;
+                  display: inline-block;
+                  box-sizing: border-box;
+                  padding-left: 5px; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .selection-count .max-selection {
+                float: right; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset {
+              width: calc(100% - 45px - 2px);
+              height: 25px;
+              border-radius: 2px;
+              display: inline-block;
+              box-sizing: border-box;
+              padding-left: 5px; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon {
+              position: relative;
+              height: 25px;
+              width: 25px;
+              float: right;
+              margin-top: -3px;
+              cursor: pointer;
+              font-size: 23px;
+              color: #239e59; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .dataset-add-icon:hover {
+                color: #2ecc71; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .description-block {
+              display: none;
+              width: 100%; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .description-block .description {
+                margin-top: 10px; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup {
+              width: 80px;
+              height: 25px;
+              border: none;
+              border-radius: 2px;
+              display: block;
+              float: right;
+              overflow: hidden; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover {
+                position: relative;
+                width: 120px;
+                left: -40px;
+                cursor: pointer; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup, .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
+                  float: left;
+                  width: 40px;
+                  height: 25px;
+                  line-height: 25px;
+                  vertical-align: middle;
+                  text-align: center;
+                  color: white;
+                  border-radius: 0; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup {
+                  background-color: #239e59;
+                  border-top-left-radius: 2px;
+                  border-bottom-left-radius: 2px; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .on-setup:hover {
+                    background-color: #2ecc71; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .slider {
+                  background-color: #BBBBBB;
+                  border-radius: 2px; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup {
+                  background-color: #c9302c;
+                  border-top-right-radius: 2px;
+                  border-bottom-right-radius: 2px; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .mover .off-setup:hover {
+                    background-color: #e74c3c; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected {
+                left: 0; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .on-selected .slider {
+                  border-top-left-radius: 0px;
+                  border-bottom-left-radius: 0px;
+                  border-top-right-radius: 2px;
+                  border-bottom-right-radius: 2px; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected {
+                left: -40px; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .on-off-setup .off-selected .slider {
+                  border-top-left-radius: 2px;
+                  border-bottom-left-radius: 2px;
+                  border-top-right-radius: 0px;
+                  border-bottom-right-radius: 0px; }
+            .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block {
+              border-top: 1px solid white;
+              display: none;
+              margin-top: 10px; }
+              .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save {
+                padding: 0;
                 display: block;
-                position: absolute;
-                background-color: #E93255;
-                top: 0;
+                width: 100%;
                 bottom: 0;
                 left: 0;
-                width: 34px; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked {
-              border: 1px solid #2bf4b1; }
-              .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon {
-                background-color: #2bf4b1; }
-          .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save {
-            display: block;
-            height: 50px;
-            box-sizing: border-box; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button, .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
-              display: block;
-              width: 80px;
-              height: 30px;
-              float: right;
-              vertical-align: middle;
-              text-align: center;
-              line-height: 30px;
-              font-size: 20px;
-              border-radius: 2px;
-              background-color: #2bf4b1;
-              color: white;
-              cursor: pointer; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
-              float: left;
-              background-color: #E93255; }
-            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button {
-              float: right;
-              background-color: #2bf4b1; }
-        .wm-form-creator-app .formCreator .popup .preview .close {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          color: black;
-          width: 40px;
-          height: 40px;
+                padding-top: 10px;
+                box-sizing: border-box; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-save-button {
+                  box-sizing: border-box;
+                  display: block;
+                  position: relative;
+                  float: left;
+                  width: 60px;
+                  height: 30px;
+                  margin-right: 20px;
+                  margin-bottom: 12px;
+                  background-color: #239e59;
+                  color: white;
+                  vertical-align: middle;
+                  line-height: 30px;
+                  border-radius: 2px;
+                  cursor: pointer;
+                  padding: 0 10px;
+                  margin: 0;
+                  text-align: center;
+                  float: right; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-save-button:hover {
+                    background-color: #2ecc71; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-save-button .button-icon {
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 5px; }
+                .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-cancel-button {
+                  box-sizing: border-box;
+                  display: block;
+                  position: relative;
+                  float: left;
+                  width: 60px;
+                  height: 30px;
+                  margin-right: 20px;
+                  margin-bottom: 12px;
+                  background-color: #c9302c;
+                  color: white;
+                  vertical-align: middle;
+                  line-height: 30px;
+                  border-radius: 2px;
+                  cursor: pointer;
+                  padding: 0 10px;
+                  float: left;
+                  margin: 0;
+                  text-align: center; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-cancel-button:hover {
+                    background-color: #e74c3c; }
+                  .wm-form-creator-app .formCreator .popup .toolbar-editor .inputfield-setting .block .block-body .add-dataset-block .dataset-save .dataset-cancel-button .button-icon {
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 5px; }
+    .wm-form-creator-app .formCreator .popup .preview {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 350px;
+      overflow: auto;
+      overflow-x: hidden;
+      background-color: #fafafa; }
+      .wm-form-creator-app .formCreator .popup .preview .preview-block {
+        width: 450px;
+        padding-left: 40px;
+        box-sizing: border-box;
+        margin-top: 200px;
+        visibility: hidden; }
+        .wm-form-creator-app .formCreator .popup .preview .preview-block input, .wm-form-creator-app .formCreator .popup .preview .preview-block select, .wm-form-creator-app .formCreator .popup .preview .preview-block textarea, .wm-form-creator-app .formCreator .popup .preview .preview-block option {
+          border: 1px solid #BBBBBB;
+          color: #040520;
+          padding: 2px;
+          box-sizing: border-box;
+          background-color: white; }
+        .wm-form-creator-app .formCreator .popup .preview .preview-block .fieldname {
+          box-sizing: border-box;
+          display: block;
+          width: 100%;
+          position: relative;
+          color: #040520;
+          vertical-align: middle;
+          line-height: 30px;
+          font-size: 30px;
           cursor: pointer; }
+        .wm-form-creator-app .formCreator .popup .preview .preview-block .description {
+          box-sizing: border-box;
+          width: 100%;
+          position: relative;
+          color: #040520;
+          margin-top: 10px;
+          vertical-align: middle;
+          line-height: 20px;
+          font-size: 20px;
+          cursor: pointer; }
+        .wm-form-creator-app .formCreator .popup .preview .preview-block .shortanswer {
+          width: 100%;
+          height: 38px;
+          border: none;
+          display: inline-block;
+          margin-top: 15px;
+          margin-bottom: 20px; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .shortanswer .shortanswer-input {
+            width: calc(100% - 4px);
+            height: 100%;
+            font-size: 32px;
+            border: #757575 1px solid;
+            border-radius: 2px;
+            display: inline-block; }
+        .wm-form-creator-app .formCreator .popup .preview .preview-block .longanswer {
+          width: 100%;
+          height: 120px;
+          border: none;
+          display: inline-block;
+          margin-top: 15px;
+          margin-bottom: 20px; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .longanswer .longanswer-input {
+            resize: none;
+            width: calc(100% - 4px);
+            height: 100%;
+            font-size: 20px;
+            border: #757575 1px solid;
+            border-radius: 2px;
+            display: inline-block; }
+        .wm-form-creator-app .formCreator .popup .preview .preview-block .selectbox {
+          width: 100%;
+          height: 38px;
+          border: none;
+          display: inline-block;
+          margin-top: 15px;
+          margin-bottom: 20px; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .selectbox .selectbox-input {
+            width: calc(100% - 4px);
+            height: 100%;
+            font-size: 22px;
+            border-radius: 2px;
+            display: inline-block; }
+        .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox {
+          width: 100%;
+          border: none;
+          display: inline-block;
+          margin-top: 15px;
+          margin-bottom: 20px; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checkbox-input {
+            display: none; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label {
+            width: 100%;
+            display: block;
+            height: 34px;
+            position: relative;
+            cursor: pointer;
+            background-color: white;
+            font-size: 24px;
+            line-height: 34px;
+            margin-bottom: 6px;
+            padding-left: 40px;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            border-radius: 2px;
+            border: 1px solid #BBBBBB;
+            color: #040520;
+            border-left: 0; }
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon {
+              display: block;
+              position: absolute;
+              background-color: #c9302c;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              width: 34px;
+              height: 100%;
+              color: white;
+              text-align: center;
+              font-size: 24px;
+              line-height: 34px;
+              border-right: 0; }
+              .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon i {
+                margin-top: -4px; }
+              .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .label .check-icon:hover {
+                background-color: #e74c3c; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon {
+            background-color: #239e59; }
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .checkbox .checkbox-input-block .checked .check-icon:hover {
+              background-color: #2ecc71; }
+        .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save {
+          display: block;
+          height: 50px;
+          box-sizing: border-box; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button, .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button {
+            text-align: center;
+            font-size: 20px; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button {
+            box-sizing: border-box;
+            display: block;
+            position: relative;
+            float: left;
+            width: 95px;
+            height: 38px;
+            margin-right: 20px;
+            margin-bottom: 12px;
+            background-color: #e74c3c;
+            color: white;
+            vertical-align: middle;
+            line-height: 38px;
+            border-radius: 2px;
+            cursor: pointer;
+            padding: 0 10px;
+            float: left;
+            margin: 0; }
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button:hover {
+              background-color: #c9302c; }
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button .button-icon {
+              position: relative;
+              display: inline-block;
+              margin-right: 5px; }
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-back-button i {
+              padding-right: 5px; }
+          .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button {
+            box-sizing: border-box;
+            display: block;
+            position: relative;
+            float: left;
+            width: 100px;
+            height: 38px;
+            margin-right: 20px;
+            margin-bottom: 12px;
+            background-color: #2ecc71;
+            color: white;
+            vertical-align: middle;
+            line-height: 38px;
+            border-radius: 2px;
+            cursor: pointer;
+            padding: 0 10px;
+            float: right;
+            margin: 0; }
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button:hover {
+              background-color: #239e59; }
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button .button-icon {
+              position: relative;
+              display: inline-block;
+              margin-right: 5px; }
+            .wm-form-creator-app .formCreator .popup .preview .preview-block .preview-save .preview-next-button i {
+              padding-left: 5px; }
+      .wm-form-creator-app .formCreator .popup .preview .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: black;
+        width: 40px;
+        height: 40px;
+        cursor: pointer; }
 
 .blur {
-  -webkit-filter: blur(1px) grayscale(0.2) opacity(0.8);
-  -moz-filter: blur(1px) grayscale(0.2) opacity(0.8);
-  -o-filter: blur(1px) grayscale(0.2) opacity(0.8);
-  -ms-filter: blur(1px);
-  filter: blur(1px) grayscale(0.2) opacity(0.8); }
+  -webkit-filter: blur(3px) grayscale(50%) opacity(0.8);
+  -moz-filter: blur(3px) grayscale(50%) opacity(0.8);
+  -o-filter: blur(3px) grayscale(50%) opacity(0.8);
+  -ms-filter: blur(3px);
+  filter: blur(3px) grayscale(50%) opacity(0.8); }
 
 .wm-form-creator-app .formMapper {
   display: none;
@@ -1775,6 +1945,63 @@ body {
   left: 0; }
   .wm-form-creator-app .formMapper .transition, .wm-form-creator-app .formMapper .transition-icon {
     cursor: pointer; }
+  .wm-form-creator-app .formMapper .navigation-toolbar {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 20px;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 7px 7px -6px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 7px 7px -6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 7px 7px -6px rgba(0, 0, 0, 0.4); }
+    .wm-form-creator-app .formMapper .navigation-toolbar .content {
+      width: 100%;
+      height: 100%; }
+      .wm-form-creator-app .formMapper .navigation-toolbar .content .toolbar-button {
+        position: relative;
+        color: #040520;
+        display: inline-block;
+        padding: 0 10px;
+        height: 100%;
+        border-right: 1px solid #e5e5e5;
+        min-width: 40px;
+        font-size: 35px;
+        cursor: pointer; }
+        .wm-form-creator-app .formMapper .navigation-toolbar .content .toolbar-button:last-child {
+          border-right: 0; }
+        .wm-form-creator-app .formMapper .navigation-toolbar .content .toolbar-button:hover {
+          background-color: #cccccc; }
+          .wm-form-creator-app .formMapper .navigation-toolbar .content .toolbar-button:hover .tooltip {
+            display: block; }
+        .wm-form-creator-app .formMapper .navigation-toolbar .content .toolbar-button .tooltip {
+          padding: 5px;
+          display: none;
+          height: 50px;
+          width: 80px;
+          font-size: 14px;
+          line-height: 20px;
+          background-color: #040520;
+          color: white;
+          position: absolute;
+          bottom: -62.5px;
+          left: -12.5px;
+          text-align: center; }
+          .wm-form-creator-app .formMapper .navigation-toolbar .content .toolbar-button .tooltip:before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-bottom: 12px solid #040520;
+            border-right: 12px solid transparent;
+            border-left: 12px solid transparent;
+            left: 28px;
+            top: -12px; }
   .wm-form-creator-app .formMapper .transition-controlls {
     display: none;
     position: absolute;
@@ -1785,7 +2012,9 @@ body {
     background-color: white;
     box-sizing: border-box;
     padding: 8px 4px;
+    z-index: 15;
     border-radius: 2px;
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
     .wm-form-creator-app .formMapper .transition-controlls .close-controlls {
@@ -1793,8 +2022,7 @@ body {
       height: 24px;
       right: 0;
       top: 0;
-      position: absolute;
-      z-index: 15; }
+      position: absolute; }
     .wm-form-creator-app .formMapper .transition-controlls:before {
       content: '';
       display: block;
@@ -1844,17 +2072,17 @@ body {
       .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .cancel, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .cancel {
         left: 0; }
       .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove {
-        background-color: #E93255;
+        background-color: #fafafa;
         color: black; }
         .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
           background-color: #AE1331; }
       .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove {
-        background-color: #E93255;
+        background-color: #fafafa;
         color: #680014; }
         .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .remove:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .remove:hover {
           background-color: #AE1331; }
       .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .save, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .save {
-        background-color: #2bf4b1;
+        background-color: #fff;
         color: #003F24; }
         .wm-form-creator-app .formMapper .transition-controlls .remove-form-confirm .save:hover, .wm-form-creator-app .formMapper .transition-controlls .change-form-name-confirm .save:hover {
           background-color: #003F24; }
@@ -1901,50 +2129,81 @@ body {
       width: calc(100% - 6px); }
   .wm-form-creator-app .formMapper .close-mapper {
     position: absolute;
-    bottom: 5px;
-    right: 5px; }
+    bottom: 10px;
+    right: 10px; }
     .wm-form-creator-app .formMapper .close-mapper .close-button {
+      box-sizing: border-box;
       display: block;
-      width: 120px;
-      height: 30px;
-      float: right;
-      vertical-align: middle;
-      text-align: center;
-      line-height: 30px;
-      font-size: 22px;
-      border-radius: 2px;
-      background-color: #2bf4b1;
+      position: relative;
+      float: left;
+      width: 130px;
+      height: 38px;
+      margin-right: 20px;
+      margin-bottom: 12px;
+      background-color: #2ecc71;
       color: white;
+      vertical-align: middle;
+      line-height: 38px;
+      border-radius: 2px;
       cursor: pointer;
-      background-color: #003F24;
-      background-image: -webkit-gradient(linear, left top, right top, from(#003F24), to(#009464));
-      background-image: -webkit-linear-gradient(left, #003F24, #009464);
-      background-image: -moz-linear-gradient(left, #003F24, #009464);
-      background-image: -ms-linear-gradient(left, #003F24, #009464);
-      background-image: -o-linear-gradient(left, #003F24, #009464);
-      background-image: linear-gradient(left, #003F24, #009464);
-      filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#003F24', end-colourStr='#009464', gradientType='1'); }
+      padding: 0 10px;
+      text-align: center;
+      margin: 0;
+      font-size: 20px; }
+      .wm-form-creator-app .formMapper .close-mapper .close-button:hover {
+        background-color: #239e59; }
+      .wm-form-creator-app .formMapper .close-mapper .close-button .button-icon {
+        position: relative;
+        display: inline-block;
+        margin-right: 5px; }
+
+.tooltip {
+  padding: 5px;
+  display: none;
+  height: 50px;
+  width: 80px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #040520;
+  color: white;
+  position: absolute;
+  bottom: -62.5px;
+  left: -12.5px;
+  text-align: center; }
+  .tooltip:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-bottom: 12px solid #040520;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    left: 28px;
+    top: -12px; }
 
 .wm-form-creator-app .formSelector {
   display: none;
-  background-color: white;
+  background-color: #fafafa;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   width: 440px;
-  height: 250px;
+  height: 220px;
   margin: auto;
-  padding: 4px;
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
   .wm-form-creator-app .formSelector .close-form-selector {
     position: absolute;
-    top: -2px;
-    right: -2px;
+    top: 0px;
+    right: 0px;
     width: 20px;
-    height: 20px; }
+    height: 20px;
+    color: #040520;
+    font-size: 16px; }
   .wm-form-creator-app .formSelector .select-block {
     width: 100%;
     margin: auto;
@@ -1952,8 +2211,8 @@ body {
     position: relative; }
     .wm-form-creator-app .formSelector .select-block .select-icons {
       display: block;
-      height: calc(100% - 20px);
-      width: calc(100% - 20px);
+      height: 100%;
+      width: 100%;
       margin: auto;
       top: 0;
       left: 0;
@@ -1961,7 +2220,7 @@ body {
       bottom: 0;
       position: absolute; }
       .wm-form-creator-app .formSelector .select-block .select-icons .copy-form, .wm-form-creator-app .formSelector .select-block .select-icons .new-form {
-        width: calc(50% - 5px);
+        width: 50%;
         height: 100%;
         border-radius: 2px;
         position: relative;
@@ -1979,24 +2238,30 @@ body {
           width: 150px;
           text-align: center;
           margin: auto;
-          margin-top: 20px;
           font-size: 110px;
-          color: #040520;
-          margin-top: 20px; }
+          color: #040520; }
       .wm-form-creator-app .formSelector .select-block .select-icons .copy-form {
         float: left;
-        background-color: #00E499; }
+        background-color: #E6E6E6; }
         .wm-form-creator-app .formSelector .select-block .select-icons .copy-form:hover {
-          background-color: #009464; }
+          background-color: #b7b7b7; }
+        .wm-form-creator-app .formSelector .select-block .select-icons .copy-form .copy-form-icon i, .wm-form-creator-app .formSelector .select-block .select-icons .copy-form .copy-form-icon .label {
+          color: #040520; }
       .wm-form-creator-app .formSelector .select-block .select-icons .new-form {
         float: right;
-        background-color: #E93255; }
+        background-color: #3CBC8D; }
         .wm-form-creator-app .formSelector .select-block .select-icons .new-form:hover {
-          background-color: #AE1331; }
+          background-color: #37a277; }
+        .wm-form-creator-app .formSelector .select-block .select-icons .new-form .new-form-icon i, .wm-form-creator-app .formSelector .select-block .select-icons .new-form .new-form-icon .label {
+          color: #040520; }
       .wm-form-creator-app .formSelector .select-block .select-icons .new-form.disabled:hover {
-        background-color: #E93255; }
-      .wm-form-creator-app .formSelector .select-block .select-icons .copy-form.disabled:hover {
-        background-color: #2bf4b1; }
+        background-color: #fafafa; }
+      .wm-form-creator-app .formSelector .select-block .select-icons .copy-form.disabled {
+        background-color: #e5e5e5; }
+        .wm-form-creator-app .formSelector .select-block .select-icons .copy-form.disabled:hover {
+          background-color: #e5e5e5; }
+        .wm-form-creator-app .formSelector .select-block .select-icons .copy-form.disabled .copy-form-icon i, .wm-form-creator-app .formSelector .select-block .select-icons .copy-form.disabled .copy-form-icon .label {
+          color: #666; }
     .wm-form-creator-app .formSelector .select-block .select-name, .wm-form-creator-app .formSelector .select-block .select-form {
       display: none;
       width: 100%;
@@ -2008,7 +2273,8 @@ body {
       top: 0;
       bottom: 0;
       left: 0;
-      right: 0; }
+      right: 0;
+      padding: 0 20px; }
       .wm-form-creator-app .formSelector .select-block .select-name .label, .wm-form-creator-app .formSelector .select-block .select-form .label {
         margin-bottom: 20px;
         text-align: center; }
@@ -2017,10 +2283,16 @@ body {
         height: 30px;
         margin-bottom: 20px;
         position: relative; }
+        .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block input, .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block select, .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block textarea, .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block option, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block input, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block select, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block textarea, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block option {
+          border: 1px solid #BBBBBB;
+          color: #040520;
+          padding: 2px;
+          box-sizing: border-box;
+          background-color: white; }
         .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block .form-name, .wm-form-creator-app .formSelector .select-block .select-name .form-outer-block .form-selector, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block .form-name, .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block .form-selector {
           width: calc(100% - 6px);
-          height: 30px;
-          line-height: 30px; }
+          height: 35px;
+          line-height: 35px; }
       .wm-form-creator-app .formSelector .select-block .select-name .save-form-name, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection {
         padding: 0;
         display: block;
@@ -2029,27 +2301,59 @@ body {
         padding-top: 10px;
         box-sizing: border-box;
         margin: auto;
-        width: 290px; }
+        width: 100%; }
         .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .cancel-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .cancel-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .cancel-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .cancel-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save {
-          display: inline-block;
-          width: 120px;
-          height: 30px;
+          text-align: center; }
+        .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .cancel-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .cancel-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .cancel-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .cancel-save {
+          box-sizing: border-box;
+          display: block;
+          position: relative;
           float: left;
-          vertical-align: middle;
-          text-align: center;
-          line-height: 30px;
-          font-size: 24px;
-          background-color: #0672AF;
+          width: 130px;
+          height: 38px;
+          margin-right: 20px;
+          margin-bottom: 12px;
+          background-color: #c9302c;
           color: white;
+          vertical-align: middle;
+          line-height: 38px;
+          border-radius: 2px;
           cursor: pointer;
-          border-radius: 2px; }
-          .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save:hover {
-            background-color: #034369; }
+          padding: 0 10px;
+          margin: 0;
+          float: left;
+          font-size: 20px; }
+          .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .cancel-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .cancel-save:hover {
+            background-color: #e74c3c; }
+          .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .cancel-save .button-icon, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .cancel-save .button-icon, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .cancel-save .button-icon, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .cancel-save .button-icon {
+            position: relative;
+            display: inline-block;
+            margin-right: 5px; }
         .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save {
-          background-color: #5562AA;
-          float: right; }
+          box-sizing: border-box;
+          display: block;
+          position: relative;
+          float: left;
+          width: 130px;
+          height: 38px;
+          margin-right: 20px;
+          margin-bottom: 12px;
+          background-color: #239e59;
+          color: white;
+          vertical-align: middle;
+          line-height: 38px;
+          border-radius: 2px;
+          cursor: pointer;
+          padding: 0 10px;
+          margin: 0;
+          float: right;
+          font-size: 20px; }
           .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save:hover, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save:hover {
-            background-color: #24327D; }
+            background-color: #2ecc71; }
+          .wm-form-creator-app .formSelector .select-block .select-name .save-form-name .confirm-save .button-icon, .wm-form-creator-app .formSelector .select-block .select-name .save-form-selection .confirm-save .button-icon, .wm-form-creator-app .formSelector .select-block .select-form .save-form-name .confirm-save .button-icon, .wm-form-creator-app .formSelector .select-block .select-form .save-form-selection .confirm-save .button-icon {
+            position: relative;
+            display: inline-block;
+            margin-right: 5px; }
     .wm-form-creator-app .formSelector .select-block .select-form .form-outer-block .form-selector {
       width: 100%;
       -webkit-appearance: menulist-button; }
@@ -2067,5 +2371,188 @@ body {
   outline: 2px solid red; }
   .wm-form-creator-app .error:focus {
     outline: 2px solid red; }
+
+.transition-controlls {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 280px;
+  height: 120px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 8px 4px;
+  z-index: 15;
+  border-radius: 2px;
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+  .transition-controlls .close-controlls {
+    width: 24px;
+    height: 24px;
+    right: 0;
+    top: 0;
+    position: absolute; }
+  .transition-controlls:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 12px solid white;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    left: 108px;
+    bottom: -12px; }
+  .transition-controlls .action-selector, .transition-controlls .remove-form-confirm, .transition-controlls .change-form-name-confirm {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%; }
+    .transition-controlls .action-selector .headline, .transition-controlls .remove-form-confirm .headline, .transition-controlls .change-form-name-confirm .headline {
+      width: calc(100% - 40px);
+      margin: auto;
+      height: 24px;
+      line-height: 24px;
+      font-size: 22px;
+      text-align: center;
+      vertical-align: middle;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #040520; }
+  .transition-controlls .remove-form-confirm, .transition-controlls .change-form-name-confirm {
+    display: none; }
+    .transition-controlls .remove-form-confirm .save, .transition-controlls .remove-form-confirm .cancel, .transition-controlls .remove-form-confirm .remove, .transition-controlls .change-form-name-confirm .save, .transition-controlls .change-form-name-confirm .cancel, .transition-controlls .change-form-name-confirm .remove {
+      text-align: center;
+      bottom: 0px; }
+    .transition-controlls .remove-form-confirm .cancel, .transition-controlls .change-form-name-confirm .cancel {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      float: left;
+      width: 60px;
+      height: 25px;
+      margin-right: 20px;
+      margin-bottom: 12px;
+      background-color: #cdcdcd;
+      color: white;
+      vertical-align: middle;
+      line-height: 25px;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 0 10px;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute; }
+      .transition-controlls .remove-form-confirm .cancel:hover, .transition-controlls .change-form-name-confirm .cancel:hover {
+        background-color: #b7b7b7; }
+      .transition-controlls .remove-form-confirm .cancel .button-icon, .transition-controlls .change-form-name-confirm .cancel .button-icon {
+        position: relative;
+        display: inline-block;
+        margin-right: 5px; }
+    .transition-controlls .remove-form-confirm .remove, .transition-controlls .change-form-name-confirm .remove {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      float: left;
+      width: 80px;
+      height: 25px;
+      margin-right: 20px;
+      margin-bottom: 12px;
+      background-color: #e74c3c;
+      color: white;
+      vertical-align: middle;
+      line-height: 25px;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 0 10px;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute; }
+      .transition-controlls .remove-form-confirm .remove:hover, .transition-controlls .change-form-name-confirm .remove:hover {
+        background-color: #c9302c; }
+      .transition-controlls .remove-form-confirm .remove .button-icon, .transition-controlls .change-form-name-confirm .remove .button-icon {
+        position: relative;
+        display: inline-block;
+        margin-right: 5px; }
+    .transition-controlls .remove-form-confirm .save, .transition-controlls .change-form-name-confirm .save {
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      float: left;
+      width: 100px;
+      height: 25px;
+      margin-right: 20px;
+      margin-bottom: 12px;
+      background-color: #2ecc71;
+      color: white;
+      vertical-align: middle;
+      line-height: 25px;
+      border-radius: 2px;
+      cursor: pointer;
+      padding: 0 10px;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute; }
+      .transition-controlls .remove-form-confirm .save:hover, .transition-controlls .change-form-name-confirm .save:hover {
+        background-color: #239e59; }
+      .transition-controlls .remove-form-confirm .save .button-icon, .transition-controlls .change-form-name-confirm .save .button-icon {
+        position: relative;
+        display: inline-block;
+        margin-right: 5px; }
+  .transition-controlls .action-selector .change-form, .transition-controlls .action-selector .remove-form, .transition-controlls .action-selector .edit-form {
+    position: relative;
+    height: auto;
+    width: calc( (100% - 6*2% - 6*2px ) / 3);
+    margin-top: 15px;
+    border-radius: 2px;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 5px 0; }
+    .transition-controlls .action-selector .change-form .edit-button, .transition-controlls .action-selector .change-form .rename-button, .transition-controlls .action-selector .change-form .remove-button, .transition-controlls .action-selector .remove-form .edit-button, .transition-controlls .action-selector .remove-form .rename-button, .transition-controlls .action-selector .remove-form .remove-button, .transition-controlls .action-selector .edit-form .edit-button, .transition-controlls .action-selector .edit-form .rename-button, .transition-controlls .action-selector .edit-form .remove-button {
+      display: block;
+      height: 32px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5px;
+      color: #040520; }
+      .transition-controlls .action-selector .change-form .edit-button i, .transition-controlls .action-selector .change-form .rename-button i, .transition-controlls .action-selector .change-form .remove-button i, .transition-controlls .action-selector .remove-form .edit-button i, .transition-controlls .action-selector .remove-form .rename-button i, .transition-controlls .action-selector .remove-form .remove-button i, .transition-controlls .action-selector .edit-form .edit-button i, .transition-controlls .action-selector .edit-form .rename-button i, .transition-controlls .action-selector .edit-form .remove-button i {
+        font-size: 32px; }
+    .transition-controlls .action-selector .change-form .label, .transition-controlls .action-selector .remove-form .label, .transition-controlls .action-selector .edit-form .label {
+      text-align: center;
+      color: #040520; }
+    .transition-controlls .action-selector .change-form:hover, .transition-controlls .action-selector .remove-form:hover, .transition-controlls .action-selector .edit-form:hover {
+      margin-top: 14px;
+      border: 1px solid #757575;
+      background-color: #fafafa; }
+  .transition-controlls .action-selector .change-form {
+    width: calc(37% - 2px); }
+  .transition-controlls .action-selector .remove-form {
+    width: calc(28% - 2px); }
+  .transition-controlls .action-selector .edit-form {
+    width: calc(25% - 2px); }
+  .transition-controlls .remove-form-confirm .question {
+    height: 40px;
+    margin-top: 5px;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle; }
+  .transition-controlls .change-form-name-confirm .form-name {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 23px;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0 5px; }
 
 /*# sourceMappingURL=mainformsstyles.css.map */

@@ -1,6 +1,6 @@
 body{
-  @include gradient($backgroundColor,$backgroundColor2);
-
+  background-color: $backgroundColor;
+  //for dragged buttons
   .button-small{
     @include button( 72.5px,$buttonColor3,white,$buttonColor32);
 
@@ -11,26 +11,76 @@ body{
 
   }
   .button-large {
-    @include button( 350px,$buttonColor1,white,$buttonColor12);
+    @include button( 350px,$toolbarbuttoncolor,white,$toolbarbuttoncolor2);
   }
 }
 
+.nav{
+  color : white;
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+  height: $headerHeight;
+  line-height: $headerHeight;
+  background-color: $navcolor;
+  border-bottom: 1px solid $bordercolor2;
+  z-index: 2;
+  //@include shadow(0.3,0,1px,3px);
+  @include shadowBottom(0.3,0,7px,7px,$bordercolor2);
+
+  h1{
+    margin: 0;
+    font-size: 35px;
+    font-weight: lighter;
+  }
+}
+.footer{
+  color : white;
+  position: relative;
+  padding: 0 20px;
+  width: 100%;
+  height: $footerHeight;
+  line-height: $footerHeight;
+  background-color: $footercolor;
+  border-top: 1px solid #e5e5e5;
+}
 
 .wm-form-creator-app{
+  margin: 0 auto;
+  position: relative;
   font-weight: lighter;
-  position: absolute;
-  top: 80px;
-  right: 0;
-  bottom: 60px;
-  left: 0;
-  min-height: 500px;
-  height: auto;
-  margin: 0 20px;
+ // height: auto;
   text-align: left;
-  background-color: $mainAppColor;
   zoom: 1;
   z-index: 1;
+  height: calc( 100vh - #{$headerHeight} - #{$footerHeight} );
 
+  border-right: 1px solid $bordercolor;
+  border-left: 1px solid $bordercolor;
+
+  background-color: $mainWindowColor;
+
+
+  @include xlarge{
+    max-width: $large-desktop;
+  }
+  @include large{
+    max-width: $desktop;
+  }
+
+  @include medium{
+    max-width:  $tablet;
+  }
+
+  @include small{
+    max-width: $mobile;
+  }
+
+}
+
+
+
+.wm-form-creator-app{
 
   .formCreator{
     display: none;
@@ -42,43 +92,9 @@ body{
     z-index: 2;
 
     .main{
-      .form-name{
-        display: block;
-        width: $toolbar-width;
-        height:34px;
-        position: absolute;
-        top: -34px;
-        background-color: white;
-        z-index: 2;
-        .form-icon{
-          width: 34px;
-          height: 34px;
-          position: absolute;
-          font-size: 25px;
-          text-align: center;
-        }
-        .form-name-value{
-          width: calc(100% - 2px - 34px);
-          height: 32px;
-          font-size: 28px;
-          line-height: 32px;
-          top:0;
-          left:34px;
-          position: absolute;
-          color:$darkblue;
-          border: none;
-
-        }
-        &.error{
-          .form-icon{
-          }
-        }
-
-      }
 
       .toolbar{
         background-color: $mainToolbarColor;
-        @include gradient($mainToolbarColor1,$mainToolbarColor);
 
         position: absolute;
         width: $toolbar-width;
@@ -86,7 +102,7 @@ body{
         overflow-y: auto;
         overflow-x: hidden;
         z-index: 4;
-        box-shadow: 6px 0 8px -6px $gray;
+        box-shadow: 6px 0 8px -6px $shadowcolor;
 
         .content{
           display: inline-block;
@@ -96,6 +112,40 @@ body{
           top: 0;
           bottom: 0;
           height: calc(100% - 40px);
+
+          .form-name{
+            display: block;
+            width: $toolbar-width - 2*$spacing;
+            height: 34px;
+            margin-bottom: 5px;
+            position: relative;
+            background-color: white;
+            z-index: 2;
+            .form-icon{
+              width: 34px;
+              height: 34px;
+              position: absolute;
+              font-size: 25px;
+              text-align: center;
+            }
+            .form-name-value{
+              width: calc(100% - 2px - 34px);
+              height: 32px;
+              font-size: 28px;
+              line-height: 32px;
+              top: 0;
+              left: 34px;
+              position: absolute;
+              color: $fontcolor;
+              border: none;
+
+            }
+            &.error{
+              .form-icon{
+              }
+            }
+
+          }
 
           .buttons-group{
             overflow: auto;
@@ -122,42 +172,15 @@ body{
               }
             }
             .button-large {
-              @include button( $toolbar-width - 2*$spacing,$buttonColor1,white,$buttonColor12);
+              @include button( $toolbar-width - 2*$spacing,$toolbarbuttoncolor,white,$toolbarbuttoncolor2);
               @include shadow(0.4);
               &.dragged{
-                background-color: $buttonColor22;
+                background-color: $toolbarbuttoncolor2;
               }
             }
 
 
           }
-
-          .close-form-creator, .cancel-save{
-            position: absolute;
-            bottom: 5px;
-            right: 10px;
-            width: 100px;
-            .close-button,.cancel-button{
-              display: block;
-              width: 100%;
-              height: 35px;
-              float:right;
-              vertical-align: middle;
-              text-align: center;
-              line-height: 35px;
-              font-size: 20px;
-              border-radius: 2px;
-              background-color: $mainToolbarColor5;
-              color:white;
-              cursor: pointer;
-              @include shadow(0.4);
-
-              &:hover{
-                background-color: $mainToolbarColor4;
-              }
-            }
-          }
-
           .cancel-save{
             left: 10px;
             .cancel-button{
@@ -179,21 +202,20 @@ body{
         right: 0;
         bottom: 0;
         left: $toolbar-width;
-        overflow-y: auto;
-        overflow-x: hidden;
+        overflow: hidden;
         background-color: $mainWindowColor;
-        @include gradient($mainWindowColor1,$mainWindowColor);
 
         .content{
           display: inline-block;
           margin: 20px;
           position: absolute;
-          margin-bottom: 30px;
+          margin-bottom: 40px;
           margin-right: 0;
           top: 0;
           bottom: 0;
           width: calc(100% - 40px);
-          height: calc(100% - 50px);
+          height: calc(100% - 80px);
+          overflow-y: scroll;
 
           .inputfields-group,.newinputfield-group{
             overflow: auto;
@@ -205,57 +227,19 @@ body{
             margin-top: 10px;
             padding-left: 0;
 
-            @mixin inputfield($background:black ,$color:white , $height:60px){
-              box-sizing: border-box;
-              display: block;
-              width: 100% ;
-              height: $height;
-              position: relative;
-              margin-bottom: 10px;
-              background-color: $background;
-              color : $color;
-              padding: 0 40px;
-              vertical-align: middle;
-              line-height: $height;
-              border-radius: 2px;
-              font-size: 20px;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              cursor: pointer;
-              &:last-child{
-                //margin-bottom: 0;
-              }
-              .input-icon{
-                position: absolute;
-                display: inline-block;
-                left: 10px;
-                height: 20px;
-                width: 20px;
-
-              }
-              .input-remove-icon{
-                position: absolute;
-                display: inline-block;
-                right: 10px;
-                height: 20px;
-                width: 20px;
-              }
-
-            }
 
             .inputfield{
-              @include inputfield($fieldColor,$fieldFontColor);
+              @include inputfield($inputfieldcolor, $fontcolor,$inputfieldcolor2);
               @include shadow(0.4);
             }
 
             .inputfield-placeholder{
-              @include inputfield(rgba(red($fieldColor),green($fieldColor),blue($fieldColor),0.2),$fieldFontColor);
-              border: 2px dashed $fieldColor;
+              @include inputfield(rgba(red($inputfieldcolor),green($inputfieldcolor),blue($inputfieldcolor),0.2),$inputfieldcolor);
+              border: 2px dashed $inputfieldbordercolor;
             }
 
             .newinputfield{
-              @include inputfield($mainToolbarColor,$fieldFontColor,60px);
+              @include inputfield($newinputfieldcolor, $fontcolor,60px);
               @include shadow(0.4);
               cursor: default;
               .input-icon{
@@ -273,9 +257,37 @@ body{
             margin-bottom: 20px;
           }
           .inputfield-group-border{
-            border: 2px dashed white;
+            border: 2px dashed $inputfieldbordercolor;
             border-radius: 2px;
             box-sizing: border-box;
+          }
+        }
+        .controls{
+          position: absolute;
+          width: 100%;
+          height: 50px;
+          bottom: 0;
+          left: 0;
+          .cancel-save,.close-form-creator{
+            .cancel-button,.finish-creator-button{
+              margin : 0 20px;
+              font-size: 20px;
+              text-align: center;
+            }
+          }
+          .cancel-save{
+            .cancel-button{
+              @include button(140px,$dangerbuttoncolor,white,$dangerbuttoncolor2,38px);
+              float: left;
+
+            }
+          }
+          .close-form-creator{
+            .finish-creator-button{
+              @include button(140px,$successbuttoncolor,white,$successbuttoncolor2,38px);
+              float: right;
+
+            }
           }
         }
 
@@ -283,45 +295,44 @@ body{
     }
 
     .popup{
-      position: absolute;
+      position: relative;
       margin-left: auto;
       margin-right: auto;
       display: none;
       overflow: hidden;
       border-radius: 2px;
-      height: auto;
-      width: auto;
-      top: 18px;
-      bottom: 18px;
-      left: 18px;
-      right: 18px;
+      height: 100%;
+      width: 100%;
       background-color: white;
+      color : $fontcolor;
       z-index: 15;
       .toolbar-editor{
-        padding: 0;
+        padding: 20px 0 20px 20px;
         display: block;
         position: absolute;
         overflow: hidden;
         text-align: left;
         width: 350px;
         height: 100%;
-        background-color: $mainWindowColor;
+        background-color: $toolbarColor;
+
+        box-shadow: 6px 0 8px -6px $shadowcolor;
+        z-index: 10;
 
         .inputfield-name{
-          padding: 0 15px 0 10px;
+          padding: 0 20px 0 10px;
           display: block;
           position: absolute;
-          width:100%;
+          width: 100%;
+          left: 0;
           height: 40px;
-          top:0;
-          left:0;
-          background-color: $buttonColor2;
+          background-color: $toolbarColor;
+          border-bottom: 1px solid $bordercolor3;
           .inputfield-icon{
             position: absolute;
             left: 20px;
-            top: 7px;
-            font-size: 20px;
-            color:$white;
+            font-size: 25px;
+            color: $fontcolor;
 
 
           }
@@ -329,83 +340,73 @@ body{
             display: inline-block;
             height: inherit;
             width: auto;
-            color: white;
-            line-height: 40px;
+            color: $fontcolor;
+            line-height: 30px;
             vertical-align: middle;
             text-align: left;
             box-sizing: border-box;
-            padding-left: 35px;
-            font-size: 20px;
+            padding-left: 40px;
+            font-size: 25px;
           }
 
         }
         .inputfield-save{
           padding: 0;
+          padding-left: 20px;
           display: block;
           position: absolute;
-          width:100%;
+          width: 100%;
           height: 50px;
-          bottom:0;
-          left:0;
+          bottom: 0;
+          left: 0;
           padding-top: 10px;
           box-sizing: border-box;
-          background-color: $buttonColor2;
+          background-color: $toolbarColor;
+          border-top: 1px solid $bordercolor3;
 
 
           .inputfield-save-button{
-            display: block;
-            width: 60px;
-            height: 30px;
-            float:right;
-            margin-right: 15px;
-            vertical-align: middle;
-            text-align: center;
-            line-height: 30px;
-            background-color: $buttonColor3;
-            color:white;
-            cursor: pointer;
-            &:hover{
-              background-color: $buttonColor32;
-            }
+            @include button(60px,$successbuttoncolor,white,$successbuttoncolor2,30px);
+            float: right;
           }
           .inputfield-cancel-button{
-            display: block;
-            width: 80px;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            vertical-align: middle;
-            float:right;
-            margin-right: 5px;
-            color:white;
-            background-color: $buttonColor1;
-            cursor: pointer;
-            &:hover{
-              background-color: $buttonColor12;
-            }
+            @include button(60px,$dangerbuttoncolor,white,$dangerbuttoncolor2,30px);
+            float: left;
           }
 
         }
         .inputfield-setting{
           box-sizing: border-box;
           display: block;
-          position: absolute;
-          width:100%;
-          height: auto;
-          top:40px;
-          bottom:50px;
-          left:0;
-          background-color: $buttonColor1;
-          @include gradient($buttonColor14,$buttonColor15);
+          position: relative;
+          width: 100%;
+          height: calc(100% - 70px);
+          top: 40px;
+          bottom: 50px;
+          left: 0;
+          background-color: $toolbarColor;
           overflow-y: auto;
 
+          input,textarea,select,option{
+            border: 1px solid $bordercolor3;
+            color: $fontcolor;
+            padding: 2px;
+            box-sizing: border-box;
+
+          }
+
           .block{
-            width: 100%;
+            width: calc(100% - 20px);
             height: auto;
+            min-height: 45px;
             display: inline-block;
             box-sizing: border-box;
-            padding: 8px 16px;
-            border-bottom: 1px solid $fieldColor;
+            padding: 10px 0;
+            overflow: hidden;
+            border-bottom: 1px solid $bordercolor;
+            &:last-child{
+              border-bottom: 0;
+            }
 
             .heading {
               display: block;
@@ -413,7 +414,7 @@ body{
               height: $popupinputheight;
               line-height: $popupinputheight;
               font-size: 16px;
-              color: $fieldColor;
+              color: $fontcolor;
 
               .description{
                 display: inline-block;
@@ -436,8 +437,7 @@ body{
                 height: $popupinputheight;
                 line-height: $popupinputheight;
                 font-size: 16px;
-                color: $fieldColor;
-                margin-bottom: 3px;
+                color: $fontcolor;
 
                 .description {
                   display: inline-block;
@@ -453,81 +453,68 @@ body{
               }
               .small-input {
                 width: calc(100% - 2px);
-                height: 23px;
-                border: none;
+                height: $popupinputheight;
                 border-radius: 2px;
                 display: inline-block;
-                margin-bottom: 3px;
                 box-sizing: border-box;
                 padding-left: 5px;
 
-                //&:focus {
-                //  outline: 2px solid $mainToolbarColor;
-                //  outline: 0;
-                //}
               }
 
               .max-length {
                 width: calc(30% - 2px);
-                height: 25px;
-                border: none;
+                height: $popupinputheight;
                 border-radius: 2px;
                 display: inline-block;
-                margin-bottom: 3px;
                 box-sizing: border-box;
                 padding-left: 5px;
-                //&:focus {
-                //  outline: 2px solid $mainToolbarColor;
-                //  outline: 0;
-                //}
+
               }
 
 
               .large-input {
                 width: calc(100% - 4px);
                 height: 55px;
-                border: none;
                 border-radius: 2px;
                 display: inline-block;
                 resize: none;
-                margin-bottom: 3px;
-                //&:focus {
-                //  outline: 2px solid $mainToolbarColor;
-                //  outline: 0;
-                //
-                //}
               }
               .choices{
                 .choice-block{
                   width: 100%;
                   margin-bottom: 10px;
                   &:last-child{
-                    margin-bottom: 3px;
+                    margin-bottom: 0;
                   }
                   .choice{
                     width: calc(100% - 30px - 15px - 4px);
-                    border: none;
-                    height: 23px;
+                    height: $popupinputheight;
                     border-radius: 2px;
-                    //&:focus {
-                    //  outline: 0;
-                    //}
+
                   }
                   .controls{
-                    width: 30px;
+                    width: 23px;
                     float: right;
                     .add-choice-icon,.remove-choice-icon{
                       position: relative;
                       float: left;
-                      height: 23px;
-                      width: 23px;
+                      height: $popupinputheight;
+                      width: $popupinputheight;
+                      line-height: $popupinputheight;
                       padding-right: 5px;
                       cursor: pointer;
-                      color:$mainToolbarColor2;
+                      color: $successbuttoncolor2;
+                      font-size: 23px;
+                      top: -2px;
+                      &:hover{
+                        color:$successbuttoncolor;
+                      }
                     }
                     .remove-choice-icon{
-                      color:$mainWindowColor2;
-
+                      color: $dangerbuttoncolor2;
+                      &:hover{
+                        color: $dangerbuttoncolor;
+                      }
                     }
                   }
 
@@ -545,11 +532,9 @@ body{
                   float: left;
                   .min-selected,.max-selected{
                     width: calc(100% - 6px);
-                    height: 25px;
-                    border: none;
+                    height: $popupinputheight;
                     border-radius: 2px;
                     display: inline-block;
-                    margin-bottom: 3px;
                     box-sizing: border-box;
                     padding-left: 5px;
                     //&:focus {
@@ -567,31 +552,24 @@ body{
 
               .dataset {
                 width: calc(100% - 45px - 2px);
-                height: 23px;
-                border: none;
+                height: $popupinputheight;
                 border-radius: 2px;
                 display: inline-block;
-                margin-bottom: 3px;
                 box-sizing: border-box;
                 padding-left: 5px;
-                //&:focus {
-                //  outline: 2px solid $mainToolbarColor;
-                //  outline: 0;
-                //}
+
               }
               .dataset-add-icon {
                 position: relative;
-                height: 23px;
-                width: 23px;
+                height: $popupinputheight;
+                width: $popupinputheight;
                 float: right;
-                margin-right: 5px;
                 margin-top: -3px;
                 cursor: pointer;
-                i{
-                  color:$white;
-                  border-radius: 50%;
-                  padding: 5px;
-                  border: 1px solid white;
+                font-size: 23px;
+                color: $successbuttoncolor2;
+                &:hover{
+                  color:$successbuttoncolor
                 }
 
               }
@@ -599,6 +577,9 @@ body{
               .description-block {
                 display: none;
                 width: 100%;
+                .description{
+                  margin-top: 10px;
+                }
               }
 
               .on-off-setup {
@@ -609,7 +590,6 @@ body{
                 display: block;
                 float: right;
                 overflow: hidden;
-                margin-bottom: 3px;
 
                 .mover {
                   position: relative;
@@ -628,23 +608,23 @@ body{
                     border-radius: 0;
                   }
                   .on-setup {
-                    background-color: $mainToolbarColor;
+                    background-color: $successbuttoncolor2;
                     border-top-left-radius: 2px;
                     border-bottom-left-radius: 2px;
                     &:hover{
-                      background-color: $mainToolbarColor2;
+                      background-color: $successbuttoncolor;
                     }
                   }
                   .slider {
-                    background-color: $backgroundColor;
+                    background-color: $sliderColor;
                     border-radius: 2px;
                   }
                   .off-setup {
-                    background-color: $mainWindowColor;
+                    background-color: $dangerbuttoncolor2;
                     border-top-right-radius: 2px;
                     border-bottom-right-radius: 2px;
                     &:hover{
-                      background-color: $mainWindowColor2;
+                      background-color: $dangerbuttoncolor;
                     }
                   }
                 }
@@ -670,7 +650,7 @@ body{
               .add-dataset-block{
                 border-top: 1px solid white;
                 display: none;
-                margin-top: 5px;
+                margin-top: 10px;
                 .dataset-save {
                   padding: 0;
                   display: block;
@@ -680,32 +660,17 @@ body{
                   padding-top: 10px;
                   box-sizing: border-box;
                   .dataset-save-button {
-                    display: block;
-                    width: 60px;
-                    height: 30px;
-                    float: right;
-                    margin-right: 15px;
-                    vertical-align: middle;
+                    @include button(60px,$successbuttoncolor2,white,$successbuttoncolor,30px);
+                    margin: 0;
                     text-align: center;
-                    line-height: 30px;
-                    background-color: $buttonColor3;
-                    color: white;
-                    cursor: pointer;
+                    float: right;
 
                   }
                   .dataset-cancel-button {
-                    display: block;
-                    width: 80px;
-                    height: 30px;
-                    line-height: 30px;
+                    @include button(60px,$dangerbuttoncolor2,white,$dangerbuttoncolor,30px);
+                    float: left;
+                    margin: 0;
                     text-align: center;
-                    vertical-align: middle;
-                    float: right;
-                    margin-right: 5px;
-                    color: white;
-                    background-color: $buttonColor2;
-                    cursor: pointer;
-
                   }
                 }
               }
@@ -723,7 +688,7 @@ body{
         left: 350px;
         overflow: auto;
         overflow-x: hidden;
-        background-color: $fieldColor;
+        background-color: $previewColor;
 
         .preview-block {
           width: 450px;
@@ -732,12 +697,21 @@ body{
           margin-top: 200px;
           visibility: hidden;
 
+          input,select,textarea,option{
+            border: 1px solid $bordercolor3;
+            color: $fontcolor;
+            padding: 2px;
+            box-sizing: border-box;
+            background-color: white;
+          }
+
+
           .fieldname {
             box-sizing: border-box;
             display: block;
             width: 100%;
             position: relative;
-            color: $backgroundColor;
+            color: $fontcolor;
             vertical-align: middle;
             line-height: 30px;
             font-size: 30px;
@@ -748,7 +722,7 @@ body{
             box-sizing: border-box;
             width: 100%;
             position: relative;
-            color: $backgroundColor;
+            color: $fontcolor;
             margin-top: 10px;
             vertical-align: middle;
             line-height: 20px;
@@ -766,7 +740,7 @@ body{
               width: calc(100% - 4px);
               height: 100%;
               font-size: 32px;
-              border: $gray 1px solid;
+              border: $shadowcolor 1px solid;
               border-radius: 2px;
               display: inline-block;
 
@@ -789,7 +763,7 @@ body{
               width: calc(100% - 4px);
               height: 100%;
               font-size: 20px;
-              border: $gray 1px solid;
+              border: $shadowcolor 1px solid;
               border-radius: 2px;
               display: inline-block;
               //&:focus {
@@ -809,7 +783,6 @@ body{
               width: calc(100% - 4px);
               height: 100%;
               font-size: 22px;
-              border: $mainAppColor 1px solid;
               border-radius: 2px;
               display: inline-block;
               //&:focus {
@@ -844,23 +817,42 @@ body{
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 border-radius: 2px;
-                border: 1px solid $mainWindowColor;
+                border: 1px solid $bordercolor3;
+                color: $fontcolor;
+                border-left: 0;
                 .check-icon {
                   display: block;
                   position: absolute;
-                  background-color: $mainWindowColor;
-                  top:0;
+                  background-color: $dangerbuttoncolor2;
+                  top: 0;
                   bottom: 0;
                   left: 0;
                   width: 34px;
+                  height: 100%;
+                  color: white;
+                  text-align: center;
+                  font-size: 24px;
+                  line-height: 34px;
+                  border-right: 0;
+                  i{
+                    margin-top: -4px;
+                  }
+
+
+                  &:hover{
+                    background-color: $dangerbuttoncolor;
+                  }
 
                 }
               }
               .checked{
-                border: 1px solid $mainToolbarColor;
 
                 .check-icon {
-                  background-color: $mainToolbarColor;
+                  background-color: $successbuttoncolor2;
+
+                  &:hover{
+                    background-color: $successbuttoncolor;
+                  }
                 }
               }
             }
@@ -870,27 +862,25 @@ body{
             display: block;
             height: 50px;
             box-sizing: border-box;
-            .preview-next-button,.preview-back-button{
-              display: block;
-              width: 80px;
-              height: 30px;
-              float: right;
-              vertical-align: middle;
+            .preview-back-button,.preview-next-button{
               text-align: center;
-              line-height: 30px;
               font-size: 20px;
-              border-radius: 2px;
-              background-color: $mainToolbarColor;
-              color: white;
-              cursor: pointer;
             }
             .preview-back-button{
-              float:left;
-              background-color: $mainWindowColor;
+              @include button(95px,$dangerbuttoncolor,white,$dangerbuttoncolor2,38px);
+              float: left;
+              margin: 0;
+              i{
+                padding-right: 5px;
+              }
             }
             .preview-next-button{
+              @include button(100px,$successbuttoncolor,white,$successbuttoncolor2,38px);
               float: right;
-              background-color: $mainToolbarColor;
+              margin: 0;
+              i{
+                padding-left: 5px;
+              }
             }
           }
         }
@@ -915,9 +905,9 @@ body{
 }
 
 .blur{
-  -webkit-filter: blur(1px) grayscale(0.2) opacity(0.8);
-  -moz-filter: blur(1px) grayscale(0.2) opacity(0.8);
-  -o-filter: blur(1px) grayscale(0.2) opacity(0.8);
-  -ms-filter: blur(1px);
-  filter: blur(1px) grayscale(0.2) opacity(0.8);
+  -webkit-filter: blur(3px) grayscale(50%) opacity(0.8);
+  -moz-filter: blur(3px) grayscale(50%) opacity(0.8);
+  -o-filter: blur(3px) grayscale(50%) opacity(0.8);
+  -ms-filter: blur(3px);
+  filter: blur(3px) grayscale(50%) opacity(0.8);
 }

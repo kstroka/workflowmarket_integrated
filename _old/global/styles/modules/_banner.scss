@@ -22,7 +22,7 @@
       display: inline-block;
       max-width: 40%;
       left:0;
-      color:$gray;
+      color: $shadowcolor;
       cursor: pointer;
       &:hover{
         color:$gray3;
@@ -43,7 +43,7 @@
           border-right: 0;
         }
         a{
-          color: $gray;
+          color: $shadowcolor;
           text-decoration: none;
 
           &:hover{
